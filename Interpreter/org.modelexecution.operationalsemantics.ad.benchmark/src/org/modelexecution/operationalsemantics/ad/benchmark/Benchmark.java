@@ -17,8 +17,8 @@ public class Benchmark {
 
 	private static final String MODELS_PATH = "{0}/{1}.xmi";
 
-	public void start(final String model, final int warmup, final int iterations, String xmiPath, String prefix) throws IOException {
-		System.out.println("DEFAULT");
+	public void start(final String model, final int warmup, final int iterations, String xmiPath, String prefix)
+			throws IOException {
 		final Result res = new Result();
 		for (int i = 0; i < warmup; i++) {
 			this.executeBenchmark(model, i, xmiPath);
@@ -36,7 +36,7 @@ public class Benchmark {
 		ActivitydiagramFactory.eINSTANCE.eClass();
 		ActivitydiagramPackage a = ActivitydiagramPackage.eINSTANCE;
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
-		return new ResourceSetImpl(); 
+		return new ResourceSetImpl();
 	}
 
 	private Long executeBenchmark(String modelPath, int itt, String xmiPath) {
@@ -44,7 +44,6 @@ public class Benchmark {
 		return doTheJob(activity);
 
 	}
-
 
 	private Activity getActivity(String modelPath, String xmiPath) {
 		ResourceSetImpl resourceSet = this.init();
@@ -56,12 +55,11 @@ public class Benchmark {
 		}
 		return null;
 	}
-	
+
 	private long doTheJob(final Activity activity) {
 		final long start = System.currentTimeMillis();
 		activity.main(null);
 		final long stop = System.currentTimeMillis();
-//		System.out.println("SUCCESS " + activity.getTrace().getExecutedNodes().size());
 		long res = stop - start;
 		return res;
 	}
