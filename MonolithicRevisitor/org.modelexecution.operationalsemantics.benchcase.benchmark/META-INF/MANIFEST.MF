@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Benchmark
+Bundle-SymbolicName: org.modelexecution.operationalsemantics.monolithicrevisitor.benchmark
+Bundle-Version: 1.0.0.qualifier
+Export-Package: org.modelexecution.operationalsemantics.monolithicrevisitor.benchmark
+Require-Bundle: org.eclipse.emf.ecore,
+ org.modelexecution.operationalsemantics.ad,
+ org.modelexecution.operationalsemantics.ad.input.grammar,
+ ModelPluginIDTest,
+ org.eclipse.emf.common

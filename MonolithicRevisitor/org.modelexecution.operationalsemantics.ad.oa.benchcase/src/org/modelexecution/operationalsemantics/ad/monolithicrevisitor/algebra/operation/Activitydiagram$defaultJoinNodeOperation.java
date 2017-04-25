@@ -1,0 +1,4 @@
+package org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.operation;
+
+public interface Activitydiagram$defaultJoinNodeOperation extends org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.operation.Activitydiagram$defaultControlNodeOperation {
+}
