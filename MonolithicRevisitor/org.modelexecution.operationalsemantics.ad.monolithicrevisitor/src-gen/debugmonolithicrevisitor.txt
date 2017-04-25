@@ -1,0 +1,3909 @@
+ale.xtext.ale.impl.VarDeclarationImpl@1db2d3ee (name: offer) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@1db2d3ee (name: offer)
+
+------------------------
+ale.xtext.ale.impl.ConstructorOperationImpl@65dc5c5c (name: Offer) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- new Offer() : 
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@70612797 (name: token) ->  
+ForLoop: [] |- for(Token token in tokens) { offer.getOf... : null
+ VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2aea9d00 (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5477cd1f ->  
+ChainedCall: [] |- offer.getOfferedTokens().add(token) : null
+ ChainedCall: [] |- offer.getOfferedTokens() : null
+  VarRef: [] |- offer : null
+  OperationCallOperation: [] |- getOfferedTokens() : null
+   VarRef: [] |- offer : null
+ OperationCallOperation: [] |- add(token) : null
+  ChainedCall: [] |- offer.getOfferedTokens() : null
+   VarRef: [] |- offer : null
+   OperationCallOperation: [] |- getOfferedTokens() : null
+    VarRef: [] |- offer : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1248a950 ->  
+ChainedCall: [] |- offer.getOfferedTokens() : null
+ VarRef: [] |- offer : null
+ OperationCallOperation: [] |- getOfferedTokens() : null
+  VarRef: [] |- offer : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@6cb43484 (value: offer) ->  
+VarRef: [] |- offer : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@5907cd4d (name: getOfferedTokens) ->  
+OperationCallOperation: [] |- getOfferedTokens() : null
+ VarRef: [] |- offer : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@33f2ec47 (name: add) ->  
+OperationCallOperation: [] |- add(token) : null
+ ChainedCall: [] |- offer.getOfferedTokens() : null
+  VarRef: [] |- offer : null
+  OperationCallOperation: [] |- getOfferedTokens() : null
+   VarRef: [] |- offer : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@29fac944 (value: token) ->  
+VarRef: [] |- token : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@4ef01493 ->  
+ChainedCall: [] |- self.getOffers().add(offer) : null
+ ChainedCall: [] |- self.getOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+  OperationCallOperation: [] |- getOffers() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+ OperationCallOperation: [] |- add(offer) : null
+  ChainedCall: [] |- self.getOffers() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+   OperationCallOperation: [] |- getOffers() : null
+    SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@6a4449de ->  
+ChainedCall: [] |- self.getOffers() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+ OperationCallOperation: [] |- getOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@30b3a807 -> ale.xtext.ale.impl.ClassTypeTImpl@2c92e6ea 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4f7cf7bc (name: getOffers) ->  
+OperationCallOperation: [] |- getOffers() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@166264c (name: add) ->  
+OperationCallOperation: [] |- add(offer) : null
+ ChainedCall: [] |- self.getOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+  OperationCallOperation: [] |- getOffers() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@64faefa4 (value: offer) ->  
+VarRef: [] |- offer : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@77485414 (name: tokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@77485414 (name: tokens)
+
+------------------------
+ale.xtext.ale.impl.NewSequenceImpl@237d4376 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- newSequence(Token) : 
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@7555b4dd (name: o) ->  
+ForLoop: [] |- for(Offer o in self.getOffers()) { token... : null
+ ChainedCall: [] |- self.getOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+  OperationCallOperation: [] |- getOffers() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@6983f593 ->  
+ChainedCall: [] |- self.getOffers() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+ OperationCallOperation: [] |- getOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@7de804d9 -> ale.xtext.ale.impl.ClassTypeTImpl@34f1817a 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@2543a4e5 (name: getOffers) ->  
+OperationCallOperation: [] |- getOffers() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@10d51e1d ->  
+ChainedCall: [] |- tokens.addAll(o.getOfferedTokens()) : null
+ VarRef: [] |- tokens : null
+ OperationCallOperation: [] |- addAll(o.getOfferedTokens()) : null
+  VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2d261e12 (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@157af3df (name: addAll) ->  
+OperationCallOperation: [] |- addAll(o.getOfferedTokens()) : null
+ VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@29eeed47 ->  
+ChainedCall: [] |- o.getOfferedTokens() : null
+ VarRef: [] |- o : null
+ OperationCallOperation: [] |- getOfferedTokens() : null
+  VarRef: [] |- o : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3425a0e6 (value: o) ->  
+VarRef: [] |- o : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@760359b6 (name: getOfferedTokens) ->  
+OperationCallOperation: [] |- getOfferedTokens() : null
+ VarRef: [] |- o : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7e1cecd8 ->  
+ChainedCall: [] |- self.getOffers().clear() : null
+ ChainedCall: [] |- self.getOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+  OperationCallOperation: [] |- getOffers() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+ OperationCallOperation: [] |- clear() : null
+  ChainedCall: [] |- self.getOffers() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+   OperationCallOperation: [] |- getOffers() : null
+    SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2046a289 ->  
+ChainedCall: [] |- self.getOffers() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+ OperationCallOperation: [] |- getOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@39fd14f7 -> ale.xtext.ale.impl.ClassTypeTImpl@264dacc7 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@555f2497 (name: getOffers) ->  
+OperationCallOperation: [] |- getOffers() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4c3c68c8 (name: clear) ->  
+OperationCallOperation: [] |- clear() : null
+ ChainedCall: [] |- self.getOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+  OperationCallOperation: [] |- getOffers() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@597bc92c ->  
+ReturnStatement: [] |- return tokens : null
+ VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@8702458 (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@51cb9e6 (name: o) ->  
+ForLoop: [] |- for(Offer o in self.getOffers()) { if($[... : null
+ ChainedCall: [] |- self.getOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+  OperationCallOperation: [] |- getOffers() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@ffaaa1 ->  
+ChainedCall: [] |- self.getOffers() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+ OperationCallOperation: [] |- getOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@34fa95e2 -> ale.xtext.ale.impl.ClassTypeTImpl@3133fe2b 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@5449d912 (name: getOffers) ->  
+OperationCallOperation: [] |- getOffers() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityEdge { de...
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@2f9af5d5 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if($[o].hasTokens()) { return true; } : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@4faf3041 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@4faf3041
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@55b4e1ef ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[o] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@68f81559 (value: o) ->  
+VarRef: [] |- o : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@10b471ce (name: hasTokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@10b471ce (name: hasTokens)
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@54665012 -> ale.xtext.ale.impl.BooleanTypeTImpl@a2deb51 
+ReturnStatement: [] |- return true : BooleanTypeT
+ BooleanLiteral: [] |- true : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@7c9cd51a (value: true) -> ale.xtext.ale.impl.BooleanTypeTImpl@32ef513f 
+BooleanLiteral: [] |- true : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@4f15f146 -> ale.xtext.ale.impl.BooleanTypeTImpl@798ff831 
+ReturnStatement: [] |- return false : BooleanTypeT
+ BooleanLiteral: [] |- false : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@12d28c6b (value: false) -> ale.xtext.ale.impl.BooleanTypeTImpl@57e3838d 
+BooleanLiteral: [] |- false : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@69408414 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@69408414
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@638d696d -> ale.xtext.ale.impl.ClassTypeTImpl@32719d43 
+SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@733fe306 (name: removeWithdrawnTokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@733fe306 (name: removeWithdrawnTokens)
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@5ea46398 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ReturnStatementImpl@5ea46398
+
+------------------------
+ale.xtext.ale.impl.CompareGOperationImpl@33a93c7c ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- self.getOfferedTokens().size() > 0 : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3b67ed65 ->  
+ChainedCall: [] |- self.getOfferedTokens().size() : null
+ ChainedCall: [] |- self.getOfferedTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+  OperationCallOperation: [] |- getOfferedTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+ OperationCallOperation: [] |- size() : null
+  ChainedCall: [] |- self.getOfferedTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+   OperationCallOperation: [] |- getOfferedTokens() : null
+    SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@37cc0edc ->  
+ChainedCall: [] |- self.getOfferedTokens() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+ OperationCallOperation: [] |- getOfferedTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@4a89131e -> ale.xtext.ale.impl.ClassTypeTImpl@7adf449b 
+SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@30399cef (name: getOfferedTokens) ->  
+OperationCallOperation: [] |- getOfferedTokens() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@34b15348 (name: size) ->  
+OperationCallOperation: [] |- size() : null
+ ChainedCall: [] |- self.getOfferedTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+  OperationCallOperation: [] |- getOfferedTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.IntLiteralImpl@635c11ec (value: 0) -> ale.xtext.ale.impl.IntTypeTImpl@7c177581 
+IntLiteral: [] |- 0 : IntTypeT
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@23f8e2ae (name: tokensToBeRemoved) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@23f8e2ae (name: tokensToBeRemoved)
+
+------------------------
+ale.xtext.ale.impl.NewSequenceImpl@4d56621d ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- newSequence(Token) : 
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@4bb7afc8 (name: token) ->  
+ForLoop: [] |- for(Token token in self.getOfferedTokens... : null
+ ChainedCall: [] |- self.getOfferedTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+  OperationCallOperation: [] |- getOfferedTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@19791776 ->  
+ChainedCall: [] |- self.getOfferedTokens() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+ OperationCallOperation: [] |- getOfferedTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@48d3339e -> ale.xtext.ale.impl.ClassTypeTImpl@37a37e65 
+SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3e6c1ca3 (name: getOfferedTokens) ->  
+OperationCallOperation: [] |- getOfferedTokens() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@6ef1256 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if($[token].isWithdrawn()) { tokensToBeR... : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@57719ed6 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@57719ed6
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@9a6099f ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[token] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3d85b2fe (value: token) ->  
+VarRef: [] |- token : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@43866aba (name: isWithdrawn) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@43866aba (name: isWithdrawn)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2109d357 ->  
+ChainedCall: [] |- tokensToBeRemoved.add(token) : null
+ VarRef: [] |- tokensToBeRemoved : null
+ OperationCallOperation: [] |- add(token) : null
+  VarRef: [] |- tokensToBeRemoved : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@310b97ca (value: tokensToBeRemoved) ->  
+VarRef: [] |- tokensToBeRemoved : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@41a8e8eb (name: add) ->  
+OperationCallOperation: [] |- add(token) : null
+ VarRef: [] |- tokensToBeRemoved : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@60195167 (value: token) ->  
+VarRef: [] |- token : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@d413f69 ->  
+ChainedCall: [] |- self.getOfferedTokens().removeAll(tokens... : null
+ ChainedCall: [] |- self.getOfferedTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+  OperationCallOperation: [] |- getOfferedTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+ OperationCallOperation: [] |- removeAll(tokensToBeRemoved) : null
+  ChainedCall: [] |- self.getOfferedTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+   OperationCallOperation: [] |- getOfferedTokens() : null
+    SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@b28619a ->  
+ChainedCall: [] |- self.getOfferedTokens() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+ OperationCallOperation: [] |- getOfferedTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@292a4058 -> ale.xtext.ale.impl.ClassTypeTImpl@9067657 
+SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@392ae73 (name: getOfferedTokens) ->  
+OperationCallOperation: [] |- getOfferedTokens() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@72c731f (name: removeAll) ->  
+OperationCallOperation: [] |- removeAll(tokensToBeRemoved) : null
+ ChainedCall: [] |- self.getOfferedTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+  OperationCallOperation: [] |- getOfferedTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Offer { def Boole...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@341357f1 (value: tokensToBeRemoved) ->  
+VarRef: [] |- tokensToBeRemoved : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2008cf78 ->  
+ChainedCall: [] |- self.setRunning(true) : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ OperationCallOperation: [] |- setRunning(true) : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@26dbb869 -> ale.xtext.ale.impl.ClassTypeTImpl@97d0070 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4563ba01 (name: setRunning) ->  
+OperationCallOperation: [] |- setRunning(true) : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@784b2e13 (value: true) -> ale.xtext.ale.impl.BooleanTypeTImpl@4e81c7a3 
+BooleanLiteral: [] |- true : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@16e6a2f1 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ReturnStatementImpl@16e6a2f1
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@53c7057f ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@53c7057f
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@1603fe32 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self] : 
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@4064bc38 -> ale.xtext.ale.impl.ClassTypeTImpl@627dc840 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@63367fef (name: getRunning) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@63367fef (name: getRunning)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@642a163c ->  
+ChainedCall: [] |- self.setRunning(false) : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ OperationCallOperation: [] |- setRunning(false) : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@3433c451 -> ale.xtext.ale.impl.ClassTypeTImpl@5873ae96 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3711d9e6 (name: setRunning) ->  
+OperationCallOperation: [] |- setRunning(false) : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@5558e9d6 (value: false) -> ale.xtext.ale.impl.BooleanTypeTImpl@39ec5b68 
+BooleanLiteral: [] |- false : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@96bec8b -> ale.xtext.ale.impl.BooleanTypeTImpl@79102f29 
+ReturnStatement: [] |- return self.isRunning() : BooleanTypeT
+ ChainedCall: [] |- self.isRunning() : BooleanTypeT
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+  OperationCallOperation: [] |- isRunning() : BooleanTypeT
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+   LiteralType: [] |= Boolean : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@6b99d368 -> ale.xtext.ale.impl.BooleanTypeTImpl@7523c783 
+ChainedCall: [] |- self.isRunning() : BooleanTypeT
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ OperationCallOperation: [] |- isRunning() : BooleanTypeT
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+  LiteralType: [] |= Boolean : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@94be086 -> ale.xtext.ale.impl.ClassTypeTImpl@30e1c0af 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@6f41752e (name: isRunning) -> ale.xtext.ale.impl.BooleanTypeTImpl@6b0deac0 
+OperationCallOperation: [] |- isRunning() : BooleanTypeT
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ LiteralType: [] |= Boolean : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@3722e5ee (name: edge) ->  
+ForLoop: [] |- for(ActivityEdge edge in self.getOutgoin... : null
+ ChainedCall: [] |- self.getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+  OperationCallOperation: [] |- getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@340ed99f ->  
+ChainedCall: [] |- self.getOutgoing() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ OperationCallOperation: [] |- getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@703dcc52 -> ale.xtext.ale.impl.ClassTypeTImpl@131cf9ef 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@50904a2e (name: getOutgoing) ->  
+OperationCallOperation: [] |- getOutgoing() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@63cfd2c3 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@63cfd2c3
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@7d8ecdb4 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[edge] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2f9d2911 (value: edge) ->  
+VarRef: [] |- edge : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7720cc33 (name: sendOffer) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@7720cc33 (name: sendOffer)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@618cc25b (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@4387dde6 (name: allTokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@4387dde6 (name: allTokens)
+
+------------------------
+ale.xtext.ale.impl.NewSequenceImpl@233757a1 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- newSequence(Token) : 
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@7904af68 (name: edge) ->  
+ForLoop: [] |- for(ActivityEdge edge in self.getIncomin... : null
+ ChainedCall: [] |- self.getIncoming() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+  OperationCallOperation: [] |- getIncoming() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@6ade7e3f ->  
+ChainedCall: [] |- self.getIncoming() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ OperationCallOperation: [] |- getIncoming() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@2202c11e -> ale.xtext.ale.impl.ClassTypeTImpl@78e82bd0 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7e2155d9 (name: getIncoming) ->  
+OperationCallOperation: [] |- getIncoming() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@79e97a62 (name: tokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@79e97a62 (name: tokens)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2793acb4 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@2793acb4
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@159be84e ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[edge] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@62c89043 (value: edge) ->  
+VarRef: [] |- edge : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@391339b1 (name: takeOfferedTokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@391339b1 (name: takeOfferedTokens)
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@3dfc42b (name: token) ->  
+ForLoop: [] |- for(Token token in tokens) { $[token].wi... : null
+ VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@6f204e64 (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@325d57dc ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@325d57dc
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@1f1084a4 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[token] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@722eba4c (value: token) ->  
+VarRef: [] |- token : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4c2aa2a5 (name: withdraw) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@4c2aa2a5 (name: withdraw)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1411ff4b ->  
+ChainedCall: [] |- allTokens.addAll(tokens) : null
+ VarRef: [] |- allTokens : null
+ OperationCallOperation: [] |- addAll(tokens) : null
+  VarRef: [] |- allTokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@fbf7cc9 (value: allTokens) ->  
+VarRef: [] |- allTokens : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@8445ba8 (name: addAll) ->  
+OperationCallOperation: [] |- addAll(tokens) : null
+ VarRef: [] |- allTokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@a92a14f (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@7e3fcde0 ->  
+ReturnStatement: [] |- return allTokens : null
+ VarRef: [] |- allTokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@548c5094 (value: allTokens) ->  
+VarRef: [] |- allTokens : null
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@5e0151ba (name: token) ->  
+ForLoop: [] |- for(Token token in tokens) { Token trans... : null
+ VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@1f707ac9 (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@6ea695cd (name: transferredToken) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@6ea695cd (name: transferredToken)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@57f41f5c ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@57f41f5c
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@19b9415c ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[token] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@436ba75b (value: token) ->  
+VarRef: [] |- token : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7c8c059a (name: transfer) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@7c8c059a (name: transfer)
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@5815e82b -> ale.xtext.ale.impl.ClassTypeTImpl@463278da 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@465acd0d ->  
+ChainedCall: [] |- self.getHeldTokens().add(transferredToke... : null
+ ChainedCall: [] |- self.getHeldTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+  OperationCallOperation: [] |- getHeldTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ OperationCallOperation: [] |- add(transferredToken) : null
+  ChainedCall: [] |- self.getHeldTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+   OperationCallOperation: [] |- getHeldTokens() : null
+    SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5ae6b089 ->  
+ChainedCall: [] |- self.getHeldTokens() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ OperationCallOperation: [] |- getHeldTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@7e6a28c6 -> ale.xtext.ale.impl.ClassTypeTImpl@42edc136 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@9c9d390 (name: getHeldTokens) ->  
+OperationCallOperation: [] |- getHeldTokens() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@196b4501 (name: add) ->  
+OperationCallOperation: [] |- add(transferredToken) : null
+ ChainedCall: [] |- self.getHeldTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+  OperationCallOperation: [] |- getHeldTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@59e5e64f (value: transferredToken) ->  
+VarRef: [] |- transferredToken : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@6b129792 (name: hasOffer) -> ale.xtext.ale.impl.BooleanTypeTImpl@364a8b05 
+VarDeclaration: [] |- Boolean hasOffer = true : BooleanTypeT
+ BooleanLiteral: [] |- true : BooleanTypeT
+ LiteralType: [] |= Boolean : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@283df2bc (value: true) -> ale.xtext.ale.impl.BooleanTypeTImpl@fc580b7 
+BooleanLiteral: [] |- true : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@2be2ce3b (name: edge) ->  
+ForLoop: [] |- for(ActivityEdge edge in self.getIncomin... : null
+ ChainedCall: [] |- self.getIncoming() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+  OperationCallOperation: [] |- getIncoming() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5473bb6c ->  
+ChainedCall: [] |- self.getIncoming() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ OperationCallOperation: [] |- getIncoming() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@139c1b4c -> ale.xtext.ale.impl.ClassTypeTImpl@5ae4cd3d 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@2e328c12 (name: getIncoming) ->  
+OperationCallOperation: [] |- getIncoming() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@2839a178 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(not $[edge].hasOffer()) { hasOffer = ... : 
+
+------------------------
+ale.xtext.ale.impl.NotInfixOperationImpl@5b0c8948 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.NotInfixOperationImpl@5b0c8948
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@6164dc27 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@6164dc27
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@46ec0191 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[edge] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@23bb4a55 (value: edge) ->  
+VarRef: [] |- edge : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@1c42d1a3 (name: hasOffer) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@1c42d1a3 (name: hasOffer)
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@7d46c190 (name: hasOffer) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- hasOffer = false : 
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@4d6c58f (value: false) -> ale.xtext.ale.impl.BooleanTypeTImpl@76ac5326 
+BooleanLiteral: [] |- false : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@e13c37f ->  
+ReturnStatement: [] |- return hasOffer : null
+ VarRef: [] |- hasOffer : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5052aea6 (value: hasOffer) ->  
+VarRef: [] |- hasOffer : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7a4f93fc ->  
+ChainedCall: [] |- self.getHeldTokens().remove(token) : null
+ ChainedCall: [] |- self.getHeldTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+  OperationCallOperation: [] |- getHeldTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ OperationCallOperation: [] |- remove(token) : null
+  ChainedCall: [] |- self.getHeldTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+   OperationCallOperation: [] |- getHeldTokens() : null
+    SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@cfb0d53 ->  
+ChainedCall: [] |- self.getHeldTokens() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+ OperationCallOperation: [] |- getHeldTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@2b35a843 -> ale.xtext.ale.impl.ClassTypeTImpl@145cfc55 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@5cb9e54c (name: getHeldTokens) ->  
+OperationCallOperation: [] |- getHeldTokens() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@5aef4d54 (name: remove) ->  
+OperationCallOperation: [] |- remove(token) : null
+ ChainedCall: [] |- self.getHeldTokens() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+  OperationCallOperation: [] |- getHeldTokens() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ActivityNode { de...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@8db94e9 (value: token) ->  
+VarRef: [] |- token : null
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@4395bcfc ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(not self.isWithdrawn()) { $[self.getH... : 
+
+------------------------
+ale.xtext.ale.impl.NotInfixOperationImpl@4d32304f -> ale.xtext.ale.impl.BooleanTypeTImpl@373f0651 
+NotInfixOperationRule: [] |- not self.isWithdrawn() : BooleanTypeT
+ ChainedCall: [] |- self.isWithdrawn() : BooleanTypeT
+  SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+  OperationCallOperation: [] |- isWithdrawn() : BooleanTypeT
+   SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+   LiteralType: [] |= Boolean : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7a751741 -> ale.xtext.ale.impl.BooleanTypeTImpl@4bceb8ae 
+ChainedCall: [] |- self.isWithdrawn() : BooleanTypeT
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+ OperationCallOperation: [] |- isWithdrawn() : BooleanTypeT
+  SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+  LiteralType: [] |= Boolean : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@1fe4014c -> ale.xtext.ale.impl.ClassTypeTImpl@5f6ff792 
+SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@71f82c10 (name: isWithdrawn) -> ale.xtext.ale.impl.BooleanTypeTImpl@2c22167e 
+OperationCallOperation: [] |- isWithdrawn() : BooleanTypeT
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+ LiteralType: [] |= Boolean : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7f090fd4 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@7f090fd4
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@40d89f18 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self.getHolder()] : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@70f0b3bf ->  
+ChainedCall: [] |- self.getHolder() : null
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+ OperationCallOperation: [] |- getHolder() : null
+  SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@7bbee213 -> ale.xtext.ale.impl.ClassTypeTImpl@63608025 
+SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4c7e251f (name: getHolder) ->  
+OperationCallOperation: [] |- getHolder() : null
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@485a53d7 (name: removeToken) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@485a53d7 (name: removeToken)
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@3160bff9 -> ale.xtext.ale.impl.ClassTypeTImpl@5dd55f2f 
+SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@c8b2217 ->  
+ChainedCall: [] |- self.setHolder(null) : null
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+ OperationCallOperation: [] |- setHolder(null) : null
+  SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@16d50cba -> ale.xtext.ale.impl.ClassTypeTImpl@7d26e060 
+SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@38580174 (name: setHolder) ->  
+OperationCallOperation: [] |- setHolder(null) : null
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@59bdfef2 -> ale.xtext.ale.impl.NullTypeTImpl@410b985c 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@3af323f9 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ReturnStatementImpl@3af323f9
+
+------------------------
+ale.xtext.ale.impl.EqualityOperationImpl@41f6cb95 (op: ==) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.EqualityOperationImpl@41f6cb95 (op: ==)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1d8e80dc ->  
+ChainedCall: [] |- self.getHolder() : null
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+ OperationCallOperation: [] |- getHolder() : null
+  SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@69428d3f -> ale.xtext.ale.impl.ClassTypeTImpl@268d49f0 
+SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4a0d9705 (name: getHolder) ->  
+OperationCallOperation: [] |- getHolder() : null
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@3d5057b2 -> ale.xtext.ale.impl.NullTypeTImpl@51564629 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@7f9987b8 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(self.getHolder() != null) { self.with... : 
+
+------------------------
+ale.xtext.ale.impl.CompareNEOperationImpl@57da6036 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- self.getHolder() != null : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@51396fc8 ->  
+ChainedCall: [] |- self.getHolder() : null
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+ OperationCallOperation: [] |- getHolder() : null
+  SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@6190a6f8 -> ale.xtext.ale.impl.ClassTypeTImpl@1b399983 
+SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@52074935 (name: getHolder) ->  
+OperationCallOperation: [] |- getHolder() : null
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@56d84893 -> ale.xtext.ale.impl.NullTypeTImpl@66d3bc0 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2846f2b1 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@2846f2b1
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@4060586d -> ale.xtext.ale.impl.ClassTypeTImpl@4ae33034 
+SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@54681c22 (name: withdraw) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@54681c22 (name: withdraw)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@31dd0452 ->  
+ChainedCall: [] |- self.setHolder(holder) : null
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+ OperationCallOperation: [] |- setHolder(holder) : null
+  SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@2e11aba2 -> ale.xtext.ale.impl.ClassTypeTImpl@29e7504f 
+SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@6cf03d3d (name: setHolder) ->  
+OperationCallOperation: [] |- setHolder(holder) : null
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@21cbc156 (value: holder) ->  
+VarRef: [] |- holder : null
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@2243276 -> ale.xtext.ale.impl.ClassTypeTImpl@7e452171 
+ReturnStatement: [] |- return self : ClassTypeT 'class Token { def void withd...
+ SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@6fd0eeda -> ale.xtext.ale.impl.ClassTypeTImpl@1199a642 
+SelfRef: [] |- self : ClassTypeT 'class Token { def void withd...
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@17c67036 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(not $[self.getBaseToken()].isWithdraw... : 
+
+------------------------
+ale.xtext.ale.impl.NotInfixOperationImpl@44af20b1 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.NotInfixOperationImpl@44af20b1
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@15fa7925 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@15fa7925
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@589c91be ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self.getBaseToken()] : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7cff0d5b ->  
+ChainedCall: [] |- self.getBaseToken() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+ OperationCallOperation: [] |- getBaseToken() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@416810dd -> ale.xtext.ale.impl.ClassTypeTImpl@42a856d5 
+SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@79d6a84 (name: getBaseToken) ->  
+OperationCallOperation: [] |- getBaseToken() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3bb01aa8 (name: isWithdrawn) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@3bb01aa8 (name: isWithdrawn)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3e4e4c91 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@3e4e4c91
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@526bd896 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self.getBaseToken()] : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@69b5ed29 ->  
+ChainedCall: [] |- self.getBaseToken() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+ OperationCallOperation: [] |- getBaseToken() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@5c4be692 -> ale.xtext.ale.impl.ClassTypeTImpl@51de13e7 
+SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@10ad134e (name: getBaseToken) ->  
+OperationCallOperation: [] |- getBaseToken() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@1c0ed6a5 (name: withdraw) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@1c0ed6a5 (name: withdraw)
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@5a94aca8 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(self.getRemainingOffersCount() > 0) {... : 
+
+------------------------
+ale.xtext.ale.impl.CompareGOperationImpl@5968ae1e ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- self.getRemainingOffersCount() > 0 : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2127e11e ->  
+ChainedCall: [] |- self.getRemainingOffersCount() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+ OperationCallOperation: [] |- getRemainingOffersCount() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@4bf6b061 -> ale.xtext.ale.impl.ClassTypeTImpl@6c7fe04 
+SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@34f8b45b (name: getRemainingOffersCount) ->  
+OperationCallOperation: [] |- getRemainingOffersCount() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.IntLiteralImpl@287cf484 (value: 0) -> ale.xtext.ale.impl.IntTypeTImpl@5ab0e328 
+IntLiteral: [] |- 0 : IntTypeT
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@48c61484 ->  
+ChainedCall: [] |- self.setRemainingOffersCount(self.getRem... : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+ OperationCallOperation: [] |- setRemainingOffersCount(self.getRemainin... : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@396d2bab -> ale.xtext.ale.impl.ClassTypeTImpl@5aae1855 
+SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@76fa30d6 (name: setRemainingOffersCount) ->  
+OperationCallOperation: [] |- setRemainingOffersCount(self.getRemainin... : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.SubOperationImpl@5689a310 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- self.getRemainingOffersCount() - 1 : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@669fa19 ->  
+ChainedCall: [] |- self.getRemainingOffersCount() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+ OperationCallOperation: [] |- getRemainingOffersCount() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@21320682 -> ale.xtext.ale.impl.ClassTypeTImpl@7b4e69cc 
+SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@1093e2a6 (name: getRemainingOffersCount) ->  
+OperationCallOperation: [] |- getRemainingOffersCount() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.IntLiteralImpl@b995287 (value: 1) -> ale.xtext.ale.impl.IntTypeTImpl@42408f7f 
+IntLiteral: [] |- 1 : IntTypeT
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@4269c8df ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(self.getRemainingOffersCount() == 0) ... : 
+
+------------------------
+ale.xtext.ale.impl.EqualityOperationImpl@73dec006 (op: ==) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.EqualityOperationImpl@73dec006 (op: ==)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7cd79a09 ->  
+ChainedCall: [] |- self.getRemainingOffersCount() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+ OperationCallOperation: [] |- getRemainingOffersCount() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@3d9be27e -> ale.xtext.ale.impl.ClassTypeTImpl@1fb48dbc 
+SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3138ea22 (name: getRemainingOffersCount) ->  
+OperationCallOperation: [] |- getRemainingOffersCount() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkedToken exten...
+
+------------------------
+ale.xtext.ale.impl.IntLiteralImpl@3463c2f3 (value: 0) -> ale.xtext.ale.impl.IntTypeTImpl@357252af 
+IntLiteral: [] |- 0 : IntTypeT
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@16ce854c ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@16ce854c
+
+------------------------
+ale.xtext.ale.impl.SuperRefImpl@6051044d ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- super : 
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4a8f26ee (name: withdraw) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@4a8f26ee (name: withdraw)
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@180e0c91 (name: v) ->  
+ForLoop: [] |- for(Variable v in self.getLocals()) { $[... : null
+ ChainedCall: [] |- self.getLocals() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+  OperationCallOperation: [] |- getLocals() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3625a9b5 ->  
+ChainedCall: [] |- self.getLocals() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+ OperationCallOperation: [] |- getLocals() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@5c5750e4 -> ale.xtext.ale.impl.ClassTypeTImpl@3d7a4dc4 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3455a57b (name: getLocals) ->  
+OperationCallOperation: [] |- getLocals() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1c912afb ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@1c912afb
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@7a2799fd ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[v] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@634085bf (value: v) ->  
+VarRef: [] |- v : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@762abd2f (name: setCurrentValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@762abd2f (name: setCurrentValue)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@25d71210 ->  
+ChainedCall: [] |- v.getInitialValue() : null
+ VarRef: [] |- v : null
+ OperationCallOperation: [] |- getInitialValue() : null
+  VarRef: [] |- v : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@425d0668 (value: v) ->  
+VarRef: [] |- v : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@613d18c9 (name: getInitialValue) ->  
+OperationCallOperation: [] |- getInitialValue() : null
+ VarRef: [] |- v : null
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@4e54dd82 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(inputValues != null) { for(InputValue... : 
+
+------------------------
+ale.xtext.ale.impl.CompareNEOperationImpl@538e01ca ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- inputValues != null : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@79ca3395 (value: inputValues) ->  
+VarRef: [] |- inputValues : null
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@70b88735 -> ale.xtext.ale.impl.NullTypeTImpl@7b071663 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@3bcb3eeb (name: v) ->  
+ForLoop: [] |- for(InputValue v in inputValues) { $[v.g... : null
+ VarRef: [] |- inputValues : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@270048e0 (value: inputValues) ->  
+VarRef: [] |- inputValues : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1a8a966e ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@1a8a966e
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@262700b7 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[v.getVariable()] : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3451bdb ->  
+ChainedCall: [] |- v.getVariable() : null
+ VarRef: [] |- v : null
+ OperationCallOperation: [] |- getVariable() : null
+  VarRef: [] |- v : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5d505b51 (value: v) ->  
+VarRef: [] |- v : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@13a79f73 (name: getVariable) ->  
+OperationCallOperation: [] |- getVariable() : null
+ VarRef: [] |- v : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@d1b0708 (name: setCurrentValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@d1b0708 (name: setCurrentValue)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@79fe13f4 ->  
+ChainedCall: [] |- v.getValue() : null
+ VarRef: [] |- v : null
+ OperationCallOperation: [] |- getValue() : null
+  VarRef: [] |- v : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@568d47bf (value: v) ->  
+VarRef: [] |- v : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3fb2921 (name: getValue) ->  
+OperationCallOperation: [] |- getValue() : null
+ VarRef: [] |- v : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5f1fc9db ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@5f1fc9db
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@7ee9601c -> ale.xtext.ale.impl.ClassTypeTImpl@4065bdd2 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@41bbc580 (name: initialize) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@41bbc580 (name: initialize)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@78066f21 (value: inputValues) ->  
+VarRef: [] |- inputValues : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@4d5a09bd ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@4d5a09bd
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@52524253 -> ale.xtext.ale.impl.ClassTypeTImpl@67a5785b 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3aea14d0 (name: initializeTrace) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@3aea14d0 (name: initializeTrace)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@71de1bcb ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@71de1bcb
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@6cd4f3ac -> ale.xtext.ale.impl.ClassTypeTImpl@8de0d06 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@2c5474bf (name: run) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@2c5474bf (name: run)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@cf130e6 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@cf130e6
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@38f5c4b -> ale.xtext.ale.impl.ClassTypeTImpl@4ba9b670 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@5065c46a (name: runNodes) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@5065c46a (name: runNodes)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@85f668b ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@85f668b
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@d2c1166 -> ale.xtext.ale.impl.ClassTypeTImpl@264f09fa 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7438798c (name: fireInitialNode) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@7438798c (name: fireInitialNode)
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@a00a5f5 (name: enabledNodes) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@a00a5f5 (name: enabledNodes)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2311976b ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@2311976b
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@2c31b1f1 -> ale.xtext.ale.impl.ClassTypeTImpl@6a64dac8 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@121f5586 (name: getEnabledNodes) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@121f5586 (name: getEnabledNodes)
+
+------------------------
+ale.xtext.ale.impl.WhileStatementImpl@15098e79 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- while(enabledNodes.size() > 0) { Activit... : 
+
+------------------------
+ale.xtext.ale.impl.CompareGOperationImpl@3a0ce97c ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- enabledNodes.size() > 0 : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1b1379f5 ->  
+ChainedCall: [] |- enabledNodes.size() : null
+ VarRef: [] |- enabledNodes : null
+ OperationCallOperation: [] |- size() : null
+  VarRef: [] |- enabledNodes : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@7348ac74 (value: enabledNodes) ->  
+VarRef: [] |- enabledNodes : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@2a6b8e22 (name: size) ->  
+OperationCallOperation: [] |- size() : null
+ VarRef: [] |- enabledNodes : null
+
+------------------------
+ale.xtext.ale.impl.IntLiteralImpl@77f1d51a (value: 0) -> ale.xtext.ale.impl.IntTypeTImpl@122a4cbf 
+IntLiteral: [] |- 0 : IntTypeT
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@4130ef4d (name: nextNode) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@4130ef4d (name: nextNode)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@4e7c2933 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@4e7c2933
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@57feedea -> ale.xtext.ale.impl.ClassTypeTImpl@14b662bc 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@11723adf (name: selectNextNode) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@11723adf (name: selectNextNode)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@6a7eadc3 (value: enabledNodes) ->  
+VarRef: [] |- enabledNodes : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@4acf9cdb ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@4acf9cdb
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@4aebe39f -> ale.xtext.ale.impl.ClassTypeTImpl@4a68a909 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@2e64c8f6 (name: fireNode) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@2e64c8f6 (name: fireNode)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@7f403fe (value: nextNode) ->  
+VarRef: [] |- nextNode : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@1216ff84 (name: enabledNodes) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- enabledNodes = self.getEnabledNodes() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1a3db648 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@1a3db648
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@707e844b -> ale.xtext.ale.impl.ClassTypeTImpl@6168816 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@57b28249 (name: getEnabledNodes) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@57b28249 (name: getEnabledNodes)
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@1d2ac344 ->  
+ReturnStatement: [] |- return activityNodes.get(0) : null
+ ChainedCall: [] |- activityNodes.get(0) : null
+  VarRef: [] |- activityNodes : null
+  OperationCallOperation: [] |- get(0) : null
+   VarRef: [] |- activityNodes : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2e238a1b ->  
+ChainedCall: [] |- activityNodes.get(0) : null
+ VarRef: [] |- activityNodes : null
+ OperationCallOperation: [] |- get(0) : null
+  VarRef: [] |- activityNodes : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@6e6d06fc (value: activityNodes) ->  
+VarRef: [] |- activityNodes : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7065bee7 (name: get) ->  
+OperationCallOperation: [] |- get(0) : null
+ VarRef: [] |- activityNodes : null
+
+------------------------
+ale.xtext.ale.impl.IntLiteralImpl@95f4566 (value: 0) -> ale.xtext.ale.impl.IntTypeTImpl@461963df 
+IntLiteral: [] |- 0 : IntTypeT
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@79567eb4 (name: enabledNodes) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@79567eb4 (name: enabledNodes)
+
+------------------------
+ale.xtext.ale.impl.NewSequenceImpl@71f027f ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- newSequence(ActivityNode) : 
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@d87f16b (name: node) ->  
+ForLoop: [] |- for(ActivityNode node in self.getNodes()... : null
+ ChainedCall: [] |- self.getNodes() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+  OperationCallOperation: [] |- getNodes() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@70a15900 ->  
+ChainedCall: [] |- self.getNodes() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+ OperationCallOperation: [] |- getNodes() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@e56813d -> ale.xtext.ale.impl.ClassTypeTImpl@619d5a22 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3c683535 (name: getNodes) ->  
+OperationCallOperation: [] |- getNodes() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@5c40e102 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if($[node].isReady()) { enabledNodes.add... : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@6625dcde ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@6625dcde
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@1b198cb2 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[node] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@235e3d1d (value: node) ->  
+VarRef: [] |- node : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@784d8085 (name: isReady) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@784d8085 (name: isReady)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@67ed06c8 ->  
+ChainedCall: [] |- enabledNodes.add(node) : null
+ VarRef: [] |- enabledNodes : null
+ OperationCallOperation: [] |- add(node) : null
+  VarRef: [] |- enabledNodes : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@358969fd (value: enabledNodes) ->  
+VarRef: [] |- enabledNodes : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@21d49e61 (name: add) ->  
+OperationCallOperation: [] |- add(node) : null
+ VarRef: [] |- enabledNodes : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2dc65679 (value: node) ->  
+VarRef: [] |- node : null
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@53fe04bd ->  
+ReturnStatement: [] |- return enabledNodes : null
+ VarRef: [] |- enabledNodes : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@56dcbf35 (value: enabledNodes) ->  
+VarRef: [] |- enabledNodes : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@5e95e267 (name: initialNode) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@5e95e267 (name: initialNode)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3636e556 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@3636e556
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@251cd889 -> ale.xtext.ale.impl.ClassTypeTImpl@6eb287f9 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@546b8097 (name: getInitialNode) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@546b8097 (name: getInitialNode)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@274726ee ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@274726ee
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@265a6b05 -> ale.xtext.ale.impl.ClassTypeTImpl@5cd6f401 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@654127d7 (name: fireNode) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@654127d7 (name: fireNode)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@73c847dc (value: initialNode) ->  
+VarRef: [] |- initialNode : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@7bf3e6b5 (name: tokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@7bf3e6b5 (name: tokens)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7de2cd36 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@7de2cd36
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@19c04a71 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[node] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@675edf90 (value: node) ->  
+VarRef: [] |- node : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7bd311b1 (name: takeOfferedTokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@7bd311b1 (name: takeOfferedTokens)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1033f880 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@1033f880
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@b3bbb35 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[node] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@1a08479d (value: node) ->  
+VarRef: [] |- node : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@793593f4 (name: fire) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@793593f4 (name: fire)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@20f96c55 (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7815f378 ->  
+ChainedCall: [] |- self.getTrace().getExecutedNodes().add(n... : null
+ ChainedCall: [] |- self.getTrace().getExecutedNodes() : null
+  ChainedCall: [] |- self.getTrace() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+   OperationCallOperation: [] |- getTrace() : null
+    SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+  OperationCallOperation: [] |- getExecutedNodes() : null
+   ChainedCall: [] |- self.getTrace() : null
+    SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+    OperationCallOperation: [] |- getTrace() : null
+     SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+ OperationCallOperation: [] |- add(node) : null
+  ChainedCall: [] |- self.getTrace().getExecutedNodes() : null
+   ChainedCall: [] |- self.getTrace() : null
+    SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+    OperationCallOperation: [] |- getTrace() : null
+     SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+   OperationCallOperation: [] |- getExecutedNodes() : null
+    ChainedCall: [] |- self.getTrace() : null
+     SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+     OperationCallOperation: [] |- getTrace() : null
+      SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2dea75bd ->  
+ChainedCall: [] |- self.getTrace().getExecutedNodes() : null
+ ChainedCall: [] |- self.getTrace() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+  OperationCallOperation: [] |- getTrace() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+ OperationCallOperation: [] |- getExecutedNodes() : null
+  ChainedCall: [] |- self.getTrace() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+   OperationCallOperation: [] |- getTrace() : null
+    SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@37a06379 ->  
+ChainedCall: [] |- self.getTrace() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+ OperationCallOperation: [] |- getTrace() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@5cd03a1c -> ale.xtext.ale.impl.ClassTypeTImpl@51dc73df 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@b099ccd (name: getTrace) ->  
+OperationCallOperation: [] |- getTrace() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@75b0578c (name: getExecutedNodes) ->  
+OperationCallOperation: [] |- getExecutedNodes() : null
+ ChainedCall: [] |- self.getTrace() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+  OperationCallOperation: [] |- getTrace() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@413f49e8 (name: add) ->  
+OperationCallOperation: [] |- add(node) : null
+ ChainedCall: [] |- self.getTrace().getExecutedNodes() : null
+  ChainedCall: [] |- self.getTrace() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+   OperationCallOperation: [] |- getTrace() : null
+    SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+  OperationCallOperation: [] |- getExecutedNodes() : null
+   ChainedCall: [] |- self.getTrace() : null
+    SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+    OperationCallOperation: [] |- getTrace() : null
+     SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5b4a83bc (value: node) ->  
+VarRef: [] |- node : null
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@1010830a (name: node) ->  
+ForLoop: [] |- for(ActivityNode node in self.getNodes()... : null
+ ChainedCall: [] |- self.getNodes() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+  OperationCallOperation: [] |- getNodes() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@70d87b98 ->  
+ChainedCall: [] |- self.getNodes() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+ OperationCallOperation: [] |- getNodes() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@2aeb486b -> ale.xtext.ale.impl.ClassTypeTImpl@5a9b6f8c 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3e7796ef (name: getNodes) ->  
+OperationCallOperation: [] |- getNodes() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@63f0aaff ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(node instanceof activitydiagramoa.Ini... : 
+
+------------------------
+ale.xtext.ale.impl.InstanceofOperationImpl@13280efa ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- node instanceof activitydiagramoa.Initia... : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@11ea329e (value: node) ->  
+VarRef: [] |- node : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@79bbb648 ->  
+ChainedCall: [] |- activitydiagramoa.InitialNode : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- InitialNode : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@1f7a4cd2 (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@4cf6ce19 (value: InitialNode) ->  
+VarRef: [] |- InitialNode : null
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@28e595ec ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ReturnStatementImpl@28e595ec
+
+------------------------
+ale.xtext.ale.impl.CasttoOperationImpl@653440fe ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- node castto activitydiagramoa.InitialNod... : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@1fc8cc47 (value: node) ->  
+VarRef: [] |- node : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@50916ad6 ->  
+ChainedCall: [] |- activitydiagramoa.InitialNode : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- InitialNode : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@545fdfdd (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@13ab4618 (value: InitialNode) ->  
+VarRef: [] |- InitialNode : null
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@4a581ade -> ale.xtext.ale.impl.NullTypeTImpl@206cb669 
+ReturnStatement: [] |- return null : NullTypeT
+ NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@11440e99 -> ale.xtext.ale.impl.NullTypeTImpl@4b712899 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@7819facb (name: node) ->  
+ForLoop: [] |- for(ActivityNode node in self.getNodes()... : null
+ ChainedCall: [] |- self.getNodes() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+  OperationCallOperation: [] |- getNodes() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@ec2d5ad ->  
+ChainedCall: [] |- self.getNodes() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+ OperationCallOperation: [] |- getNodes() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@10c4aca9 -> ale.xtext.ale.impl.ClassTypeTImpl@7901f8a3 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@27bcc3d8 (name: getNodes) ->  
+OperationCallOperation: [] |- getNodes() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@36462fd5 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@36462fd5
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@3d27c50 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[node] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@4231cdf1 (value: node) ->  
+VarRef: [] |- node : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@63615444 (name: run) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@63615444 (name: run)
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@38ec2266 (name: trace) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@38ec2266 (name: trace)
+
+------------------------
+ale.xtext.ale.impl.ConstructorOperationImpl@4230ca2e (name: Trace) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- new Trace() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@47f1d97a ->  
+ChainedCall: [] |- self.setTrace(trace) : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+ OperationCallOperation: [] |- setTrace(trace) : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@1e572cf0 -> ale.xtext.ale.impl.ClassTypeTImpl@78e70f00 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7be6a1bb (name: setTrace) ->  
+OperationCallOperation: [] |- setTrace(trace) : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@763051c8 (value: trace) ->  
+VarRef: [] |- trace : null
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@3bcf4cfa (name: node) ->  
+ForLoop: [] |- for(ActivityNode node in self.getNodes()... : null
+ ChainedCall: [] |- self.getNodes() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+  OperationCallOperation: [] |- getNodes() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@205713ab ->  
+ChainedCall: [] |- self.getNodes() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+ OperationCallOperation: [] |- getNodes() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@2d85a3ee -> ale.xtext.ale.impl.ClassTypeTImpl@3dfd318b 
+SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@6c6c9238 (name: getNodes) ->  
+OperationCallOperation: [] |- getNodes() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Activity { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@14f90cbe ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@14f90cbe
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@1463471c ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[node] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@1c96eafa (value: node) ->  
+VarRef: [] |- node : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4c8bf0e7 (name: terminate) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@4c8bf0e7 (name: terminate)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@6a8cc939 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@6a8cc939
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@2b7eb5ee ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self] : 
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@78110e42 -> ale.xtext.ale.impl.ClassTypeTImpl@7f8ae34d 
+SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@77c51f0b (name: doAction) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@77c51f0b (name: doAction)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7b0cc5cb ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@7b0cc5cb
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@2583ce81 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self] : 
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@5510a76d -> ale.xtext.ale.impl.ClassTypeTImpl@9b8c8ff 
+SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@af2d783 (name: sendOffers) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@af2d783 (name: sendOffers)
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@1c55996b ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(self.getOutgoing().size() > 0) { Sequ... : 
+
+------------------------
+ale.xtext.ale.impl.CompareGOperationImpl@3aa3a8a6 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- self.getOutgoing().size() > 0 : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@13281e76 ->  
+ChainedCall: [] |- self.getOutgoing().size() : null
+ ChainedCall: [] |- self.getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+  OperationCallOperation: [] |- getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+ OperationCallOperation: [] |- size() : null
+  ChainedCall: [] |- self.getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+   OperationCallOperation: [] |- getOutgoing() : null
+    SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@320f8f52 ->  
+ChainedCall: [] |- self.getOutgoing() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+ OperationCallOperation: [] |- getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@221d6b9 -> ale.xtext.ale.impl.ClassTypeTImpl@49e749c7 
+SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@2560b8c3 (name: getOutgoing) ->  
+OperationCallOperation: [] |- getOutgoing() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@76e8c9b7 (name: size) ->  
+OperationCallOperation: [] |- size() : null
+ ChainedCall: [] |- self.getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+  OperationCallOperation: [] |- getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.IntLiteralImpl@38d3ad27 (value: 0) -> ale.xtext.ale.impl.IntTypeTImpl@1d425819 
+IntLiteral: [] |- 0 : IntTypeT
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@144d3060 (name: tokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@144d3060 (name: tokens)
+
+------------------------
+ale.xtext.ale.impl.NewSequenceImpl@6ce5f254 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- newSequence(Token) : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@72dcf403 ->  
+ChainedCall: [] |- tokens.add(new Token()) : null
+ VarRef: [] |- tokens : null
+ OperationCallOperation: [] |- add(new Token()) : null
+  VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@4d4ca8a3 (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@ef8840c (name: add) ->  
+OperationCallOperation: [] |- add(new Token()) : null
+ VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ConstructorOperationImpl@3aea8b95 (name: Token) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- new Token() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@12cb25db ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@12cb25db
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@58590b6a ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self] : 
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@6f992935 -> ale.xtext.ale.impl.ClassTypeTImpl@35fa5077 
+SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@1c1a170 (name: addTokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@1c1a170 (name: addTokens)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5afdf902 (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7c0bb3e9 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@7c0bb3e9
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@70cd4739 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self.getOutgoing().get(0)] : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@475eb487 ->  
+ChainedCall: [] |- self.getOutgoing().get(0) : null
+ ChainedCall: [] |- self.getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+  OperationCallOperation: [] |- getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+ OperationCallOperation: [] |- get(0) : null
+  ChainedCall: [] |- self.getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+   OperationCallOperation: [] |- getOutgoing() : null
+    SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@725e6087 ->  
+ChainedCall: [] |- self.getOutgoing() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+ OperationCallOperation: [] |- getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@536b01de -> ale.xtext.ale.impl.ClassTypeTImpl@7a4a8907 
+SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@49056005 (name: getOutgoing) ->  
+OperationCallOperation: [] |- getOutgoing() : null
+ SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7b4d1f2e (name: get) ->  
+OperationCallOperation: [] |- get(0) : null
+ ChainedCall: [] |- self.getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+  OperationCallOperation: [] |- getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.IntLiteralImpl@717899e5 (value: 0) -> ale.xtext.ale.impl.IntTypeTImpl@9904ef8 
+IntLiteral: [] |- 0 : IntTypeT
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@131fca87 (name: sendOffer) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@131fca87 (name: sendOffer)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@4a7043f8 (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@1a160080 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ReturnStatementImpl@1a160080
+
+------------------------
+ale.xtext.ale.impl.BooleanAndOperationImpl@776e5a6c ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- super.isReady() and $[self].hasOffers() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@425ce15a ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@425ce15a
+
+------------------------
+ale.xtext.ale.impl.SuperRefImpl@1f85e3a2 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- super : 
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@353de2d2 (name: isReady) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@353de2d2 (name: isReady)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@30856323 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@30856323
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@15760258 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self] : 
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@255e7ba7 -> ale.xtext.ale.impl.ClassTypeTImpl@69d4d43 
+SelfRef: [] |- self : ClassTypeT 'open class Action { def void...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7faf26ac (name: hasOffers) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@7faf26ac (name: hasOffers)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5915e136 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@5915e136
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@395e670b ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self.getActivity()] : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@4d9d320d ->  
+ChainedCall: [] |- self.getActivity() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityFinalNode...
+ OperationCallOperation: [] |- getActivity() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ActivityFinalNode...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@d8dc7ba -> ale.xtext.ale.impl.ClassTypeTImpl@6183dc0f 
+SelfRef: [] |- self : ClassTypeT 'open class ActivityFinalNode...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7be79b6c (name: getActivity) ->  
+OperationCallOperation: [] |- getActivity() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ActivityFinalNode...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@314bdd24 (name: terminate) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@314bdd24 (name: terminate)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@462e115c ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@462e115c
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@2585380a ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self] : 
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@499e4588 -> ale.xtext.ale.impl.ClassTypeTImpl@4f2f6389 
+SelfRef: [] |- self : ClassTypeT 'open class ControlNode { def...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7a50fe92 (name: addTokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@7a50fe92 (name: addTokens)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@400b808f (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7b822f03 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@7b822f03
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@6dbfa8f ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self] : 
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@5f63172d -> ale.xtext.ale.impl.ClassTypeTImpl@44c3131a 
+SelfRef: [] |- self : ClassTypeT 'open class ControlNode { def...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@43f0ebb6 (name: sendOffers) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@43f0ebb6 (name: sendOffers)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@7036b6cd (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@1eb87fb7 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ReturnStatementImpl@1eb87fb7
+
+------------------------
+ale.xtext.ale.impl.BooleanAndOperationImpl@71906e3c ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- super.isReady() and self.hasOffers() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@155aab6a ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@155aab6a
+
+------------------------
+ale.xtext.ale.impl.SuperRefImpl@27c37068 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- super : 
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7adbe6e0 (name: isReady) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@7adbe6e0 (name: isReady)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@8c89609 ->  
+ChainedCall: [] |- self.hasOffers() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ControlNode { def...
+ OperationCallOperation: [] |- hasOffers() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ControlNode { def...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@48896d81 -> ale.xtext.ale.impl.ClassTypeTImpl@28d8a994 
+SelfRef: [] |- self : ClassTypeT 'open class ControlNode { def...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@747514c8 (name: hasOffers) ->  
+OperationCallOperation: [] |- hasOffers() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ControlNode { def...
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@442541c0 (name: selectedEdge) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@442541c0 (name: selectedEdge)
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@8d6a164 -> ale.xtext.ale.impl.NullTypeTImpl@57c46b24 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@7d6e672d (name: edge) ->  
+ForLoop: [] |- for(ActivityEdge edge in self.getOutgoin... : null
+ ChainedCall: [] |- self.getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+  OperationCallOperation: [] |- getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2f321329 ->  
+ChainedCall: [] |- self.getOutgoing() : null
+ SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+ OperationCallOperation: [] |- getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@12d24a2a -> ale.xtext.ale.impl.ClassTypeTImpl@6343797e 
+SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@1c8b1052 (name: getOutgoing) ->  
+OperationCallOperation: [] |- getOutgoing() : null
+ SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@68ef4845 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(edge instanceof activitydiagramoa.Con... : 
+
+------------------------
+ale.xtext.ale.impl.InstanceofOperationImpl@68ecdc68 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- edge instanceof activitydiagramoa.Contro... : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2ca148a7 (value: edge) ->  
+VarRef: [] |- edge : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@26465219 ->  
+ChainedCall: [] |- activitydiagramoa.ControlFlow : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- ControlFlow : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@34f98bf4 (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3a780e9f (value: ControlFlow) ->  
+VarRef: [] |- ControlFlow : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@878c203 (name: controlFlow) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@878c203 (name: controlFlow)
+
+------------------------
+ale.xtext.ale.impl.CasttoOperationImpl@a50baae ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- edge castto activitydiagramoa.ControlFlo... : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@42cadc46 (value: edge) ->  
+VarRef: [] |- edge : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@c6c76c6 ->  
+ChainedCall: [] |- activitydiagramoa.ControlFlow : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- ControlFlow : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@4efe714e (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@417437f5 (value: ControlFlow) ->  
+VarRef: [] |- ControlFlow : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@55c8fb71 (name: guardValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@55c8fb71 (name: guardValue)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7b41f48 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@7b41f48
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@679f4bd4 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[controlFlow.getGuard()] : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@751e3725 ->  
+ChainedCall: [] |- controlFlow.getGuard() : null
+ VarRef: [] |- controlFlow : null
+ OperationCallOperation: [] |- getGuard() : null
+  VarRef: [] |- controlFlow : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@24d893f3 (value: controlFlow) ->  
+VarRef: [] |- controlFlow : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@331867f (name: getGuard) ->  
+OperationCallOperation: [] |- getGuard() : null
+ VarRef: [] |- controlFlow : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@1eedbc26 (name: getCurrentValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@1eedbc26 (name: getCurrentValue)
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@1ace17c1 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(guardValue instanceof activitydiagram... : 
+
+------------------------
+ale.xtext.ale.impl.InstanceofOperationImpl@7a695860 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- guardValue instanceof activitydiagramoa.... : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@75643b2c (value: guardValue) ->  
+VarRef: [] |- guardValue : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@69ba52a ->  
+ChainedCall: [] |- activitydiagramoa.BooleanValue : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- BooleanValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@6c81ca27 (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5c9b358f (value: BooleanValue) ->  
+VarRef: [] |- BooleanValue : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@539b8eaa (name: booleanValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@539b8eaa (name: booleanValue)
+
+------------------------
+ale.xtext.ale.impl.CasttoOperationImpl@341bdaeb ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- guardValue castto activitydiagramoa.Bool... : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2a34ed93 (value: guardValue) ->  
+VarRef: [] |- guardValue : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@25d5d8a1 ->  
+ChainedCall: [] |- activitydiagramoa.BooleanValue : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- BooleanValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@59b093c1 (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3316c69e (value: BooleanValue) ->  
+VarRef: [] |- BooleanValue : null
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@3ec3fd1a ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(booleanValue.isValue()) { selectedEdg... : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@35583ab3 ->  
+ChainedCall: [] |- booleanValue.isValue() : null
+ VarRef: [] |- booleanValue : null
+ OperationCallOperation: [] |- isValue() : null
+  VarRef: [] |- booleanValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@682b9942 (value: booleanValue) ->  
+VarRef: [] |- booleanValue : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@6d0c90ef (name: isValue) ->  
+OperationCallOperation: [] |- isValue() : null
+ VarRef: [] |- booleanValue : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@38ffbde8 (name: selectedEdge) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- selectedEdge = edge : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@caac23c (value: edge) ->  
+VarRef: [] |- edge : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5a8a0ae (value: break) ->  
+VarRef: [] |- break : null
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@7d0dae21 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(selectedEdge != null) { self.addToken... : 
+
+------------------------
+ale.xtext.ale.impl.CompareNEOperationImpl@38584c95 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- selectedEdge != null : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@62b9d280 (value: selectedEdge) ->  
+VarRef: [] |- selectedEdge : null
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@22d4a3a9 -> ale.xtext.ale.impl.NullTypeTImpl@3fc4fdcf 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@487ea352 ->  
+ChainedCall: [] |- self.addTokens(tokens) : null
+ SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+ OperationCallOperation: [] |- addTokens(tokens) : null
+  SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@64ff550f -> ale.xtext.ale.impl.ClassTypeTImpl@52bd67aa 
+SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@63316bd2 (name: addTokens) ->  
+OperationCallOperation: [] |- addTokens(tokens) : null
+ SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2f4a2c3e (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@310353f5 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@310353f5
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@5904c1fc ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[selectedEdge] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@50d610d0 (value: selectedEdge) ->  
+VarRef: [] |- selectedEdge : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@2e83ed28 (name: sendOffer) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@2e83ed28 (name: sendOffer)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@7a40a58d (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@75d2ffea (name: ready) -> ale.xtext.ale.impl.BooleanTypeTImpl@2654ab92 
+VarDeclaration: [] |- Boolean ready = true : BooleanTypeT
+ BooleanLiteral: [] |- true : BooleanTypeT
+ LiteralType: [] |= Boolean : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@1e440d8a (value: true) -> ale.xtext.ale.impl.BooleanTypeTImpl@5e24beaf 
+BooleanLiteral: [] |- true : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@1e7aef7f (name: edge) ->  
+ForLoop: [] |- for(ActivityEdge edge in self.getIncomin... : null
+ ChainedCall: [] |- self.getIncoming() : null
+  SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+  OperationCallOperation: [] |- getIncoming() : null
+   SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@68720d5b ->  
+ChainedCall: [] |- self.getIncoming() : null
+ SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+ OperationCallOperation: [] |- getIncoming() : null
+  SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@56e47582 -> ale.xtext.ale.impl.ClassTypeTImpl@46161a21 
+SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@1fac7936 (name: getIncoming) ->  
+OperationCallOperation: [] |- getIncoming() : null
+ SelfRef: [] |- self : ClassTypeT 'open class DecisionNode { de...
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@30d93a69 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(not $[edge].hasOffer()) { ready = fal... : 
+
+------------------------
+ale.xtext.ale.impl.NotInfixOperationImpl@45640195 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.NotInfixOperationImpl@45640195
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@39fda5c6 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@39fda5c6
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@3eb482e7 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[edge] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@47c7fd2a (value: edge) ->  
+VarRef: [] |- edge : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@22ca34ee (name: hasOffer) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@22ca34ee (name: hasOffer)
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@6c746170 (name: ready) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- ready = false : 
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@1422ff79 (value: false) -> ale.xtext.ale.impl.BooleanTypeTImpl@7fafa57e 
+BooleanLiteral: [] |- false : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@673cc457 ->  
+ReturnStatement: [] |- return ready : null
+ VarRef: [] |- ready : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@7adb7402 (value: ready) ->  
+VarRef: [] |- ready : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@699214b (name: forkedTokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@699214b (name: forkedTokens)
+
+------------------------
+ale.xtext.ale.impl.NewSequenceImpl@3d214447 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- newSequence(Token) : 
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@1538b2ac (name: token) ->  
+ForLoop: [] |- for(Token token in tokens) { ForkedToken... : null
+ VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@623f59f (value: tokens) ->  
+VarRef: [] |- tokens : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@49f29bf4 (name: forkedToken) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@49f29bf4 (name: forkedToken)
+
+------------------------
+ale.xtext.ale.impl.ConstructorOperationImpl@5d1a47f3 (name: ForkedToken) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- new ForkedToken() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3b4e5154 ->  
+ChainedCall: [] |- forkedToken.setBaseToken(token) : null
+ VarRef: [] |- forkedToken : null
+ OperationCallOperation: [] |- setBaseToken(token) : null
+  VarRef: [] |- forkedToken : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@663e50f2 (value: forkedToken) ->  
+VarRef: [] |- forkedToken : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@447f7208 (name: setBaseToken) ->  
+OperationCallOperation: [] |- setBaseToken(token) : null
+ VarRef: [] |- forkedToken : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2d8ac74 (value: token) ->  
+VarRef: [] |- token : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1675d51d ->  
+ChainedCall: [] |- forkedToken.setRemainingOffersCount(self... : null
+ VarRef: [] |- forkedToken : null
+ OperationCallOperation: [] |- setRemainingOffersCount(self.getOutgoing... : null
+  VarRef: [] |- forkedToken : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@29250ae9 (value: forkedToken) ->  
+VarRef: [] |- forkedToken : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4e9217be (name: setRemainingOffersCount) ->  
+OperationCallOperation: [] |- setRemainingOffersCount(self.getOutgoing... : null
+ VarRef: [] |- forkedToken : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@318b5809 ->  
+ChainedCall: [] |- self.getOutgoing().size() : null
+ ChainedCall: [] |- self.getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+  OperationCallOperation: [] |- getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+ OperationCallOperation: [] |- size() : null
+  ChainedCall: [] |- self.getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+   OperationCallOperation: [] |- getOutgoing() : null
+    SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@30787e93 ->  
+ChainedCall: [] |- self.getOutgoing() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+ OperationCallOperation: [] |- getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@6e09b0c5 -> ale.xtext.ale.impl.ClassTypeTImpl@7ca49922 
+SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@12538209 (name: getOutgoing) ->  
+OperationCallOperation: [] |- getOutgoing() : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@79f3db5a (name: size) ->  
+OperationCallOperation: [] |- size() : null
+ ChainedCall: [] |- self.getOutgoing() : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+  OperationCallOperation: [] |- getOutgoing() : null
+   SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@a8cae11 ->  
+ChainedCall: [] |- forkedTokens.add(forkedToken) : null
+ VarRef: [] |- forkedTokens : null
+ OperationCallOperation: [] |- add(forkedToken) : null
+  VarRef: [] |- forkedTokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2920b81d (value: forkedTokens) ->  
+VarRef: [] |- forkedTokens : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@27ed34fa (name: add) ->  
+OperationCallOperation: [] |- add(forkedToken) : null
+ VarRef: [] |- forkedTokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2f30c075 (value: forkedToken) ->  
+VarRef: [] |- forkedToken : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3fc65de ->  
+ChainedCall: [] |- self.addTokens(forkedTokens) : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+ OperationCallOperation: [] |- addTokens(forkedTokens) : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@4d78dbbf -> ale.xtext.ale.impl.ClassTypeTImpl@70e81df 
+SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@1511d1f4 (name: addTokens) ->  
+OperationCallOperation: [] |- addTokens(forkedTokens) : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5cb9c881 (value: forkedTokens) ->  
+VarRef: [] |- forkedTokens : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5797558a ->  
+ChainedCall: [] |- self.sendOffers(forkedTokens) : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+ OperationCallOperation: [] |- sendOffers(forkedTokens) : null
+  SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@4c12b0fd -> ale.xtext.ale.impl.ClassTypeTImpl@713f540d 
+SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@2c3bb0f4 (name: sendOffers) ->  
+OperationCallOperation: [] |- sendOffers(forkedTokens) : null
+ SelfRef: [] |- self : ClassTypeT 'open class ForkNode { def vo...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5302b167 (value: forkedTokens) ->  
+VarRef: [] |- forkedTokens : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@3c3e0f09 (name: producedTokens) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@3c3e0f09 (name: producedTokens)
+
+------------------------
+ale.xtext.ale.impl.NewSequenceImpl@135b0e38 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- newSequence(Token) : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1d6b049c ->  
+ChainedCall: [] |- producedTokens.add(new ControlToken()) : null
+ VarRef: [] |- producedTokens : null
+ OperationCallOperation: [] |- add(new ControlToken()) : null
+  VarRef: [] |- producedTokens : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@930d25d (value: producedTokens) ->  
+VarRef: [] |- producedTokens : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4251278d (name: add) ->  
+OperationCallOperation: [] |- add(new ControlToken()) : null
+ VarRef: [] |- producedTokens : null
+
+------------------------
+ale.xtext.ale.impl.ConstructorOperationImpl@50355ae0 (name: ControlToken) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- new ControlToken() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5f98d881 ->  
+ChainedCall: [] |- self.addTokens(producedTokens) : null
+ SelfRef: [] |- self : ClassTypeT 'open class InitialNode { def...
+ OperationCallOperation: [] |- addTokens(producedTokens) : null
+  SelfRef: [] |- self : ClassTypeT 'open class InitialNode { def...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@14bee1b0 -> ale.xtext.ale.impl.ClassTypeTImpl@73b99b01 
+SelfRef: [] |- self : ClassTypeT 'open class InitialNode { def...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7e725e83 (name: addTokens) ->  
+OperationCallOperation: [] |- addTokens(producedTokens) : null
+ SelfRef: [] |- self : ClassTypeT 'open class InitialNode { def...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@1daf653b (value: producedTokens) ->  
+VarRef: [] |- producedTokens : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7e7fb45f ->  
+ChainedCall: [] |- self.sendOffers(producedTokens) : null
+ SelfRef: [] |- self : ClassTypeT 'open class InitialNode { def...
+ OperationCallOperation: [] |- sendOffers(producedTokens) : null
+  SelfRef: [] |- self : ClassTypeT 'open class InitialNode { def...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@12157b55 -> ale.xtext.ale.impl.ClassTypeTImpl@2b8c61dd 
+SelfRef: [] |- self : ClassTypeT 'open class InitialNode { def...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@41e39db1 (name: sendOffers) ->  
+OperationCallOperation: [] |- sendOffers(producedTokens) : null
+ SelfRef: [] |- self : ClassTypeT 'open class InitialNode { def...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@245d3bf8 (value: producedTokens) ->  
+VarRef: [] |- producedTokens : null
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@377e4043 -> ale.xtext.ale.impl.BooleanTypeTImpl@58ff0d0a 
+ReturnStatement: [] |- return false : BooleanTypeT
+ BooleanLiteral: [] |- false : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@738e69d2 (value: false) -> ale.xtext.ale.impl.BooleanTypeTImpl@536bb524 
+BooleanLiteral: [] |- false : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@70e5067d (name: ready) -> ale.xtext.ale.impl.BooleanTypeTImpl@6c355ddb 
+VarDeclaration: [] |- Boolean ready = true : BooleanTypeT
+ BooleanLiteral: [] |- true : BooleanTypeT
+ LiteralType: [] |= Boolean : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@7c71a08a (value: true) -> ale.xtext.ale.impl.BooleanTypeTImpl@247f4b09 
+BooleanLiteral: [] |- true : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@22b097bd (name: edge) ->  
+ForLoop: [] |- for(ActivityEdge edge in self.getIncomin... : null
+ ChainedCall: [] |- self.getIncoming() : null
+  SelfRef: [] |- self : ClassTypeT 'open class JoinNode { def Bo...
+  OperationCallOperation: [] |- getIncoming() : null
+   SelfRef: [] |- self : ClassTypeT 'open class JoinNode { def Bo...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3b44d795 ->  
+ChainedCall: [] |- self.getIncoming() : null
+ SelfRef: [] |- self : ClassTypeT 'open class JoinNode { def Bo...
+ OperationCallOperation: [] |- getIncoming() : null
+  SelfRef: [] |- self : ClassTypeT 'open class JoinNode { def Bo...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@4a405587 -> ale.xtext.ale.impl.ClassTypeTImpl@4c885d1 
+SelfRef: [] |- self : ClassTypeT 'open class JoinNode { def Bo...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@6ceb2e0d (name: getIncoming) ->  
+OperationCallOperation: [] |- getIncoming() : null
+ SelfRef: [] |- self : ClassTypeT 'open class JoinNode { def Bo...
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@7ee4b609 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(not $[edge].hasOffer()) { ready = fal... : 
+
+------------------------
+ale.xtext.ale.impl.NotInfixOperationImpl@3640383f ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.NotInfixOperationImpl@3640383f
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@36ee3bc ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@36ee3bc
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@69e93b77 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[edge] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@32e68cbd (value: edge) ->  
+VarRef: [] |- edge : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@550db1e (name: hasOffer) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@550db1e (name: hasOffer)
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@514504c5 (name: ready) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- ready = false : 
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@5740f934 (value: false) -> ale.xtext.ale.impl.BooleanTypeTImpl@a84d2f9 
+BooleanLiteral: [] |- false : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@54cb50e9 ->  
+ReturnStatement: [] |- return ready : null
+ VarRef: [] |- ready : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@1808b698 (value: ready) ->  
+VarRef: [] |- ready : null
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@145f1eaf (name: edge) ->  
+ForLoop: [] |- for(ActivityEdge edge in self.getIncomin... : null
+ ChainedCall: [] |- self.getIncoming() : null
+  SelfRef: [] |- self : ClassTypeT 'open class MergeNode { def B...
+  OperationCallOperation: [] |- getIncoming() : null
+   SelfRef: [] |- self : ClassTypeT 'open class MergeNode { def B...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@89755f7 ->  
+ChainedCall: [] |- self.getIncoming() : null
+ SelfRef: [] |- self : ClassTypeT 'open class MergeNode { def B...
+ OperationCallOperation: [] |- getIncoming() : null
+  SelfRef: [] |- self : ClassTypeT 'open class MergeNode { def B...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@2f171a74 -> ale.xtext.ale.impl.ClassTypeTImpl@4c199df7 
+SelfRef: [] |- self : ClassTypeT 'open class MergeNode { def B...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@4351c35f (name: getIncoming) ->  
+OperationCallOperation: [] |- getIncoming() : null
+ SelfRef: [] |- self : ClassTypeT 'open class MergeNode { def B...
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@60451bb3 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if($[edge].hasOffer()) { return true; } : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@77967975 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@77967975
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@3a1017e3 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[edge] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@16d4bc15 (value: edge) ->  
+VarRef: [] |- edge : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@5e84a5ff (name: hasOffer) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@5e84a5ff (name: hasOffer)
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@20888134 -> ale.xtext.ale.impl.BooleanTypeTImpl@12e0a07e 
+ReturnStatement: [] |- return true : BooleanTypeT
+ BooleanLiteral: [] |- true : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@130fa524 (value: true) -> ale.xtext.ale.impl.BooleanTypeTImpl@524649fe 
+BooleanLiteral: [] |- true : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@685f41e7 -> ale.xtext.ale.impl.BooleanTypeTImpl@7ef94a55 
+ReturnStatement: [] |- return false : BooleanTypeT
+ BooleanLiteral: [] |- false : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.BooleanLiteralImpl@1b252f0d (value: false) -> ale.xtext.ale.impl.BooleanTypeTImpl@7e0f8658 
+BooleanLiteral: [] |- false : BooleanTypeT
+
+------------------------
+ale.xtext.ale.impl.ForLoopImpl@1aa4c0ef (name: e) ->  
+ForLoop: [] |- for(Expression e in self.getExpressions(... : null
+ ChainedCall: [] |- self.getExpressions() : null
+  SelfRef: [] |- self : ClassTypeT 'open class OpaqueAction { de...
+  OperationCallOperation: [] |- getExpressions() : null
+   SelfRef: [] |- self : ClassTypeT 'open class OpaqueAction { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5050f636 ->  
+ChainedCall: [] |- self.getExpressions() : null
+ SelfRef: [] |- self : ClassTypeT 'open class OpaqueAction { de...
+ OperationCallOperation: [] |- getExpressions() : null
+  SelfRef: [] |- self : ClassTypeT 'open class OpaqueAction { de...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@74cd7511 -> ale.xtext.ale.impl.ClassTypeTImpl@69fb2ab7 
+SelfRef: [] |- self : ClassTypeT 'open class OpaqueAction { de...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@48d260df (name: getExpressions) ->  
+OperationCallOperation: [] |- getExpressions() : null
+ SelfRef: [] |- self : ClassTypeT 'open class OpaqueAction { de...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5e331731 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@5e331731
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@4149841b ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[e] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@1ac6c075 (value: e) ->  
+VarRef: [] |- e : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3eecf465 (name: execute) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@3eecf465 (name: execute)
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@3bf77c (name: operandValue1) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@3bf77c (name: operandValue1)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2c216c70 ->  
+ChainedCall: [] |- self.getCurrentValue(self.getOperand1()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+ OperationCallOperation: [] |- getCurrentValue(self.getOperand1()) : null
+  SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@1e41d46b -> ale.xtext.ale.impl.ClassTypeTImpl@99287cf 
+SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@419e40c8 (name: getCurrentValue) ->  
+OperationCallOperation: [] |- getCurrentValue(self.getOperand1()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@38f85146 ->  
+ChainedCall: [] |- self.getOperand1() : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+ OperationCallOperation: [] |- getOperand1() : null
+  SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@280a38be -> ale.xtext.ale.impl.ClassTypeTImpl@3d0ddf4a 
+SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@1b21a577 (name: getOperand1) ->  
+OperationCallOperation: [] |- getOperand1() : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@6b2dee0e (name: operandValue2) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@6b2dee0e (name: operandValue2)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@6813e50e ->  
+ChainedCall: [] |- self.getCurrentValue(self.getOperand2()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+ OperationCallOperation: [] |- getCurrentValue(self.getOperand2()) : null
+  SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@7e8fff66 -> ale.xtext.ale.impl.ClassTypeTImpl@3fb2b3f5 
+SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7a562327 (name: getCurrentValue) ->  
+OperationCallOperation: [] |- getCurrentValue(self.getOperand2()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3303ada3 ->  
+ChainedCall: [] |- self.getOperand2() : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+ OperationCallOperation: [] |- getOperand2() : null
+  SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@32f6006a -> ale.xtext.ale.impl.ClassTypeTImpl@f2c8826 
+SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@79725208 (name: getOperand2) ->  
+OperationCallOperation: [] |- getOperand2() : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@45dcdc84 (name: result) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@45dcdc84 (name: result)
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@696bb770 -> ale.xtext.ale.impl.NullTypeTImpl@129ddaf3 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@2e25a47 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(self.getOperator() == activitydiagram... : 
+
+------------------------
+ale.xtext.ale.impl.EqualityOperationImpl@21f98e63 (op: ==) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.EqualityOperationImpl@21f98e63 (op: ==)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2a972822 ->  
+ChainedCall: [] |- self.getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+ OperationCallOperation: [] |- getOperator() : null
+  SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@1ef3ca37 -> ale.xtext.ale.impl.ClassTypeTImpl@41b9a065 
+SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@e538bcc (name: getOperator) ->  
+OperationCallOperation: [] |- getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@63b496f3 ->  
+ChainedCall: [] |- activitydiagramoa.BooleanBinaryOperator.... : null
+ ChainedCall: [] |- activitydiagramoa.BooleanBinaryOperator : null
+  VarRef: [] |- activitydiagramoa : null
+  VarRef: [] |- BooleanBinaryOperator : null
+ VarRef: [] |- AND : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@70f1749f ->  
+ChainedCall: [] |- activitydiagramoa.BooleanBinaryOperator : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- BooleanBinaryOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@7053bac4 (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@62cc42e9 (value: BooleanBinaryOperator) ->  
+VarRef: [] |- BooleanBinaryOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2508434d (value: AND) ->  
+VarRef: [] |- AND : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@33ce8a65 (name: result) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- result = operandValue1 and operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.BooleanAndOperationImpl@33154dff ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- operandValue1 and operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@54e062fb (value: operandValue1) ->  
+VarRef: [] |- operandValue1 : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3e5b4fee (value: operandValue2) ->  
+VarRef: [] |- operandValue2 : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@6062a788 (name: result) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- result = operandValue1 or operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.BooleanOrOperationImpl@37c2e6c5 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.BooleanOrOperationImpl@37c2e6c5
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5382fbec (value: operandValue1) ->  
+VarRef: [] |- operandValue1 : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@21ceb809 (value: operandValue2) ->  
+VarRef: [] |- operandValue2 : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@54e5055f ->  
+ChainedCall: [] |- self.assignValue(result) : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+ OperationCallOperation: [] |- assignValue(result) : null
+  SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@743135c8 -> ale.xtext.ale.impl.ClassTypeTImpl@6b3e8ebc 
+SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3028fd39 (name: assignValue) ->  
+OperationCallOperation: [] |- assignValue(result) : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanBinaryExpr...
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@18c13be9 (value: result) ->  
+VarRef: [] |- result : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@3781fcfa (name: resultValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@3781fcfa (name: resultValue)
+
+------------------------
+ale.xtext.ale.impl.ConstructorOperationImpl@5deee121 (name: BooleanValue) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- new BooleanValue() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@147747ea ->  
+ChainedCall: [] |- resultValue.setValue(value) : null
+ VarRef: [] |- resultValue : null
+ OperationCallOperation: [] |- setValue(value) : null
+  VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2ca91fb2 (value: resultValue) ->  
+VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@469e1b06 (name: setValue) ->  
+OperationCallOperation: [] |- setValue(value) : null
+ VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@42b55f7a (value: value) ->  
+VarRef: [] |- value : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@26858c11 (name: assignee) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@26858c11 (name: assignee)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@64bab90a ->  
+ChainedCall: [] |- self.getAssignee() : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanExpression...
+ OperationCallOperation: [] |- getAssignee() : null
+  SelfRef: [] |- self : ClassTypeT 'open class BooleanExpression...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@c1c6468 -> ale.xtext.ale.impl.ClassTypeTImpl@385645 
+SelfRef: [] |- self : ClassTypeT 'open class BooleanExpression...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@6f384fe (name: getAssignee) ->  
+OperationCallOperation: [] |- getAssignee() : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanExpression...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3996db49 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@3996db49
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@8d55798 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[assignee] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@67055dce (value: assignee) ->  
+VarRef: [] |- assignee : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7d4bf1a4 (name: setCurrentValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@7d4bf1a4 (name: setCurrentValue)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5043d199 (value: resultValue) ->  
+VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@4075de21 (name: currentValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@4075de21 (name: currentValue)
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@8c95d2 -> ale.xtext.ale.impl.NullTypeTImpl@7c8e5ef3 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@16efb74 (name: value) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@16efb74 (name: value)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2d3f9686 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@2d3f9686
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@4979b4f6 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[variable] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3f3a53f6 (value: variable) ->  
+VarRef: [] |- variable : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@75b9c476 (name: getCurrentValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@75b9c476 (name: getCurrentValue)
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@24e3e7e1 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(value instanceof activitydiagramoa.Bo... : 
+
+------------------------
+ale.xtext.ale.impl.InstanceofOperationImpl@20b9298f ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- value instanceof activitydiagramoa.Boole... : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@4d716b8d (value: value) ->  
+VarRef: [] |- value : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@76508c21 ->  
+ChainedCall: [] |- activitydiagramoa.BooleanValue : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- BooleanValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@4d37a1e5 (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@242b0c9d (value: BooleanValue) ->  
+VarRef: [] |- BooleanValue : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@10838f6b (name: booleanValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@10838f6b (name: booleanValue)
+
+------------------------
+ale.xtext.ale.impl.CasttoOperationImpl@1cf88b67 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- value castto activitydiagramoa.BooleanVa... : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@7fef7ae8 (value: value) ->  
+VarRef: [] |- value : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@731b5aa9 ->  
+ChainedCall: [] |- activitydiagramoa.BooleanValue : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- BooleanValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@4a097b59 (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@127272cc (value: BooleanValue) ->  
+VarRef: [] |- BooleanValue : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@164e7250 (name: currentValue) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- currentValue = booleanValue.isValue() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@3f29ac22 ->  
+ChainedCall: [] |- booleanValue.isValue() : null
+ VarRef: [] |- booleanValue : null
+ OperationCallOperation: [] |- isValue() : null
+  VarRef: [] |- booleanValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3e7bdb2d (value: booleanValue) ->  
+VarRef: [] |- booleanValue : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3f1e2a3c (name: isValue) ->  
+OperationCallOperation: [] |- isValue() : null
+ VarRef: [] |- booleanValue : null
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@5aa7137d ->  
+ReturnStatement: [] |- return currentValue : null
+ VarRef: [] |- currentValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@281dfcb7 (value: currentValue) ->  
+VarRef: [] |- currentValue : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@23bf13f9 (name: operandValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@23bf13f9 (name: operandValue)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@611b8795 ->  
+ChainedCall: [] |- self.getCurrentValue(self.getOperand()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+ OperationCallOperation: [] |- getCurrentValue(self.getOperand()) : null
+  SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@e6745f -> ale.xtext.ale.impl.ClassTypeTImpl@7038738f 
+SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@5b9d9f61 (name: getCurrentValue) ->  
+OperationCallOperation: [] |- getCurrentValue(self.getOperand()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@47384cb1 ->  
+ChainedCall: [] |- self.getOperand() : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+ OperationCallOperation: [] |- getOperand() : null
+  SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@74cf9c85 -> ale.xtext.ale.impl.ClassTypeTImpl@6fec485a 
+SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@439e63ea (name: getOperand) ->  
+OperationCallOperation: [] |- getOperand() : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2b8eb0f5 ->  
+ChainedCall: [] |- self.assignValue(not operandValue) : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+ OperationCallOperation: [] |- assignValue(not operandValue) : null
+  SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@2ed63cf1 -> ale.xtext.ale.impl.ClassTypeTImpl@2da4b19c 
+SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@26f5b61a (name: assignValue) ->  
+OperationCallOperation: [] |- assignValue(not operandValue) : null
+ SelfRef: [] |- self : ClassTypeT 'open class BooleanUnaryExpre...
+
+------------------------
+ale.xtext.ale.impl.NotInfixOperationImpl@48130328 ->  
+NotInfixOperationRule: [] |- not operandValue : null
+ VarRef: [] |- operandValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@573d9f6f (value: operandValue) ->  
+VarRef: [] |- operandValue : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@1a66377 (name: operandValue1) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@1a66377 (name: operandValue1)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@224cddc3 ->  
+ChainedCall: [] |- self.getCurrentValue(self.getOperand1()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+ OperationCallOperation: [] |- getCurrentValue(self.getOperand1()) : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@42dadacb -> ale.xtext.ale.impl.ClassTypeTImpl@23531b1d 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@70d5b43c (name: getCurrentValue) ->  
+OperationCallOperation: [] |- getCurrentValue(self.getOperand1()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@6dc45f0c ->  
+ChainedCall: [] |- self.getOperand1() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+ OperationCallOperation: [] |- getOperand1() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@795cdcfd -> ale.xtext.ale.impl.ClassTypeTImpl@10c4b0f3 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@2475e3be (name: getOperand1) ->  
+OperationCallOperation: [] |- getOperand1() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@1c867153 (name: operandValue2) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@1c867153 (name: operandValue2)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@4c51f447 ->  
+ChainedCall: [] |- self.getCurrentValue(self.getOperand2()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+ OperationCallOperation: [] |- getCurrentValue(self.getOperand2()) : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@47329660 -> ale.xtext.ale.impl.ClassTypeTImpl@1d678429 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@68916b3c (name: getCurrentValue) ->  
+OperationCallOperation: [] |- getCurrentValue(self.getOperand2()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@53a340b6 ->  
+ChainedCall: [] |- self.getOperand2() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+ OperationCallOperation: [] |- getOperand2() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@715d34 -> ale.xtext.ale.impl.ClassTypeTImpl@15c7fe48 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@635a1e8d (name: getOperand2) ->  
+OperationCallOperation: [] |- getOperand2() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@682b7d5c (name: result) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@682b7d5c (name: result)
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@2bd647ee -> ale.xtext.ale.impl.NullTypeTImpl@2ef7941e 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@184b8a6f ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(self.getOperator() == activitydiagram... : 
+
+------------------------
+ale.xtext.ale.impl.EqualityOperationImpl@2bb9c5a7 (op: ==) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.EqualityOperationImpl@2bb9c5a7 (op: ==)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2b4dfa11 ->  
+ChainedCall: [] |- self.getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+ OperationCallOperation: [] |- getOperator() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@32bd31a1 -> ale.xtext.ale.impl.ClassTypeTImpl@1b81fa1b 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7661cd6b (name: getOperator) ->  
+OperationCallOperation: [] |- getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1390aafd ->  
+ChainedCall: [] |- activitydiagramoa.IntegerCalculationOper... : null
+ ChainedCall: [] |- activitydiagramoa.IntegerCalculationOper... : null
+  VarRef: [] |- activitydiagramoa : null
+  VarRef: [] |- IntegerCalculationOperator : null
+ VarRef: [] |- ADD : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@57c947ec ->  
+ChainedCall: [] |- activitydiagramoa.IntegerCalculationOper... : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- IntegerCalculationOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@ca2548d (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@74d0dae7 (value: IntegerCalculationOperator) ->  
+VarRef: [] |- IntegerCalculationOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@628141c2 (value: ADD) ->  
+VarRef: [] |- ADD : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@6172b915 (name: result) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- result = operandValue1 + operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.AddOperationImpl@1307503e ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- operandValue1 + operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@7be08ccd (value: operandValue1) ->  
+VarRef: [] |- operandValue1 : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5043dfbc (value: operandValue2) ->  
+VarRef: [] |- operandValue2 : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@da24caf (name: result) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- result = operandValue1 - operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.SubOperationImpl@725b2f32 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- operandValue1 - operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3c2ba0fa (value: operandValue1) ->  
+VarRef: [] |- operandValue1 : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@731c2121 (value: operandValue2) ->  
+VarRef: [] |- operandValue2 : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@6cc4ccd9 (name: resultValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@6cc4ccd9 (name: resultValue)
+
+------------------------
+ale.xtext.ale.impl.ConstructorOperationImpl@268018af (name: IntegerValue) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- new IntegerValue() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@34873077 ->  
+ChainedCall: [] |- resultValue.setValue(result) : null
+ VarRef: [] |- resultValue : null
+ OperationCallOperation: [] |- setValue(result) : null
+  VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@7eef803a (value: resultValue) ->  
+VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@53e98807 (name: setValue) ->  
+OperationCallOperation: [] |- setValue(result) : null
+ VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@788335eb (value: result) ->  
+VarRef: [] |- result : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7a6f8491 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@7a6f8491
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@65d9926b ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self.getAssignee()] : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@454ea66a ->  
+ChainedCall: [] |- self.getAssignee() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+ OperationCallOperation: [] |- getAssignee() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@2403ff45 -> ale.xtext.ale.impl.ClassTypeTImpl@3ae6738e 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@224eac58 (name: getAssignee) ->  
+OperationCallOperation: [] |- getAssignee() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerCalculatio...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@bad38b0 (name: setCurrentValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@bad38b0 (name: setCurrentValue)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@228ba7 (value: resultValue) ->  
+VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@1ff4529a (name: operandValue1) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@1ff4529a (name: operandValue1)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2b9d5e08 ->  
+ChainedCall: [] |- self.getCurrentValue(self.getOperand1()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+ OperationCallOperation: [] |- getCurrentValue(self.getOperand1()) : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@5c0a4cf1 -> ale.xtext.ale.impl.ClassTypeTImpl@1079ff24 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@61d7b568 (name: getCurrentValue) ->  
+OperationCallOperation: [] |- getCurrentValue(self.getOperand1()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@636c3d3b ->  
+ChainedCall: [] |- self.getOperand1() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+ OperationCallOperation: [] |- getOperand1() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@6d8f8863 -> ale.xtext.ale.impl.ClassTypeTImpl@2bcde51 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@312f0c4f (name: getOperand1) ->  
+OperationCallOperation: [] |- getOperand1() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@119c6bfd (name: operandValue2) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@119c6bfd (name: operandValue2)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2464790 ->  
+ChainedCall: [] |- self.getCurrentValue(self.getOperand2()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+ OperationCallOperation: [] |- getCurrentValue(self.getOperand2()) : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@4bc27ee3 -> ale.xtext.ale.impl.ClassTypeTImpl@16f9ad3f 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@397327e5 (name: getCurrentValue) ->  
+OperationCallOperation: [] |- getCurrentValue(self.getOperand2()) : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@42a14948 ->  
+ChainedCall: [] |- self.getOperand2() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+ OperationCallOperation: [] |- getOperand2() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@1a4c1299 -> ale.xtext.ale.impl.ClassTypeTImpl@1f8ad66d 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3a20423a (name: getOperand2) ->  
+OperationCallOperation: [] |- getOperand2() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@173486d6 (name: result) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@173486d6 (name: result)
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@25b56fc0 -> ale.xtext.ale.impl.NullTypeTImpl@40558a67 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@1d3cc8de ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(self.getOperator() == activitydiagram... : 
+
+------------------------
+ale.xtext.ale.impl.EqualityOperationImpl@2e0def99 (op: ==) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.EqualityOperationImpl@2e0def99 (op: ==)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@4a4d20d7 ->  
+ChainedCall: [] |- self.getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+ OperationCallOperation: [] |- getOperator() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@44089d31 -> ale.xtext.ale.impl.ClassTypeTImpl@24ff9a6a 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3f09d756 (name: getOperator) ->  
+OperationCallOperation: [] |- getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@7eb98609 ->  
+ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+ ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+  VarRef: [] |- activitydiagramoa : null
+  VarRef: [] |- IntegerComparisonOperator : null
+ VarRef: [] |- EQUALS : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5d514a91 ->  
+ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- IntegerComparisonOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5db0b51f (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2c726a98 (value: IntegerComparisonOperator) ->  
+VarRef: [] |- IntegerComparisonOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@1ec928d1 (value: EQUALS) ->  
+VarRef: [] |- EQUALS : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@11dba02a (name: result) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- result = operandValue1 == operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.EqualityOperationImpl@2e422e23 (op: ==) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.EqualityOperationImpl@2e422e23 (op: ==)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@799a149a (value: operandValue1) ->  
+VarRef: [] |- operandValue1 : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@6ff546c6 (value: operandValue2) ->  
+VarRef: [] |- operandValue2 : null
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@1c6f708b ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(self.getOperator() == activitydiagram... : 
+
+------------------------
+ale.xtext.ale.impl.EqualityOperationImpl@35789958 (op: ==) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.EqualityOperationImpl@35789958 (op: ==)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@70fe3a47 ->  
+ChainedCall: [] |- self.getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+ OperationCallOperation: [] |- getOperator() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@48aa29db -> ale.xtext.ale.impl.ClassTypeTImpl@7fb44b9f 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@2fa6f36d (name: getOperator) ->  
+OperationCallOperation: [] |- getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5e651d98 ->  
+ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+ ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+  VarRef: [] |- activitydiagramoa : null
+  VarRef: [] |- IntegerComparisonOperator : null
+ VarRef: [] |- GREATER : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5f483811 ->  
+ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- IntegerComparisonOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@463526d2 (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5e1098e2 (value: IntegerComparisonOperator) ->  
+VarRef: [] |- IntegerComparisonOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@28efd765 (value: GREATER) ->  
+VarRef: [] |- GREATER : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@59155972 (name: result) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- result = operandValue1 > operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.CompareGOperationImpl@3981d3a ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- operandValue1 > operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@551aa6d3 (value: operandValue1) ->  
+VarRef: [] |- operandValue1 : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@2ccc319b (value: operandValue2) ->  
+VarRef: [] |- operandValue2 : null
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@1c5394a2 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(self.getOperator() == activitydiagram... : 
+
+------------------------
+ale.xtext.ale.impl.EqualityOperationImpl@1cff85c5 (op: ==) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.EqualityOperationImpl@1cff85c5 (op: ==)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@51f23f28 ->  
+ChainedCall: [] |- self.getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+ OperationCallOperation: [] |- getOperator() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@7d8b244 -> ale.xtext.ale.impl.ClassTypeTImpl@36c4c3ba 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7aed099 (name: getOperator) ->  
+OperationCallOperation: [] |- getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@671fac04 ->  
+ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+ ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+  VarRef: [] |- activitydiagramoa : null
+  VarRef: [] |- IntegerComparisonOperator : null
+ VarRef: [] |- GREATER_EQUALS : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2754d4b0 ->  
+ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- IntegerComparisonOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@655c088c (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@140736a6 (value: IntegerComparisonOperator) ->  
+VarRef: [] |- IntegerComparisonOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@ee2c7ae (value: GREATER_EQUALS) ->  
+VarRef: [] |- GREATER_EQUALS : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@a0f0280 (name: result) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- result = operandValue1 >= operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.CompareGEOperationImpl@2790a761 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- operandValue1 >= operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3fd7db8a (value: operandValue1) ->  
+VarRef: [] |- operandValue1 : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@23451125 (value: operandValue2) ->  
+VarRef: [] |- operandValue2 : null
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@73251234 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(self.getOperator() == activitydiagram... : 
+
+------------------------
+ale.xtext.ale.impl.EqualityOperationImpl@72af9c51 (op: ==) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.EqualityOperationImpl@72af9c51 (op: ==)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@79e87718 ->  
+ChainedCall: [] |- self.getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+ OperationCallOperation: [] |- getOperator() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@4893568e -> ale.xtext.ale.impl.ClassTypeTImpl@5a2e71b7 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@137c591a (name: getOperator) ->  
+OperationCallOperation: [] |- getOperator() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1dbf0230 ->  
+ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+ ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+  VarRef: [] |- activitydiagramoa : null
+  VarRef: [] |- IntegerComparisonOperator : null
+ VarRef: [] |- SMALLER : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@27d5f628 ->  
+ChainedCall: [] |- activitydiagramoa.IntegerComparisonOpera... : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- IntegerComparisonOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@7520e37a (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@465d04d (value: IntegerComparisonOperator) ->  
+VarRef: [] |- IntegerComparisonOperator : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@61aeec73 (value: SMALLER) ->  
+VarRef: [] |- SMALLER : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@1b8b37a9 (name: result) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- result = operandValue1 < operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.CompareLOperationImpl@31c67b2d ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- operandValue1 < operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@279dc412 (value: operandValue1) ->  
+VarRef: [] |- operandValue1 : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@5fb1e6db (value: operandValue2) ->  
+VarRef: [] |- operandValue2 : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@1f58bb6d (name: result) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- result = operandValue1 <= operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.CompareLEOperationImpl@56ac41c0 ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- operandValue1 <= operandValue2 : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@6fbe2f0 (value: operandValue1) ->  
+VarRef: [] |- operandValue1 : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3629fca8 (value: operandValue2) ->  
+VarRef: [] |- operandValue2 : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@6cf0bad3 (name: resultValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@6cf0bad3 (name: resultValue)
+
+------------------------
+ale.xtext.ale.impl.ConstructorOperationImpl@1d3c142 (name: BooleanValue) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- new BooleanValue() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@78e6a16c ->  
+ChainedCall: [] |- resultValue.setValue(result) : null
+ VarRef: [] |- resultValue : null
+ OperationCallOperation: [] |- setValue(result) : null
+  VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@11a9aa81 (value: resultValue) ->  
+VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@7b034c5c (name: setValue) ->  
+OperationCallOperation: [] |- setValue(result) : null
+ VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@29656b9a (value: result) ->  
+VarRef: [] |- result : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@75c43195 ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@75c43195
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@14c4f2dd ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[self.getAssignee()] : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@5a125bd9 ->  
+ChainedCall: [] |- self.getAssignee() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+ OperationCallOperation: [] |- getAssignee() : null
+  SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.SelfRefImpl@5829d2ba -> ale.xtext.ale.impl.ClassTypeTImpl@25a8c52 
+SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@c3508b3 (name: getAssignee) ->  
+OperationCallOperation: [] |- getAssignee() : null
+ SelfRef: [] |- self : ClassTypeT 'open class IntegerComparison...
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@3f5441f2 (name: setCurrentValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@3f5441f2 (name: setCurrentValue)
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@61fab900 (value: resultValue) ->  
+VarRef: [] |- resultValue : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@338661eb (name: currentValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@338661eb (name: currentValue)
+
+------------------------
+ale.xtext.ale.impl.NullLiteralImpl@98bbe6b -> ale.xtext.ale.impl.NullTypeTImpl@5f6fc735 
+NullLiteralt: [] |- null : NullTypeT
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@7abef602 (name: value) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@7abef602 (name: value)
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@2c42488b ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.ChainedCallImpl@2c42488b
+
+------------------------
+ale.xtext.ale.impl.OADenotImpl@786ed38e ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- $[variable] : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@756d3467 (value: variable) ->  
+VarRef: [] |- variable : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@35d6202c (name: getCurrentValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.OperationCallOperationImpl@35d6202c (name: getCurrentValue)
+
+------------------------
+ale.xtext.ale.impl.IfStatementImpl@bee200d ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- if(value instanceof activitydiagramoa.In... : 
+
+------------------------
+ale.xtext.ale.impl.InstanceofOperationImpl@512605d ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- value instanceof activitydiagramoa.Integ... : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@19c0b294 (value: value) ->  
+VarRef: [] |- value : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@1d1336c0 ->  
+ChainedCall: [] |- activitydiagramoa.IntegerValue : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- IntegerValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@67078327 (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@71011712 (value: IntegerValue) ->  
+VarRef: [] |- IntegerValue : null
+
+------------------------
+ale.xtext.ale.impl.VarDeclarationImpl@6968d1fb (name: integerValue) ->  it.xsemantics.runtime.RuleFailedException: failed: cannot type statement ale.xtext.ale.impl.VarDeclarationImpl@6968d1fb (name: integerValue)
+
+------------------------
+ale.xtext.ale.impl.CasttoOperationImpl@4bed419a ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- value castto activitydiagramoa.IntegerVa... : 
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@6c7e93ac (value: value) ->  
+VarRef: [] |- value : null
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@433670d1 ->  
+ChainedCall: [] |- activitydiagramoa.IntegerValue : null
+ VarRef: [] |- activitydiagramoa : null
+ VarRef: [] |- IntegerValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@1a8836c4 (value: activitydiagramoa) ->  
+VarRef: [] |- activitydiagramoa : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3bc8459e (value: IntegerValue) ->  
+VarRef: [] |- IntegerValue : null
+
+------------------------
+ale.xtext.ale.impl.VarAssignImpl@23b342b8 (name: currentValue) ->  it.xsemantics.runtime.RuleFailedException: cannot find a rule for |- currentValue = integerValue.getValue() : 
+
+------------------------
+ale.xtext.ale.impl.ChainedCallImpl@53730ee7 ->  
+ChainedCall: [] |- integerValue.getValue() : null
+ VarRef: [] |- integerValue : null
+ OperationCallOperation: [] |- getValue() : null
+  VarRef: [] |- integerValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@8162c5b (value: integerValue) ->  
+VarRef: [] |- integerValue : null
+
+------------------------
+ale.xtext.ale.impl.OperationCallOperationImpl@710b7c72 (name: getValue) ->  
+OperationCallOperation: [] |- getValue() : null
+ VarRef: [] |- integerValue : null
+
+------------------------
+ale.xtext.ale.impl.ReturnStatementImpl@48144669 ->  
+ReturnStatement: [] |- return currentValue : null
+ VarRef: [] |- currentValue : null
+
+------------------------
+ale.xtext.ale.impl.VarRefImpl@3db7dba (value: currentValue) ->  
+VarRef: [] |- currentValue : null
