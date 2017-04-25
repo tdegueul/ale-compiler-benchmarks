@@ -1,0 +1,4 @@
+package activitydiagram.activitydiagram.algebra.operation;
+
+public interface ActivitydiagramActivitydiagramControlTokenOperation extends activitydiagram.activitydiagram.algebra.operation.ActivitydiagramActivitydiagramTokenOperation {
+}

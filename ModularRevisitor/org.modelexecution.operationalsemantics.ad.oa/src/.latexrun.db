@@ -1,0 +1,125 @@
+{
+  "clean": {
+    "./texput.fls": "6281022366bcccefaf98980bb52db50ef9119809085c28060117dbedf40e65c1",
+    "texput.log": "10e661360824e304cf4ca82c55de0b0cc6a42132e4fa5434bb630cac3d0f08d1"
+  },
+  "version": "latexrun-db-v2",
+  "tasks": {
+    "latex::models17-oa.tex": {
+      "deps": [
+        [
+          "args",
+          [],
+          [
+            "pdflatex",
+            "--shell-escape",
+            "-interaction",
+            "nonstopmode",
+            "-recorder",
+            "-output-directory",
+            ".",
+            "models17-oa.tex"
+          ]
+        ],
+        [
+          "env",
+          [
+            "TEXMFOUTPUT"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXINPUTS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXFORMATS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXPOOL"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TFMFONTS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "PATH"
+          ],
+          "/usr/local/heroku/bin:/home/mleduc/.local/bin:/home/mleduc/.nvm/versions/node/v7.5.0/bin:/usr/local/go/bin:/home/mleduc/.rvm/gems/ruby-2.1.6/bin:/home/mleduc/.rvm/gems/ruby-2.1.6@global/bin:/home/mleduc/.rvm/rubies/ruby-2.1.6/bin:/home/mleduc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/java/jdk1.8.0_51/bin:/opt/java/jdk1.8.0_51/db/bin:/home/mleduc/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/mleduc/bin:/bin:/home/mleduc/.rvm/bin:/home/mleduc/.local/bin/"
+        ],
+        [
+          "file",
+          [
+            "/usr/share/texlive/texmf-dist/web2c/texmf.cnf"
+          ],
+          "a22f7ac4f789e49d8aa8ae783cce516f8e5ec579b94c238784dda9640833b6cd"
+        ],
+        [
+          "file",
+          [
+            "/var/lib/texmf/web2c/pdftex/pdflatex.fmt"
+          ],
+          "a9080f851296c9c50a42feef85c96e3c74a6ac7465c04ac1382833b355b32ebe"
+        ],
+        [
+          "file",
+          [
+            "/etc/texmf/web2c/texmf.cnf"
+          ],
+          "3443c7e22fbb4585732473f7e95d3cbf3e8657100f9117e711e2af5b0db85a40"
+        ],
+        [
+          "file",
+          [
+            "/usr/share/texmf/web2c/texmf.cnf"
+          ],
+          "a22f7ac4f789e49d8aa8ae783cce516f8e5ec579b94c238784dda9640833b6cd"
+        ],
+        [
+          "unknown_input",
+          [],
+          1493032433.0607858
+        ],
+        [
+          "file",
+          [
+            "./texput.fls"
+          ],
+          "6281022366bcccefaf98980bb52db50ef9119809085c28060117dbedf40e65c1"
+        ],
+        [
+          "file",
+          [
+            "texput.log"
+          ],
+          "10e661360824e304cf4ca82c55de0b0cc6a42132e4fa5434bb630cac3d0f08d1"
+        ]
+      ],
+      "extra": {
+        "jobname": "./texput",
+        "outname": null,
+        "status": 1
+      },
+      "output_files": {
+        "./texput.fls": "6281022366bcccefaf98980bb52db50ef9119809085c28060117dbedf40e65c1",
+        "texput.log": "10e661360824e304cf4ca82c55de0b0cc6a42132e4fa5434bb630cac3d0f08d1"
+      }
+    }
+  }
+}

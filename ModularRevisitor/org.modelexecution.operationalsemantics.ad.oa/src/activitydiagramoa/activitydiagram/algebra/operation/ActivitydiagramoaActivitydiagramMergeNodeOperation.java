@@ -1,0 +1,5 @@
+package activitydiagramoa.activitydiagram.algebra.operation;
+
+public interface ActivitydiagramoaActivitydiagramMergeNodeOperation extends activitydiagramoa.activitydiagram.algebra.operation.ActivitydiagramoaActivitydiagramControlNodeOperation {
+	Boolean hasOffers();
+}

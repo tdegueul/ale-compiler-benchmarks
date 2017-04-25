@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<activitydiagram:Activity_Aspect xmi:version="2.0"
+  xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:activitydiagram="http://activitydiagram"
+  xmlns:activitydiagramoa="http://activitydiagramoa/1.0" name="test5">
+  <nodes xsi:type="activitydiagram:InitialNode_Aspect" name="initialNode5" outgoing="//@edges.0"/>
+  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect" name="action10" outgoing="//@edges.1" incoming="//@edges.0">
+    <expressions xsi:type="activitydiagram:IntegerCalculationExpression_Aspect" operand2="//@locals.0" operand1="//@inputs.0" assignee="//@locals.1"/>
+  </nodes>
+  <nodes xsi:type="activitydiagram:ActivityFinalNode_Aspect" name="finalNode5" incoming="//@edges.1"/>
+  <edges xsi:type="activitydiagram:ControlFlow_Aspect" name="edge20" source="//@nodes.0" target="//@nodes.1"/>
+  <edges xsi:type="activitydiagram:ControlFlow_Aspect" name="edge21" source="//@nodes.1" target="//@nodes.2"/>
+  <locals xsi:type="activitydiagram:IntegerVariable_Aspect" name="var10"/>
+  <locals xsi:type="activitydiagram:IntegerVariable_Aspect" name="var11"/>
+  <inputs xsi:type="activitydiagram:IntegerVariable_Aspect" name="var9"/>
+</activitydiagram:Activity_Aspect>

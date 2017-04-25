@@ -1,0 +1,5 @@
+package activitydiagramoa.activitydiagram.algebra.operation;
+
+public interface ActivitydiagramoaActivitydiagramIntegerComparisonExpressionOperation extends activitydiagramoa.activitydiagram.algebra.operation.ActivitydiagramoaActivitydiagramIntegerExpressionOperation {
+	void execute();
+}

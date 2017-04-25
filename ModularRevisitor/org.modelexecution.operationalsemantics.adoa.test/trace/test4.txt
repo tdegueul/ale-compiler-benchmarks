@@ -1,0 +1,12 @@
+initialNode4
+action6
+action7
+action8
+action9
+finalNode4
+var3 = 2
+var4 = 2
+var5 = 0
+var6 = false
+var7 = true
+var8 = true

@@ -1,0 +1,5 @@
+initialNode3
+decisionNode1
+action4
+var1 = true
+var2 = false
