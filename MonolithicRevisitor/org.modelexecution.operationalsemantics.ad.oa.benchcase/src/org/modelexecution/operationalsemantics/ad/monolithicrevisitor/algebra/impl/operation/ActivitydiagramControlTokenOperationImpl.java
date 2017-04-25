@@ -1,6 +1,6 @@
 package org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.impl.operation;
 
-import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.oabenchcase.algebra.impl.MonolithicRevisitorImpl;
+import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.monolithic.algebra.impl.MonolithicRevisitorImpl;
 
 public class ActivitydiagramControlTokenOperationImpl extends ActivitydiagramTokenOperation
 		implements org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.operation.Activitydiagram$defaultControlTokenOperation {

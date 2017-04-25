@@ -1,6 +1,26 @@
 package org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra;
 
-public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activitydiagram__ExecutableNodeT, Activitydiagram__ActivityT extends Activitydiagram__NamedElementT, Activitydiagram__ActivityEdgeT extends Activitydiagram__NamedElementT, Activitydiagram__ActivityFinalNodeT extends Activitydiagram__FinalNodeT, Activitydiagram__ActivityNodeT extends Activitydiagram__NamedElementT, Activitydiagram__BooleanBinaryExpressionT extends Activitydiagram__BooleanExpressionT, Activitydiagram__BooleanExpressionT extends Activitydiagram__ExpressionT, Activitydiagram__BooleanUnaryExpressionT extends Activitydiagram__BooleanExpressionT, Activitydiagram__BooleanValueT extends Activitydiagram__ValueT, Activitydiagram__BooleanVariableT extends Activitydiagram__VariableT, Activitydiagram__ControlFlowT extends Activitydiagram__ActivityEdgeT, Activitydiagram__ControlNodeT extends Activitydiagram__ActivityNodeT, Activitydiagram__ControlTokenT extends Activitydiagram__TokenT, Activitydiagram__DecisionNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__ExecutableNodeT extends Activitydiagram__ActivityNodeT, Activitydiagram__ExpressionT, Activitydiagram__FinalNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__ForkNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__ForkedTokenT extends Activitydiagram__TokenT, Activitydiagram__InitialNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__InputT, Activitydiagram__InputValueT, Activitydiagram__IntegerCalculationExpressionT extends Activitydiagram__IntegerExpressionT, Activitydiagram__IntegerComparisonExpressionT extends Activitydiagram__IntegerExpressionT, Activitydiagram__IntegerExpressionT extends Activitydiagram__ExpressionT, Activitydiagram__IntegerValueT extends Activitydiagram__ValueT, Activitydiagram__IntegerVariableT extends Activitydiagram__VariableT, Activitydiagram__JoinNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__MergeNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__NamedElementT, Activitydiagram__OfferT, Activitydiagram__OpaqueActionT extends Activitydiagram__ActionT, Activitydiagram__TokenT, Activitydiagram__TraceT, Activitydiagram__ValueT, Activitydiagram__VariableT> {
+import activitydiagram.Activity;
+import activitydiagram.ActivityFinalNode;
+import activitydiagram.BooleanBinaryExpression;
+import activitydiagram.BooleanUnaryExpression;
+import activitydiagram.BooleanValue;
+import activitydiagram.BooleanVariable;
+import activitydiagram.ControlFlow;
+import activitydiagram.ControlToken;
+import activitydiagram.DecisionNode;
+import activitydiagram.ForkNode;
+import activitydiagram.ForkedToken;
+import activitydiagram.InitialNode;
+import activitydiagram.IntegerCalculationExpression;
+import activitydiagram.IntegerComparisonExpression;
+import activitydiagram.IntegerValue;
+import activitydiagram.IntegerVariable;
+import activitydiagram.JoinNode;
+import activitydiagram.MergeNode;
+import activitydiagram.OpaqueAction;
+
+public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activitydiagram__ExecutableNodeT, Activitydiagram__ActivityT extends Activitydiagram__NamedElementT, Activitydiagram__ActivityEdgeT extends Activitydiagram__NamedElementT, Activitydiagram__ActivityFinalNodeT extends Activitydiagram__FinalNodeT, Activitydiagram__ActivityNodeT extends Activitydiagram__NamedElementT, Activitydiagram__BooleanBinaryExpressionT extends Activitydiagram__BooleanExpressionT, Activitydiagram__BooleanExpressionT extends Activitydiagram__ExpressionT, Activitydiagram__BooleanUnaryExpressionT extends Activitydiagram__BooleanExpressionT, Activitydiagram__BooleanValueT extends Activitydiagram__ValueT, Activitydiagram__BooleanVariableT extends Activitydiagram__VariableT, Activitydiagram__ControlFlowT extends Activitydiagram__ActivityEdgeT, Activitydiagram__ControlNodeT extends Activitydiagram__ActivityNodeT, Activitydiagram__ControlTokenT extends Activitydiagram__TokenT, Activitydiagram__DecisionNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__ExecutableNodeT extends Activitydiagram__ActivityNodeT, Activitydiagram__ExpressionT, Activitydiagram__FinalNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__ForkNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__ForkedTokenT extends Activitydiagram__TokenT, Activitydiagram__InitialNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__InputT, Activitydiagram__InputValueT, Activitydiagram__IntegerCalculationExpressionT extends Activitydiagram__IntegerExpressionT, Activitydiagram__IntegerComparisonExpressionT extends Activitydiagram__IntegerExpressionT, Activitydiagram__IntegerExpressionT extends Activitydiagram__ExpressionT, Activitydiagram__IntegerValueT extends Activitydiagram__ValueT, Activitydiagram__IntegerVariableT extends Activitydiagram__VariableT, Activitydiagram__JoinNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__MergeNodeT extends Activitydiagram__ControlNodeT, Activitydiagram__NamedElementT, Activitydiagram__OfferT, Activitydiagram__OpaqueActionT extends Activitydiagram__ActionT, Activitydiagram__TokenT, Activitydiagram__TraceT, Activitydiagram__ValueT, Activitydiagram__VariableT> {
 	Activitydiagram__ActivityT activity(final activitydiagram.Activity activity);
 
 	Activitydiagram__NamedElementT namedElement_activity(final activitydiagram.Activity activity);
@@ -143,15 +163,15 @@ public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activit
 	Activitydiagram__TraceT trace(final activitydiagram.Trace trace);
 
 	default Activitydiagram__FinalNodeT $(final activitydiagram.FinalNode self) {
-		if (self instanceof activitydiagram.ActivityFinalNode)
+		if (self.getClass() == ActivityFinalNode.class)
 			return activityFinalNode((activitydiagram.ActivityFinalNode) self);
 		return null;
 	}
 
 	default Activitydiagram__BooleanExpressionT $(final activitydiagram.BooleanExpression self) {
-		if (self instanceof activitydiagram.BooleanUnaryExpression)
+		if (self.getClass() == BooleanUnaryExpression.class)
 			return booleanUnaryExpression((activitydiagram.BooleanUnaryExpression) self);
-		if (self instanceof activitydiagram.BooleanBinaryExpression)
+		if (self.getClass() == BooleanBinaryExpression.class)
 			return booleanBinaryExpression((activitydiagram.BooleanBinaryExpression) self);
 		return null;
 	}
@@ -165,23 +185,23 @@ public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activit
 	}
 
 	default Activitydiagram__NamedElementT $(final activitydiagram.NamedElement self) {
-		if (self instanceof activitydiagram.Activity)
+		if (self.getClass() == Activity.class)
 			return activity((activitydiagram.Activity) self);
-		if (self instanceof activitydiagram.JoinNode)
+		if (self.getClass() == JoinNode.class)
 			return joinNode((activitydiagram.JoinNode) self);
-		if (self instanceof activitydiagram.DecisionNode)
+		if (self.getClass() == DecisionNode.class)
 			return decisionNode((activitydiagram.DecisionNode) self);
-		if (self instanceof activitydiagram.ForkNode)
+		if (self.getClass() == ForkNode.class)
 			return forkNode((activitydiagram.ForkNode) self);
-		if (self instanceof activitydiagram.MergeNode)
+		if (self.getClass() == MergeNode.class)
 			return mergeNode((activitydiagram.MergeNode) self);
-		if (self instanceof activitydiagram.ActivityFinalNode)
+		if (self.getClass() == ActivityFinalNode.class)
 			return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if (self instanceof activitydiagram.OpaqueAction)
+		if (self.getClass() == OpaqueAction.class)
 			return opaqueAction((activitydiagram.OpaqueAction) self);
-		if (self instanceof activitydiagram.ControlFlow)
+		if (self.getClass() == ControlFlow.class)
 			return controlFlow((activitydiagram.ControlFlow) self);
-		if (self instanceof activitydiagram.InitialNode)
+		if (self.getClass() == InitialNode.class)
 			return initialNode((activitydiagram.InitialNode) self);
 		return null;
 	}
@@ -195,17 +215,17 @@ public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activit
 	}
 
 	default Activitydiagram__ControlNodeT $(final activitydiagram.ControlNode self) {
-		if (self instanceof activitydiagram.JoinNode)
+		if (self.getClass() == JoinNode.class)
 			return joinNode((activitydiagram.JoinNode) self);
-		if (self instanceof activitydiagram.DecisionNode)
+		if (self.getClass() == DecisionNode.class)
 			return decisionNode((activitydiagram.DecisionNode) self);
-		if (self instanceof activitydiagram.ForkNode)
+		if (self.getClass() == ForkNode.class)
 			return forkNode((activitydiagram.ForkNode) self);
-		if (self instanceof activitydiagram.MergeNode)
+		if (self.getClass() == MergeNode.class)
 			return mergeNode((activitydiagram.MergeNode) self);
-		if (self instanceof activitydiagram.ActivityFinalNode)
+		if (self.getClass() == ActivityFinalNode.class)
 			return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if (self instanceof activitydiagram.InitialNode)
+		if (self.getClass() == InitialNode.class)
 			return initialNode((activitydiagram.InitialNode) self);
 		return null;
 	}
@@ -247,7 +267,7 @@ public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activit
 	}
 
 	default Activitydiagram__ActionT $(final activitydiagram.Action self) {
-		if (self instanceof activitydiagram.OpaqueAction)
+		if (self.getClass() == OpaqueAction.class)
 			return opaqueAction((activitydiagram.OpaqueAction) self);
 		return null;
 	}
@@ -257,17 +277,17 @@ public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activit
 	}
 
 	default Activitydiagram__VariableT $(final activitydiagram.Variable self) {
-		if (self instanceof activitydiagram.IntegerVariable)
+		if (self.getClass() == IntegerVariable.class)
 			return integerVariable((activitydiagram.IntegerVariable) self);
-		if (self instanceof activitydiagram.BooleanVariable)
+		if (self.getClass() == BooleanVariable.class)
 			return booleanVariable((activitydiagram.BooleanVariable) self);
 		return null;
 	}
 
 	default Activitydiagram__TokenT $(final activitydiagram.Token self) {
-		if (self instanceof activitydiagram.ControlToken)
+		if (self.getClass() == ControlToken.class)
 			return controlToken((activitydiagram.ControlToken) self);
-		if (self instanceof activitydiagram.ForkedToken)
+		if (self.getClass() == ForkedToken.class)
 			return forkedToken((activitydiagram.ForkedToken) self);
 		return null;
 	}
@@ -277,19 +297,19 @@ public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activit
 	}
 
 	default Activitydiagram__ActivityNodeT $(final activitydiagram.ActivityNode self) {
-		if (self instanceof activitydiagram.JoinNode)
+		if (self.getClass() == JoinNode.class)
 			return joinNode((activitydiagram.JoinNode) self);
-		if (self instanceof activitydiagram.DecisionNode)
+		if (self.getClass() == DecisionNode.class)
 			return decisionNode((activitydiagram.DecisionNode) self);
-		if (self instanceof activitydiagram.ForkNode)
+		if (self.getClass() == ForkNode.class)
 			return forkNode((activitydiagram.ForkNode) self);
-		if (self instanceof activitydiagram.MergeNode)
+		if (self.getClass() == MergeNode.class)
 			return mergeNode((activitydiagram.MergeNode) self);
-		if (self instanceof activitydiagram.ActivityFinalNode)
+		if (self.getClass() == ActivityFinalNode.class)
 			return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if (self instanceof activitydiagram.OpaqueAction)
+		if (self.getClass() == OpaqueAction.class)
 			return opaqueAction((activitydiagram.OpaqueAction) self);
-		if (self instanceof activitydiagram.InitialNode)
+		if (self.getClass() == InitialNode.class)
 			return initialNode((activitydiagram.InitialNode) self);
 		return null;
 	}
@@ -303,13 +323,13 @@ public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activit
 	}
 
 	default Activitydiagram__ExpressionT $(final activitydiagram.Expression self) {
-		if (self instanceof activitydiagram.IntegerCalculationExpression)
+		if (self.getClass() == IntegerCalculationExpression.class)
 			return integerCalculationExpression((activitydiagram.IntegerCalculationExpression) self);
-		if (self instanceof activitydiagram.IntegerComparisonExpression)
+		if (self.getClass() == IntegerComparisonExpression.class)
 			return integerComparisonExpression((activitydiagram.IntegerComparisonExpression) self);
-		if (self instanceof activitydiagram.BooleanUnaryExpression)
+		if (self.getClass() == BooleanUnaryExpression.class)
 			return booleanUnaryExpression((activitydiagram.BooleanUnaryExpression) self);
-		if (self instanceof activitydiagram.BooleanBinaryExpression)
+		if (self.getClass() == BooleanBinaryExpression.class)
 			return booleanBinaryExpression((activitydiagram.BooleanBinaryExpression) self);
 		return null;
 	}
@@ -319,15 +339,15 @@ public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activit
 	}
 
 	default Activitydiagram__ActivityEdgeT $(final activitydiagram.ActivityEdge self) {
-		if (self instanceof activitydiagram.ControlFlow)
+		if (self.getClass() == ControlFlow.class)
 			return controlFlow((activitydiagram.ControlFlow) self);
 		return null;
 	}
 
 	default Activitydiagram__ValueT $(final activitydiagram.Value self) {
-		if (self instanceof activitydiagram.BooleanValue)
+		if (self.getClass() == BooleanValue.class)
 			return booleanValue((activitydiagram.BooleanValue) self);
-		if (self instanceof activitydiagram.IntegerValue)
+		if (self.getClass() == IntegerValue.class)
 			return integerValue((activitydiagram.IntegerValue) self);
 		return null;
 	}
@@ -341,9 +361,9 @@ public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activit
 	}
 
 	default Activitydiagram__IntegerExpressionT $(final activitydiagram.IntegerExpression self) {
-		if (self instanceof activitydiagram.IntegerCalculationExpression)
+		if (self.getClass() == IntegerCalculationExpression.class)
 			return integerCalculationExpression((activitydiagram.IntegerCalculationExpression) self);
-		if (self instanceof activitydiagram.IntegerComparisonExpression)
+		if (self.getClass() == IntegerComparisonExpression.class)
 			return integerComparisonExpression((activitydiagram.IntegerComparisonExpression) self);
 		return null;
 	}
@@ -361,7 +381,7 @@ public interface ActivitydiagramAlgebra<Activitydiagram__ActionT extends Activit
 	}
 
 	default Activitydiagram__ExecutableNodeT $(final activitydiagram.ExecutableNode self) {
-		if (self instanceof activitydiagram.OpaqueAction)
+		if (self.getClass() == OpaqueAction.class)
 			return opaqueAction((activitydiagram.OpaqueAction) self);
 		return null;
 	}

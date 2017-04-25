@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.operation.Activitydiagram$defaultActivityOperation;
-import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.oabenchcase.algebra.impl.MonolithicRevisitorImpl;
+import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.monolithic.algebra.impl.MonolithicRevisitorImpl;
 
 import activitydiagram.ActivityNode;
 import activitydiagram.ActivitydiagramFactory;

@@ -1,7 +1,7 @@
 package org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.impl.operation;
 
 import org.eclipse.emf.ecore.InternalEObject;
-import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.oabenchcase.algebra.impl.MonolithicRevisitorImpl;
+import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.monolithic.algebra.impl.MonolithicRevisitorImpl;
 
 import activitydiagram.Token;
 

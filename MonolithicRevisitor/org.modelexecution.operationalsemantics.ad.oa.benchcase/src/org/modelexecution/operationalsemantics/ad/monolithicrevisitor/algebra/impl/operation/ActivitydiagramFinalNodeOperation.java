@@ -1,6 +1,6 @@
 package org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.impl.operation;
 
-import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.oabenchcase.algebra.impl.MonolithicRevisitorImpl;
+import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.monolithic.algebra.impl.MonolithicRevisitorImpl;
 
 public abstract class ActivitydiagramFinalNodeOperation extends ActivitydiagramControlNodeOperationImpl
 		implements org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.operation.Activitydiagram$defaultFinalNodeOperation {

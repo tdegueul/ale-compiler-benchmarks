@@ -23,7 +23,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.modelexecution.operationalsemantics.ActivityDiagramInputStandaloneSetup;
 import org.modelexecution.operationalsemantics.ActivityDiagramStandaloneSetup;
-import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.oabenchcase.algebra.impl.MonolithicRevisitorImpl;
+import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.monolithic.algebra.impl.MonolithicRevisitorImpl;
 
 import activitydiagram.Activity;
 import activitydiagram.ActivityNode;
