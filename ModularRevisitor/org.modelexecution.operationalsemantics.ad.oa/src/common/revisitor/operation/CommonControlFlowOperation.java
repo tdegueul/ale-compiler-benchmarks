@@ -1,0 +1,6 @@
+package common.revisitor.operation;
+
+public interface CommonControlFlowOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityEdgeOperation 
+{
+}

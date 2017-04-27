@@ -3,8 +3,8 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:activitydiagram="http://activitydiagram"
-    xmlns:activitydiagramoa="http://activitydiagramoa/1.0"
+     xmlns:activitydiagram="http://www.example.org/adruntime"
+    xmlns:activitydiagramoa="http://activitydiagram/1.0"
     name="test3">
   <nodes xsi:type="activitydiagram:InitialNode_Aspect"
       name="initialNode3"

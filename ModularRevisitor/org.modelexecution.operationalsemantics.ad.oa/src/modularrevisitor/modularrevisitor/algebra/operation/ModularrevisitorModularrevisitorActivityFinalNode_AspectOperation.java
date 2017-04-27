@@ -1,5 +1,0 @@
-package modularrevisitor.modularrevisitor.algebra.operation;
-
-public interface ModularrevisitorModularrevisitorActivityFinalNode_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorActivityFinalNodeOperation, modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorFinalNode_AspectOperation {
-	void fire(org.eclipse.emf.common.util.EList<modularrevisitor.Token> tokens);
-}

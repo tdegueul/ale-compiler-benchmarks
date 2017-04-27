@@ -1,5 +1,0 @@
-package admodular.modularrevisitor.algebra.operation;
-
-public interface AdmodularModularrevisitorBooleanBinaryExpressionOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorBooleanExpressionOperation {
-	void execute();
-}

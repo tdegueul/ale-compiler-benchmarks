@@ -1,4 +1,0 @@
-package modularrevisitor.modularrevisitor.algebra.operation;
-
-public interface ModularrevisitorModularrevisitorFinalNode_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorFinalNodeOperation, modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorControlNode_AspectOperation {
-}

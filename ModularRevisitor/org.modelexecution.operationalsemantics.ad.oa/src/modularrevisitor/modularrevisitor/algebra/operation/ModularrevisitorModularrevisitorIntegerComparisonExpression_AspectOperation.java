@@ -1,5 +1,0 @@
-package modularrevisitor.modularrevisitor.algebra.operation;
-
-public interface ModularrevisitorModularrevisitorIntegerComparisonExpression_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorIntegerComparisonExpressionOperation, modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorIntegerExpression_AspectOperation {
-	void execute();
-}

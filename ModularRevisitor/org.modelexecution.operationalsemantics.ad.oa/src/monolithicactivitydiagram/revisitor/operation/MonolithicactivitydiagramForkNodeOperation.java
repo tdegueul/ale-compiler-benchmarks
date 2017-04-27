@@ -1,0 +1,6 @@
+package monolithicactivitydiagram.revisitor.operation;
+
+public interface MonolithicactivitydiagramForkNodeOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlNodeOperation 
+{
+}

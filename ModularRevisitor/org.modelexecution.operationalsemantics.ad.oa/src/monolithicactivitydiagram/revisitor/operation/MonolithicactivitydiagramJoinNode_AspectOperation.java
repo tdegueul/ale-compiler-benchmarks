@@ -1,0 +1,7 @@
+package monolithicactivitydiagram.revisitor.operation;
+
+public interface MonolithicactivitydiagramJoinNode_AspectOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramForkNodeOperation, monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlNode_AspectOperation 
+{
+	Boolean isReady();
+}

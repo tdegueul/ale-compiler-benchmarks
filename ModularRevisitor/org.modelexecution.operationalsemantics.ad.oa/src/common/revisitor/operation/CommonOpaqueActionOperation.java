@@ -1,0 +1,6 @@
+package common.revisitor.operation;
+
+public interface CommonOpaqueActionOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActionOperation 
+{
+}

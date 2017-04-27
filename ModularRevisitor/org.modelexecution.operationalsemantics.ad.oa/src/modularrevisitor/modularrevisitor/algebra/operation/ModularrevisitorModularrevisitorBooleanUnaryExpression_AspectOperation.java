@@ -1,5 +1,0 @@
-package modularrevisitor.modularrevisitor.algebra.operation;
-
-public interface ModularrevisitorModularrevisitorBooleanUnaryExpression_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorBooleanUnaryExpressionOperation, modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorBooleanExpression_AspectOperation {
-	void execute();
-}

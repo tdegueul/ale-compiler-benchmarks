@@ -1,4 +1,0 @@
-package admodular.modularrevisitor.algebra.operation;
-
-public interface AdmodularModularrevisitorIntegerVariableOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorVariableOperation {
-}

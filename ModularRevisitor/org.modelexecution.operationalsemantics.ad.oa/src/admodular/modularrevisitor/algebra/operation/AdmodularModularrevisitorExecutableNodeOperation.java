@@ -1,4 +1,0 @@
-package admodular.modularrevisitor.algebra.operation;
-
-public interface AdmodularModularrevisitorExecutableNodeOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorActivityNodeOperation {
-}

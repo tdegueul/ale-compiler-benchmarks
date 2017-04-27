@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <activitydiagram:Activity_Aspect xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activitydiagram="http://activitydiagram"
-xmlns:activitydiagramoa="http://activitydiagramoa/1.0" name="testperformance_variant1">
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:activitydiagram="http://www.example.org/adruntime"
+xmlns:activitydiagramoa="http://activitydiagram/1.0" name="testperformance_variant1">
   <nodes xsi:type="activitydiagram:InitialNode_Aspect" name="initialNode" outgoing="//@edges.0"/>
   <nodes xsi:type="activitydiagram:ActivityFinalNode_Aspect" name="finalNode" incoming="//@edges.1000"/>
   <nodes xsi:type="activitydiagram:OpaqueAction_Aspect" name="action1" outgoing="//@edges.1" incoming="//@edges.0"/>

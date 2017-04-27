@@ -1,5 +1,0 @@
-package modularrevisitor.modularrevisitor.algebra.operation;
-
-public interface ModularrevisitorModularrevisitorMergeNode_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorMergeNodeOperation, modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorControlNode_AspectOperation {
-	Boolean hasOffers();
-}

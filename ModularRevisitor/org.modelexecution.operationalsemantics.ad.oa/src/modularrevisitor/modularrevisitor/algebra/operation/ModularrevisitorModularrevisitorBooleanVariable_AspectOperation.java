@@ -1,4 +1,0 @@
-package modularrevisitor.modularrevisitor.algebra.operation;
-
-public interface ModularrevisitorModularrevisitorBooleanVariable_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorBooleanVariableOperation, modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorVariable_AspectOperation {
-}

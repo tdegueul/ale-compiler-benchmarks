@@ -1,0 +1,6 @@
+package common.revisitor.operation;
+
+public interface CommonInitialNodeOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlNodeOperation 
+{
+}

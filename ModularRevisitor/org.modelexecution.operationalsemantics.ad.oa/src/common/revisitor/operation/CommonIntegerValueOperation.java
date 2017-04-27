@@ -1,0 +1,6 @@
+package common.revisitor.operation;
+
+public interface CommonIntegerValueOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramValueOperation 
+{
+}

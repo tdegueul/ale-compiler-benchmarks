@@ -25,8 +25,23 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import admodular.ActivitydiagramFactory;
-import modularrevisitor.Trace;
+import activitydiagram.Activity;
+import activitydiagram.ActivityNode;
+import activitydiagram.ActivitydiagramFactory;
+import activitydiagram.BooleanValue;
+import activitydiagram.BooleanVariable;
+import activitydiagram.IntegerValue;
+import activitydiagram.IntegerVariable;
+import activitydiagram.Value;
+import activitydiagram.Variable;
+import adruntime.Activity_Aspect;
+import adruntime.AdruntimeFactory;
+import adruntime.Input;
+import adruntime.InputValue;
+import adruntime.Trace;
+import adruntime.Variable_Aspect;
+import adruntime.impl.Activity_AspectImpl;
+import monolithicactivitydiagram.revisitor.impl.MonolithicactivitydiagramRevisitorImpl;
 
 
 public class TestSuite {
@@ -43,8 +58,8 @@ public class TestSuite {
 
 	@Before
 	final public void setupGrammar() {
-		ActivitydiagramFactory einstance = ActivitydiagramFactory.eINSTANCE;
-		ActivitydiagramoaFactory einstance2 = ActivitydiagramoaFactory.eINSTANCE;
+//		ActivitydiagramFactory einstance = ActivitydiagramFactory.eINSTANCE;
+		AdruntimeFactory einstance2 = AdruntimeFactory.eINSTANCE;
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new XMIResourceFactoryImpl());
 		// ActivityDiagramStandaloneSetup.doSetup();
 		// ActivityDiagramInputStandaloneSetup.doSetup();
@@ -181,20 +196,20 @@ public class TestSuite {
 	}
 
 	protected Trace executeActivity(final String modelPath, final String inputPath) {
-		final Activity activity = getActivity(modelPath);
+		final Activity_Aspect activity = getActivity(modelPath);
 		final EList<InputValue> inputValues = getInputValues(inputPath);
 
-		new activitydiagram.algebra.impl.ActivitydiagramAlgebraImpl() {
+		new MonolithicactivitydiagramRevisitorImpl() {
 		}.$(activity).main(inputValues);
 
 		return ((Activity_Aspect) activity).getTrace();
 	}
 
-	protected Activity getActivity(final String modelPath) {
+	protected Activity_Aspect getActivity(final String modelPath) {
 		final Resource resource = resourceSet.getResource(createFileURI(modelPath), true);
 		final EObject eObject = resource.getContents().get(0);
 		if (eObject instanceof Activity_AspectImpl) {
-			final Activity activity = (Activity_AspectImpl) eObject;
+			final Activity_Aspect activity = (Activity_Aspect) eObject;
 			return activity;
 		}
 		return null;
