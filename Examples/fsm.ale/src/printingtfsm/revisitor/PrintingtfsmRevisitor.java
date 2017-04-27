@@ -12,12 +12,12 @@ public interface PrintingtfsmRevisitor<Fsm__FinalStateT extends Fsm__StateT,Fsm_
 	default Tfsm__TimedTransitionT $(final tfsm.TimedTransition self) {
 		return timedTransition(self);
 	}
-	default Fsm__MachineT $(final fsm.Machine self) {
-		return machine(self);
-	}
 	default Fsm__TransitionT $(final fsm.Transition self) {
 		if(self.eClass().getClassifierID() == tfsm.TfsmPackage.TIMED_TRANSITION && self.eClass().getEPackage() == tfsm.TfsmPackage.eINSTANCE) return timedTransition((tfsm.TimedTransition) self);
 		return transition(self);
+	}
+	default Fsm__MachineT $(final fsm.Machine self) {
+		return machine(self);
 	}
 	default Fsm__StateT $(final fsm.State self) {
 		if(self.eClass().getClassifierID() == fsm.FsmPackage.FINAL_STATE && self.eClass().getEPackage() == fsm.FsmPackage.eINSTANCE) return finalState((fsm.FinalState) self);

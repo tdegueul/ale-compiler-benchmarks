@@ -13,6 +13,9 @@ Fsm__StateT state(final fsm.State state);
 Fsm__TransitionT transition(final fsm.Transition transition);
 
 	
+	default Fsm__MachineT $(final fsm.Machine self) {
+		return machine(self);
+	}
 	default Fsm__StateT $(final fsm.State self) {
 		if(self.eClass().getClassifierID() == fsm.FsmPackage.FINAL_STATE && self.eClass().getEPackage() == fsm.FsmPackage.eINSTANCE) return finalState((fsm.FinalState) self);
 		return state(self);
@@ -22,8 +25,5 @@ Fsm__TransitionT transition(final fsm.Transition transition);
 	}
 	default Fsm__FinalStateT $(final fsm.FinalState self) {
 		return finalState(self);
-	}
-	default Fsm__MachineT $(final fsm.Machine self) {
-		return machine(self);
 	}
 }
