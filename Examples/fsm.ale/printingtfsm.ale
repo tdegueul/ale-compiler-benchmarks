@@ -1,0 +1,12 @@
+behavior printingtfsm;
+
+import ecore "/tfsm.model/model/tfsm.ecore";
+
+
+import ale printingfsm;
+
+open class TimedTransition extends printingfsm.Transition {
+	def String print() {
+		return self.getTime() + "@" + $[super].print();
+	}
+}

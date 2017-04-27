@@ -1,0 +1,13 @@
+behavior guardedexecution;
+
+import ecore "/guarded.model/model/guarded.ecore";
+import ale evalexp;
+import ale execution;
+
+open class Guarded extends execution.Transition {
+	def void step(String ch) {
+		if($[self.getGuard()].eval().equals(true)) {
+			$[super].step(ch);
+		}
+	}
+}

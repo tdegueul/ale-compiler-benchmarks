@@ -1,0 +1,9 @@
+behavior execution;
+
+import ecore "/fsm.model/model/fsm.ecore";
+
+open class Transition {
+	def void step(String ch) {
+		debug(ch);
+	}
+}
