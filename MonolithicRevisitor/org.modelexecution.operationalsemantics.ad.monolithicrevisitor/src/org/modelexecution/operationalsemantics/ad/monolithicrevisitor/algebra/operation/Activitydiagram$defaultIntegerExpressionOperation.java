@@ -1,4 +1,0 @@
-package org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.operation;
-
-public interface Activitydiagram$defaultIntegerExpressionOperation extends org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.operation.Activitydiagram$defaultExpressionOperation {
-}

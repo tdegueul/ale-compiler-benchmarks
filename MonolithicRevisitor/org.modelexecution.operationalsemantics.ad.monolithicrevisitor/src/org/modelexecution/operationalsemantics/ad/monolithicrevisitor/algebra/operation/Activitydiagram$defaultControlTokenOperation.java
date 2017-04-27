@@ -1,4 +1,0 @@
-package org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.operation;
-
-public interface Activitydiagram$defaultControlTokenOperation extends org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.operation.Activitydiagram$defaultTokenOperation {
-}

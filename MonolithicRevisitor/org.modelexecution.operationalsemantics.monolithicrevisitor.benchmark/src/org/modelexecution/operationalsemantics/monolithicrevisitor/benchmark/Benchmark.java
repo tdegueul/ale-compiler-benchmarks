@@ -8,11 +8,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.monolithic.algebra.impl.MonolithicRevisitorImpl;
 
 import activitydiagram.Activity;
 import activitydiagram.ActivitydiagramFactory;
 import activitydiagram.ActivitydiagramPackage;
+import monolithicactivitydiagram.revisitor.impl.MonolithicactivitydiagramRevisitorImpl;
 
 public class Benchmark {
 
@@ -58,7 +58,7 @@ public class Benchmark {
 	}
 
 	private long doTheJob(final Activity activity) {
-		final MonolithicRevisitorImpl monolithicRevisitorImpl = new MonolithicRevisitorImpl() {
+		final MonolithicactivitydiagramRevisitorImpl monolithicRevisitorImpl = new MonolithicactivitydiagramRevisitorImpl() {
 		};
 		final long start = System.currentTimeMillis();
 		monolithicRevisitorImpl.$(activity).main(null);

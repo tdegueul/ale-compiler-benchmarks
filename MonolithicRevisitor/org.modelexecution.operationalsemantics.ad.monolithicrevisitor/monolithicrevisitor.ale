@@ -1,10 +1,20 @@
-behavior monolithicrevisitor;
+behavior monolithicactivitydiagram;
 
+import ecore "/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore";
+ 
 open class Expression {
 	def void execute() {}
 }
 
 open class ActivityEdge {
+	def Boolean isControlFlow() {
+		return false;
+	}
+	
+	def ControlFlow asControlFlow() {
+		return null;
+	}
+	
 	def void sendOffer(Sequence(Token) tokens) {
 		Offer offer = new Offer();
 		for(Token token in tokens) {
@@ -28,7 +38,7 @@ open class ActivityEdge {
 	
 	def Boolean hasOffer() {
 		for(Offer o in self.getOffers()) {
-			if($[o].hasTokens()) { // $
+			if($[o].hasTokens()) { 
 				return true;
 			}
 		}
@@ -37,16 +47,16 @@ open class ActivityEdge {
 }
 
 open class Offer {
-
+	
 	def Boolean hasTokens() {
-		self.removeWithdrawnTokens();
+		$[self].removeWithdrawnTokens();
 		return self.getOfferedTokens().size() > 0;
 	}
 	
 	def void removeWithdrawnTokens() {
 		Sequence(Token) tokensToBeRemoved = newSequence(Token);
 		for(Token token in self.getOfferedTokens()) {
-			if($[token].isWithdrawn()) { // $
+			if($[token].isWithdrawn()) { 
 				tokensToBeRemoved.add(token);
 			}
 		} 
@@ -54,14 +64,21 @@ open class Offer {
 	}
 }
 
-open class ActivityNode {
-
+open class ActivityNode { // extends NamdeElement
+	def Boolean isInitialNode() {
+		return false;
+	}
+	
+	def InitialNode asInitialNode() {
+		return null;
+	}
+	
 	def void run() {
 		self.setRunning(true);
 	}
 	
 	def Boolean isRunning() {
-		return $[self].getRunning();
+		return self.isRunning();
 	}
 	
 	def void terminate() {
@@ -74,16 +91,16 @@ open class ActivityNode {
 	
 	def void sendOffers(Sequence(Token) tokens) {
 		for(ActivityEdge edge in self.getOutgoing()) {
-			$[edge].sendOffer(tokens); // $
+			$[edge].sendOffer(tokens); 
 		}
 	}
 	
 	def Sequence(Token) takeOfferedTokens() {
 		Sequence(Token) allTokens = newSequence(Token);
 		for(ActivityEdge edge in self.getIncoming()) {
-			Sequence(Token) tokens = $[edge].takeOfferedTokens(); // $
+			Sequence(Token) tokens = $[edge].takeOfferedTokens(); 
 			for(Token token in tokens) {
-				$[token].withdraw(); // $
+				$[token].withdraw(); 
 			}
 			
 			allTokens.addAll(tokens);
@@ -116,10 +133,10 @@ open class ActivityNode {
 	def void fire(Sequence(Token) tokens) {} // abstract
 }
 
-class Token {
+open class Token {
 	
 	def void withdraw() {
-		if(not self.isWithdrawn()) {
+		if(not $[self].isWithdrawn()) {
 			$[self.getHolder()].removeToken(self);
 			self.setHolder(null);	
 		}
@@ -131,7 +148,7 @@ class Token {
 	
 	def Token transfer(ActivityNode holder) {
 		if(self.getHolder() != null) {
-			self.withdraw();
+			$[self].withdraw();
 		}
 		
 		self.setHolder(holder);
@@ -163,32 +180,32 @@ open class ForkedToken extends Token {
 
 
 open class Activity {
-
+	
 	def void initialize(Sequence(InputValue) inputValues) {
 		for(Variable v in self.getLocals()) {
-			$[v].setCurrentValue(v.getInitialValue());
+			v.setCurrentValue(v.getInitialValue());
 		}
 		if(inputValues != null) {
 			for(InputValue v in inputValues) {
-				$[v.getVariable()].setCurrentValue(v.getValue());
+				v.getVariable().setCurrentValue(v.getValue());
 			}
 		}
 	}
 	
 	def void main(Sequence(InputValue) inputValues) {
-		self.initialize(inputValues);
-		self.initializeTrace();
-		self.run();
+		$[self].initialize(inputValues);
+		$[self].initializeTrace();
+		$[self].run();
 	}
 	
 	def void run() {
-		self.runNodes();
-		self.fireInitialNode();
-		Sequence(ActivityNode) enabledNodes = self.getEnabledNodes();
+		$[self].runNodes();
+		$[self].fireInitialNode();
+		Sequence(ActivityNode) enabledNodes = $[self].getEnabledNodes();
 		while(enabledNodes.size() > 0) {
-			ActivityNode nextNode = self.selectNextNode(enabledNodes);
-			self.fireNode(nextNode);
-			enabledNodes = self.getEnabledNodes();
+			ActivityNode nextNode = $[self].selectNextNode(enabledNodes);
+			$[self].fireNode(nextNode);
+			enabledNodes = $[self].getEnabledNodes();
 		}
 	}
 	
@@ -199,7 +216,7 @@ open class Activity {
 	def Sequence(ActivityNode) getEnabledNodes() {
 		Sequence(ActivityNode) enabledNodes = newSequence(ActivityNode);
 		for(ActivityNode node in self.getNodes()) {
-			if($[node].isReady()) { // $
+			if($[node].isReady()) { 
 				enabledNodes.add(node);
 			}
 		}
@@ -209,20 +226,20 @@ open class Activity {
 	}
 	
 	def void fireInitialNode() {
-		InitialNode initialNode = self.getInitialNode();
-		self.fireNode(initialNode);
+		InitialNode initialNode = $[self].getInitialNode();
+		$[self].fireNode(initialNode);
 	}
 	
 	def void fireNode(ActivityNode node) {
-		Sequence(Token) tokens = $[node].takeOfferedTokens(); // $
-		$[node].fire(tokens); // $
-		self.getTrace().getExecutedNodes().add(node); // expected type wrong in generated code
+		Sequence(Token) tokens = $[node].takeOfferedTokens(); 
+		$[node].fire(tokens); 
+		self.getTrace().getExecutedNodes().add(node); 
 	}
 	
 	def InitialNode getInitialNode() {
 		for(ActivityNode node in self.getNodes()) {
-			if(node instanceof activitydiagramoa.InitialNode) {
-				return node castto activitydiagramoa.InitialNode;
+			if($[node].isInitialNode()) {
+				return $[node].asInitialNode();
 			}
 		}
 		
@@ -231,7 +248,7 @@ open class Activity {
 	
 	def void runNodes() {
 		for(ActivityNode node in self.getNodes()) {
-			$[node].run(); // $
+			$[node].run(); 
 		}
 	}
 	
@@ -247,11 +264,7 @@ open class Activity {
 	}
 }
 
-open class ExecutableNode {
-	
-}
-
-open class Action {
+open class Action extends ExecutableNode {
 	def void fire(Sequence(Token) tokens) {
 		$[self].doAction();
 		$[self].sendOffers();
@@ -265,7 +278,7 @@ open class Action {
 	def void sendOffers() {
 		if(self.getOutgoing().size() > 0) {
 			Sequence(Token) tokens = newSequence(Token);
-			tokens.add(new Token());
+			tokens.add(new ControlToken());
 			$[self].addTokens(tokens);
 			$[self.getOutgoing().get(0)].sendOffer(tokens);
 		}
@@ -276,36 +289,36 @@ open class Action {
 	}
 }
 
-open class FinalNode {
+open class FinalNode extends ControlNode {
 	
 }
 
-open class ActivityFinalNode {
+open class ActivityFinalNode extends FinalNode {
 	def void fire(Sequence(Token) tokens) {
-		$[self.getActivity()].terminate(); // $
+		$[self.getActivity()].terminate(); 
 	}
 }
 
-open class ControlNode {
+open class ControlNode extends ActivityNode {
 	def void fire(Sequence(Token) tokens) {
 		$[self].addTokens(tokens);
 		$[self].sendOffers(tokens);
 	}
 	
 	def Boolean isReady() {
-		return super.isReady() and self.hasOffers();
+		return super.isReady() and $[self].hasOffers();
 	}
 }
 
-open class DecisionNode {
+open class DecisionNode extends ControlNode {
 	def void fire(Sequence(Token) tokens) {
 		ActivityEdge selectedEdge = null;
 		for(ActivityEdge edge in self.getOutgoing()) {
-			if(edge instanceof activitydiagramoa.ControlFlow) {
-				ControlFlow controlFlow = edge castto activitydiagramoa.ControlFlow;
-				Value guardValue = $[controlFlow.getGuard()].getCurrentValue(); // $ ??
-				if(guardValue instanceof activitydiagramoa.BooleanValue) {
-					BooleanValue booleanValue = guardValue castto activitydiagramoa.BooleanValue;
+			if($[edge].isControlFlow()) {
+				ControlFlow controlFlow = $[edge].asControlFlow();
+				Value guardValue = controlFlow.getGuard().getCurrentValue();
+				if($[guardValue].isBooleanValue()) {
+					BooleanValue booleanValue = $[guardValue].asBooleanValue();
 					if(booleanValue.isValue()) {
 						selectedEdge = edge;
 						break;
@@ -315,7 +328,7 @@ open class DecisionNode {
 		}
 		
 		if(selectedEdge != null) {
-			self.addTokens(tokens);
+			$[self].addTokens(tokens);
 			$[selectedEdge].sendOffer(tokens);
 		}
 	}
@@ -323,7 +336,7 @@ open class DecisionNode {
 	def Boolean isReady() {
 		Boolean ready = true;
 		for(ActivityEdge edge in self.getIncoming()) {
-			if(not $[edge].hasOffer()) {// $
+			if(not $[edge].hasOffer()) {
 				ready = false;
 			}
 			
@@ -333,7 +346,7 @@ open class DecisionNode {
 	}
 }
 
-open class ForkNode {
+open class ForkNode extends ControlNode {
 	def void fire(Sequence(Token) tokens) {
 		Sequence(Token) forkedTokens = newSequence(Token);
 		for(Token token in tokens) {
@@ -343,25 +356,33 @@ open class ForkNode {
 			forkedTokens.add(forkedToken);
 		}
 		
-		self.addTokens(forkedTokens);
-		self.sendOffers(forkedTokens);
+		$[self].addTokens(forkedTokens);
+		$[self].sendOffers(forkedTokens);
 	}
 }
 
-open class InitialNode {
+open class InitialNode extends ControlNode {
 	def void fire(Sequence(Token) tokens) {
 		Sequence(Token) producedTokens = newSequence(Token);
 		producedTokens.add(new ControlToken());
-		self.addTokens(producedTokens);
-		self.sendOffers(producedTokens);
+		$[self].addTokens(producedTokens);
+		$[self].sendOffers(producedTokens);
 	}
 	
 	def Boolean isReady() {
 		return false;
 	}
+	
+	def Boolean isInitialNode() {
+		return true;
+	}
+	
+	def InitialNode asInitialNode() {
+		return self;
+	}
 }
 
-open class JoinNode {
+open class JoinNode extends ControlNode {
 	def Boolean isReady() {
 		Boolean ready = true;
 		for(ActivityEdge edge in self.getIncoming()) {
@@ -373,7 +394,7 @@ open class JoinNode {
 	}
 }
 
-open class MergeNode {
+open class MergeNode extends ControlNode {
 	def Boolean hasOffers() {
 		for(ActivityEdge edge in self.getIncoming()) {
 			if($[edge].hasOffer()) {
@@ -386,44 +407,44 @@ open class MergeNode {
 }
 
 
-open class OpaqueAction {
+open class OpaqueAction extends Action {
 	def void execute() {} // abstract
 	def void doAction() {
 		for(Expression e in self.getExpressions()) {
-			$[e].execute(); // $
+			$[e].execute(); 
 		}		
 	}
 }
 
-open class BooleanBinaryExpression {
+open class BooleanBinaryExpression extends BooleanExpression{
 	def void execute() {
-		Boolean operandValue1 = self.getCurrentValue(self.getOperand1());
-		Boolean operandValue2 = self.getCurrentValue(self.getOperand2());
+		Boolean operandValue1 = $[self].getCurrentValue(self.getOperand1());
+		Boolean operandValue2 = $[self].getCurrentValue(self.getOperand2());
 		
 		Boolean result = null;
-		if(self.getOperator() == activitydiagramoa.BooleanBinaryOperator.AND) {
+		if(self.getOperator() == activitydiagram.BooleanBinaryOperator.AND) {
 			result = operandValue1 and operandValue2;
 		} else {
 			result = operandValue1 or operandValue2;
 		}
 		
-		self.assignValue(result);
+		$[self].assignValue(result);
 	}
 }
 
-open class BooleanExpression {
+open class BooleanExpression extends Expression {
 	def void assignValue(Boolean value) {
 		BooleanValue resultValue = new BooleanValue();
 		resultValue.setValue(value);
 		BooleanVariable assignee = self.getAssignee();
-		$[assignee].setCurrentValue(resultValue);
+		assignee.setCurrentValue(resultValue);
 	}
 	
 	def Boolean getCurrentValue(BooleanVariable variable) {
 		Boolean currentValue = null;
-		Value value = $[variable].getCurrentValue();
-		if(value instanceof activitydiagramoa.BooleanValue) {
-			BooleanValue booleanValue = value castto activitydiagramoa.BooleanValue;
+		Value value = variable.getCurrentValue();
+		if($[value].isBooleanValue()) {
+			BooleanValue booleanValue = $[value].asBooleanValue();
 			currentValue = booleanValue.isValue();
 		}
 		
@@ -431,66 +452,65 @@ open class BooleanExpression {
 	}
 }
 
-open class BooleanUnaryExpression {
+open class BooleanUnaryExpression extends BooleanExpression {
 	def void execute() {
-		Boolean operandValue = self.getCurrentValue(self.getOperand());
-		self.assignValue(not operandValue);
+		Boolean operandValue = $[self].getCurrentValue(self.getOperand());
+		$[self].assignValue(not operandValue);
 	}
 }
 
-open class IntegerCalculationExpression {
+open class IntegerCalculationExpression extends IntegerExpression {
 	def void execute() {
-		Integer operandValue1 = self.getCurrentValue(self.getOperand1());
-		Integer operandValue2 = self.getCurrentValue(self.getOperand2());
+		Integer operandValue1 = $[self].getCurrentValue(self.getOperand1());
+		Integer operandValue2 = $[self].getCurrentValue(self.getOperand2());
 
 		Integer result = null;
-		if(self.getOperator() == activitydiagramoa.IntegerCalculationOperator.ADD) {
+
+		if(self.getOperator() == activitydiagram.IntegerCalculationOperator.ADD) {
 			result = operandValue1 + operandValue2;
 		} else {
 			result = operandValue1 - operandValue2;
 		}
 		IntegerValue resultValue = new IntegerValue();
 		resultValue.setValue(result);
-		$[self.getAssignee()].setCurrentValue(resultValue);
+		self.getAssignee().setCurrentValue(resultValue);
 		
 	}
 }
 
-open class IntegerComparisonExpression {
+open class IntegerComparisonExpression extends IntegerExpression {
 	def void execute() {
-		Integer operandValue1 = self.getCurrentValue(self.getOperand1());
-		Integer operandValue2 = self.getCurrentValue(self.getOperand2());
+		Integer operandValue1 = $[self].getCurrentValue(self.getOperand1());
+		Integer operandValue2 = $[self].getCurrentValue(self.getOperand2());
 
 		Boolean result = null;
-		if(self.getOperator() == activitydiagramoa.IntegerComparisonOperator.EQUALS) {
+
+		if(self.getOperator() == activitydiagram.IntegerComparisonOperator.EQUALS) {
 			result = operandValue1 == operandValue2;
 		} else {
-			if(self.getOperator() == activitydiagramoa.IntegerComparisonOperator.GREATER) {
+			if(self.getOperator() == activitydiagram.IntegerComparisonOperator.GREATER) {
 			result = operandValue1 > operandValue2;
 		} else {
-			if(self.getOperator() == activitydiagramoa.IntegerComparisonOperator.GREATER_EQUALS) {
+			if(self.getOperator() == activitydiagram.IntegerComparisonOperator.GREATER_EQUALS) {
 			result = operandValue1 >= operandValue2;
 		} else {
-			if(self.getOperator() == activitydiagramoa.IntegerComparisonOperator.SMALLER) {
+			if(self.getOperator() == activitydiagram.IntegerComparisonOperator.SMALLER) {
 			result = operandValue1 < operandValue2;
 		} else {
 			result = operandValue1 <= operandValue2;
-		}
-		}
-		}
-		}
+		}}}}
 		BooleanValue resultValue = new BooleanValue();
 		resultValue.setValue(result);
-		$[self.getAssignee()].setCurrentValue(resultValue);
+		self.getAssignee().setCurrentValue(resultValue);
 	}
 }
 
-open class IntegerExpression {
+open class IntegerExpression extends Expression {
 	def Integer getCurrentValue(Variable variable) {
 		Integer currentValue = null;
-		Value value = $[variable].getCurrentValue();
-		if(value instanceof activitydiagramoa.IntegerValue) {
-			IntegerValue integerValue = value castto activitydiagramoa.IntegerValue;
+		Value value = variable.getCurrentValue();
+		if($[value].isIntegerValue()) {
+			IntegerValue integerValue = $[value].asIntegerValue();
 			currentValue = integerValue.getValue();
 		}
 		
@@ -499,6 +519,57 @@ open class IntegerExpression {
 }
 
 
-open class ControlFlow {}
+open class ControlFlow extends ActivityEdge {
+	def Boolean isControlFlow() {
+		return true;
+	}
+	
+	def ControlFlow asControlFlow() {
+		return self;
+	}
+}
 open class IntegerVariable {}
 open class BooleanVariable {}
+
+
+open class Value {
+	def Boolean isBooleanValue() {
+		return false;
+	}
+	
+	def BooleanValue asBooleanValue() {
+		return null;
+	}
+	
+	def Boolean isIntegerValue() {
+		return false;
+	}
+	
+	def IntegerValue asIntegerValue() {
+		return null;
+	}
+}
+
+open class BooleanValue extends Value {
+	def Boolean isBooleanValue() {
+		return true;
+	}
+	
+	def BooleanValue asBooleanValue() {
+		return self;
+	}
+}
+
+open class IntegerValue extends Value {
+	def Boolean isIntegerValue() {
+		return true;		
+	}
+	
+	def IntegerValue asIntegerValue() {
+		return self;
+	}
+}
+
+open class ExecutableNode extends ActivityNode {
+	
+}

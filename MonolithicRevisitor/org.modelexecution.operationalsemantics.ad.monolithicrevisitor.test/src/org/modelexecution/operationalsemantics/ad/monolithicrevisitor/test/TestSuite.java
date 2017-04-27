@@ -13,6 +13,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -23,7 +24,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.modelexecution.operationalsemantics.ActivityDiagramInputStandaloneSetup;
 import org.modelexecution.operationalsemantics.ActivityDiagramStandaloneSetup;
-import org.modelexecution.operationalsemantics.ad.monolithicrevisitor.monolithic.algebra.impl.MonolithicRevisitorImpl;
 
 import activitydiagram.Activity;
 import activitydiagram.ActivityNode;
@@ -36,6 +36,7 @@ import activitydiagram.IntegerVariable;
 import activitydiagram.Trace;
 import activitydiagram.Value;
 import activitydiagram.Variable;
+import monolithicactivitydiagram.revisitor.impl.MonolithicactivitydiagramRevisitorImpl;
 
 public class TestSuite {
 
@@ -188,9 +189,9 @@ public class TestSuite {
 	protected Trace executeActivity(final String modelPath, final String inputPath) {
 		final Activity activity = getActivity(modelPath);
 		final List<InputValue> inputValues = getInputValues(inputPath);
-		final MonolithicRevisitorImpl monolithicRevisitorImpl = new MonolithicRevisitorImpl() {
+		final MonolithicactivitydiagramRevisitorImpl monolithicRevisitorImpl = new MonolithicactivitydiagramRevisitorImpl() {
 		};
-		monolithicRevisitorImpl.$(activity).main(inputValues);
+		monolithicRevisitorImpl.$(activity).main(new BasicEList<>(inputValues));
 		final Trace trace = activity.getTrace();
 		return trace;
 	}

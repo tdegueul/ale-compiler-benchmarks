@@ -1,0 +1,7 @@
+package monolithicactivitydiagram.revisitor.operation;
+
+public interface MonolithicactivitydiagramMergeNodeOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlNodeOperation 
+{
+	Boolean hasOffers();
+}

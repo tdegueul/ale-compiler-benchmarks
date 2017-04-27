@@ -1,0 +1,8 @@
+package monolithicactivitydiagram.revisitor.operation;
+
+public interface MonolithicactivitydiagramBooleanExpressionOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramExpressionOperation 
+{
+	void assignValue(Boolean value);
+	Boolean getCurrentValue(activitydiagram.BooleanVariable variable);
+}
