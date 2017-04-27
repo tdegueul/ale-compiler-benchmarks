@@ -19,7 +19,13 @@ Export-Package: activitydiagram,
  activitydiagramoa.activitydiagram.algebra.operation,
  activitydiagramoa.algebra,
  activitydiagramoa.impl,
- activitydiagramoa.util
+ activitydiagramoa.util,
+ admodular,
+ admodular.impl,
+ admodular.util,
+ modularrevisitor,
+ modularrevisitor.impl,
+ modularrevisitor.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.modelexecution.operationalsemantics.admodular;bundle-version="0.1.0";visibility:=reexport

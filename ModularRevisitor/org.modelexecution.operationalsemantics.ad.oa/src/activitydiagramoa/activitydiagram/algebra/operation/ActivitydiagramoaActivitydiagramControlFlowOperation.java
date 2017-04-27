@@ -1,4 +1,0 @@
-package activitydiagramoa.activitydiagram.algebra.operation;
-
-public interface ActivitydiagramoaActivitydiagramControlFlowOperation extends activitydiagramoa.activitydiagram.algebra.operation.ActivitydiagramoaActivitydiagramActivityEdgeOperation {
-}

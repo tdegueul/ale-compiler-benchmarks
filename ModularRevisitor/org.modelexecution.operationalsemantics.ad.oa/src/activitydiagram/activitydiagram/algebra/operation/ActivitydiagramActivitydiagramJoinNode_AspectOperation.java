@@ -1,5 +1,0 @@
-package activitydiagram.activitydiagram.algebra.operation;
-
-public interface ActivitydiagramActivitydiagramJoinNode_AspectOperation extends activitydiagramoa.activitydiagram.algebra.operation.ActivitydiagramoaActivitydiagramJoinNodeOperation, activitydiagram.activitydiagram.algebra.operation.ActivitydiagramActivitydiagramControlNode_AspectOperation {
-	Boolean isReady();
-}

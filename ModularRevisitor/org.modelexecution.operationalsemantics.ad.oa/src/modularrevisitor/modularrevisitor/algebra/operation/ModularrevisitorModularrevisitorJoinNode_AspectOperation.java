@@ -1,0 +1,5 @@
+package modularrevisitor.modularrevisitor.algebra.operation;
+
+public interface ModularrevisitorModularrevisitorJoinNode_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorJoinNodeOperation, modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorControlNode_AspectOperation {
+	Boolean isReady();
+}

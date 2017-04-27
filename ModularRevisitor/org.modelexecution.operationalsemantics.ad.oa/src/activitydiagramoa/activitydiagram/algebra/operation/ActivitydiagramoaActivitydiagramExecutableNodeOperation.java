@@ -1,4 +1,0 @@
-package activitydiagramoa.activitydiagram.algebra.operation;
-
-public interface ActivitydiagramoaActivitydiagramExecutableNodeOperation extends activitydiagramoa.activitydiagram.algebra.operation.ActivitydiagramoaActivitydiagramActivityNodeOperation {
-}

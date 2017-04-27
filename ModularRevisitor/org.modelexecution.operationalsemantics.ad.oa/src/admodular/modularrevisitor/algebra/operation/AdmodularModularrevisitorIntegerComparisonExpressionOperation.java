@@ -1,0 +1,5 @@
+package admodular.modularrevisitor.algebra.operation;
+
+public interface AdmodularModularrevisitorIntegerComparisonExpressionOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorIntegerExpressionOperation {
+	void execute();
+}

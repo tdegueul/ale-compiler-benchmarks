@@ -1,6 +1,0 @@
-package activitydiagram.activitydiagram.algebra.operation;
-
-public interface ActivitydiagramActivitydiagramOpaqueAction_AspectOperation extends activitydiagramoa.activitydiagram.algebra.operation.ActivitydiagramoaActivitydiagramOpaqueActionOperation, activitydiagram.activitydiagram.algebra.operation.ActivitydiagramActivitydiagramAction_AspectOperation {
-	void execute();
-	void doAction();
-}

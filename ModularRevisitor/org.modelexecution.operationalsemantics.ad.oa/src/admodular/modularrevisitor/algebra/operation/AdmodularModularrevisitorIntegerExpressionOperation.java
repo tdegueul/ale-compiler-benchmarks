@@ -1,0 +1,5 @@
+package admodular.modularrevisitor.algebra.operation;
+
+public interface AdmodularModularrevisitorIntegerExpressionOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorExpressionOperation {
+	Integer getCurrentValue(admodular.Variable variable);
+}

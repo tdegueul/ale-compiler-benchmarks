@@ -1,0 +1,4 @@
+package modularrevisitor.modularrevisitor.algebra.operation;
+
+public interface ModularrevisitorModularrevisitorControlTokenOperation extends modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorTokenOperation {
+}

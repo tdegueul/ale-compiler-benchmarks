@@ -1,0 +1,4 @@
+package modularrevisitor.modularrevisitor.algebra.operation;
+
+public interface ModularrevisitorModularrevisitorExecutableNode_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorExecutableNodeOperation, modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorActivityNode_AspectOperation {
+}

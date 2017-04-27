@@ -1,0 +1,6 @@
+package modularrevisitor.modularrevisitor.algebra.operation;
+
+public interface ModularrevisitorModularrevisitorControlFlow_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorControlFlowOperation, modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorActivityEdge_AspectOperation {
+	Boolean isControlFlow();
+	admodular.ControlFlow asControlFlow();
+}

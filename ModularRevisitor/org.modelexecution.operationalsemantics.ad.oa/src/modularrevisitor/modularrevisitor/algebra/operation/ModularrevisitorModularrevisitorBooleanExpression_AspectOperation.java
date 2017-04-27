@@ -1,0 +1,6 @@
+package modularrevisitor.modularrevisitor.algebra.operation;
+
+public interface ModularrevisitorModularrevisitorBooleanExpression_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorBooleanExpressionOperation {
+	void assignValue(Boolean value);
+	Boolean getCurrentValue(admodular.BooleanVariable variable);
+}

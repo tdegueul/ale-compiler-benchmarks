@@ -1,6 +1,0 @@
-package activitydiagram.activitydiagram.algebra.operation;
-
-public interface ActivitydiagramActivitydiagramVariable_AspectOperation extends activitydiagramoa.activitydiagram.algebra.operation.ActivitydiagramoaActivitydiagramVariableOperation {
-	activitydiagramoa.Value getCurrentValue();
-	void setCurrentValue(activitydiagramoa.Value currentValue);
-}

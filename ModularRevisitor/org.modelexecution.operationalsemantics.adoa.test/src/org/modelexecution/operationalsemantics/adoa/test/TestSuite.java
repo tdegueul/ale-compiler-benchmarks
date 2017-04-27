@@ -25,22 +25,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import activitydiagram.Activity_Aspect;
-import activitydiagram.ActivitydiagramFactory;
-import activitydiagram.Input;
-import activitydiagram.InputValue;
-import activitydiagram.Trace;
-import activitydiagram.Variable_Aspect;
-import activitydiagram.impl.Activity_AspectImpl;
-import activitydiagramoa.Activity;
-import activitydiagramoa.ActivityNode;
-import activitydiagramoa.ActivitydiagramoaFactory;
-import activitydiagramoa.BooleanValue;
-import activitydiagramoa.BooleanVariable;
-import activitydiagramoa.IntegerValue;
-import activitydiagramoa.IntegerVariable;
-import activitydiagramoa.Value;
-import activitydiagramoa.Variable;
+import admodular.ActivitydiagramFactory;
+import modularrevisitor.Trace;
+
 
 public class TestSuite {
 

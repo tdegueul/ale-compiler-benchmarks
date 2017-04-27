@@ -1,0 +1,6 @@
+package modularrevisitor.modularrevisitor.algebra.operation;
+
+public interface ModularrevisitorModularrevisitorOpaqueAction_AspectOperation extends admodular.modularrevisitor.algebra.operation.AdmodularModularrevisitorOpaqueActionOperation, modularrevisitor.modularrevisitor.algebra.operation.ModularrevisitorModularrevisitorAction_AspectOperation {
+	void execute();
+	void doAction();
+}

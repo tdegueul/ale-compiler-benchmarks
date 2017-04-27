@@ -1,7 +1,0 @@
-package activitydiagramoa.activitydiagram.algebra.operation;
-
-import admodular.Variable;
-
-public interface ActivitydiagramoaActivitydiagramIntegerExpressionOperation extends activitydiagramoa.activitydiagram.algebra.operation.ActivitydiagramoaActivitydiagramExpressionOperation {
-	Integer getCurrentValue(Variable variable);
-}

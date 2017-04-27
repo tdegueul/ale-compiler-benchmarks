@@ -1,5 +1,0 @@
-package activitydiagram.activitydiagram.algebra.operation;
-
-public interface ActivitydiagramActivitydiagramMergeNode_AspectOperation extends activitydiagramoa.activitydiagram.algebra.operation.ActivitydiagramoaActivitydiagramMergeNodeOperation, activitydiagram.activitydiagram.algebra.operation.ActivitydiagramActivitydiagramControlNode_AspectOperation {
-	Boolean hasOffers();
-}
