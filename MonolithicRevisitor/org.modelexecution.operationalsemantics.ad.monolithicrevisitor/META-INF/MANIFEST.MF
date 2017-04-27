@@ -9,12 +9,7 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: monolithicactivitydiagram.revisitor,
  monolithicactivitydiagram.revisitor.impl,
- monolithicactivitydiagram.revisitor.operation,
- org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra,
- org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.impl.operation,
- org.modelexecution.operationalsemantics.ad.monolithicrevisitor.algebra.operation,
- org.modelexecution.operationalsemantics.ad.monolithicrevisitor.monolithic.algebra,
- org.modelexecution.operationalsemantics.ad.monolithicrevisitor.monolithic.algebra.impl
+ monolithicactivitydiagram.revisitor.operation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.modelexecution.operationalsemantics.ad;bundle-version="0.1.0"
