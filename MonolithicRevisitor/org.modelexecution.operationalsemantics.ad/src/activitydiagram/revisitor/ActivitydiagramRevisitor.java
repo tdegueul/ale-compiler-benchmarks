@@ -7,10 +7,10 @@ Activitydiagram__ActivityT activity(final activitydiagram.Activity activity);
 Activitydiagram__NamedElementT namedElement_activity(final activitydiagram.Activity activity);
 
 Activitydiagram__ActivityFinalNodeT activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode);
-Activitydiagram__ControlNodeT controlNode_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode);
-Activitydiagram__ActivityNodeT activityNode_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode);
-Activitydiagram__NamedElementT namedElement_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode);
 Activitydiagram__FinalNodeT finalNode_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode);
+Activitydiagram__ControlNodeT controlNode_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode);
+Activitydiagram__NamedElementT namedElement_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode);
+Activitydiagram__ActivityNodeT activityNode_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode);
 
 Activitydiagram__BooleanBinaryExpressionT booleanBinaryExpression(final activitydiagram.BooleanBinaryExpression booleanBinaryExpression);
 Activitydiagram__BooleanExpressionT booleanExpression_booleanBinaryExpression(final activitydiagram.BooleanBinaryExpression booleanBinaryExpression);
@@ -34,22 +34,22 @@ Activitydiagram__ControlTokenT controlToken(final activitydiagram.ControlToken c
 Activitydiagram__TokenT token_controlToken(final activitydiagram.ControlToken controlToken);
 
 Activitydiagram__DecisionNodeT decisionNode(final activitydiagram.DecisionNode decisionNode);
+Activitydiagram__NamedElementT namedElement_decisionNode(final activitydiagram.DecisionNode decisionNode);
 Activitydiagram__ControlNodeT controlNode_decisionNode(final activitydiagram.DecisionNode decisionNode);
 Activitydiagram__ActivityNodeT activityNode_decisionNode(final activitydiagram.DecisionNode decisionNode);
-Activitydiagram__NamedElementT namedElement_decisionNode(final activitydiagram.DecisionNode decisionNode);
 
 Activitydiagram__ForkNodeT forkNode(final activitydiagram.ForkNode forkNode);
+Activitydiagram__NamedElementT namedElement_forkNode(final activitydiagram.ForkNode forkNode);
 Activitydiagram__ControlNodeT controlNode_forkNode(final activitydiagram.ForkNode forkNode);
 Activitydiagram__ActivityNodeT activityNode_forkNode(final activitydiagram.ForkNode forkNode);
-Activitydiagram__NamedElementT namedElement_forkNode(final activitydiagram.ForkNode forkNode);
 
 Activitydiagram__ForkedTokenT forkedToken(final activitydiagram.ForkedToken forkedToken);
 Activitydiagram__TokenT token_forkedToken(final activitydiagram.ForkedToken forkedToken);
 
 Activitydiagram__InitialNodeT initialNode(final activitydiagram.InitialNode initialNode);
+Activitydiagram__NamedElementT namedElement_initialNode(final activitydiagram.InitialNode initialNode);
 Activitydiagram__ControlNodeT controlNode_initialNode(final activitydiagram.InitialNode initialNode);
 Activitydiagram__ActivityNodeT activityNode_initialNode(final activitydiagram.InitialNode initialNode);
-Activitydiagram__NamedElementT namedElement_initialNode(final activitydiagram.InitialNode initialNode);
 
 Activitydiagram__InputT input(final activitydiagram.Input input);
 
@@ -70,172 +70,172 @@ Activitydiagram__IntegerVariableT integerVariable(final activitydiagram.IntegerV
 Activitydiagram__VariableT variable_integerVariable(final activitydiagram.IntegerVariable integerVariable);
 
 Activitydiagram__JoinNodeT joinNode(final activitydiagram.JoinNode joinNode);
+Activitydiagram__NamedElementT namedElement_joinNode(final activitydiagram.JoinNode joinNode);
 Activitydiagram__ControlNodeT controlNode_joinNode(final activitydiagram.JoinNode joinNode);
 Activitydiagram__ActivityNodeT activityNode_joinNode(final activitydiagram.JoinNode joinNode);
-Activitydiagram__NamedElementT namedElement_joinNode(final activitydiagram.JoinNode joinNode);
 
 Activitydiagram__MergeNodeT mergeNode(final activitydiagram.MergeNode mergeNode);
+Activitydiagram__NamedElementT namedElement_mergeNode(final activitydiagram.MergeNode mergeNode);
 Activitydiagram__ControlNodeT controlNode_mergeNode(final activitydiagram.MergeNode mergeNode);
 Activitydiagram__ActivityNodeT activityNode_mergeNode(final activitydiagram.MergeNode mergeNode);
-Activitydiagram__NamedElementT namedElement_mergeNode(final activitydiagram.MergeNode mergeNode);
 
 Activitydiagram__OfferT offer(final activitydiagram.Offer offer);
 
 Activitydiagram__OpaqueActionT opaqueAction(final activitydiagram.OpaqueAction opaqueAction);
 Activitydiagram__ExecutableNodeT executableNode_opaqueAction(final activitydiagram.OpaqueAction opaqueAction);
-Activitydiagram__ActivityNodeT activityNode_opaqueAction(final activitydiagram.OpaqueAction opaqueAction);
-Activitydiagram__NamedElementT namedElement_opaqueAction(final activitydiagram.OpaqueAction opaqueAction);
 Activitydiagram__ActionT action_opaqueAction(final activitydiagram.OpaqueAction opaqueAction);
+Activitydiagram__NamedElementT namedElement_opaqueAction(final activitydiagram.OpaqueAction opaqueAction);
+Activitydiagram__ActivityNodeT activityNode_opaqueAction(final activitydiagram.OpaqueAction opaqueAction);
 
 Activitydiagram__TraceT trace(final activitydiagram.Trace trace);
 
 	
-	default Activitydiagram__VariableT $(final activitydiagram.Variable self) {
-		if(self instanceof activitydiagram.IntegerVariable) return integerVariable((activitydiagram.IntegerVariable) self);
-		if(self instanceof activitydiagram.BooleanVariable) return booleanVariable((activitydiagram.BooleanVariable) self);
+	default Activitydiagram__ExecutableNodeT $(final activitydiagram.ExecutableNode self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return opaqueAction((activitydiagram.OpaqueAction) self);
 		return null;
 	}
 	default Activitydiagram__JoinNodeT $(final activitydiagram.JoinNode self) {
 		return joinNode(self);
 	}
-	default Activitydiagram__ActivityFinalNodeT $(final activitydiagram.ActivityFinalNode self) {
-		return activityFinalNode(self);
-	}
-	default Activitydiagram__BooleanExpressionT $(final activitydiagram.BooleanExpression self) {
-		if(self instanceof activitydiagram.BooleanBinaryExpression) return booleanBinaryExpression((activitydiagram.BooleanBinaryExpression) self);
-		if(self instanceof activitydiagram.BooleanUnaryExpression) return booleanUnaryExpression((activitydiagram.BooleanUnaryExpression) self);
-		return null;
-	}
-	default Activitydiagram__ControlNodeT $(final activitydiagram.ControlNode self) {
-		if(self instanceof activitydiagram.JoinNode) return joinNode((activitydiagram.JoinNode) self);
-		if(self instanceof activitydiagram.ActivityFinalNode) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if(self instanceof activitydiagram.DecisionNode) return decisionNode((activitydiagram.DecisionNode) self);
-		if(self instanceof activitydiagram.InitialNode) return initialNode((activitydiagram.InitialNode) self);
-		if(self instanceof activitydiagram.ForkNode) return forkNode((activitydiagram.ForkNode) self);
-		if(self instanceof activitydiagram.MergeNode) return mergeNode((activitydiagram.MergeNode) self);
-		return null;
-	}
-	default Activitydiagram__ControlFlowT $(final activitydiagram.ControlFlow self) {
-		return controlFlow(self);
-	}
-	default Activitydiagram__ValueT $(final activitydiagram.Value self) {
-		if(self instanceof activitydiagram.BooleanValue) return booleanValue((activitydiagram.BooleanValue) self);
-		if(self instanceof activitydiagram.IntegerValue) return integerValue((activitydiagram.IntegerValue) self);
-		return null;
+	default Activitydiagram__OpaqueActionT $(final activitydiagram.OpaqueAction self) {
+		return opaqueAction(self);
 	}
 	default Activitydiagram__ExpressionT $(final activitydiagram.Expression self) {
-		if(self instanceof activitydiagram.IntegerComparisonExpression) return integerComparisonExpression((activitydiagram.IntegerComparisonExpression) self);
-		if(self instanceof activitydiagram.IntegerCalculationExpression) return integerCalculationExpression((activitydiagram.IntegerCalculationExpression) self);
-		if(self instanceof activitydiagram.BooleanBinaryExpression) return booleanBinaryExpression((activitydiagram.BooleanBinaryExpression) self);
-		if(self instanceof activitydiagram.BooleanUnaryExpression) return booleanUnaryExpression((activitydiagram.BooleanUnaryExpression) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanUnaryExpression((activitydiagram.BooleanUnaryExpression) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanBinaryExpression((activitydiagram.BooleanBinaryExpression) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_CALCULATION_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerCalculationExpression((activitydiagram.IntegerCalculationExpression) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerComparisonExpression((activitydiagram.IntegerComparisonExpression) self);
 		return null;
-	}
-	default Activitydiagram__IntegerComparisonExpressionT $(final activitydiagram.IntegerComparisonExpression self) {
-		return integerComparisonExpression(self);
-	}
-	default Activitydiagram__ControlTokenT $(final activitydiagram.ControlToken self) {
-		return controlToken(self);
-	}
-	default Activitydiagram__DecisionNodeT $(final activitydiagram.DecisionNode self) {
-		return decisionNode(self);
 	}
 	default Activitydiagram__BooleanValueT $(final activitydiagram.BooleanValue self) {
 		return booleanValue(self);
 	}
-	default Activitydiagram__ActivityEdgeT $(final activitydiagram.ActivityEdge self) {
-		if(self instanceof activitydiagram.ControlFlow) return controlFlow((activitydiagram.ControlFlow) self);
+	default Activitydiagram__NamedElementT $(final activitydiagram.NamedElement self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return joinNode((activitydiagram.JoinNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return opaqueAction((activitydiagram.OpaqueAction) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return initialNode((activitydiagram.InitialNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return decisionNode((activitydiagram.DecisionNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return mergeNode((activitydiagram.MergeNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return forkNode((activitydiagram.ForkNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return activity((activitydiagram.Activity) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_FLOW && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return controlFlow((activitydiagram.ControlFlow) self);
+		return null;
+	}
+	default Activitydiagram__TokenT $(final activitydiagram.Token self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORKED_TOKEN && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return forkedToken((activitydiagram.ForkedToken) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_TOKEN && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return controlToken((activitydiagram.ControlToken) self);
 		return null;
 	}
 	default Activitydiagram__InitialNodeT $(final activitydiagram.InitialNode self) {
 		return initialNode(self);
 	}
-	default Activitydiagram__IntegerVariableT $(final activitydiagram.IntegerVariable self) {
-		return integerVariable(self);
-	}
-	default Activitydiagram__BooleanVariableT $(final activitydiagram.BooleanVariable self) {
-		return booleanVariable(self);
-	}
-	default Activitydiagram__IntegerValueT $(final activitydiagram.IntegerValue self) {
-		return integerValue(self);
-	}
-	default Activitydiagram__ActionT $(final activitydiagram.Action self) {
-		if(self instanceof activitydiagram.OpaqueAction) return opaqueAction((activitydiagram.OpaqueAction) self);
-		return null;
-	}
-	default Activitydiagram__TokenT $(final activitydiagram.Token self) {
-		if(self instanceof activitydiagram.ControlToken) return controlToken((activitydiagram.ControlToken) self);
-		if(self instanceof activitydiagram.ForkedToken) return forkedToken((activitydiagram.ForkedToken) self);
-		return null;
-	}
-	default Activitydiagram__ActivityT $(final activitydiagram.Activity self) {
-		return activity(self);
-	}
-	default Activitydiagram__ActivityNodeT $(final activitydiagram.ActivityNode self) {
-		if(self instanceof activitydiagram.JoinNode) return joinNode((activitydiagram.JoinNode) self);
-		if(self instanceof activitydiagram.ActivityFinalNode) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if(self instanceof activitydiagram.DecisionNode) return decisionNode((activitydiagram.DecisionNode) self);
-		if(self instanceof activitydiagram.InitialNode) return initialNode((activitydiagram.InitialNode) self);
-		if(self instanceof activitydiagram.ForkNode) return forkNode((activitydiagram.ForkNode) self);
-		if(self instanceof activitydiagram.OpaqueAction) return opaqueAction((activitydiagram.OpaqueAction) self);
-		if(self instanceof activitydiagram.MergeNode) return mergeNode((activitydiagram.MergeNode) self);
-		return null;
-	}
-	default Activitydiagram__IntegerCalculationExpressionT $(final activitydiagram.IntegerCalculationExpression self) {
-		return integerCalculationExpression(self);
+	default Activitydiagram__BooleanUnaryExpressionT $(final activitydiagram.BooleanUnaryExpression self) {
+		return booleanUnaryExpression(self);
 	}
 	default Activitydiagram__BooleanBinaryExpressionT $(final activitydiagram.BooleanBinaryExpression self) {
 		return booleanBinaryExpression(self);
 	}
+	default Activitydiagram__IntegerValueT $(final activitydiagram.IntegerValue self) {
+		return integerValue(self);
+	}
 	default Activitydiagram__OfferT $(final activitydiagram.Offer self) {
 		return offer(self);
 	}
-	default Activitydiagram__BooleanUnaryExpressionT $(final activitydiagram.BooleanUnaryExpression self) {
-		return booleanUnaryExpression(self);
+	default Activitydiagram__DecisionNodeT $(final activitydiagram.DecisionNode self) {
+		return decisionNode(self);
 	}
-	default Activitydiagram__IntegerExpressionT $(final activitydiagram.IntegerExpression self) {
-		if(self instanceof activitydiagram.IntegerComparisonExpression) return integerComparisonExpression((activitydiagram.IntegerComparisonExpression) self);
-		if(self instanceof activitydiagram.IntegerCalculationExpression) return integerCalculationExpression((activitydiagram.IntegerCalculationExpression) self);
-		return null;
-	}
-	default Activitydiagram__InputValueT $(final activitydiagram.InputValue self) {
-		return inputValue(self);
-	}
-	default Activitydiagram__ForkNodeT $(final activitydiagram.ForkNode self) {
-		return forkNode(self);
-	}
-	default Activitydiagram__NamedElementT $(final activitydiagram.NamedElement self) {
-		if(self instanceof activitydiagram.JoinNode) return joinNode((activitydiagram.JoinNode) self);
-		if(self instanceof activitydiagram.ActivityFinalNode) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if(self instanceof activitydiagram.ControlFlow) return controlFlow((activitydiagram.ControlFlow) self);
-		if(self instanceof activitydiagram.DecisionNode) return decisionNode((activitydiagram.DecisionNode) self);
-		if(self instanceof activitydiagram.InitialNode) return initialNode((activitydiagram.InitialNode) self);
-		if(self instanceof activitydiagram.Activity) return activity((activitydiagram.Activity) self);
-		if(self instanceof activitydiagram.ForkNode) return forkNode((activitydiagram.ForkNode) self);
-		if(self instanceof activitydiagram.OpaqueAction) return opaqueAction((activitydiagram.OpaqueAction) self);
-		if(self instanceof activitydiagram.MergeNode) return mergeNode((activitydiagram.MergeNode) self);
-		return null;
-	}
-	default Activitydiagram__OpaqueActionT $(final activitydiagram.OpaqueAction self) {
-		return opaqueAction(self);
-	}
-	default Activitydiagram__ExecutableNodeT $(final activitydiagram.ExecutableNode self) {
-		if(self instanceof activitydiagram.OpaqueAction) return opaqueAction((activitydiagram.OpaqueAction) self);
-		return null;
-	}
-	default Activitydiagram__TraceT $(final activitydiagram.Trace self) {
-		return trace(self);
-	}
-	default Activitydiagram__FinalNodeT $(final activitydiagram.FinalNode self) {
-		if(self instanceof activitydiagram.ActivityFinalNode) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
+	default Activitydiagram__ActivityEdgeT $(final activitydiagram.ActivityEdge self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_FLOW && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return controlFlow((activitydiagram.ControlFlow) self);
 		return null;
 	}
 	default Activitydiagram__ForkedTokenT $(final activitydiagram.ForkedToken self) {
 		return forkedToken(self);
 	}
+	default Activitydiagram__ControlTokenT $(final activitydiagram.ControlToken self) {
+		return controlToken(self);
+	}
+	default Activitydiagram__ActivityNodeT $(final activitydiagram.ActivityNode self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return joinNode((activitydiagram.JoinNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return opaqueAction((activitydiagram.OpaqueAction) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return initialNode((activitydiagram.InitialNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return decisionNode((activitydiagram.DecisionNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return mergeNode((activitydiagram.MergeNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return forkNode((activitydiagram.ForkNode) self);
+		return null;
+	}
 	default Activitydiagram__MergeNodeT $(final activitydiagram.MergeNode self) {
 		return mergeNode(self);
 	}
+	default Activitydiagram__ValueT $(final activitydiagram.Value self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_VALUE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanValue((activitydiagram.BooleanValue) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_VALUE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerValue((activitydiagram.IntegerValue) self);
+		return null;
+	}
+	default Activitydiagram__IntegerExpressionT $(final activitydiagram.IntegerExpression self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_CALCULATION_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerCalculationExpression((activitydiagram.IntegerCalculationExpression) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerComparisonExpression((activitydiagram.IntegerComparisonExpression) self);
+		return null;
+	}
+	default Activitydiagram__FinalNodeT $(final activitydiagram.FinalNode self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
+		return null;
+	}
+	default Activitydiagram__IntegerVariableT $(final activitydiagram.IntegerVariable self) {
+		return integerVariable(self);
+	}
+	default Activitydiagram__BooleanExpressionT $(final activitydiagram.BooleanExpression self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanUnaryExpression((activitydiagram.BooleanUnaryExpression) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanBinaryExpression((activitydiagram.BooleanBinaryExpression) self);
+		return null;
+	}
+	default Activitydiagram__IntegerCalculationExpressionT $(final activitydiagram.IntegerCalculationExpression self) {
+		return integerCalculationExpression(self);
+	}
+	default Activitydiagram__ActivityFinalNodeT $(final activitydiagram.ActivityFinalNode self) {
+		return activityFinalNode(self);
+	}
+	default Activitydiagram__BooleanVariableT $(final activitydiagram.BooleanVariable self) {
+		return booleanVariable(self);
+	}
+	default Activitydiagram__ControlNodeT $(final activitydiagram.ControlNode self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return joinNode((activitydiagram.JoinNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return initialNode((activitydiagram.InitialNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return decisionNode((activitydiagram.DecisionNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return mergeNode((activitydiagram.MergeNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return forkNode((activitydiagram.ForkNode) self);
+		return null;
+	}
+	default Activitydiagram__ActionT $(final activitydiagram.Action self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return opaqueAction((activitydiagram.OpaqueAction) self);
+		return null;
+	}
+	default Activitydiagram__ForkNodeT $(final activitydiagram.ForkNode self) {
+		return forkNode(self);
+	}
+	default Activitydiagram__ActivityT $(final activitydiagram.Activity self) {
+		return activity(self);
+	}
+	default Activitydiagram__IntegerComparisonExpressionT $(final activitydiagram.IntegerComparisonExpression self) {
+		return integerComparisonExpression(self);
+	}
+	default Activitydiagram__VariableT $(final activitydiagram.Variable self) {
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_VARIABLE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerVariable((activitydiagram.IntegerVariable) self);
+		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_VARIABLE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanVariable((activitydiagram.BooleanVariable) self);
+		return null;
+	}
+	default Activitydiagram__InputValueT $(final activitydiagram.InputValue self) {
+		return inputValue(self);
+	}
+	default Activitydiagram__ControlFlowT $(final activitydiagram.ControlFlow self) {
+		return controlFlow(self);
+	}
 	default Activitydiagram__InputT $(final activitydiagram.Input self) {
 		return input(self);
+	}
+	default Activitydiagram__TraceT $(final activitydiagram.Trace self) {
+		return trace(self);
 	}
 }

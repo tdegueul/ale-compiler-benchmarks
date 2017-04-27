@@ -15,15 +15,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityFinalNodeOperation finalNode_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode) {
-		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
-	} 
-	@Override
 	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityFinalNodeOperation namedElement_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode) {
-		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
-	} 
-	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityFinalNodeOperation activityNode_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
 	} 
 	@Override
@@ -31,11 +23,15 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanBinaryExpressionOperation booleanBinaryExpression(final activitydiagram.BooleanBinaryExpression booleanBinaryExpression) {
-		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramBooleanBinaryExpressionOperationImpl(booleanBinaryExpression, this);
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityFinalNodeOperation finalNode_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode) {
+		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanBinaryExpressionOperation expression_booleanBinaryExpression(final activitydiagram.BooleanBinaryExpression booleanBinaryExpression) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityFinalNodeOperation activityNode_activityFinalNode(final activitydiagram.ActivityFinalNode activityFinalNode) {
+		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
+	} 
+	@Override
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanBinaryExpressionOperation booleanBinaryExpression(final activitydiagram.BooleanBinaryExpression booleanBinaryExpression) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramBooleanBinaryExpressionOperationImpl(booleanBinaryExpression, this);
 	} 
 	@Override
@@ -43,15 +39,19 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramBooleanBinaryExpressionOperationImpl(booleanBinaryExpression, this);
 	} 
 	@Override
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanBinaryExpressionOperation expression_booleanBinaryExpression(final activitydiagram.BooleanBinaryExpression booleanBinaryExpression) {
+		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramBooleanBinaryExpressionOperationImpl(booleanBinaryExpression, this);
+	} 
+	@Override
 	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanUnaryExpressionOperation booleanUnaryExpression(final activitydiagram.BooleanUnaryExpression booleanUnaryExpression) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramBooleanUnaryExpressionOperationImpl(booleanUnaryExpression, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanUnaryExpressionOperation expression_booleanUnaryExpression(final activitydiagram.BooleanUnaryExpression booleanUnaryExpression) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanUnaryExpressionOperation booleanExpression_booleanUnaryExpression(final activitydiagram.BooleanUnaryExpression booleanUnaryExpression) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramBooleanUnaryExpressionOperationImpl(booleanUnaryExpression, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanUnaryExpressionOperation booleanExpression_booleanUnaryExpression(final activitydiagram.BooleanUnaryExpression booleanUnaryExpression) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanUnaryExpressionOperation expression_booleanUnaryExpression(final activitydiagram.BooleanUnaryExpression booleanUnaryExpression) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramBooleanUnaryExpressionOperationImpl(booleanUnaryExpression, this);
 	} 
 	@Override
@@ -75,11 +75,11 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramControlFlowOperationImpl(controlFlow, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlFlowOperation activityEdge_controlFlow(final activitydiagram.ControlFlow controlFlow) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlFlowOperation namedElement_controlFlow(final activitydiagram.ControlFlow controlFlow) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramControlFlowOperationImpl(controlFlow, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlFlowOperation namedElement_controlFlow(final activitydiagram.ControlFlow controlFlow) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlFlowOperation activityEdge_controlFlow(final activitydiagram.ControlFlow controlFlow) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramControlFlowOperationImpl(controlFlow, this);
 	} 
 	@Override
@@ -95,7 +95,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramDecisionNodeOperationImpl(decisionNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramDecisionNodeOperation activityNode_decisionNode(final activitydiagram.DecisionNode decisionNode) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramDecisionNodeOperation namedElement_decisionNode(final activitydiagram.DecisionNode decisionNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramDecisionNodeOperationImpl(decisionNode, this);
 	} 
 	@Override
@@ -103,7 +103,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramDecisionNodeOperationImpl(decisionNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramDecisionNodeOperation namedElement_decisionNode(final activitydiagram.DecisionNode decisionNode) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramDecisionNodeOperation activityNode_decisionNode(final activitydiagram.DecisionNode decisionNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramDecisionNodeOperationImpl(decisionNode, this);
 	} 
 	@Override
@@ -111,7 +111,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramForkNodeOperationImpl(forkNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramForkNodeOperation activityNode_forkNode(final activitydiagram.ForkNode forkNode) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramForkNodeOperation namedElement_forkNode(final activitydiagram.ForkNode forkNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramForkNodeOperationImpl(forkNode, this);
 	} 
 	@Override
@@ -119,7 +119,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramForkNodeOperationImpl(forkNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramForkNodeOperation namedElement_forkNode(final activitydiagram.ForkNode forkNode) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramForkNodeOperation activityNode_forkNode(final activitydiagram.ForkNode forkNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramForkNodeOperationImpl(forkNode, this);
 	} 
 	@Override
@@ -135,7 +135,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramInitialNodeOperationImpl(initialNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramInitialNodeOperation activityNode_initialNode(final activitydiagram.InitialNode initialNode) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramInitialNodeOperation namedElement_initialNode(final activitydiagram.InitialNode initialNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramInitialNodeOperationImpl(initialNode, this);
 	} 
 	@Override
@@ -143,7 +143,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramInitialNodeOperationImpl(initialNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramInitialNodeOperation namedElement_initialNode(final activitydiagram.InitialNode initialNode) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramInitialNodeOperation activityNode_initialNode(final activitydiagram.InitialNode initialNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramInitialNodeOperationImpl(initialNode, this);
 	} 
 	@Override
@@ -199,7 +199,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramJoinNodeOperationImpl(joinNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramJoinNodeOperation activityNode_joinNode(final activitydiagram.JoinNode joinNode) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramJoinNodeOperation namedElement_joinNode(final activitydiagram.JoinNode joinNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramJoinNodeOperationImpl(joinNode, this);
 	} 
 	@Override
@@ -207,7 +207,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramJoinNodeOperationImpl(joinNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramJoinNodeOperation namedElement_joinNode(final activitydiagram.JoinNode joinNode) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramJoinNodeOperation activityNode_joinNode(final activitydiagram.JoinNode joinNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramJoinNodeOperationImpl(joinNode, this);
 	} 
 	@Override
@@ -215,7 +215,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramMergeNodeOperationImpl(mergeNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramMergeNodeOperation activityNode_mergeNode(final activitydiagram.MergeNode mergeNode) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramMergeNodeOperation namedElement_mergeNode(final activitydiagram.MergeNode mergeNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramMergeNodeOperationImpl(mergeNode, this);
 	} 
 	@Override
@@ -223,7 +223,7 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramMergeNodeOperationImpl(mergeNode, this);
 	} 
 	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramMergeNodeOperation namedElement_mergeNode(final activitydiagram.MergeNode mergeNode) {
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramMergeNodeOperation activityNode_mergeNode(final activitydiagram.MergeNode mergeNode) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramMergeNodeOperationImpl(mergeNode, this);
 	} 
 	@Override
@@ -239,15 +239,15 @@ public interface MonolithicactivitydiagramRevisitorImpl extends monolithicactivi
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramOpaqueActionOperationImpl(opaqueAction, this);
 	} 
 	@Override
+	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramOpaqueActionOperation action_opaqueAction(final activitydiagram.OpaqueAction opaqueAction) {
+		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramOpaqueActionOperationImpl(opaqueAction, this);
+	} 
+	@Override
 	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramOpaqueActionOperation executableNode_opaqueAction(final activitydiagram.OpaqueAction opaqueAction) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramOpaqueActionOperationImpl(opaqueAction, this);
 	} 
 	@Override
 	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramOpaqueActionOperation activityNode_opaqueAction(final activitydiagram.OpaqueAction opaqueAction) {
-		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramOpaqueActionOperationImpl(opaqueAction, this);
-	} 
-	@Override
-	default monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramOpaqueActionOperation action_opaqueAction(final activitydiagram.OpaqueAction opaqueAction) {
 		return new monolithicactivitydiagram.revisitor.operation.impl.MonolithicactivitydiagramOpaqueActionOperationImpl(opaqueAction, this);
 	} 
 	@Override
