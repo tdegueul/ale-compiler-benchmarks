@@ -16,5 +16,5 @@ Export-Package: common.revisitor.operation,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.modelexecution.operationalsemantics.ad;bundle-version="0.1.0";visibility:=reexport,
- org.modelexecution.operationsemantics.adruntime;bundle-version="0.1.0"
+ org.modelexecution.operationalsemantics.adruntime;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy

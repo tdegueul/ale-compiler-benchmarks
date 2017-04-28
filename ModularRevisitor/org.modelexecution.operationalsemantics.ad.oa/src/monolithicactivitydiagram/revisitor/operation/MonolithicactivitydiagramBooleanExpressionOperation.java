@@ -1,0 +1,6 @@
+package monolithicactivitydiagram.revisitor.operation;
+
+public interface MonolithicactivitydiagramBooleanExpressionOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramExpressionOperation 
+{
+}

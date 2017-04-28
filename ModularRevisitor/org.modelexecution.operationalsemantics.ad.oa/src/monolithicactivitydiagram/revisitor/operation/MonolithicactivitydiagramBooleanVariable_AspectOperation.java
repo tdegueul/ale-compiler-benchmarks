@@ -1,0 +1,6 @@
+package monolithicactivitydiagram.revisitor.operation;
+
+public interface MonolithicactivitydiagramBooleanVariable_AspectOperation
+extends common.revisitor.operation.CommonBooleanVariableOperation, common.revisitor.operation.CommonVariable_AspectOperation 
+{
+}

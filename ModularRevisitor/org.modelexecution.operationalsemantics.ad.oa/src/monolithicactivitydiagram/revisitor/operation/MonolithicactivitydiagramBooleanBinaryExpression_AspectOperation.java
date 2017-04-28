@@ -1,0 +1,7 @@
+package monolithicactivitydiagram.revisitor.operation;
+
+public interface MonolithicactivitydiagramBooleanBinaryExpression_AspectOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanBinaryExpressionOperation, monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanExpression_AspectOperation 
+{
+	void execute();
+}

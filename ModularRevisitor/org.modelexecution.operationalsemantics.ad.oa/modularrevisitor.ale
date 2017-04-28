@@ -1,7 +1,7 @@
 behavior monolithicactivitydiagram;
 
 //import ecore "/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore";
-import ecore "/org.modelexecution.operationsemantics.adruntime/model/adruntime.ecore";
+import ecore "/org.modelexecution.operationalsemantics.adruntime/model/adruntime.ecore";
  
 open class Expression {
 	def void execute() {}
@@ -567,8 +567,10 @@ open class Value {
 	}
 }
 
-open class BooleanValue extends Value {}
-open class BooleanValue_Aspect extends Value {
+open class BooleanValue extends Value {
+//	
+//}
+//open class BooleanValue_Aspect extends Value {
 	def Boolean isBooleanValue() {
 		return true;
 	}
@@ -577,8 +579,10 @@ open class BooleanValue_Aspect extends Value {
 		return self;
 	}
 }
-open class IntegerValue extends Value {}
-open class IntegerValue_Aspect extends Value {
+open class IntegerValue extends Value {
+//	
+//}
+//open class IntegerValue_Aspect extends Value {
 	def Boolean isIntegerValue() {
 		return true;		
 	}

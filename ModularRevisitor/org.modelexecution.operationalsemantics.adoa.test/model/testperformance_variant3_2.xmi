@@ -1,249 +1,250 @@
 <?xml version="1.0" encoding="ASCII"?>
-<activitydiagram:Activity_Aspect
-    xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:activitydiagram="http://www.example.org/adruntime"
-xmlns:activitydiagramoa="http://activitydiagram/1.0" name="testperformance_variant1">
-  <nodes xsi:type="activitydiagram:InitialNode_Aspect"
-    name="testperformance_variant3_2" />
-  <nodes xsi:type="activitydiagram:InitialNode_Aspect"
+<adruntime:Activity_Aspect
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:adruntime="http://www.example.org/adruntime"
+   xmlns:activitydiagram="http://activitydiagram/1.0"
+    name="testperformance_variant3_2">
+  <nodes xsi:type="adruntime:InitialNode_Aspect"
       name="initialNode7"
       outgoing="//@edges.0"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="a"
       outgoing="//@edges.1"
       incoming="//@edges.0">
     <expressions
-        xsi:type="activitydiagram:IntegerComparisonExpression_Aspect"
+        xsi:type="adruntime:IntegerComparisonExpression_Aspect"
         operand2="//@locals.0"
         operand1="//@inputs.0"
         assignee="//@locals.1"
         operator=">"/>
     <expressions
-        xsi:type="activitydiagram:IntegerComparisonExpression_Aspect"
+        xsi:type="adruntime:IntegerComparisonExpression_Aspect"
         operand2="//@locals.0"
         operand1="//@inputs.0"
         assignee="//@locals.2"
         operator="="/>
     <expressions
-        xsi:type="activitydiagram:IntegerComparisonExpression_Aspect"
+        xsi:type="adruntime:IntegerComparisonExpression_Aspect"
         operand2="//@locals.0"
         operand1="//@inputs.0"
         assignee="//@locals.3"/>
   </nodes>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="b"
       outgoing="//@edges.2"
       incoming="//@edges.1"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="c"
       outgoing="//@edges.3"
       incoming="//@edges.2"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="d"
       outgoing="//@edges.4"
       incoming="//@edges.3"/>
-  <nodes xsi:type="activitydiagram:MergeNode_Aspect"
+  <nodes xsi:type="adruntime:MergeNode_Aspect"
       name="mergeE"
       outgoing="//@edges.5"
       incoming="//@edges.4 //@edges.19"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="e"
       outgoing="//@edges.6"
       incoming="//@edges.5"/>
-  <nodes xsi:type="activitydiagram:DecisionNode_Aspect"
+  <nodes xsi:type="adruntime:DecisionNode_Aspect"
       name="decisionI"
       outgoing="//@edges.7 //@edges.8 //@edges.9"
       incoming="//@edges.6"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="f"
       outgoing="//@edges.10"
       incoming="//@edges.7"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="g"
       outgoing="//@edges.12"
       incoming="//@edges.8"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="h"
       outgoing="//@edges.13"
       incoming="//@edges.12"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="i"
       outgoing="//@edges.14"
       incoming="//@edges.9"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="j"
       outgoing="//@edges.15"
       incoming="//@edges.14">
     <expressions
-        xsi:type="activitydiagram:IntegerComparisonExpression_Aspect"
+        xsi:type="adruntime:IntegerComparisonExpression_Aspect"
         operand2="//@locals.5"
         operand1="//@locals.4"
         assignee="//@locals.6"
         operator="="/>
     <expressions
-        xsi:type="activitydiagram:IntegerComparisonExpression_Aspect"
+        xsi:type="adruntime:IntegerComparisonExpression_Aspect"
         operand2="//@locals.5"
         operand1="//@locals.4"
         assignee="//@locals.7"/>
   </nodes>
-  <nodes xsi:type="activitydiagram:DecisionNode_Aspect"
+  <nodes xsi:type="adruntime:DecisionNode_Aspect"
       name="decisionLoop"
       outgoing="//@edges.16 //@edges.17"
       incoming="//@edges.15"/>
-  <nodes xsi:type="activitydiagram:MergeNode_Aspect"
+  <nodes xsi:type="adruntime:MergeNode_Aspect"
       name="mergeFinal7"
       outgoing="//@edges.11"
       incoming="//@edges.10 //@edges.13 //@edges.18"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="k"
       outgoing="//@edges.18"
       incoming="//@edges.16"/>
-  <nodes xsi:type="activitydiagram:OpaqueAction_Aspect"
+  <nodes xsi:type="adruntime:OpaqueAction_Aspect"
       name="l"
       outgoing="//@edges.19"
       incoming="//@edges.17">
     <expressions
-        xsi:type="activitydiagramoa:IntegerCalculationExpression"
+        xsi:type="adruntime:IntegerCalculationExpression_Aspect"
         operand2="//@locals.8"
         operand1="//@locals.4"
         assignee="//@locals.4"/>
   </nodes>
-  <nodes xsi:type="activitydiagram:ActivityFinalNode_Aspect"
+  <nodes xsi:type="adruntime:ActivityFinalNode_Aspect"
       name="finalNode7"
       incoming="//@edges.11"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge22"
       source="//@nodes.0"
       target="//@nodes.1"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge23"
       source="//@nodes.1"
       target="//@nodes.2"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge24"
       source="//@nodes.2"
       target="//@nodes.3"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge25"
       source="//@nodes.3"
       target="//@nodes.4"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge26"
       source="//@nodes.4"
       target="//@nodes.5"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge27"
       source="//@nodes.5"
       target="//@nodes.6"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge28"
       source="//@nodes.6"
       target="//@nodes.7"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge29"
       source="//@nodes.7"
       target="//@nodes.8"
       guard="//@locals.1"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge30"
       source="//@nodes.7"
       target="//@nodes.9"
       guard="//@locals.2"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge31"
       source="//@nodes.7"
       target="//@nodes.11"
       guard="//@locals.3"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge32"
       source="//@nodes.8"
       target="//@nodes.14"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge33"
       source="//@nodes.14"
       target="//@nodes.17"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge34"
       source="//@nodes.9"
       target="//@nodes.10"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge35"
       source="//@nodes.10"
       target="//@nodes.14"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge36"
       source="//@nodes.11"
       target="//@nodes.12"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge37"
       source="//@nodes.12"
       target="//@nodes.13"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge38"
       source="//@nodes.13"
       target="//@nodes.15"
       guard="//@locals.6"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge39"
       source="//@nodes.13"
       target="//@nodes.16"
       guard="//@locals.7"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge40"
       source="//@nodes.15"
       target="//@nodes.14"/>
-  <edges xsi:type="activitydiagram:ControlFlow_Aspect"
+  <edges xsi:type="adruntime:ControlFlow_Aspect"
       name="edge41"
       source="//@nodes.16"
       target="//@nodes.5"/>
-  <locals xsi:type="activitydiagram:IntegerVariable_Aspect"
+  <locals xsi:type="adruntime:IntegerVariable_Aspect"
       name="value2">
     <initialValue
-        xsi:type="activitydiagramoa:IntegerValue"
+        xsi:type="activitydiagram:IntegerValue"
         value="2"/>
   </locals>
-  <locals xsi:type="activitydiagram:BooleanVariable_Aspect"
+  <locals xsi:type="adruntime:BooleanVariable_Aspect"
       name="iG2">
     <initialValue
-        xsi:type="activitydiagramoa:IntegerValue"/>
+        xsi:type="activitydiagram:BooleanValue"/>
   </locals>
-  <locals xsi:type="activitydiagram:BooleanVariable_Aspect"
+  <locals xsi:type="adruntime:BooleanVariable_Aspect"
       name="iE2">
     <initialValue
-        xsi:type="activitydiagramoa:IntegerValue"/>
+        xsi:type="activitydiagram:BooleanValue"/>
   </locals>
-  <locals xsi:type="activitydiagram:BooleanVariable_Aspect"
+  <locals xsi:type="adruntime:BooleanVariable_Aspect"
       name="iL2">
     <initialValue
-        xsi:type="activitydiagramoa:IntegerValue"/>
+        xsi:type="activitydiagram:BooleanValue"/>
   </locals>
-  <locals xsi:type="activitydiagram:IntegerVariable_Aspect"
+  <locals xsi:type="adruntime:IntegerVariable_Aspect"
       name="loop">
     <initialValue
-        xsi:type="activitydiagramoa:IntegerValue"/>
+        xsi:type="activitydiagram:IntegerValue"/>
   </locals>
-  <locals xsi:type="activitydiagram:IntegerVariable_Aspect"
+  <locals xsi:type="adruntime:IntegerVariable_Aspect"
       name="iterations">
     <initialValue
-        xsi:type="activitydiagramoa:IntegerValue"
+        xsi:type="activitydiagram:IntegerValue"
         value="141"/>
   </locals>
-  <locals xsi:type="activitydiagram:BooleanVariable_Aspect"
+  <locals xsi:type="adruntime:BooleanVariable_Aspect"
       name="loopEiterations">
     <initialValue
-        xsi:type="activitydiagramoa:IntegerValue"/>
+        xsi:type="activitydiagram:BooleanValue"/>
   </locals>
-  <locals xsi:type="activitydiagram:BooleanVariable_Aspect"
+  <locals xsi:type="adruntime:BooleanVariable_Aspect"
       name="loopLiterations">
     <initialValue
-        xsi:type="activitydiagramoa:IntegerValue"/>
+        xsi:type="activitydiagram:BooleanValue"/>
   </locals>
-  <locals xsi:type="activitydiagram:IntegerVariable_Aspect"
+  <locals xsi:type="adruntime:IntegerVariable_Aspect"
       name="value1">
     <initialValue
-        xsi:type="activitydiagramoa:IntegerValue"
+        xsi:type="activitydiagram:IntegerValue"
         value="1"/>
   </locals>
-  <inputs xsi:type="activitydiagram:IntegerVariable_Aspect"
+  <inputs xsi:type="adruntime:IntegerVariable_Aspect"
       name="i"/>
-</activitydiagram:Activity_Aspect>
+</adruntime:Activity_Aspect>

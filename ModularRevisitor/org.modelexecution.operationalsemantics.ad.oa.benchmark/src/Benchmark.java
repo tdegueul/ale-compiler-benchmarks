@@ -11,7 +11,9 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import activitydiagram.ActivitydiagramFactory;
 import activitydiagram.ActivitydiagramPackage;
-import admodular.Activity;
+import adruntime.Activity_Aspect;
+import monolithicactivitydiagram.revisitor.impl.MonolithicactivitydiagramRevisitorImpl;
+import monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivity_AspectOperation;
 
 public class Benchmark {
 
@@ -40,29 +42,29 @@ public class Benchmark {
 	}
 
 	private Long executeBenchmark(String modelPath, int itt, String xmiPath) {
-		final Activity activity = getActivity(modelPath, xmiPath);
+		final Activity_Aspect activity = getActivity(modelPath, xmiPath);
 		return doTheJob(activity);
 
 	}
 
 
-	private Activity getActivity(String modelPath, String xmiPath) {
+	private Activity_Aspect getActivity(String modelPath, String xmiPath) {
 		ResourceSetImpl resourceSet = this.init();
 		final URI uri = URI.createURI(MessageFormat.format(MODELS_PATH, xmiPath, modelPath));
 		final Resource resource = resourceSet.getResource(uri, true);
 		final EObject eObject = resource.getContents().get(0);
-		if (eObject instanceof Activity) {
-			return (Activity) eObject;
+		if (eObject instanceof Activity_Aspect) {
+			return (Activity_Aspect) eObject;
 		}
 		return null;
 	}
 	
 	
-	private long doTheJob(final Activity activity) {
-//		activitydiagram.algebra.impl.ActivitydiagramAlgebraImpl activitydiagramAlgebraImpl = new activitydiagram.algebra.impl.ActivitydiagramAlgebraImpl() {
-//		};
+	private long doTheJob(final Activity_Aspect activity) {
+		MonolithicactivitydiagramActivity_AspectOperation $ = new MonolithicactivitydiagramRevisitorImpl() {
+		}.$(activity);
 		final long start = System.currentTimeMillis();
-//		activitydiagramAlgebraImpl.$(activity).main(null);
+		$.main(null);
 		final long stop = System.currentTimeMillis();
 		long l = stop - start;
 		return l;

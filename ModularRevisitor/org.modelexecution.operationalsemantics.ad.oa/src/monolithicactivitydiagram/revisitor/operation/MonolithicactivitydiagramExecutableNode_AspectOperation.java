@@ -1,0 +1,6 @@
+package monolithicactivitydiagram.revisitor.operation;
+
+public interface MonolithicactivitydiagramExecutableNode_AspectOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramExecutableNodeOperation, monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityNode_AspectOperation 
+{
+}

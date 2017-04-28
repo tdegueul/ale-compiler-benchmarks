@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
-<activitydiagram:Input
+<adruntime:Input
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xmlns:activitydiagram="http://www.example.org/adruntime"
-    xmlns:activitydiagramoa="http://activitydiagram/1.0">
+    xmlns:adruntime="http://www.example.org/adruntime"
+   xmlns:activitydiagram="http://activitydiagram/1.0">
   <inputValues>
-    <value xsi:type="activitydiagramoa:IntegerValue"
+    <value xsi:type="activitydiagram:IntegerValue"
         value="1"/>
     <variable
-        xsi:type="activitydiagram:IntegerVariable_Aspect"
+        xsi:type="adruntime:IntegerVariable_Aspect"
         href="testperformance_variant3_2.xmi#//@inputs.0"/>
   </inputValues>
-</activitydiagram:Input>
+</adruntime:Input>

@@ -1,0 +1,7 @@
+package monolithicactivitydiagram.revisitor.operation;
+
+public interface MonolithicactivitydiagramActivityFinalNode_AspectOperation
+extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityFinalNodeOperation, monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramFinalNode_AspectOperation 
+{
+	void fire(org.eclipse.emf.common.util.EList<adruntime.Token> tokens);
+}

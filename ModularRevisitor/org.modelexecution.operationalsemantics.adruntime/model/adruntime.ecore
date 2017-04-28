@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="adruntime" nsURI="http://www.example.org/adruntime" nsPrefix="adruntime">
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanUnaryExpression_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//BooleanUnaryExpression #//BooleanExpression_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JoinNode_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//JoinNode #//ControlNode_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanExpression_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//BooleanExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OpaqueAction_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//OpaqueAction #//Action_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Token">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="holder" eType="ecore:EClass /org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InitialNode_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//InitialNode #//ControlNode_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlNode_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ControlNode #//ActivityNode_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutableNode_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ExecutableNode #//ActivityNode_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="#//Trace"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Action_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Action #//ExecutableNode_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Trace">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodes" upperBound="-1"
+        eType="ecore:EClass /org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerComparisonExpression_Aspect"
+      eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//IntegerComparisonExpression #//IntegerExpression_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActivityNode_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1"
+        eType="#//Token" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="running" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanBinaryExpression_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//BooleanBinaryExpression #//BooleanExpression_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlFlow_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ControlFlow #//ActivityEdge_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Input">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputValues" upperBound="-1"
+        eType="#//InputValue" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Offer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offeredTokens" upperBound="-1"
+        eType="#//Token"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" eType="ecore:EClass /org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Value"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActivityFinalNode_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityFinalNode #//FinalNode_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerCalculationExpression_Aspect"
+      eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//IntegerCalculationExpression #//IntegerExpression_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerExpression_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//IntegerExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerVariable_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//IntegerVariable #//Variable_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InputValue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="ecore:EClass /org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Value"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+        eType="ecore:EClass /org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Variable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ForkedToken" eSuperTypes="#//Token">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseToken" eType="#//Token"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="remainingOffersCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanVariable_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//BooleanVariable #//Variable_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActivityEdge_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityEdge">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1"
+        eType="#//Offer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ForkNode_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ForkNode #//ControlNode_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FinalNode_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//FinalNode #//ControlNode_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DecisionNode_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//DecisionNode #//ControlNode_Aspect"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlToken" eSuperTypes="#//Token"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MergeNode_Aspect" eSuperTypes="/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//MergeNode #//ControlNode_Aspect"/>
+</ecore:EPackage>

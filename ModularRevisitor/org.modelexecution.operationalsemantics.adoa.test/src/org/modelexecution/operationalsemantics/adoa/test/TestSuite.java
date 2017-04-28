@@ -27,7 +27,6 @@ import org.junit.Test;
 
 import activitydiagram.Activity;
 import activitydiagram.ActivityNode;
-import activitydiagram.ActivitydiagramFactory;
 import activitydiagram.BooleanValue;
 import activitydiagram.BooleanVariable;
 import activitydiagram.IntegerValue;
@@ -58,11 +57,8 @@ public class TestSuite {
 
 	@Before
 	final public void setupGrammar() {
-//		ActivitydiagramFactory einstance = ActivitydiagramFactory.eINSTANCE;
 		AdruntimeFactory einstance2 = AdruntimeFactory.eINSTANCE;
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new XMIResourceFactoryImpl());
-		// ActivityDiagramStandaloneSetup.doSetup();
-		// ActivityDiagramInputStandaloneSetup.doSetup();
 	}
 
 	@After
