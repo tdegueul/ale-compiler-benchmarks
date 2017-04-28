@@ -1,6 +1,0 @@
-package monolithicactivitydiagram.revisitor.operation;
-
-public interface MonolithicactivitydiagramIntegerComparisonExpressionOperation
-extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramIntegerExpressionOperation 
-{
-}

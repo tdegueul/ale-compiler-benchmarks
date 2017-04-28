@@ -1,6 +1,0 @@
-package common.revisitor.operation;
-
-public interface CommonBooleanUnaryExpressionOperation
-extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanExpressionOperation 
-{
-}

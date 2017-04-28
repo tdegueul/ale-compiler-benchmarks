@@ -1,8 +1,0 @@
-package monolithicactivitydiagram.revisitor.operation;
-
-public interface MonolithicactivitydiagramControlFlow_AspectOperation
-extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlFlowOperation, monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityEdge_AspectOperation 
-{
-	Boolean isControlFlow();
-	activitydiagram.ControlFlow asControlFlow();
-}

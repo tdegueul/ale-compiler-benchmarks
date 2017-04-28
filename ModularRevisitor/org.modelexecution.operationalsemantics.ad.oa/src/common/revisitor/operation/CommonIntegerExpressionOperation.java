@@ -1,6 +1,0 @@
-package common.revisitor.operation;
-
-public interface CommonIntegerExpressionOperation
-extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramExpressionOperation 
-{
-}

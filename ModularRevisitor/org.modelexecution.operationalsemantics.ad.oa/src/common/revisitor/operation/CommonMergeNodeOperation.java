@@ -1,6 +1,0 @@
-package common.revisitor.operation;
-
-public interface CommonMergeNodeOperation
-extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlNodeOperation 
-{
-}

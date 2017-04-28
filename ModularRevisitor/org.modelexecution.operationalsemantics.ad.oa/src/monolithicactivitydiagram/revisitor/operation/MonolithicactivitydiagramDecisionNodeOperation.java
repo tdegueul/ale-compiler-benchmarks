@@ -1,6 +1,0 @@
-package monolithicactivitydiagram.revisitor.operation;
-
-public interface MonolithicactivitydiagramDecisionNodeOperation
-extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramControlNodeOperation 
-{
-}

@@ -1,6 +1,0 @@
-package common.revisitor.operation;
-
-public interface CommonBooleanValueOperation
-extends monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramValueOperation 
-{
-}
