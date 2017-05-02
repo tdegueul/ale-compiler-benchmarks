@@ -1,8 +1,7 @@
 behavior monolithicactivitydiagram;
 
-//import ecore "/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore";
 import ecore "/org.modelexecution.operationalsemantics.adruntime/model/adruntime.ecore";
- 
+
 open class Expression {
 	def void execute() {}
 }
@@ -21,13 +20,13 @@ open class ActivityEdge_Aspect {
 		for(Token token in tokens) {
 			offer.getOfferedTokens().add(token);
 		}
-		
+
 		self.getOffers().add(offer);
 	}
 	
 	def Sequence(Token) takeOfferedTokens() {
 		Sequence(Token) tokens = newSequence(Token);
-		
+
 		for(Offer o in self.getOffers()) {
 			tokens.addAll(o.getOfferedTokens());
 		}
@@ -131,7 +130,7 @@ open class ActivityNode_Aspect { // extends NamdeElement
 		self.getHeldTokens().remove(token);
 	}
 	
-	def void fire(Sequence(Token) tokens) {} // abstract
+	def void fire(Sequence(Token) tokens) {}
 }
 
 open class Token {
@@ -568,9 +567,6 @@ open class Value {
 }
 
 open class BooleanValue extends Value {
-//	
-//}
-//open class BooleanValue_Aspect extends Value {
 	def Boolean isBooleanValue() {
 		return true;
 	}
@@ -580,9 +576,6 @@ open class BooleanValue extends Value {
 	}
 }
 open class IntegerValue extends Value {
-//	
-//}
-//open class IntegerValue_Aspect extends Value {
 	def Boolean isIntegerValue() {
 		return true;		
 	}
