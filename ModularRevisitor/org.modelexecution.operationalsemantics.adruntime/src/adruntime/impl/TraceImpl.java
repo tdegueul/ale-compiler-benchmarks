@@ -9,6 +9,7 @@ import adruntime.Trace;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -63,11 +64,12 @@ public class TraceImpl extends MinimalEObjectImpl.Container implements Trace {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<ActivityNode> getExecutedNodes() {
 		if (executedNodes == null) {
-			executedNodes = new EObjectResolvingEList<ActivityNode>(ActivityNode.class, this, AdruntimePackage.TRACE__EXECUTED_NODES);
+			executedNodes = new BasicEList<ActivityNode>();
+//			executedNodes = new EObjectResolvingEList<ActivityNode>(ActivityNode.class, this, AdruntimePackage.TRACE__EXECUTED_NODES);
 		}
 		return executedNodes;
 	}
