@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.modelexecution.operationalsemantics.ad.oa.benchcase/src" modelPluginID="ModelPluginIDTest" modelName="MODELNAMETEST" complianceLevel="8.0" copyrightFields="false">
-  <foreignModel>http://oachenchase</foreignModel>
-  <foreignModel>http://oabenchcase</foreignModel>
-  <genPackages prefix="Oabenchcase" disposableProviderFactory="true">
-    <ecorePackage href="oachenchase.ecore#/"/>
-  </genPackages>
-</genmodel:GenModel>
