@@ -6,7 +6,7 @@
 
 All the following projects are implementations of the 8th Transformation Tool Contest - [Model Execution use case](http://www.transformation-tool-contest.eu/2015/solutions_execution.html).
 
- - [EMF Switch](./EMF Switch): EMF Switch based implementation
+ - [EMF Switch](./EMF%20Switch): EMF Switch based implementation
  - [Interpreter](./Interpreter): The reference implementation, inspired by the Interpreter pattern
  - [Visitor](./Visitor): Visitor pattern based implementation
  - [MonolithicRevisitor](./MonolithicRevisitor): Revisitor based implementation using a monolithic metamodel where the runtime concepts are already merged.
