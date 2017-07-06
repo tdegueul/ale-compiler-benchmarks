@@ -1,0 +1,39 @@
+behavior evalexp;
+
+import ecore "platform:/resource/boolexp/model/BoolExp.ecore";
+
+open class Tru {
+	def Boolean eval() {
+		return true;
+	}
+}
+
+open class Fals {
+	def Boolean eval() {
+		return false;
+	}
+}
+
+open class And {
+	def Boolean eval() {
+		return $[self.getLhs()].eval() and $[self.getRhs()].eval();
+	}
+}
+
+open class Or {
+	def Boolean eval() {
+		return $[self.getLhs()].eval() or $[self.getRhs()].eval();
+	}
+}
+
+open class Exp {
+	def Boolean eval() { return false; }
+}
+
+open class BinaryExp {
+	def Boolean eval() { return false; }
+}
+
+open class Lit {
+	def Boolean eval() { return false; }
+}

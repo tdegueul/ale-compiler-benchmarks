@@ -1,0 +1,35 @@
+behavior fsmprinting;
+
+import ecore "platform:/resource/minifsm/model/MiniFsm.ecore";
+
+open class Machine {
+	def String print() {
+		String ret = "";
+		for (State s in self.getStates()) {
+			ret = ret + $[s].print();
+		}
+		return ret;
+	}
+}
+
+open class State {
+	def String print() {
+		String ret = "State " + self.getName() + "\n";
+		for (Transition t  in self.getOut()) {
+			ret = ret + "\t" + $[t].print() + "\n";
+		}
+		return ret;
+	}
+}
+
+open class FinalState extends State {
+	def String print() {
+		return "* " + $[super].print();
+	}
+}
+
+open class Transition {
+	def String print() {
+		return self.getEvent() + " => " + self.getTgt().getName();
+	}
+}
