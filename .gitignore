@@ -1,2 +1,7 @@
+.metadata
+*.class
+*._trace
+xtend-gen/
+bin/
+target/
 
-MonolithicRevisitor/org\.modelexecution\.operationalsemantics\.ad\.monolithicrevisitor/bin/
