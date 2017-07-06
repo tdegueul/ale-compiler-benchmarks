@@ -14,13 +14,14 @@ All the following projects are implementations of the 8th Transformation Tool Co
 
 ## Running the benchmarks
 
-1. Follows the Ale installation steps: https://github.com/manuelleduc/ale-compiler#installation
-2. Loading the content of the project into the Language workbench workspace
-3. Executing the BenchmarkGeneric class of the benchmark project of your choice (one per implementation folder). BenchmarkGeneric's main function expect 3 parameters:
-  4. The path to a folder with the xmi of the benchmark
-  5. The name of the test to run (testperformance_variant1, testperformance_variant2, or testperformance_variant3_1)
-  6. A file name prefix (where the execution times are saved)
+1. Follow the Ale installation steps: https://github.com/manuelleduc/ale-compiler#installation
+2. Load the content of the project into the Language workbench workspace
+3. Execute the BenchmarkGeneric class of the benchmark project of your choice (one per implementation folder). BenchmarkGeneric's main function expect 3 parameters:
+  1. The path to a folder with the xmi of the benchmark.
+  2. The name of the test to run (testperformance_variant1, testperformance_variant2, or testperformance_variant3_1)
+  3. A file name prefix (where the execution times are saved)
 
+Each benchmark's folder has a readme with the detail of the specific configuration for it execution.
 Each benchmark executes the test 500 times with 50 warmups executions.
 
 ## Running the tests
