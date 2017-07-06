@@ -1,6 +1,6 @@
 # Ale compiler benchmarks
 
-[Example](./Example): Small examples of Ale operational semantics.
+[Examples](./Examples): Small examples of Ale operational semantics.
 
 **Benchmarks:**
 
