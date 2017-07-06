@@ -1,6 +1,6 @@
 package printexp.revisitor.operation.impl;
 
-public class PrintexpOrOperationImpl implements printexp.revisitor.operation.PrintexpOrOperation
+public  class PrintexpOrOperationImpl implements printexp.revisitor.operation.PrintexpOrOperation
 {
 	
 	private final boolexp.Or self;

@@ -1,6 +1,6 @@
 package evalexp.revisitor.operation.impl;
 
-public class EvalexpOrOperationImpl implements evalexp.revisitor.operation.EvalexpOrOperation
+public  class EvalexpOrOperationImpl implements evalexp.revisitor.operation.EvalexpOrOperation
 {
 	
 	private final boolexp.Or self;

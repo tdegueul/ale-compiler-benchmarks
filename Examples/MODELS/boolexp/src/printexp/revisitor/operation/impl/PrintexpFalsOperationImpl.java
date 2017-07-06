@@ -1,6 +1,6 @@
 package printexp.revisitor.operation.impl;
 
-public class PrintexpFalsOperationImpl implements printexp.revisitor.operation.PrintexpFalsOperation
+public  class PrintexpFalsOperationImpl implements printexp.revisitor.operation.PrintexpFalsOperation
 {
 	
 	private final boolexp.Fals self;

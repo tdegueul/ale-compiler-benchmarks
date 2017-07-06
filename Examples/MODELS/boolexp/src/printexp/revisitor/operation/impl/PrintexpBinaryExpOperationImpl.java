@@ -1,6 +1,6 @@
 package printexp.revisitor.operation.impl;
 
-public class PrintexpBinaryExpOperationImpl implements printexp.revisitor.operation.PrintexpBinaryExpOperation
+public abstract class PrintexpBinaryExpOperationImpl implements printexp.revisitor.operation.PrintexpBinaryExpOperation
 {
 	
 	private final boolexp.BinaryExp self;
@@ -13,7 +13,5 @@ public class PrintexpBinaryExpOperationImpl implements printexp.revisitor.operat
 		this.alg = alg;
 	}
 	@Override
-	public String print() {
-		return "";
-	}
+	public abstract String print();
 }

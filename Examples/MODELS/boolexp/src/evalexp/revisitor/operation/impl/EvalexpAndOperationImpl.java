@@ -1,6 +1,6 @@
 package evalexp.revisitor.operation.impl;
 
-public class EvalexpAndOperationImpl implements evalexp.revisitor.operation.EvalexpAndOperation
+public  class EvalexpAndOperationImpl implements evalexp.revisitor.operation.EvalexpAndOperation
 {
 	
 	private final boolexp.And self;

@@ -2,6 +2,18 @@ behavior evalexp;
 
 import ecore "platform:/resource/boolexp/model/BoolExp.ecore";
 
+open class Exp {
+	abstract def Boolean eval();
+}
+
+open class BinaryExp {
+	abstract def Boolean eval();
+}
+
+open class Lit {
+	abstract def Boolean eval();
+}
+
 open class Tru {
 	def Boolean eval() {
 		return true;
@@ -24,16 +36,4 @@ open class Or {
 	def Boolean eval() {
 		return $[self.getLhs()].eval() or $[self.getRhs()].eval();
 	}
-}
-
-open class Exp {
-	def Boolean eval() { return false; }
-}
-
-open class BinaryExp {
-	def Boolean eval() { return false; }
-}
-
-open class Lit {
-	def Boolean eval() { return false; }
 }

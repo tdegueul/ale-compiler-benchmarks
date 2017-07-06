@@ -1,6 +1,6 @@
 package evalexp.revisitor.operation.impl;
 
-public class EvalexpExpOperationImpl implements evalexp.revisitor.operation.EvalexpExpOperation
+public abstract class EvalexpExpOperationImpl implements evalexp.revisitor.operation.EvalexpExpOperation
 {
 	
 	private final boolexp.Exp self;
@@ -13,7 +13,5 @@ public class EvalexpExpOperationImpl implements evalexp.revisitor.operation.Eval
 		this.alg = alg;
 	}
 	@Override
-	public Boolean eval() {
-		return false;
-	}
+	public abstract Boolean eval();
 }

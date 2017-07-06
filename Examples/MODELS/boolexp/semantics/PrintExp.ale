@@ -2,6 +2,18 @@ behavior printexp;
 
 import ecore "platform:/resource/boolexp/model/BoolExp.ecore";
 
+open class Exp {
+	abstract def String print();
+}
+
+open class BinaryExp {
+	abstract def String print();
+}
+
+open class Lit {
+	abstract def String print();
+}
+
 open class Tru {
 	def String print() {
 		return "T";
@@ -24,16 +36,4 @@ open class Or {
 	def String print() {
 		return "(" + $[self.getLhs()].print() + " ∨ " + $[self.getRhs()].print() + ")";
 	}
-}
-
-open class Exp {
-	def String print() { return ""; }
-}
-
-open class BinaryExp {
-	def String print() { return ""; }
-}
-
-open class Lit {
-	def String print() { return ""; }
 }

@@ -1,6 +1,6 @@
 package evalexp.revisitor.operation.impl;
 
-public class EvalexpTruOperationImpl implements evalexp.revisitor.operation.EvalexpTruOperation
+public  class EvalexpTruOperationImpl implements evalexp.revisitor.operation.EvalexpTruOperation
 {
 	
 	private final boolexp.Tru self;

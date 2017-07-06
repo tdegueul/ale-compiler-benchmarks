@@ -1,6 +1,6 @@
 package evalexp.revisitor.operation.impl;
 
-public class EvalexpBinaryExpOperationImpl implements evalexp.revisitor.operation.EvalexpBinaryExpOperation
+public abstract class EvalexpBinaryExpOperationImpl implements evalexp.revisitor.operation.EvalexpBinaryExpOperation
 {
 	
 	private final boolexp.BinaryExp self;
@@ -13,7 +13,5 @@ public class EvalexpBinaryExpOperationImpl implements evalexp.revisitor.operatio
 		this.alg = alg;
 	}
 	@Override
-	public Boolean eval() {
-		return false;
-	}
+	public abstract Boolean eval();
 }

@@ -7,11 +7,11 @@ public interface EvalexpRevisitorImpl extends evalexp.revisitor.EvalexpRevisitor
 		return new evalexp.revisitor.operation.impl.EvalexpAndOperationImpl(and, this);
 	} 
 	@Override
-	default evalexp.revisitor.operation.EvalexpAndOperation binaryExp_and(final boolexp.And and) {
+	default evalexp.revisitor.operation.EvalexpAndOperation exp_and(final boolexp.And and) {
 		return new evalexp.revisitor.operation.impl.EvalexpAndOperationImpl(and, this);
 	} 
 	@Override
-	default evalexp.revisitor.operation.EvalexpAndOperation exp_and(final boolexp.And and) {
+	default evalexp.revisitor.operation.EvalexpAndOperation binaryExp_and(final boolexp.And and) {
 		return new evalexp.revisitor.operation.impl.EvalexpAndOperationImpl(and, this);
 	} 
 	@Override
@@ -19,11 +19,11 @@ public interface EvalexpRevisitorImpl extends evalexp.revisitor.EvalexpRevisitor
 		return new evalexp.revisitor.operation.impl.EvalexpFalsOperationImpl(fals, this);
 	} 
 	@Override
-	default evalexp.revisitor.operation.EvalexpFalsOperation lit_fals(final boolexp.Fals fals) {
+	default evalexp.revisitor.operation.EvalexpFalsOperation exp_fals(final boolexp.Fals fals) {
 		return new evalexp.revisitor.operation.impl.EvalexpFalsOperationImpl(fals, this);
 	} 
 	@Override
-	default evalexp.revisitor.operation.EvalexpFalsOperation exp_fals(final boolexp.Fals fals) {
+	default evalexp.revisitor.operation.EvalexpFalsOperation lit_fals(final boolexp.Fals fals) {
 		return new evalexp.revisitor.operation.impl.EvalexpFalsOperationImpl(fals, this);
 	} 
 	@Override
@@ -31,11 +31,11 @@ public interface EvalexpRevisitorImpl extends evalexp.revisitor.EvalexpRevisitor
 		return new evalexp.revisitor.operation.impl.EvalexpOrOperationImpl(or, this);
 	} 
 	@Override
-	default evalexp.revisitor.operation.EvalexpOrOperation binaryExp_or(final boolexp.Or or) {
+	default evalexp.revisitor.operation.EvalexpOrOperation exp_or(final boolexp.Or or) {
 		return new evalexp.revisitor.operation.impl.EvalexpOrOperationImpl(or, this);
 	} 
 	@Override
-	default evalexp.revisitor.operation.EvalexpOrOperation exp_or(final boolexp.Or or) {
+	default evalexp.revisitor.operation.EvalexpOrOperation binaryExp_or(final boolexp.Or or) {
 		return new evalexp.revisitor.operation.impl.EvalexpOrOperationImpl(or, this);
 	} 
 	@Override
@@ -43,11 +43,11 @@ public interface EvalexpRevisitorImpl extends evalexp.revisitor.EvalexpRevisitor
 		return new evalexp.revisitor.operation.impl.EvalexpTruOperationImpl(tru, this);
 	} 
 	@Override
-	default evalexp.revisitor.operation.EvalexpTruOperation lit_tru(final boolexp.Tru tru) {
+	default evalexp.revisitor.operation.EvalexpTruOperation exp_tru(final boolexp.Tru tru) {
 		return new evalexp.revisitor.operation.impl.EvalexpTruOperationImpl(tru, this);
 	} 
 	@Override
-	default evalexp.revisitor.operation.EvalexpTruOperation exp_tru(final boolexp.Tru tru) {
+	default evalexp.revisitor.operation.EvalexpTruOperation lit_tru(final boolexp.Tru tru) {
 		return new evalexp.revisitor.operation.impl.EvalexpTruOperationImpl(tru, this);
 	} 
 }

@@ -1,6 +1,6 @@
 package evalexp.revisitor.operation.impl;
 
-public class EvalexpFalsOperationImpl implements evalexp.revisitor.operation.EvalexpFalsOperation
+public  class EvalexpFalsOperationImpl implements evalexp.revisitor.operation.EvalexpFalsOperation
 {
 	
 	private final boolexp.Fals self;
