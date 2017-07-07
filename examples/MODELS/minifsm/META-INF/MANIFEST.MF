@@ -8,9 +8,8 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: fsmprinting.revisitor,
- fsmprinting.revisitor.impl,
- fsmprinting.revisitor.operation,
- fsmprinting.revisitor.operation.impl,
+ fsmprinting.revisitor.operations,
+ fsmprinting.revisitor.operations.impl,
  minifsm,
  minifsm.impl,
  minifsm.main,

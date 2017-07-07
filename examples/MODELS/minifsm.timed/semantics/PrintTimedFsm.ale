@@ -1,6 +1,6 @@
 behavior tfsmprinting;
 
-import ecore "platform:/resource/minifsm.timed/model/TimedMiniFsm.ecore";
+import ecore "minifsm.timed/model/TimedMiniFsm.ecore";
 import ale fsmprinting;
 
 open class TimedTransition extends fsmprinting.Transition {

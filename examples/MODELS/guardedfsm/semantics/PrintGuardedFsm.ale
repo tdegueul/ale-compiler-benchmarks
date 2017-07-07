@@ -1,6 +1,6 @@
 behavior guardedfsmprinting;
 
-import ecore "platform:/resource/guardedfsm/model/GuardedFsm.ecore";
+import ecore "guardedfsm/model/GuardedFsm.ecore";
 import ale fsmprinting;
 import ale printexp;
 

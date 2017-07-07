@@ -7,15 +7,15 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import fsmprinting.revisitor.impl.FsmprintingRevisitorImpl;
-import fsmprinting.revisitor.operation.FsmprintingMachineOperation;
+import fsmprinting.revisitor.FsmprintingRevisitor;
+import fsmprinting.revisitor.operations.MachineOperation;
 import minifsm.Machine;
 import minifsm.MinifsmPackage;
 
 public class Main {
 	public static void main(String[] args) {
 		Machine m = loadModel();
-		FsmprintingMachineOperation sem = new FsmprintingRevisitorImpl(){}.$(m);
+		MachineOperation sem = new FsmprintingRevisitor(){}.$(m);
 		
 		System.out.println("Printing MiniFsm:");
 		System.out.println(sem.print());

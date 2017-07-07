@@ -1,37 +1,52 @@
 package printexp.revisitor;
 
-public interface PrintexpRevisitor<Boolexp__AndT extends Boolexp__BinaryExpT,Boolexp__BinaryExpT extends Boolexp__ExpT,Boolexp__ExpT,Boolexp__FalsT extends Boolexp__LitT,Boolexp__LitT extends Boolexp__ExpT,Boolexp__OrT extends Boolexp__BinaryExpT,Boolexp__TruT extends Boolexp__LitT>
-	 extends boolexp.revisitor.BoolexpRevisitor<Boolexp__AndT, Boolexp__BinaryExpT, Boolexp__ExpT, Boolexp__FalsT, Boolexp__LitT, Boolexp__OrT, Boolexp__TruT>
-	
-	 {
-	
-	default Boolexp__TruT $(final boolexp.Tru self) {
-		return tru(self);
+public interface PrintexpRevisitor extends boolexp.revisitor.BoolexpRevisitor<printexp.revisitor.operations.AndOperation, printexp.revisitor.operations.BinaryExpOperation, printexp.revisitor.operations.ExpOperation, printexp.revisitor.operations.FalsOperation, printexp.revisitor.operations.LitOperation, printexp.revisitor.operations.OrOperation, printexp.revisitor.operations.TruOperation> {
+	@Override
+	default printexp.revisitor.operations.AndOperation and(final boolexp.And a) {
+		return new printexp.revisitor.operations.impl.AndOperationImpl(a, this);
 	}
-	default Boolexp__LitT $(final boolexp.Lit self) {
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.TRU && self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE) return tru((boolexp.Tru) self);
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.FALS && self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE) return fals((boolexp.Fals) self);
-		return null;
+	@Override
+	default printexp.revisitor.operations.AndOperation exp_and(final boolexp.And a) {
+		return new printexp.revisitor.operations.impl.AndOperationImpl(a, this);
 	}
-	default Boolexp__FalsT $(final boolexp.Fals self) {
-		return fals(self);
+	@Override
+	default printexp.revisitor.operations.AndOperation binaryExp_and(final boolexp.And a) {
+		return new printexp.revisitor.operations.impl.AndOperationImpl(a, this);
 	}
-	default Boolexp__AndT $(final boolexp.And self) {
-		return and(self);
+	@Override
+	default printexp.revisitor.operations.FalsOperation fals(final boolexp.Fals f) {
+		return new printexp.revisitor.operations.impl.FalsOperationImpl(f, this);
 	}
-	default Boolexp__OrT $(final boolexp.Or self) {
-		return or(self);
+	@Override
+	default printexp.revisitor.operations.FalsOperation exp_fals(final boolexp.Fals f) {
+		return new printexp.revisitor.operations.impl.FalsOperationImpl(f, this);
 	}
-	default Boolexp__ExpT $(final boolexp.Exp self) {
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.TRU && self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE) return tru((boolexp.Tru) self);
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.FALS && self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE) return fals((boolexp.Fals) self);
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.AND && self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE) return and((boolexp.And) self);
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.OR && self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE) return or((boolexp.Or) self);
-		return null;
+	@Override
+	default printexp.revisitor.operations.FalsOperation lit_fals(final boolexp.Fals f) {
+		return new printexp.revisitor.operations.impl.FalsOperationImpl(f, this);
 	}
-	default Boolexp__BinaryExpT $(final boolexp.BinaryExp self) {
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.AND && self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE) return and((boolexp.And) self);
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.OR && self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE) return or((boolexp.Or) self);
-		return null;
+	@Override
+	default printexp.revisitor.operations.OrOperation or(final boolexp.Or o) {
+		return new printexp.revisitor.operations.impl.OrOperationImpl(o, this);
+	}
+	@Override
+	default printexp.revisitor.operations.OrOperation exp_or(final boolexp.Or o) {
+		return new printexp.revisitor.operations.impl.OrOperationImpl(o, this);
+	}
+	@Override
+	default printexp.revisitor.operations.OrOperation binaryExp_or(final boolexp.Or o) {
+		return new printexp.revisitor.operations.impl.OrOperationImpl(o, this);
+	}
+	@Override
+	default printexp.revisitor.operations.TruOperation tru(final boolexp.Tru t) {
+		return new printexp.revisitor.operations.impl.TruOperationImpl(t, this);
+	}
+	@Override
+	default printexp.revisitor.operations.TruOperation exp_tru(final boolexp.Tru t) {
+		return new printexp.revisitor.operations.impl.TruOperationImpl(t, this);
+	}
+	@Override
+	default printexp.revisitor.operations.TruOperation lit_tru(final boolexp.Tru t) {
+		return new printexp.revisitor.operations.impl.TruOperationImpl(t, this);
 	}
 }

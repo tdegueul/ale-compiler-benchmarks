@@ -1,6 +1,6 @@
 behavior fsmprinting;
 
-import ecore "platform:/resource/minifsm/model/MiniFsm.ecore";
+import ecore "minifsm/model/MiniFsm.ecore";
 
 open class Machine {
 	def String print() {

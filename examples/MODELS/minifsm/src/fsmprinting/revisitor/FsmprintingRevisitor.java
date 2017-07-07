@@ -1,21 +1,24 @@
 package fsmprinting.revisitor;
 
-public interface FsmprintingRevisitor<Minifsm__FinalStateT extends Minifsm__StateT,Minifsm__MachineT,Minifsm__StateT,Minifsm__TransitionT>
-	 extends minifsm.revisitor.MinifsmRevisitor<Minifsm__FinalStateT, Minifsm__MachineT, Minifsm__StateT, Minifsm__TransitionT>
-	
-	 {
-	
-	default Minifsm__TransitionT $(final minifsm.Transition self) {
-		return transition(self);
+public interface FsmprintingRevisitor extends minifsm.revisitor.MinifsmRevisitor<fsmprinting.revisitor.operations.FinalStateOperation, fsmprinting.revisitor.operations.MachineOperation, fsmprinting.revisitor.operations.StateOperation, fsmprinting.revisitor.operations.TransitionOperation> {
+	@Override
+	default fsmprinting.revisitor.operations.FinalStateOperation finalState(final minifsm.FinalState f) {
+		return new fsmprinting.revisitor.operations.impl.FinalStateOperationImpl(f, this);
 	}
-	default Minifsm__StateT $(final minifsm.State self) {
-		if(self.eClass().getClassifierID() == minifsm.MinifsmPackage.FINAL_STATE && self.eClass().getEPackage() == minifsm.MinifsmPackage.eINSTANCE) return finalState((minifsm.FinalState) self);
-		return state(self);
+	@Override
+	default fsmprinting.revisitor.operations.FinalStateOperation state_finalState(final minifsm.FinalState f) {
+		return new fsmprinting.revisitor.operations.impl.FinalStateOperationImpl(f, this);
 	}
-	default Minifsm__MachineT $(final minifsm.Machine self) {
-		return machine(self);
+	@Override
+	default fsmprinting.revisitor.operations.MachineOperation machine(final minifsm.Machine m) {
+		return new fsmprinting.revisitor.operations.impl.MachineOperationImpl(m, this);
 	}
-	default Minifsm__FinalStateT $(final minifsm.FinalState self) {
-		return finalState(self);
+	@Override
+	default fsmprinting.revisitor.operations.StateOperation state(final minifsm.State s) {
+		return new fsmprinting.revisitor.operations.impl.StateOperationImpl(s, this);
+	}
+	@Override
+	default fsmprinting.revisitor.operations.TransitionOperation transition(final minifsm.Transition t) {
+		return new fsmprinting.revisitor.operations.impl.TransitionOperationImpl(t, this);
 	}
 }

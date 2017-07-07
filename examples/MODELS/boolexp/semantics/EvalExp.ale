@@ -1,6 +1,6 @@
 behavior evalexp;
 
-import ecore "platform:/resource/boolexp/model/BoolExp.ecore";
+import ecore "boolexp/model/BoolExp.ecore";
 
 open class Exp {
 	abstract def Boolean eval();

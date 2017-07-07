@@ -9,7 +9,12 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: guardedfsm,
  guardedfsm.impl,
- guardedfsm.util
+ guardedfsm.main,
+ guardedfsm.revisitor,
+ guardedfsm.util,
+ guardedfsmprinting.revisitor,
+ guardedfsmprinting.revisitor.operations,
+ guardedfsmprinting.revisitor.operations.impl
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  boolexp;visibility:=reexport,
