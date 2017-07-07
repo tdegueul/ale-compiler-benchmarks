@@ -1,331 +1,548 @@
 package modularactivitydiagram.revisitor;
 
-public interface ModularactivitydiagramRevisitor<Adwithoutruntime__ActionT extends Adwithoutruntime__ExecutableNodeT,Adruntime__Action_AspectT,Adwithoutruntime__ActivityT extends Adwithoutruntime__NamedElementT,Adwithoutruntime__ActivityEdgeT extends Adwithoutruntime__NamedElementT,Adruntime__ActivityEdge_AspectT extends Adwithoutruntime__ActivityEdgeT,Adwithoutruntime__ActivityFinalNodeT extends Adwithoutruntime__FinalNodeT,Adruntime__ActivityFinalNode_AspectT,Adwithoutruntime__ActivityNodeT extends Adwithoutruntime__NamedElementT,Adruntime__ActivityNode_AspectT extends Adwithoutruntime__ActivityNodeT,Adruntime__Activity_AspectT extends Adwithoutruntime__ActivityT,Adwithoutruntime__BooleanBinaryExpressionT extends Adwithoutruntime__BooleanExpressionT,Adruntime__BooleanBinaryExpression_AspectT,Adwithoutruntime__BooleanExpressionT extends Adwithoutruntime__ExpressionT,Adruntime__BooleanExpression_AspectT extends Adwithoutruntime__BooleanExpressionT,Adwithoutruntime__BooleanUnaryExpressionT extends Adwithoutruntime__BooleanExpressionT,Adruntime__BooleanUnaryExpression_AspectT,Adwithoutruntime__BooleanValueT extends Adwithoutruntime__ValueT,Adwithoutruntime__BooleanVariableT extends Adwithoutruntime__VariableT,Adruntime__BooleanVariable_AspectT,Adwithoutruntime__ControlFlowT extends Adwithoutruntime__ActivityEdgeT,Adruntime__ControlFlow_AspectT,Adwithoutruntime__ControlNodeT extends Adwithoutruntime__ActivityNodeT,Adruntime__ControlNode_AspectT,Adruntime__ControlTokenT extends Adruntime__TokenT,Adwithoutruntime__DecisionNodeT extends Adwithoutruntime__ControlNodeT,Adruntime__DecisionNode_AspectT,Adwithoutruntime__ExecutableNodeT extends Adwithoutruntime__ActivityNodeT,Adruntime__ExecutableNode_AspectT,Adwithoutruntime__ExpressionT,Adwithoutruntime__FinalNodeT extends Adwithoutruntime__ControlNodeT,Adruntime__FinalNode_AspectT,Adwithoutruntime__ForkNodeT extends Adwithoutruntime__ControlNodeT,Adruntime__ForkNode_AspectT,Adruntime__ForkedTokenT extends Adruntime__TokenT,Adwithoutruntime__InitialNodeT extends Adwithoutruntime__ControlNodeT,Adruntime__InitialNode_AspectT,Adruntime__InputT,Adruntime__InputValueT,Adwithoutruntime__IntegerCalculationExpressionT extends Adwithoutruntime__IntegerExpressionT,Adruntime__IntegerCalculationExpression_AspectT,Adwithoutruntime__IntegerComparisonExpressionT extends Adwithoutruntime__IntegerExpressionT,Adruntime__IntegerComparisonExpression_AspectT,Adwithoutruntime__IntegerExpressionT extends Adwithoutruntime__ExpressionT,Adruntime__IntegerExpression_AspectT extends Adwithoutruntime__IntegerExpressionT,Adwithoutruntime__IntegerValueT extends Adwithoutruntime__ValueT,Adwithoutruntime__IntegerVariableT extends Adwithoutruntime__VariableT,Adruntime__IntegerVariable_AspectT,Adwithoutruntime__JoinNodeT extends Adwithoutruntime__ControlNodeT,Adruntime__JoinNode_AspectT,Adwithoutruntime__MergeNodeT extends Adwithoutruntime__ControlNodeT,Adruntime__MergeNode_AspectT,Adwithoutruntime__NamedElementT,Adruntime__OfferT,Adwithoutruntime__OpaqueActionT extends Adwithoutruntime__ActionT,Adruntime__OpaqueAction_AspectT,Adruntime__TokenT,Adruntime__TraceT,Adwithoutruntime__ValueT,Adwithoutruntime__VariableT,Adruntime__Variable_AspectT extends Adwithoutruntime__VariableT>
-	 extends adruntime.revisitor.AdruntimeRevisitor<Adwithoutruntime__ActionT, Adruntime__Action_AspectT, Adwithoutruntime__ActivityT, Adwithoutruntime__ActivityEdgeT, Adruntime__ActivityEdge_AspectT, Adwithoutruntime__ActivityFinalNodeT, Adruntime__ActivityFinalNode_AspectT, Adwithoutruntime__ActivityNodeT, Adruntime__ActivityNode_AspectT, Adruntime__Activity_AspectT, Adwithoutruntime__BooleanBinaryExpressionT, Adruntime__BooleanBinaryExpression_AspectT, Adwithoutruntime__BooleanExpressionT, Adruntime__BooleanExpression_AspectT, Adwithoutruntime__BooleanUnaryExpressionT, Adruntime__BooleanUnaryExpression_AspectT, Adwithoutruntime__BooleanValueT, Adwithoutruntime__BooleanVariableT, Adruntime__BooleanVariable_AspectT, Adwithoutruntime__ControlFlowT, Adruntime__ControlFlow_AspectT, Adwithoutruntime__ControlNodeT, Adruntime__ControlNode_AspectT, Adruntime__ControlTokenT, Adwithoutruntime__DecisionNodeT, Adruntime__DecisionNode_AspectT, Adwithoutruntime__ExecutableNodeT, Adruntime__ExecutableNode_AspectT, Adwithoutruntime__ExpressionT, Adwithoutruntime__FinalNodeT, Adruntime__FinalNode_AspectT, Adwithoutruntime__ForkNodeT, Adruntime__ForkNode_AspectT, Adruntime__ForkedTokenT, Adwithoutruntime__InitialNodeT, Adruntime__InitialNode_AspectT, Adruntime__InputT, Adruntime__InputValueT, Adwithoutruntime__IntegerCalculationExpressionT, Adruntime__IntegerCalculationExpression_AspectT, Adwithoutruntime__IntegerComparisonExpressionT, Adruntime__IntegerComparisonExpression_AspectT, Adwithoutruntime__IntegerExpressionT, Adruntime__IntegerExpression_AspectT, Adwithoutruntime__IntegerValueT, Adwithoutruntime__IntegerVariableT, Adruntime__IntegerVariable_AspectT, Adwithoutruntime__JoinNodeT, Adruntime__JoinNode_AspectT, Adwithoutruntime__MergeNodeT, Adruntime__MergeNode_AspectT, Adwithoutruntime__NamedElementT, Adruntime__OfferT, Adwithoutruntime__OpaqueActionT, Adruntime__OpaqueAction_AspectT, Adruntime__TokenT, Adruntime__TraceT, Adwithoutruntime__ValueT, Adwithoutruntime__VariableT, Adruntime__Variable_AspectT>, adwithoutruntime.revisitor.AdwithoutruntimeRevisitor<Adwithoutruntime__ActionT, Adwithoutruntime__ActivityT, Adwithoutruntime__ActivityEdgeT, Adwithoutruntime__ActivityFinalNodeT, Adwithoutruntime__ActivityNodeT, Adwithoutruntime__BooleanBinaryExpressionT, Adwithoutruntime__BooleanExpressionT, Adwithoutruntime__BooleanUnaryExpressionT, Adwithoutruntime__BooleanValueT, Adwithoutruntime__BooleanVariableT, Adwithoutruntime__ControlFlowT, Adwithoutruntime__ControlNodeT, Adwithoutruntime__DecisionNodeT, Adwithoutruntime__ExecutableNodeT, Adwithoutruntime__ExpressionT, Adwithoutruntime__FinalNodeT, Adwithoutruntime__ForkNodeT, Adwithoutruntime__InitialNodeT, Adwithoutruntime__IntegerCalculationExpressionT, Adwithoutruntime__IntegerComparisonExpressionT, Adwithoutruntime__IntegerExpressionT, Adwithoutruntime__IntegerValueT, Adwithoutruntime__IntegerVariableT, Adwithoutruntime__JoinNodeT, Adwithoutruntime__MergeNodeT, Adwithoutruntime__NamedElementT, Adwithoutruntime__OpaqueActionT, Adwithoutruntime__ValueT, Adwithoutruntime__VariableT>
-	
-	 {
-	
-	default Adwithoutruntime__ControlFlowT $(final adwithoutruntime.ControlFlow self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlFlow_controlFlow_Aspect((adruntime.ControlFlow_Aspect) self);
-		return controlFlow(self);
+public interface ModularactivitydiagramRevisitor extends adruntime.revisitor.AdruntimeRevisitor<modularactivitydiagram.revisitor.operations.ActionOperation, modularactivitydiagram.revisitor.operations.Action_AspectOperation, modularactivitydiagram.revisitor.operations.ActivityOperation, modularactivitydiagram.revisitor.operations.ActivityEdgeOperation, modularactivitydiagram.revisitor.operations.ActivityEdge_AspectOperation, modularactivitydiagram.revisitor.operations.ActivityFinalNodeOperation, modularactivitydiagram.revisitor.operations.ActivityFinalNode_AspectOperation, modularactivitydiagram.revisitor.operations.ActivityNodeOperation, modularactivitydiagram.revisitor.operations.ActivityNode_AspectOperation, modularactivitydiagram.revisitor.operations.Activity_AspectOperation, modularactivitydiagram.revisitor.operations.BooleanBinaryExpressionOperation, modularactivitydiagram.revisitor.operations.BooleanBinaryExpression_AspectOperation, modularactivitydiagram.revisitor.operations.BooleanExpressionOperation, modularactivitydiagram.revisitor.operations.BooleanExpression_AspectOperation, modularactivitydiagram.revisitor.operations.BooleanUnaryExpressionOperation, modularactivitydiagram.revisitor.operations.BooleanUnaryExpression_AspectOperation, modularactivitydiagram.revisitor.operations.BooleanValueOperation, modularactivitydiagram.revisitor.operations.BooleanVariableOperation, modularactivitydiagram.revisitor.operations.BooleanVariable_AspectOperation, modularactivitydiagram.revisitor.operations.ControlFlowOperation, modularactivitydiagram.revisitor.operations.ControlFlow_AspectOperation, modularactivitydiagram.revisitor.operations.ControlNodeOperation, modularactivitydiagram.revisitor.operations.ControlNode_AspectOperation, modularactivitydiagram.revisitor.operations.ControlTokenOperation, modularactivitydiagram.revisitor.operations.DecisionNodeOperation, modularactivitydiagram.revisitor.operations.DecisionNode_AspectOperation, modularactivitydiagram.revisitor.operations.ExecutableNodeOperation, modularactivitydiagram.revisitor.operations.ExecutableNode_AspectOperation, modularactivitydiagram.revisitor.operations.ExpressionOperation, modularactivitydiagram.revisitor.operations.FinalNodeOperation, modularactivitydiagram.revisitor.operations.FinalNode_AspectOperation, modularactivitydiagram.revisitor.operations.ForkNodeOperation, modularactivitydiagram.revisitor.operations.ForkNode_AspectOperation, modularactivitydiagram.revisitor.operations.ForkedTokenOperation, modularactivitydiagram.revisitor.operations.InitialNodeOperation, modularactivitydiagram.revisitor.operations.InitialNode_AspectOperation, modularactivitydiagram.revisitor.operations.InputOperation, modularactivitydiagram.revisitor.operations.InputValueOperation, modularactivitydiagram.revisitor.operations.IntegerCalculationExpressionOperation, modularactivitydiagram.revisitor.operations.IntegerCalculationExpression_AspectOperation, modularactivitydiagram.revisitor.operations.IntegerComparisonExpressionOperation, modularactivitydiagram.revisitor.operations.IntegerComparisonExpression_AspectOperation, modularactivitydiagram.revisitor.operations.IntegerExpressionOperation, modularactivitydiagram.revisitor.operations.IntegerExpression_AspectOperation, modularactivitydiagram.revisitor.operations.IntegerValueOperation, modularactivitydiagram.revisitor.operations.IntegerVariableOperation, modularactivitydiagram.revisitor.operations.IntegerVariable_AspectOperation, modularactivitydiagram.revisitor.operations.JoinNodeOperation, modularactivitydiagram.revisitor.operations.JoinNode_AspectOperation, modularactivitydiagram.revisitor.operations.MergeNodeOperation, modularactivitydiagram.revisitor.operations.MergeNode_AspectOperation, modularactivitydiagram.revisitor.operations.NamedElementOperation, modularactivitydiagram.revisitor.operations.OfferOperation, modularactivitydiagram.revisitor.operations.OpaqueActionOperation, modularactivitydiagram.revisitor.operations.OpaqueAction_AspectOperation, modularactivitydiagram.revisitor.operations.TokenOperation, modularactivitydiagram.revisitor.operations.TraceOperation, modularactivitydiagram.revisitor.operations.ValueOperation, modularactivitydiagram.revisitor.operations.VariableOperation, modularactivitydiagram.revisitor.operations.Variable_AspectOperation> {
+	@Override
+	default modularactivitydiagram.revisitor.operations.Action_AspectOperation action_Aspect(final adruntime.Action_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.Action_AspectOperationImpl(a, this);
 	}
-	default Adruntime__ForkedTokenT $(final adruntime.ForkedToken self) {
-		return forkedToken(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.Action_AspectOperation namedElement_action_Aspect(final adruntime.Action_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.Action_AspectOperationImpl(a, this);
 	}
-	default Adruntime__BooleanExpression_AspectT $(final adruntime.BooleanExpression_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return booleanExpression_Aspect_booleanBinaryExpression_Aspect((adruntime.BooleanBinaryExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return booleanExpression_Aspect_booleanUnaryExpression_Aspect((adruntime.BooleanUnaryExpression_Aspect) self);
-		return booleanExpression_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.Action_AspectOperation activityNode_action_Aspect(final adruntime.Action_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.Action_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__IntegerExpressionT $(final adwithoutruntime.IntegerExpression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return integerExpression_integerComparisonExpression_Aspect((adruntime.IntegerComparisonExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_COMPARISON_EXPRESSION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return integerComparisonExpression((adwithoutruntime.IntegerComparisonExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return integerExpression_integerCalculationExpression_Aspect((adruntime.IntegerCalculationExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_CALCULATION_EXPRESSION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return integerCalculationExpression((adwithoutruntime.IntegerCalculationExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return integerExpression_Aspect((adruntime.IntegerExpression_Aspect) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.Action_AspectOperation executableNode_action_Aspect(final adruntime.Action_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.Action_AspectOperationImpl(a, this);
 	}
-	default Adruntime__BooleanBinaryExpression_AspectT $(final adruntime.BooleanBinaryExpression_Aspect self) {
-		return booleanBinaryExpression_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.Action_AspectOperation action_action_Aspect(final adruntime.Action_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.Action_AspectOperationImpl(a, this);
 	}
-	default Adruntime__JoinNode_AspectT $(final adruntime.JoinNode_Aspect self) {
-		return joinNode_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.Action_AspectOperation activityNode_Aspect_action_Aspect(final adruntime.Action_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.Action_AspectOperationImpl(a, this);
 	}
-	default Adruntime__OfferT $(final adruntime.Offer self) {
-		return offer(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.Action_AspectOperation executableNode_Aspect_action_Aspect(final adruntime.Action_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.Action_AspectOperationImpl(a, this);
 	}
-	default Adruntime__TokenT $(final adruntime.Token self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORKED_TOKEN && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return forkedToken((adruntime.ForkedToken) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_TOKEN && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlToken((adruntime.ControlToken) self);
-		return token(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityEdge_AspectOperation activityEdge_Aspect(final adruntime.ActivityEdge_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityEdge_AspectOperationImpl(a, this);
 	}
-	default Adruntime__OpaqueAction_AspectT $(final adruntime.OpaqueAction_Aspect self) {
-		return opaqueAction_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityEdge_AspectOperation namedElement_activityEdge_Aspect(final adruntime.ActivityEdge_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityEdge_AspectOperationImpl(a, this);
 	}
-	default Adruntime__InitialNode_AspectT $(final adruntime.InitialNode_Aspect self) {
-		return initialNode_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityEdge_AspectOperation activityEdge_activityEdge_Aspect(final adruntime.ActivityEdge_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityEdge_AspectOperationImpl(a, this);
 	}
-	default Adruntime__ControlNode_AspectT $(final adruntime.ControlNode_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_Aspect_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_Aspect_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_Aspect_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_Aspect_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_Aspect_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_Aspect_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_Aspect_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
-		return controlNode_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityFinalNode_AspectOperation activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityFinalNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__OpaqueActionT $(final adwithoutruntime.OpaqueAction self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return opaqueAction_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
-		return opaqueAction(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityFinalNode_AspectOperation namedElement_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityFinalNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__ActionT $(final adwithoutruntime.Action self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return action_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return opaqueAction((adwithoutruntime.OpaqueAction) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return action_action_Aspect((adruntime.Action_Aspect) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityFinalNode_AspectOperation activityNode_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityFinalNode_AspectOperationImpl(a, this);
 	}
-	default Adruntime__DecisionNode_AspectT $(final adruntime.DecisionNode_Aspect self) {
-		return decisionNode_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityFinalNode_AspectOperation controlNode_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityFinalNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__ActivityT $(final adwithoutruntime.Activity self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activity_Aspect((adruntime.Activity_Aspect) self);
-		return activity(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityFinalNode_AspectOperation finalNode_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityFinalNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__ControlNodeT $(final adwithoutruntime.ControlNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_controlNode_Aspect((adruntime.ControlNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return initialNode((adwithoutruntime.InitialNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return mergeNode((adwithoutruntime.MergeNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return decisionNode((adwithoutruntime.DecisionNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return joinNode((adwithoutruntime.JoinNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return forkNode((adwithoutruntime.ForkNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return controlNode_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityFinalNode_AspectOperation activityFinalNode_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityFinalNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__ActivityEdgeT $(final adwithoutruntime.ActivityEdge self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityEdge_controlFlow_Aspect((adruntime.ControlFlow_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.CONTROL_FLOW && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return controlFlow((adwithoutruntime.ControlFlow) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_EDGE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityEdge_Aspect((adruntime.ActivityEdge_Aspect) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityFinalNode_AspectOperation activityNode_Aspect_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityFinalNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__ExecutableNodeT $(final adwithoutruntime.ExecutableNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return executableNode_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return opaqueAction((adwithoutruntime.OpaqueAction) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return executableNode_action_Aspect((adruntime.Action_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return executableNode_executableNode_Aspect((adruntime.ExecutableNode_Aspect) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityFinalNode_AspectOperation controlNode_Aspect_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityFinalNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__BooleanValueT $(final adwithoutruntime.BooleanValue self) {
-		return booleanValue(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityFinalNode_AspectOperation finalNode_Aspect_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityFinalNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__InitialNodeT $(final adwithoutruntime.InitialNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return initialNode_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		return initialNode(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityNode_AspectOperation activityNode_Aspect(final adruntime.ActivityNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__IntegerVariableT $(final adwithoutruntime.IntegerVariable self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_VARIABLE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return integerVariable_integerVariable_Aspect((adruntime.IntegerVariable_Aspect) self);
-		return integerVariable(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityNode_AspectOperation namedElement_activityNode_Aspect(final adruntime.ActivityNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__MergeNodeT $(final adwithoutruntime.MergeNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return mergeNode_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
-		return mergeNode(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ActivityNode_AspectOperation activityNode_activityNode_Aspect(final adruntime.ActivityNode_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.ActivityNode_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__NamedElementT $(final adwithoutruntime.NamedElement self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.CONTROL_FLOW && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return controlFlow((adwithoutruntime.ControlFlow) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_controlNode_Aspect((adruntime.ControlNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return opaqueAction((adwithoutruntime.OpaqueAction) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return activity((adwithoutruntime.Activity) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_EDGE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityEdge_Aspect((adruntime.ActivityEdge_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return initialNode((adwithoutruntime.InitialNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return mergeNode((adwithoutruntime.MergeNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return decisionNode((adwithoutruntime.DecisionNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activity_Aspect((adruntime.Activity_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_action_Aspect((adruntime.Action_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_executableNode_Aspect((adruntime.ExecutableNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return joinNode((adwithoutruntime.JoinNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return forkNode((adwithoutruntime.ForkNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect((adruntime.ActivityNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return namedElement_controlFlow_Aspect((adruntime.ControlFlow_Aspect) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.Activity_AspectOperation activity_Aspect(final adruntime.Activity_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.Activity_AspectOperationImpl(a, this);
 	}
-	default Adruntime__Variable_AspectT $(final adruntime.Variable_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_VARIABLE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return variable_Aspect_booleanVariable_Aspect((adruntime.BooleanVariable_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_VARIABLE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return variable_Aspect_integerVariable_Aspect((adruntime.IntegerVariable_Aspect) self);
-		return variable_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.Activity_AspectOperation namedElement_activity_Aspect(final adruntime.Activity_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.Activity_AspectOperationImpl(a, this);
 	}
-	default Adwithoutruntime__DecisionNodeT $(final adwithoutruntime.DecisionNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return decisionNode_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		return decisionNode(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.Activity_AspectOperation activity_activity_Aspect(final adruntime.Activity_Aspect a) {
+		return new modularactivitydiagram.revisitor.operations.impl.Activity_AspectOperationImpl(a, this);
 	}
-	default Adruntime__BooleanVariable_AspectT $(final adruntime.BooleanVariable_Aspect self) {
-		return booleanVariable_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanBinaryExpression_AspectOperation booleanBinaryExpression_Aspect(final adruntime.BooleanBinaryExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanBinaryExpression_AspectOperationImpl(b, this);
 	}
-	default Adruntime__ForkNode_AspectT $(final adruntime.ForkNode_Aspect self) {
-		return forkNode_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanBinaryExpression_AspectOperation expression_booleanBinaryExpression_Aspect(final adruntime.BooleanBinaryExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanBinaryExpression_AspectOperationImpl(b, this);
 	}
-	default Adwithoutruntime__IntegerComparisonExpressionT $(final adwithoutruntime.IntegerComparisonExpression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return integerComparisonExpression_integerComparisonExpression_Aspect((adruntime.IntegerComparisonExpression_Aspect) self);
-		return integerComparisonExpression(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanBinaryExpression_AspectOperation booleanExpression_booleanBinaryExpression_Aspect(final adruntime.BooleanBinaryExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanBinaryExpression_AspectOperationImpl(b, this);
 	}
-	default Adruntime__IntegerComparisonExpression_AspectT $(final adruntime.IntegerComparisonExpression_Aspect self) {
-		return integerComparisonExpression_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanBinaryExpression_AspectOperation booleanBinaryExpression_booleanBinaryExpression_Aspect(final adruntime.BooleanBinaryExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanBinaryExpression_AspectOperationImpl(b, this);
 	}
-	default Adwithoutruntime__ActivityFinalNodeT $(final adwithoutruntime.ActivityFinalNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityFinalNode_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		return activityFinalNode(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanBinaryExpression_AspectOperation booleanExpression_Aspect_booleanBinaryExpression_Aspect(final adruntime.BooleanBinaryExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanBinaryExpression_AspectOperationImpl(b, this);
 	}
-	default Adruntime__InputValueT $(final adruntime.InputValue self) {
-		return inputValue(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanExpression_AspectOperation booleanExpression_Aspect(final adruntime.BooleanExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanExpression_AspectOperationImpl(b, this);
 	}
-	default Adruntime__ControlTokenT $(final adruntime.ControlToken self) {
-		return controlToken(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanExpression_AspectOperation expression_booleanExpression_Aspect(final adruntime.BooleanExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanExpression_AspectOperationImpl(b, this);
 	}
-	default Adwithoutruntime__BooleanUnaryExpressionT $(final adwithoutruntime.BooleanUnaryExpression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return booleanUnaryExpression_booleanUnaryExpression_Aspect((adruntime.BooleanUnaryExpression_Aspect) self);
-		return booleanUnaryExpression(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanExpression_AspectOperation booleanExpression_booleanExpression_Aspect(final adruntime.BooleanExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanExpression_AspectOperationImpl(b, this);
 	}
-	default Adruntime__Activity_AspectT $(final adruntime.Activity_Aspect self) {
-		return activity_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanUnaryExpression_AspectOperation booleanUnaryExpression_Aspect(final adruntime.BooleanUnaryExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanUnaryExpression_AspectOperationImpl(b, this);
 	}
-	default Adruntime__ExecutableNode_AspectT $(final adruntime.ExecutableNode_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return executableNode_Aspect_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return executableNode_Aspect_action_Aspect((adruntime.Action_Aspect) self);
-		return executableNode_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanUnaryExpression_AspectOperation expression_booleanUnaryExpression_Aspect(final adruntime.BooleanUnaryExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanUnaryExpression_AspectOperationImpl(b, this);
 	}
-	default Adruntime__ActivityEdge_AspectT $(final adruntime.ActivityEdge_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityEdge_Aspect_controlFlow_Aspect((adruntime.ControlFlow_Aspect) self);
-		return activityEdge_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanUnaryExpression_AspectOperation booleanExpression_booleanUnaryExpression_Aspect(final adruntime.BooleanUnaryExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanUnaryExpression_AspectOperationImpl(b, this);
 	}
-	default Adruntime__InputT $(final adruntime.Input self) {
-		return input(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanUnaryExpression_AspectOperation booleanUnaryExpression_booleanUnaryExpression_Aspect(final adruntime.BooleanUnaryExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanUnaryExpression_AspectOperationImpl(b, this);
 	}
-	default Adwithoutruntime__VariableT $(final adwithoutruntime.Variable self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_VARIABLE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return integerVariable((adwithoutruntime.IntegerVariable) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_VARIABLE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return variable_booleanVariable_Aspect((adruntime.BooleanVariable_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_VARIABLE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return variable_integerVariable_Aspect((adruntime.IntegerVariable_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.VARIABLE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return variable_Aspect((adruntime.Variable_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_VARIABLE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return booleanVariable((adwithoutruntime.BooleanVariable) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanUnaryExpression_AspectOperation booleanExpression_Aspect_booleanUnaryExpression_Aspect(final adruntime.BooleanUnaryExpression_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanUnaryExpression_AspectOperationImpl(b, this);
 	}
-	default Adwithoutruntime__ValueT $(final adwithoutruntime.Value self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_VALUE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return booleanValue((adwithoutruntime.BooleanValue) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_VALUE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return integerValue((adwithoutruntime.IntegerValue) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanVariable_AspectOperation booleanVariable_Aspect(final adruntime.BooleanVariable_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanVariable_AspectOperationImpl(b, this);
 	}
-	default Adwithoutruntime__IntegerCalculationExpressionT $(final adwithoutruntime.IntegerCalculationExpression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return integerCalculationExpression_integerCalculationExpression_Aspect((adruntime.IntegerCalculationExpression_Aspect) self);
-		return integerCalculationExpression(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanVariable_AspectOperation variable_booleanVariable_Aspect(final adruntime.BooleanVariable_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanVariable_AspectOperationImpl(b, this);
 	}
-	default Adruntime__BooleanUnaryExpression_AspectT $(final adruntime.BooleanUnaryExpression_Aspect self) {
-		return booleanUnaryExpression_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanVariable_AspectOperation booleanVariable_booleanVariable_Aspect(final adruntime.BooleanVariable_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanVariable_AspectOperationImpl(b, this);
 	}
-	default Adruntime__Action_AspectT $(final adruntime.Action_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return action_Aspect_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
-		return action_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.BooleanVariable_AspectOperation variable_Aspect_booleanVariable_Aspect(final adruntime.BooleanVariable_Aspect b) {
+		return new modularactivitydiagram.revisitor.operations.impl.BooleanVariable_AspectOperationImpl(b, this);
 	}
-	default Adruntime__IntegerExpression_AspectT $(final adruntime.IntegerExpression_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return integerExpression_Aspect_integerComparisonExpression_Aspect((adruntime.IntegerComparisonExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return integerExpression_Aspect_integerCalculationExpression_Aspect((adruntime.IntegerCalculationExpression_Aspect) self);
-		return integerExpression_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlFlow_AspectOperation controlFlow_Aspect(final adruntime.ControlFlow_Aspect c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlFlow_AspectOperationImpl(c, this);
 	}
-	default Adwithoutruntime__BooleanBinaryExpressionT $(final adwithoutruntime.BooleanBinaryExpression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return booleanBinaryExpression_booleanBinaryExpression_Aspect((adruntime.BooleanBinaryExpression_Aspect) self);
-		return booleanBinaryExpression(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlFlow_AspectOperation namedElement_controlFlow_Aspect(final adruntime.ControlFlow_Aspect c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlFlow_AspectOperationImpl(c, this);
 	}
-	default Adwithoutruntime__IntegerValueT $(final adwithoutruntime.IntegerValue self) {
-		return integerValue(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlFlow_AspectOperation activityEdge_controlFlow_Aspect(final adruntime.ControlFlow_Aspect c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlFlow_AspectOperationImpl(c, this);
 	}
-	default Adruntime__FinalNode_AspectT $(final adruntime.FinalNode_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return finalNode_Aspect_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		return finalNode_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlFlow_AspectOperation controlFlow_controlFlow_Aspect(final adruntime.ControlFlow_Aspect c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlFlow_AspectOperationImpl(c, this);
 	}
-	default Adruntime__IntegerCalculationExpression_AspectT $(final adruntime.IntegerCalculationExpression_Aspect self) {
-		return integerCalculationExpression_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlFlow_AspectOperation activityEdge_Aspect_controlFlow_Aspect(final adruntime.ControlFlow_Aspect c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlFlow_AspectOperationImpl(c, this);
 	}
-	default Adwithoutruntime__JoinNodeT $(final adwithoutruntime.JoinNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return joinNode_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		return joinNode(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlNode_AspectOperation controlNode_Aspect(final adruntime.ControlNode_Aspect c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlNode_AspectOperationImpl(c, this);
 	}
-	default Adwithoutruntime__ExpressionT $(final adwithoutruntime.Expression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return booleanExpression_Aspect((adruntime.BooleanExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return expression_booleanBinaryExpression_Aspect((adruntime.BooleanBinaryExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return expression_integerComparisonExpression_Aspect((adruntime.IntegerComparisonExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_COMPARISON_EXPRESSION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return integerComparisonExpression((adwithoutruntime.IntegerComparisonExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return expression_booleanUnaryExpression_Aspect((adruntime.BooleanUnaryExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_UNARY_EXPRESSION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return booleanUnaryExpression((adwithoutruntime.BooleanUnaryExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return expression_integerCalculationExpression_Aspect((adruntime.IntegerCalculationExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_CALCULATION_EXPRESSION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return integerCalculationExpression((adwithoutruntime.IntegerCalculationExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return integerExpression_Aspect((adruntime.IntegerExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_BINARY_EXPRESSION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return booleanBinaryExpression((adwithoutruntime.BooleanBinaryExpression) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlNode_AspectOperation namedElement_controlNode_Aspect(final adruntime.ControlNode_Aspect c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlNode_AspectOperationImpl(c, this);
 	}
-	default Adruntime__ActivityFinalNode_AspectT $(final adruntime.ActivityFinalNode_Aspect self) {
-		return activityFinalNode_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlNode_AspectOperation activityNode_controlNode_Aspect(final adruntime.ControlNode_Aspect c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlNode_AspectOperationImpl(c, this);
 	}
-	default Adwithoutruntime__ForkNodeT $(final adwithoutruntime.ForkNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return forkNode_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		return forkNode(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlNode_AspectOperation controlNode_controlNode_Aspect(final adruntime.ControlNode_Aspect c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlNode_AspectOperationImpl(c, this);
 	}
-	default Adwithoutruntime__BooleanExpressionT $(final adwithoutruntime.BooleanExpression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return booleanExpression_booleanBinaryExpression_Aspect((adruntime.BooleanBinaryExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return booleanExpression_booleanUnaryExpression_Aspect((adruntime.BooleanUnaryExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_EXPRESSION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return booleanExpression_Aspect((adruntime.BooleanExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_UNARY_EXPRESSION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return booleanUnaryExpression((adwithoutruntime.BooleanUnaryExpression) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_BINARY_EXPRESSION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return booleanBinaryExpression((adwithoutruntime.BooleanBinaryExpression) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlNode_AspectOperation activityNode_Aspect_controlNode_Aspect(final adruntime.ControlNode_Aspect c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlNode_AspectOperationImpl(c, this);
 	}
-	default Adruntime__ActivityNode_AspectT $(final adruntime.ActivityNode_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_controlNode_Aspect((adruntime.ControlNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_action_Aspect((adruntime.Action_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_executableNode_Aspect((adruntime.ExecutableNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		return activityNode_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlTokenOperation controlToken(final adruntime.ControlToken c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlTokenOperationImpl(c, this);
 	}
-	default Adruntime__TraceT $(final adruntime.Trace self) {
-		return trace(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.ControlTokenOperation token_controlToken(final adruntime.ControlToken c) {
+		return new modularactivitydiagram.revisitor.operations.impl.ControlTokenOperationImpl(c, this);
 	}
-	default Adwithoutruntime__FinalNodeT $(final adwithoutruntime.FinalNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return finalNode_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return finalNode_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.DecisionNode_AspectOperation decisionNode_Aspect(final adruntime.DecisionNode_Aspect d) {
+		return new modularactivitydiagram.revisitor.operations.impl.DecisionNode_AspectOperationImpl(d, this);
 	}
-	default Adruntime__MergeNode_AspectT $(final adruntime.MergeNode_Aspect self) {
-		return mergeNode_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.DecisionNode_AspectOperation namedElement_decisionNode_Aspect(final adruntime.DecisionNode_Aspect d) {
+		return new modularactivitydiagram.revisitor.operations.impl.DecisionNode_AspectOperationImpl(d, this);
 	}
-	default Adwithoutruntime__BooleanVariableT $(final adwithoutruntime.BooleanVariable self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_VARIABLE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return booleanVariable_booleanVariable_Aspect((adruntime.BooleanVariable_Aspect) self);
-		return booleanVariable(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.DecisionNode_AspectOperation activityNode_decisionNode_Aspect(final adruntime.DecisionNode_Aspect d) {
+		return new modularactivitydiagram.revisitor.operations.impl.DecisionNode_AspectOperationImpl(d, this);
 	}
-	default Adruntime__IntegerVariable_AspectT $(final adruntime.IntegerVariable_Aspect self) {
-		return integerVariable_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.DecisionNode_AspectOperation controlNode_decisionNode_Aspect(final adruntime.DecisionNode_Aspect d) {
+		return new modularactivitydiagram.revisitor.operations.impl.DecisionNode_AspectOperationImpl(d, this);
 	}
-	default Adruntime__ControlFlow_AspectT $(final adruntime.ControlFlow_Aspect self) {
-		return controlFlow_Aspect(self);
+	@Override
+	default modularactivitydiagram.revisitor.operations.DecisionNode_AspectOperation decisionNode_decisionNode_Aspect(final adruntime.DecisionNode_Aspect d) {
+		return new modularactivitydiagram.revisitor.operations.impl.DecisionNode_AspectOperationImpl(d, this);
 	}
-	default Adwithoutruntime__ActivityNodeT $(final adwithoutruntime.ActivityNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_controlNode_Aspect((adruntime.ControlNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return opaqueAction((adwithoutruntime.OpaqueAction) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return initialNode((adwithoutruntime.InitialNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return mergeNode((adwithoutruntime.MergeNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return decisionNode((adwithoutruntime.DecisionNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_action_Aspect((adruntime.Action_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_executableNode_Aspect((adruntime.ExecutableNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return joinNode((adwithoutruntime.JoinNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE && self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE) return forkNode((adwithoutruntime.ForkNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_NODE_ASPECT && self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE) return activityNode_Aspect((adruntime.ActivityNode_Aspect) self);
-		return null;
+	@Override
+	default modularactivitydiagram.revisitor.operations.DecisionNode_AspectOperation activityNode_Aspect_decisionNode_Aspect(final adruntime.DecisionNode_Aspect d) {
+		return new modularactivitydiagram.revisitor.operations.impl.DecisionNode_AspectOperationImpl(d, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.DecisionNode_AspectOperation controlNode_Aspect_decisionNode_Aspect(final adruntime.DecisionNode_Aspect d) {
+		return new modularactivitydiagram.revisitor.operations.impl.DecisionNode_AspectOperationImpl(d, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ExecutableNode_AspectOperation executableNode_Aspect(final adruntime.ExecutableNode_Aspect e) {
+		return new modularactivitydiagram.revisitor.operations.impl.ExecutableNode_AspectOperationImpl(e, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ExecutableNode_AspectOperation namedElement_executableNode_Aspect(final adruntime.ExecutableNode_Aspect e) {
+		return new modularactivitydiagram.revisitor.operations.impl.ExecutableNode_AspectOperationImpl(e, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ExecutableNode_AspectOperation activityNode_executableNode_Aspect(final adruntime.ExecutableNode_Aspect e) {
+		return new modularactivitydiagram.revisitor.operations.impl.ExecutableNode_AspectOperationImpl(e, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ExecutableNode_AspectOperation executableNode_executableNode_Aspect(final adruntime.ExecutableNode_Aspect e) {
+		return new modularactivitydiagram.revisitor.operations.impl.ExecutableNode_AspectOperationImpl(e, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ExecutableNode_AspectOperation activityNode_Aspect_executableNode_Aspect(final adruntime.ExecutableNode_Aspect e) {
+		return new modularactivitydiagram.revisitor.operations.impl.ExecutableNode_AspectOperationImpl(e, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.FinalNode_AspectOperation finalNode_Aspect(final adruntime.FinalNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.FinalNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.FinalNode_AspectOperation namedElement_finalNode_Aspect(final adruntime.FinalNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.FinalNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.FinalNode_AspectOperation activityNode_finalNode_Aspect(final adruntime.FinalNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.FinalNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.FinalNode_AspectOperation controlNode_finalNode_Aspect(final adruntime.FinalNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.FinalNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.FinalNode_AspectOperation finalNode_finalNode_Aspect(final adruntime.FinalNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.FinalNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.FinalNode_AspectOperation activityNode_Aspect_finalNode_Aspect(final adruntime.FinalNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.FinalNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.FinalNode_AspectOperation controlNode_Aspect_finalNode_Aspect(final adruntime.FinalNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.FinalNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ForkNode_AspectOperation forkNode_Aspect(final adruntime.ForkNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.ForkNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ForkNode_AspectOperation namedElement_forkNode_Aspect(final adruntime.ForkNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.ForkNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ForkNode_AspectOperation activityNode_forkNode_Aspect(final adruntime.ForkNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.ForkNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ForkNode_AspectOperation controlNode_forkNode_Aspect(final adruntime.ForkNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.ForkNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ForkNode_AspectOperation forkNode_forkNode_Aspect(final adruntime.ForkNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.ForkNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ForkNode_AspectOperation activityNode_Aspect_forkNode_Aspect(final adruntime.ForkNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.ForkNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ForkNode_AspectOperation controlNode_Aspect_forkNode_Aspect(final adruntime.ForkNode_Aspect f) {
+		return new modularactivitydiagram.revisitor.operations.impl.ForkNode_AspectOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ForkedTokenOperation forkedToken(final adruntime.ForkedToken f) {
+		return new modularactivitydiagram.revisitor.operations.impl.ForkedTokenOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.ForkedTokenOperation token_forkedToken(final adruntime.ForkedToken f) {
+		return new modularactivitydiagram.revisitor.operations.impl.ForkedTokenOperationImpl(f, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.InitialNode_AspectOperation initialNode_Aspect(final adruntime.InitialNode_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.InitialNode_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.InitialNode_AspectOperation namedElement_initialNode_Aspect(final adruntime.InitialNode_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.InitialNode_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.InitialNode_AspectOperation activityNode_initialNode_Aspect(final adruntime.InitialNode_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.InitialNode_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.InitialNode_AspectOperation controlNode_initialNode_Aspect(final adruntime.InitialNode_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.InitialNode_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.InitialNode_AspectOperation initialNode_initialNode_Aspect(final adruntime.InitialNode_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.InitialNode_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.InitialNode_AspectOperation activityNode_Aspect_initialNode_Aspect(final adruntime.InitialNode_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.InitialNode_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.InitialNode_AspectOperation controlNode_Aspect_initialNode_Aspect(final adruntime.InitialNode_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.InitialNode_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.InputOperation input(final adruntime.Input i) {
+		return new modularactivitydiagram.revisitor.operations.impl.InputOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.InputValueOperation inputValue(final adruntime.InputValue i) {
+		return new modularactivitydiagram.revisitor.operations.impl.InputValueOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerCalculationExpression_AspectOperation integerCalculationExpression_Aspect(final adruntime.IntegerCalculationExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerCalculationExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerCalculationExpression_AspectOperation expression_integerCalculationExpression_Aspect(final adruntime.IntegerCalculationExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerCalculationExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerCalculationExpression_AspectOperation integerExpression_integerCalculationExpression_Aspect(final adruntime.IntegerCalculationExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerCalculationExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerCalculationExpression_AspectOperation integerCalculationExpression_integerCalculationExpression_Aspect(final adruntime.IntegerCalculationExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerCalculationExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerCalculationExpression_AspectOperation integerExpression_Aspect_integerCalculationExpression_Aspect(final adruntime.IntegerCalculationExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerCalculationExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerComparisonExpression_AspectOperation integerComparisonExpression_Aspect(final adruntime.IntegerComparisonExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerComparisonExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerComparisonExpression_AspectOperation expression_integerComparisonExpression_Aspect(final adruntime.IntegerComparisonExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerComparisonExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerComparisonExpression_AspectOperation integerExpression_integerComparisonExpression_Aspect(final adruntime.IntegerComparisonExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerComparisonExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerComparisonExpression_AspectOperation integerComparisonExpression_integerComparisonExpression_Aspect(final adruntime.IntegerComparisonExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerComparisonExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerComparisonExpression_AspectOperation integerExpression_Aspect_integerComparisonExpression_Aspect(final adruntime.IntegerComparisonExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerComparisonExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerExpression_AspectOperation integerExpression_Aspect(final adruntime.IntegerExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerExpression_AspectOperation expression_integerExpression_Aspect(final adruntime.IntegerExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerExpression_AspectOperation integerExpression_integerExpression_Aspect(final adruntime.IntegerExpression_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerExpression_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerVariable_AspectOperation integerVariable_Aspect(final adruntime.IntegerVariable_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerVariable_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerVariable_AspectOperation variable_integerVariable_Aspect(final adruntime.IntegerVariable_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerVariable_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerVariable_AspectOperation integerVariable_integerVariable_Aspect(final adruntime.IntegerVariable_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerVariable_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.IntegerVariable_AspectOperation variable_Aspect_integerVariable_Aspect(final adruntime.IntegerVariable_Aspect i) {
+		return new modularactivitydiagram.revisitor.operations.impl.IntegerVariable_AspectOperationImpl(i, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.JoinNode_AspectOperation joinNode_Aspect(final adruntime.JoinNode_Aspect j) {
+		return new modularactivitydiagram.revisitor.operations.impl.JoinNode_AspectOperationImpl(j, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.JoinNode_AspectOperation namedElement_joinNode_Aspect(final adruntime.JoinNode_Aspect j) {
+		return new modularactivitydiagram.revisitor.operations.impl.JoinNode_AspectOperationImpl(j, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.JoinNode_AspectOperation activityNode_joinNode_Aspect(final adruntime.JoinNode_Aspect j) {
+		return new modularactivitydiagram.revisitor.operations.impl.JoinNode_AspectOperationImpl(j, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.JoinNode_AspectOperation controlNode_joinNode_Aspect(final adruntime.JoinNode_Aspect j) {
+		return new modularactivitydiagram.revisitor.operations.impl.JoinNode_AspectOperationImpl(j, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.JoinNode_AspectOperation joinNode_joinNode_Aspect(final adruntime.JoinNode_Aspect j) {
+		return new modularactivitydiagram.revisitor.operations.impl.JoinNode_AspectOperationImpl(j, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.JoinNode_AspectOperation activityNode_Aspect_joinNode_Aspect(final adruntime.JoinNode_Aspect j) {
+		return new modularactivitydiagram.revisitor.operations.impl.JoinNode_AspectOperationImpl(j, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.JoinNode_AspectOperation controlNode_Aspect_joinNode_Aspect(final adruntime.JoinNode_Aspect j) {
+		return new modularactivitydiagram.revisitor.operations.impl.JoinNode_AspectOperationImpl(j, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.MergeNode_AspectOperation mergeNode_Aspect(final adruntime.MergeNode_Aspect m) {
+		return new modularactivitydiagram.revisitor.operations.impl.MergeNode_AspectOperationImpl(m, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.MergeNode_AspectOperation namedElement_mergeNode_Aspect(final adruntime.MergeNode_Aspect m) {
+		return new modularactivitydiagram.revisitor.operations.impl.MergeNode_AspectOperationImpl(m, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.MergeNode_AspectOperation activityNode_mergeNode_Aspect(final adruntime.MergeNode_Aspect m) {
+		return new modularactivitydiagram.revisitor.operations.impl.MergeNode_AspectOperationImpl(m, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.MergeNode_AspectOperation controlNode_mergeNode_Aspect(final adruntime.MergeNode_Aspect m) {
+		return new modularactivitydiagram.revisitor.operations.impl.MergeNode_AspectOperationImpl(m, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.MergeNode_AspectOperation mergeNode_mergeNode_Aspect(final adruntime.MergeNode_Aspect m) {
+		return new modularactivitydiagram.revisitor.operations.impl.MergeNode_AspectOperationImpl(m, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.MergeNode_AspectOperation activityNode_Aspect_mergeNode_Aspect(final adruntime.MergeNode_Aspect m) {
+		return new modularactivitydiagram.revisitor.operations.impl.MergeNode_AspectOperationImpl(m, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.MergeNode_AspectOperation controlNode_Aspect_mergeNode_Aspect(final adruntime.MergeNode_Aspect m) {
+		return new modularactivitydiagram.revisitor.operations.impl.MergeNode_AspectOperationImpl(m, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.OfferOperation offer(final adruntime.Offer o) {
+		return new modularactivitydiagram.revisitor.operations.impl.OfferOperationImpl(o, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.OpaqueAction_AspectOperation opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect o) {
+		return new modularactivitydiagram.revisitor.operations.impl.OpaqueAction_AspectOperationImpl(o, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.OpaqueAction_AspectOperation namedElement_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect o) {
+		return new modularactivitydiagram.revisitor.operations.impl.OpaqueAction_AspectOperationImpl(o, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.OpaqueAction_AspectOperation activityNode_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect o) {
+		return new modularactivitydiagram.revisitor.operations.impl.OpaqueAction_AspectOperationImpl(o, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.OpaqueAction_AspectOperation executableNode_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect o) {
+		return new modularactivitydiagram.revisitor.operations.impl.OpaqueAction_AspectOperationImpl(o, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.OpaqueAction_AspectOperation action_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect o) {
+		return new modularactivitydiagram.revisitor.operations.impl.OpaqueAction_AspectOperationImpl(o, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.OpaqueAction_AspectOperation opaqueAction_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect o) {
+		return new modularactivitydiagram.revisitor.operations.impl.OpaqueAction_AspectOperationImpl(o, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.OpaqueAction_AspectOperation activityNode_Aspect_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect o) {
+		return new modularactivitydiagram.revisitor.operations.impl.OpaqueAction_AspectOperationImpl(o, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.OpaqueAction_AspectOperation executableNode_Aspect_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect o) {
+		return new modularactivitydiagram.revisitor.operations.impl.OpaqueAction_AspectOperationImpl(o, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.OpaqueAction_AspectOperation action_Aspect_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect o) {
+		return new modularactivitydiagram.revisitor.operations.impl.OpaqueAction_AspectOperationImpl(o, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.TokenOperation token(final adruntime.Token t) {
+		return new modularactivitydiagram.revisitor.operations.impl.TokenOperationImpl(t, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.TraceOperation trace(final adruntime.Trace t) {
+		return new modularactivitydiagram.revisitor.operations.impl.TraceOperationImpl(t, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.Variable_AspectOperation variable_Aspect(final adruntime.Variable_Aspect v) {
+		return new modularactivitydiagram.revisitor.operations.impl.Variable_AspectOperationImpl(v, this);
+	}
+	@Override
+	default modularactivitydiagram.revisitor.operations.Variable_AspectOperation variable_variable_Aspect(final adruntime.Variable_Aspect v) {
+		return new modularactivitydiagram.revisitor.operations.impl.Variable_AspectOperationImpl(v, this);
 	}
 }

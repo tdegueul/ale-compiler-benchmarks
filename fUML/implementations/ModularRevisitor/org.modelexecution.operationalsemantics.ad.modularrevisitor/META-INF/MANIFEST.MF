@@ -7,12 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: common.revisitor.operation,
- common.revisitor.operation.impl,
- modularactivitydiagram.revisitor,
- modularactivitydiagram.revisitor.impl,
- modularactivitydiagram.revisitor.operation,
- modularactivitydiagram.revisitor.operation.impl
+Export-Package: modularactivitydiagram.revisitor,
+ modularactivitydiagram.revisitor.operations,
+ modularactivitydiagram.revisitor.operations.impl
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.modelexecution.operationalsemantics.ad;bundle-version="0.1.0";visibility:=reexport,

@@ -1,6 +1,0 @@
-package modularactivitydiagram.revisitor.operation;
-
-public interface ModularactivitydiagramIntegerVariable_AspectOperation
-extends common.revisitor.operation.CommonIntegerVariableOperation, common.revisitor.operation.CommonVariable_AspectOperation 
-{
-}

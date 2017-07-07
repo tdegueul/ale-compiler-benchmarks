@@ -1,156 +1,256 @@
 package monolithicactivitydiagram.revisitor;
 
-public interface MonolithicactivitydiagramRevisitor<Activitydiagram__ActionT extends Activitydiagram__ExecutableNodeT,Activitydiagram__ActivityT extends Activitydiagram__NamedElementT,Activitydiagram__ActivityEdgeT extends Activitydiagram__NamedElementT,Activitydiagram__ActivityFinalNodeT extends Activitydiagram__FinalNodeT,Activitydiagram__ActivityNodeT extends Activitydiagram__NamedElementT,Activitydiagram__BooleanBinaryExpressionT extends Activitydiagram__BooleanExpressionT,Activitydiagram__BooleanExpressionT extends Activitydiagram__ExpressionT,Activitydiagram__BooleanUnaryExpressionT extends Activitydiagram__BooleanExpressionT,Activitydiagram__BooleanValueT extends Activitydiagram__ValueT,Activitydiagram__BooleanVariableT extends Activitydiagram__VariableT,Activitydiagram__ControlFlowT extends Activitydiagram__ActivityEdgeT,Activitydiagram__ControlNodeT extends Activitydiagram__ActivityNodeT,Activitydiagram__ControlTokenT extends Activitydiagram__TokenT,Activitydiagram__DecisionNodeT extends Activitydiagram__ControlNodeT,Activitydiagram__ExecutableNodeT extends Activitydiagram__ActivityNodeT,Activitydiagram__ExpressionT,Activitydiagram__FinalNodeT extends Activitydiagram__ControlNodeT,Activitydiagram__ForkNodeT extends Activitydiagram__ControlNodeT,Activitydiagram__ForkedTokenT extends Activitydiagram__TokenT,Activitydiagram__InitialNodeT extends Activitydiagram__ControlNodeT,Activitydiagram__InputT,Activitydiagram__InputValueT,Activitydiagram__IntegerCalculationExpressionT extends Activitydiagram__IntegerExpressionT,Activitydiagram__IntegerComparisonExpressionT extends Activitydiagram__IntegerExpressionT,Activitydiagram__IntegerExpressionT extends Activitydiagram__ExpressionT,Activitydiagram__IntegerValueT extends Activitydiagram__ValueT,Activitydiagram__IntegerVariableT extends Activitydiagram__VariableT,Activitydiagram__JoinNodeT extends Activitydiagram__ControlNodeT,Activitydiagram__MergeNodeT extends Activitydiagram__ControlNodeT,Activitydiagram__NamedElementT,Activitydiagram__OfferT,Activitydiagram__OpaqueActionT extends Activitydiagram__ActionT,Activitydiagram__TokenT,Activitydiagram__TraceT,Activitydiagram__ValueT,Activitydiagram__VariableT>
-	 extends activitydiagram.revisitor.ActivitydiagramRevisitor<Activitydiagram__ActionT, Activitydiagram__ActivityT, Activitydiagram__ActivityEdgeT, Activitydiagram__ActivityFinalNodeT, Activitydiagram__ActivityNodeT, Activitydiagram__BooleanBinaryExpressionT, Activitydiagram__BooleanExpressionT, Activitydiagram__BooleanUnaryExpressionT, Activitydiagram__BooleanValueT, Activitydiagram__BooleanVariableT, Activitydiagram__ControlFlowT, Activitydiagram__ControlNodeT, Activitydiagram__ControlTokenT, Activitydiagram__DecisionNodeT, Activitydiagram__ExecutableNodeT, Activitydiagram__ExpressionT, Activitydiagram__FinalNodeT, Activitydiagram__ForkNodeT, Activitydiagram__ForkedTokenT, Activitydiagram__InitialNodeT, Activitydiagram__InputT, Activitydiagram__InputValueT, Activitydiagram__IntegerCalculationExpressionT, Activitydiagram__IntegerComparisonExpressionT, Activitydiagram__IntegerExpressionT, Activitydiagram__IntegerValueT, Activitydiagram__IntegerVariableT, Activitydiagram__JoinNodeT, Activitydiagram__MergeNodeT, Activitydiagram__NamedElementT, Activitydiagram__OfferT, Activitydiagram__OpaqueActionT, Activitydiagram__TokenT, Activitydiagram__TraceT, Activitydiagram__ValueT, Activitydiagram__VariableT>
-	
-	 {
-	
-	default Activitydiagram__IntegerComparisonExpressionT $(final activitydiagram.IntegerComparisonExpression self) {
-		return integerComparisonExpression(self);
+public interface MonolithicactivitydiagramRevisitor extends activitydiagram.revisitor.ActivitydiagramRevisitor<monolithicactivitydiagram.revisitor.operations.ActionOperation, monolithicactivitydiagram.revisitor.operations.ActivityOperation, monolithicactivitydiagram.revisitor.operations.ActivityEdgeOperation, monolithicactivitydiagram.revisitor.operations.ActivityFinalNodeOperation, monolithicactivitydiagram.revisitor.operations.ActivityNodeOperation, monolithicactivitydiagram.revisitor.operations.BooleanBinaryExpressionOperation, monolithicactivitydiagram.revisitor.operations.BooleanExpressionOperation, monolithicactivitydiagram.revisitor.operations.BooleanUnaryExpressionOperation, monolithicactivitydiagram.revisitor.operations.BooleanValueOperation, monolithicactivitydiagram.revisitor.operations.BooleanVariableOperation, monolithicactivitydiagram.revisitor.operations.ControlFlowOperation, monolithicactivitydiagram.revisitor.operations.ControlNodeOperation, monolithicactivitydiagram.revisitor.operations.ControlTokenOperation, monolithicactivitydiagram.revisitor.operations.DecisionNodeOperation, monolithicactivitydiagram.revisitor.operations.ExecutableNodeOperation, monolithicactivitydiagram.revisitor.operations.ExpressionOperation, monolithicactivitydiagram.revisitor.operations.FinalNodeOperation, monolithicactivitydiagram.revisitor.operations.ForkNodeOperation, monolithicactivitydiagram.revisitor.operations.ForkedTokenOperation, monolithicactivitydiagram.revisitor.operations.InitialNodeOperation, monolithicactivitydiagram.revisitor.operations.InputOperation, monolithicactivitydiagram.revisitor.operations.InputValueOperation, monolithicactivitydiagram.revisitor.operations.IntegerCalculationExpressionOperation, monolithicactivitydiagram.revisitor.operations.IntegerComparisonExpressionOperation, monolithicactivitydiagram.revisitor.operations.IntegerExpressionOperation, monolithicactivitydiagram.revisitor.operations.IntegerValueOperation, monolithicactivitydiagram.revisitor.operations.IntegerVariableOperation, monolithicactivitydiagram.revisitor.operations.JoinNodeOperation, monolithicactivitydiagram.revisitor.operations.MergeNodeOperation, monolithicactivitydiagram.revisitor.operations.NamedElementOperation, monolithicactivitydiagram.revisitor.operations.OfferOperation, monolithicactivitydiagram.revisitor.operations.OpaqueActionOperation, monolithicactivitydiagram.revisitor.operations.TokenOperation, monolithicactivitydiagram.revisitor.operations.TraceOperation, monolithicactivitydiagram.revisitor.operations.ValueOperation, monolithicactivitydiagram.revisitor.operations.VariableOperation> {
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ActivityOperation activity(final activitydiagram.Activity a) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ActivityOperationImpl(a, this);
 	}
-	default Activitydiagram__InputValueT $(final activitydiagram.InputValue self) {
-		return inputValue(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ActivityOperation namedElement_activity(final activitydiagram.Activity a) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ActivityOperationImpl(a, this);
 	}
-	default Activitydiagram__NamedElementT $(final activitydiagram.NamedElement self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return forkNode((activitydiagram.ForkNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return decisionNode((activitydiagram.DecisionNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_FLOW && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return controlFlow((activitydiagram.ControlFlow) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return joinNode((activitydiagram.JoinNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return opaqueAction((activitydiagram.OpaqueAction) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return mergeNode((activitydiagram.MergeNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return initialNode((activitydiagram.InitialNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return activity((activitydiagram.Activity) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ActivityFinalNodeOperation activityFinalNode(final activitydiagram.ActivityFinalNode a) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ActivityFinalNodeOperationImpl(a, this);
 	}
-	default Activitydiagram__ForkNodeT $(final activitydiagram.ForkNode self) {
-		return forkNode(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ActivityFinalNodeOperation namedElement_activityFinalNode(final activitydiagram.ActivityFinalNode a) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ActivityFinalNodeOperationImpl(a, this);
 	}
-	default Activitydiagram__DecisionNodeT $(final activitydiagram.DecisionNode self) {
-		return decisionNode(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ActivityFinalNodeOperation activityNode_activityFinalNode(final activitydiagram.ActivityFinalNode a) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ActivityFinalNodeOperationImpl(a, this);
 	}
-	default Activitydiagram__ValueT $(final activitydiagram.Value self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_VALUE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanValue((activitydiagram.BooleanValue) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_VALUE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerValue((activitydiagram.IntegerValue) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ActivityFinalNodeOperation controlNode_activityFinalNode(final activitydiagram.ActivityFinalNode a) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ActivityFinalNodeOperationImpl(a, this);
 	}
-	default Activitydiagram__ControlFlowT $(final activitydiagram.ControlFlow self) {
-		return controlFlow(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ActivityFinalNodeOperation finalNode_activityFinalNode(final activitydiagram.ActivityFinalNode a) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ActivityFinalNodeOperationImpl(a, this);
 	}
-	default Activitydiagram__ActivityFinalNodeT $(final activitydiagram.ActivityFinalNode self) {
-		return activityFinalNode(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.BooleanBinaryExpressionOperation booleanBinaryExpression(final activitydiagram.BooleanBinaryExpression b) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.BooleanBinaryExpressionOperationImpl(b, this);
 	}
-	default Activitydiagram__InputT $(final activitydiagram.Input self) {
-		return input(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.BooleanBinaryExpressionOperation expression_booleanBinaryExpression(final activitydiagram.BooleanBinaryExpression b) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.BooleanBinaryExpressionOperationImpl(b, this);
 	}
-	default Activitydiagram__BooleanValueT $(final activitydiagram.BooleanValue self) {
-		return booleanValue(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.BooleanBinaryExpressionOperation booleanExpression_booleanBinaryExpression(final activitydiagram.BooleanBinaryExpression b) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.BooleanBinaryExpressionOperationImpl(b, this);
 	}
-	default Activitydiagram__JoinNodeT $(final activitydiagram.JoinNode self) {
-		return joinNode(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.BooleanUnaryExpressionOperation booleanUnaryExpression(final activitydiagram.BooleanUnaryExpression b) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.BooleanUnaryExpressionOperationImpl(b, this);
 	}
-	default Activitydiagram__OpaqueActionT $(final activitydiagram.OpaqueAction self) {
-		return opaqueAction(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.BooleanUnaryExpressionOperation expression_booleanUnaryExpression(final activitydiagram.BooleanUnaryExpression b) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.BooleanUnaryExpressionOperationImpl(b, this);
 	}
-	default Activitydiagram__ExecutableNodeT $(final activitydiagram.ExecutableNode self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return opaqueAction((activitydiagram.OpaqueAction) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.BooleanUnaryExpressionOperation booleanExpression_booleanUnaryExpression(final activitydiagram.BooleanUnaryExpression b) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.BooleanUnaryExpressionOperationImpl(b, this);
 	}
-	default Activitydiagram__TraceT $(final activitydiagram.Trace self) {
-		return trace(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.BooleanValueOperation booleanValue(final activitydiagram.BooleanValue b) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.BooleanValueOperationImpl(b, this);
 	}
-	default Activitydiagram__IntegerVariableT $(final activitydiagram.IntegerVariable self) {
-		return integerVariable(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.BooleanValueOperation value_booleanValue(final activitydiagram.BooleanValue b) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.BooleanValueOperationImpl(b, this);
 	}
-	default Activitydiagram__OfferT $(final activitydiagram.Offer self) {
-		return offer(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.BooleanVariableOperation booleanVariable(final activitydiagram.BooleanVariable b) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.BooleanVariableOperationImpl(b, this);
 	}
-	default Activitydiagram__ActionT $(final activitydiagram.Action self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return opaqueAction((activitydiagram.OpaqueAction) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.BooleanVariableOperation variable_booleanVariable(final activitydiagram.BooleanVariable b) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.BooleanVariableOperationImpl(b, this);
 	}
-	default Activitydiagram__IntegerValueT $(final activitydiagram.IntegerValue self) {
-		return integerValue(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ControlFlowOperation controlFlow(final activitydiagram.ControlFlow c) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ControlFlowOperationImpl(c, this);
 	}
-	default Activitydiagram__ActivityEdgeT $(final activitydiagram.ActivityEdge self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_FLOW && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return controlFlow((activitydiagram.ControlFlow) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ControlFlowOperation namedElement_controlFlow(final activitydiagram.ControlFlow c) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ControlFlowOperationImpl(c, this);
 	}
-	default Activitydiagram__BooleanVariableT $(final activitydiagram.BooleanVariable self) {
-		return booleanVariable(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ControlFlowOperation activityEdge_controlFlow(final activitydiagram.ControlFlow c) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ControlFlowOperationImpl(c, this);
 	}
-	default Activitydiagram__ControlTokenT $(final activitydiagram.ControlToken self) {
-		return controlToken(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ControlTokenOperation controlToken(final activitydiagram.ControlToken c) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ControlTokenOperationImpl(c, this);
 	}
-	default Activitydiagram__ForkedTokenT $(final activitydiagram.ForkedToken self) {
-		return forkedToken(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ControlTokenOperation token_controlToken(final activitydiagram.ControlToken c) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ControlTokenOperationImpl(c, this);
 	}
-	default Activitydiagram__TokenT $(final activitydiagram.Token self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_TOKEN && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return controlToken((activitydiagram.ControlToken) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORKED_TOKEN && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return forkedToken((activitydiagram.ForkedToken) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.DecisionNodeOperation decisionNode(final activitydiagram.DecisionNode d) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.DecisionNodeOperationImpl(d, this);
 	}
-	default Activitydiagram__ActivityNodeT $(final activitydiagram.ActivityNode self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return forkNode((activitydiagram.ForkNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return decisionNode((activitydiagram.DecisionNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return joinNode((activitydiagram.JoinNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return opaqueAction((activitydiagram.OpaqueAction) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return mergeNode((activitydiagram.MergeNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return initialNode((activitydiagram.InitialNode) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.DecisionNodeOperation namedElement_decisionNode(final activitydiagram.DecisionNode d) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.DecisionNodeOperationImpl(d, this);
 	}
-	default Activitydiagram__BooleanUnaryExpressionT $(final activitydiagram.BooleanUnaryExpression self) {
-		return booleanUnaryExpression(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.DecisionNodeOperation activityNode_decisionNode(final activitydiagram.DecisionNode d) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.DecisionNodeOperationImpl(d, this);
 	}
-	default Activitydiagram__FinalNodeT $(final activitydiagram.FinalNode self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.DecisionNodeOperation controlNode_decisionNode(final activitydiagram.DecisionNode d) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.DecisionNodeOperationImpl(d, this);
 	}
-	default Activitydiagram__IntegerCalculationExpressionT $(final activitydiagram.IntegerCalculationExpression self) {
-		return integerCalculationExpression(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ForkNodeOperation forkNode(final activitydiagram.ForkNode f) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ForkNodeOperationImpl(f, this);
 	}
-	default Activitydiagram__BooleanBinaryExpressionT $(final activitydiagram.BooleanBinaryExpression self) {
-		return booleanBinaryExpression(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ForkNodeOperation namedElement_forkNode(final activitydiagram.ForkNode f) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ForkNodeOperationImpl(f, this);
 	}
-	default Activitydiagram__IntegerExpressionT $(final activitydiagram.IntegerExpression self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerComparisonExpression((activitydiagram.IntegerComparisonExpression) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_CALCULATION_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerCalculationExpression((activitydiagram.IntegerCalculationExpression) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ForkNodeOperation activityNode_forkNode(final activitydiagram.ForkNode f) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ForkNodeOperationImpl(f, this);
 	}
-	default Activitydiagram__BooleanExpressionT $(final activitydiagram.BooleanExpression self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanUnaryExpression((activitydiagram.BooleanUnaryExpression) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanBinaryExpression((activitydiagram.BooleanBinaryExpression) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ForkNodeOperation controlNode_forkNode(final activitydiagram.ForkNode f) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ForkNodeOperationImpl(f, this);
 	}
-	default Activitydiagram__ControlNodeT $(final activitydiagram.ControlNode self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return forkNode((activitydiagram.ForkNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return decisionNode((activitydiagram.DecisionNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return joinNode((activitydiagram.JoinNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return mergeNode((activitydiagram.MergeNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return initialNode((activitydiagram.InitialNode) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ForkedTokenOperation forkedToken(final activitydiagram.ForkedToken f) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ForkedTokenOperationImpl(f, this);
 	}
-	default Activitydiagram__MergeNodeT $(final activitydiagram.MergeNode self) {
-		return mergeNode(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.ForkedTokenOperation token_forkedToken(final activitydiagram.ForkedToken f) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.ForkedTokenOperationImpl(f, this);
 	}
-	default Activitydiagram__ActivityT $(final activitydiagram.Activity self) {
-		return activity(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.InitialNodeOperation initialNode(final activitydiagram.InitialNode i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.InitialNodeOperationImpl(i, this);
 	}
-	default Activitydiagram__InitialNodeT $(final activitydiagram.InitialNode self) {
-		return initialNode(self);
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.InitialNodeOperation namedElement_initialNode(final activitydiagram.InitialNode i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.InitialNodeOperationImpl(i, this);
 	}
-	default Activitydiagram__VariableT $(final activitydiagram.Variable self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_VARIABLE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerVariable((activitydiagram.IntegerVariable) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_VARIABLE && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanVariable((activitydiagram.BooleanVariable) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.InitialNodeOperation activityNode_initialNode(final activitydiagram.InitialNode i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.InitialNodeOperationImpl(i, this);
 	}
-	default Activitydiagram__ExpressionT $(final activitydiagram.Expression self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerComparisonExpression((activitydiagram.IntegerComparisonExpression) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanUnaryExpression((activitydiagram.BooleanUnaryExpression) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_CALCULATION_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return integerCalculationExpression((activitydiagram.IntegerCalculationExpression) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION && self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE) return booleanBinaryExpression((activitydiagram.BooleanBinaryExpression) self);
-		return null;
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.InitialNodeOperation controlNode_initialNode(final activitydiagram.InitialNode i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.InitialNodeOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.InputOperation input(final activitydiagram.Input i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.InputOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.InputValueOperation inputValue(final activitydiagram.InputValue i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.InputValueOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.IntegerCalculationExpressionOperation integerCalculationExpression(final activitydiagram.IntegerCalculationExpression i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.IntegerCalculationExpressionOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.IntegerCalculationExpressionOperation expression_integerCalculationExpression(final activitydiagram.IntegerCalculationExpression i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.IntegerCalculationExpressionOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.IntegerCalculationExpressionOperation integerExpression_integerCalculationExpression(final activitydiagram.IntegerCalculationExpression i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.IntegerCalculationExpressionOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.IntegerComparisonExpressionOperation integerComparisonExpression(final activitydiagram.IntegerComparisonExpression i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.IntegerComparisonExpressionOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.IntegerComparisonExpressionOperation expression_integerComparisonExpression(final activitydiagram.IntegerComparisonExpression i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.IntegerComparisonExpressionOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.IntegerComparisonExpressionOperation integerExpression_integerComparisonExpression(final activitydiagram.IntegerComparisonExpression i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.IntegerComparisonExpressionOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.IntegerValueOperation integerValue(final activitydiagram.IntegerValue i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.IntegerValueOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.IntegerValueOperation value_integerValue(final activitydiagram.IntegerValue i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.IntegerValueOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.IntegerVariableOperation integerVariable(final activitydiagram.IntegerVariable i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.IntegerVariableOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.IntegerVariableOperation variable_integerVariable(final activitydiagram.IntegerVariable i) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.IntegerVariableOperationImpl(i, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.JoinNodeOperation joinNode(final activitydiagram.JoinNode j) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.JoinNodeOperationImpl(j, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.JoinNodeOperation namedElement_joinNode(final activitydiagram.JoinNode j) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.JoinNodeOperationImpl(j, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.JoinNodeOperation activityNode_joinNode(final activitydiagram.JoinNode j) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.JoinNodeOperationImpl(j, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.JoinNodeOperation controlNode_joinNode(final activitydiagram.JoinNode j) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.JoinNodeOperationImpl(j, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.MergeNodeOperation mergeNode(final activitydiagram.MergeNode m) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.MergeNodeOperationImpl(m, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.MergeNodeOperation namedElement_mergeNode(final activitydiagram.MergeNode m) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.MergeNodeOperationImpl(m, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.MergeNodeOperation activityNode_mergeNode(final activitydiagram.MergeNode m) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.MergeNodeOperationImpl(m, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.MergeNodeOperation controlNode_mergeNode(final activitydiagram.MergeNode m) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.MergeNodeOperationImpl(m, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.OfferOperation offer(final activitydiagram.Offer o) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.OfferOperationImpl(o, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.OpaqueActionOperation opaqueAction(final activitydiagram.OpaqueAction o) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.OpaqueActionOperationImpl(o, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.OpaqueActionOperation namedElement_opaqueAction(final activitydiagram.OpaqueAction o) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.OpaqueActionOperationImpl(o, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.OpaqueActionOperation activityNode_opaqueAction(final activitydiagram.OpaqueAction o) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.OpaqueActionOperationImpl(o, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.OpaqueActionOperation executableNode_opaqueAction(final activitydiagram.OpaqueAction o) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.OpaqueActionOperationImpl(o, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.OpaqueActionOperation action_opaqueAction(final activitydiagram.OpaqueAction o) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.OpaqueActionOperationImpl(o, this);
+	}
+	@Override
+	default monolithicactivitydiagram.revisitor.operations.TraceOperation trace(final activitydiagram.Trace t) {
+		return new monolithicactivitydiagram.revisitor.operations.impl.TraceOperationImpl(t, this);
 	}
 }

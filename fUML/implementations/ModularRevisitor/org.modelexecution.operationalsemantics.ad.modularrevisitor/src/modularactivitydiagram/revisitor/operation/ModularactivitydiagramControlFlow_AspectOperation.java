@@ -1,8 +1,0 @@
-package modularactivitydiagram.revisitor.operation;
-
-public interface ModularactivitydiagramControlFlow_AspectOperation
-extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlFlowOperation, modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityEdge_AspectOperation 
-{
-	Boolean isControlFlow();
-	adwithoutruntime.ControlFlow asControlFlow();
-}

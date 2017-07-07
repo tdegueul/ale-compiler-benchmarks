@@ -1,7 +1,0 @@
-package modularactivitydiagram.revisitor.operation;
-
-public interface ModularactivitydiagramMergeNode_AspectOperation
-extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNodeOperation, modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlNode_AspectOperation 
-{
-	Boolean hasOffers();
-}

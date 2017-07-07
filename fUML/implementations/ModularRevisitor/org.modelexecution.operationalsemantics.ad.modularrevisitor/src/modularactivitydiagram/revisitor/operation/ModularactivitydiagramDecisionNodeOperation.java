@@ -1,6 +1,0 @@
-package modularactivitydiagram.revisitor.operation;
-
-public interface ModularactivitydiagramDecisionNodeOperation
-extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlNodeOperation 
-{
-}

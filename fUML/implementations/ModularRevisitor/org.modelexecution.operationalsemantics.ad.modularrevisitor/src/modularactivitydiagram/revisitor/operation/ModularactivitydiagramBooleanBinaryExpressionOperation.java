@@ -1,6 +1,0 @@
-package modularactivitydiagram.revisitor.operation;
-
-public interface ModularactivitydiagramBooleanBinaryExpressionOperation
-extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanExpressionOperation 
-{
-}

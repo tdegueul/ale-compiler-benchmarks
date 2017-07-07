@@ -32,15 +32,19 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//Activity/edges"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//Activity/locals"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//Activity/inputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//Activity/trace"/>
     </genClasses>
     <genClasses image="false" ecoreClass="activitydiagram.ecore#//ActivityNode">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//ActivityNode/outgoing"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//ActivityNode/incoming"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference activitydiagram.ecore#//ActivityNode/activity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute activitydiagram.ecore#//ActivityNode/running"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//ActivityNode/heldTokens"/>
     </genClasses>
     <genClasses image="false" ecoreClass="activitydiagram.ecore#//ActivityEdge">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//ActivityEdge/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//ActivityEdge/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//ActivityEdge/offers"/>
     </genClasses>
     <genClasses ecoreClass="activitydiagram.ecore#//ControlFlow">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//ControlFlow/guard"/>
@@ -64,6 +68,7 @@
     <genClasses image="false" ecoreClass="activitydiagram.ecore#//Variable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//Variable/initialValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute activitydiagram.ecore#//Variable/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//Variable/currentValue"/>
     </genClasses>
     <genClasses ecoreClass="activitydiagram.ecore#//IntegerVariable"/>
     <genClasses ecoreClass="activitydiagram.ecore#//BooleanVariable"/>
@@ -98,6 +103,27 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//BooleanBinaryExpression/operand1"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//BooleanBinaryExpression/operand2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute activitydiagram.ecore#//BooleanBinaryExpression/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="activitydiagram.ecore#//Offer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//Offer/offeredTokens"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="activitydiagram.ecore#//Token">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference activitydiagram.ecore#//Token/holder"/>
+    </genClasses>
+    <genClasses ecoreClass="activitydiagram.ecore#//Trace">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//Trace/executedNodes"/>
+    </genClasses>
+    <genClasses ecoreClass="activitydiagram.ecore#//InputValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//InputValue/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//InputValue/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="activitydiagram.ecore#//Input">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//Input/inputValues"/>
+    </genClasses>
+    <genClasses ecoreClass="activitydiagram.ecore#//ControlToken"/>
+    <genClasses ecoreClass="activitydiagram.ecore#//ForkedToken">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference activitydiagram.ecore#//ForkedToken/baseToken"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute activitydiagram.ecore#//ForkedToken/remainingOffersCount"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -1,6 +1,0 @@
-package modularactivitydiagram.revisitor.operation;
-
-public interface ModularactivitydiagramExecutableNode_AspectOperation
-extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramExecutableNodeOperation, modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityNode_AspectOperation 
-{
-}

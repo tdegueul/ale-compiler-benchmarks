@@ -1,6 +1,0 @@
-package modularactivitydiagram.revisitor.operation;
-
-public interface ModularactivitydiagramControlTokenOperation
-extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramTokenOperation 
-{
-}
