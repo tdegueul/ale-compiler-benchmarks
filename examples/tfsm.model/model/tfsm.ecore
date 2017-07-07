@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tfsm" nsURI="http://www.example.org/tfsm" nsPrefix="tfsm">
-  <eClassifiers xsi:type="ecore:EClass" name="TimedTransition">
-    <eSuperTypes href="/fsm.model/model/fsm.ecore#//Transition"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
-    </eStructuralFeatures>
-  </eClassifiers>
-</ecore:EPackage>

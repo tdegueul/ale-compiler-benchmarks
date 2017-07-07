@@ -1,9 +1,0 @@
-behavior evalexp;
-
-import ecore "/exp.model/model/exp.ecore";
-
-open class Expression {
-	def Boolean eval() {
-		return true;
-	}
-}
