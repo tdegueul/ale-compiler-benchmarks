@@ -25,6 +25,6 @@ Each benchmark's folder has a readme with the detail of the specific configurati
 Each benchmark executes the test 500 times with 50 warmups executions.
 
 ## Running the tests
-1. Following the Ale installation steps: https://github.com/manuelleduc/ale-compiler#installation
-2. Loading the content of the project into the Language workbench workspace
-3. Executing the unit tests provided in the test project of each implementation.
+1. Follow the Ale installation steps: https://github.com/manuelleduc/ale-compiler#installation
+2. Load the content of the project into the Language workbench workspace
+3. Execute the unit tests provided in the test project of each implementation.
