@@ -1,0 +1,6 @@
+package modularactivitydiagram.revisitor.operation;
+
+public interface ModularactivitydiagramForkNodeOperation
+extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlNodeOperation 
+{
+}

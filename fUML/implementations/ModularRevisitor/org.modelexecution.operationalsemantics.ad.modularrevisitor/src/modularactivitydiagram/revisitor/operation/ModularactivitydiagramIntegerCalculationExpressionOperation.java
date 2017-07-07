@@ -1,0 +1,6 @@
+package modularactivitydiagram.revisitor.operation;
+
+public interface ModularactivitydiagramIntegerCalculationExpressionOperation
+extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerExpressionOperation 
+{
+}

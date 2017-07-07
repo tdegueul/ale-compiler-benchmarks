@@ -10,4 +10,11 @@
       </package>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated activitydiagram -->
+      <package
+            uri="http://adwithoutruntime/"
+            class="adwithoutruntime.ActivitydiagramPackage"/>
+   </extension>
+
 </plugin>

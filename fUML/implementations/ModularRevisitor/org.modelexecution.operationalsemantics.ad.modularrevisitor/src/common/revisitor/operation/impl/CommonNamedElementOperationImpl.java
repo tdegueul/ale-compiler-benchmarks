@@ -1,13 +1,14 @@
 package common.revisitor.operation.impl;
 
-public class CommonNamedElementOperationImpl implements common.revisitor.operation.CommonNamedElementOperation
+public  class CommonNamedElementOperationImpl implements common.revisitor.operation.CommonNamedElementOperation
 {
 	
-	private final activitydiagram.NamedElement self;
+	private final adwithoutruntime.NamedElement self;
 	
 	
-	public CommonNamedElementOperationImpl(activitydiagram.NamedElement self, Object  alg) {
+	public CommonNamedElementOperationImpl(adwithoutruntime.NamedElement self, Object  alg) {
 		this.self = self;
 		
 	}
+	
 }

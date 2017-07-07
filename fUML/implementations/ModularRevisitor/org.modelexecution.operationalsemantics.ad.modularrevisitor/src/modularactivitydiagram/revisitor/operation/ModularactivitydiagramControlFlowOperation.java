@@ -1,0 +1,6 @@
+package modularactivitydiagram.revisitor.operation;
+
+public interface ModularactivitydiagramControlFlowOperation
+extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityEdgeOperation 
+{
+}

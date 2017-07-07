@@ -1,0 +1,7 @@
+package modularactivitydiagram.revisitor.operation;
+
+public interface ModularactivitydiagramJoinNode_AspectOperation
+extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNodeOperation, modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlNode_AspectOperation 
+{
+	Boolean isReady();
+}

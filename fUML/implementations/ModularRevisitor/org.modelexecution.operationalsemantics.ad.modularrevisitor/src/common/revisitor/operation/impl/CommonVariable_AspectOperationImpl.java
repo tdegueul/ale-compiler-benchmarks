@@ -1,6 +1,6 @@
 package common.revisitor.operation.impl;
 
-public class CommonVariable_AspectOperationImpl implements common.revisitor.operation.CommonVariable_AspectOperation
+public  class CommonVariable_AspectOperationImpl implements common.revisitor.operation.CommonVariable_AspectOperation
 {
 	
 	private final adruntime.Variable_Aspect self;
@@ -10,4 +10,5 @@ public class CommonVariable_AspectOperationImpl implements common.revisitor.oper
 		this.self = self;
 		
 	}
+	
 }

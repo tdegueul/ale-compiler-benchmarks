@@ -1,13 +1,14 @@
 package common.revisitor.operation.impl;
 
-public class CommonIntegerVariableOperationImpl implements common.revisitor.operation.CommonIntegerVariableOperation
+public  class CommonIntegerVariableOperationImpl implements common.revisitor.operation.CommonIntegerVariableOperation
 {
 	
-	private final activitydiagram.IntegerVariable self;
+	private final adwithoutruntime.IntegerVariable self;
 	
 	
-	public CommonIntegerVariableOperationImpl(activitydiagram.IntegerVariable self, Object  alg) {
+	public CommonIntegerVariableOperationImpl(adwithoutruntime.IntegerVariable self, Object  alg) {
 		this.self = self;
 		
 	}
+	
 }

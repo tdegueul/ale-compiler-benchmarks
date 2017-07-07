@@ -1,13 +1,14 @@
 package common.revisitor.operation.impl;
 
-public class CommonBooleanVariableOperationImpl implements common.revisitor.operation.CommonBooleanVariableOperation
+public  class CommonBooleanVariableOperationImpl implements common.revisitor.operation.CommonBooleanVariableOperation
 {
 	
-	private final activitydiagram.BooleanVariable self;
+	private final adwithoutruntime.BooleanVariable self;
 	
 	
-	public CommonBooleanVariableOperationImpl(activitydiagram.BooleanVariable self, Object  alg) {
+	public CommonBooleanVariableOperationImpl(adwithoutruntime.BooleanVariable self, Object  alg) {
 		this.self = self;
 		
 	}
+	
 }

@@ -1,6 +1,7 @@
-behavior monolithicactivitydiagram;
+behavior modularactivitydiagram;
 
-import ecore "/org.modelexecution.operationalsemantics.adruntime/model/adruntime.ecore";
+//import ecore "platform:/resource/org.modelexecution.operationalsemantics.adwithoutruntime/ad/adwithoutruntime.ecore";
+import ecore "platform:/resource/org.modelexecution.operationalsemantics.adruntime/model/adruntime.ecore";
 
 open class Expression {
 	def void execute() {}

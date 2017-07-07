@@ -1,3 +1,0 @@
-initialNode1
-action1
-finalNode1

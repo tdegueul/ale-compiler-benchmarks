@@ -1,6 +1,6 @@
 package common.revisitor.operation.impl;
 
-public class CommonInputValueOperationImpl implements common.revisitor.operation.CommonInputValueOperation
+public  class CommonInputValueOperationImpl implements common.revisitor.operation.CommonInputValueOperation
 {
 	
 	private final adruntime.InputValue self;
@@ -10,4 +10,5 @@ public class CommonInputValueOperationImpl implements common.revisitor.operation
 		this.self = self;
 		
 	}
+	
 }

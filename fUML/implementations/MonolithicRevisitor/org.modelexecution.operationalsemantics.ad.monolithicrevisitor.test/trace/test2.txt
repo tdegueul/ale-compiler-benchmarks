@@ -1,6 +1,0 @@
-initialNode2
-forkNode1
-action2
-action3
-joinNode1
-finalNode2

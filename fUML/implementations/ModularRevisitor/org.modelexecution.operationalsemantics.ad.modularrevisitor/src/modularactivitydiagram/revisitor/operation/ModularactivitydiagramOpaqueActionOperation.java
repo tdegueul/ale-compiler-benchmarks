@@ -1,0 +1,6 @@
+package modularactivitydiagram.revisitor.operation;
+
+public interface ModularactivitydiagramOpaqueActionOperation
+extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramActionOperation 
+{
+}

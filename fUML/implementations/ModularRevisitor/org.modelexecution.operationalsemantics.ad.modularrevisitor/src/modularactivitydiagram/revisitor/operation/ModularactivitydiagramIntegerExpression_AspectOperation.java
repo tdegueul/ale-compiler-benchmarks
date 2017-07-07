@@ -1,0 +1,7 @@
+package modularactivitydiagram.revisitor.operation;
+
+public interface ModularactivitydiagramIntegerExpression_AspectOperation
+extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerExpressionOperation 
+{
+	Integer getCurrentValue(adwithoutruntime.Variable variable);
+}

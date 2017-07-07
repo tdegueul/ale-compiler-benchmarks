@@ -1,6 +1,6 @@
 package common.revisitor.operation.impl;
 
-public class CommonTraceOperationImpl implements common.revisitor.operation.CommonTraceOperation
+public  class CommonTraceOperationImpl implements common.revisitor.operation.CommonTraceOperation
 {
 	
 	private final adruntime.Trace self;
@@ -10,4 +10,5 @@ public class CommonTraceOperationImpl implements common.revisitor.operation.Comm
 		this.self = self;
 		
 	}
+	
 }

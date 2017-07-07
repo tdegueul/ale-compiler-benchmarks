@@ -1,0 +1,7 @@
+package modularactivitydiagram.revisitor.operation;
+
+public interface ModularactivitydiagramIntegerComparisonExpression_AspectOperation
+extends modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerComparisonExpressionOperation, modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerExpression_AspectOperation 
+{
+	void execute();
+}
