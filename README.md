@@ -33,7 +33,7 @@ The concrete semantics code is common to all implementations: the only variation
 The [fUML/activitydiagram](./fUML/activitydiagram) contains the reference implementation of activity diagrams from TTC'15, plus a variant where the static concepts and the runtime concepts are split in two different metamodels.
 
 * For convenience, we provide pre-compiled JARs for all the projects and a Bash script that runs all of the benchmarks one after the other:
-  1. Download the [revisitor-benchmarks.zip](https://ncp.cwi.nl/s/vGGvZl8hoGXf0YE) archive (password: `MODELS17!revisitors`, md5sum: `c4f7d9c8077e897555abab9f44334e74`)
+  1. Download the [revisitor-benchmarks.zip](https://ncp.cwi.nl/s/3YjASrajUJvGxb9) archive (password: `MODELS17!revisitors`, md5sum: `c4f7d9c8077e897555abab9f44334e74`)
   2. Extract the content of the archive
   3. Run the benchmarks `./benchmark.sh`
 
