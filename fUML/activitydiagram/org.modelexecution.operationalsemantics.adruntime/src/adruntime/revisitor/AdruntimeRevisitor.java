@@ -140,49 +140,49 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 	Adwithoutruntime__VariableT variable_variable_Aspect(final adruntime.Variable_Aspect v);
 
 	default Adwithoutruntime__ActionT $(final adwithoutruntime.Action self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return action_action_Aspect((adruntime.Action_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return opaqueAction((adwithoutruntime.OpaqueAction) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return action_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
 		return null;
 	}
 	default Adruntime__Action_AspectT $(final adruntime.Action_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return action_Aspect_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
 		return action_Aspect(self);
 	}
 	default Adwithoutruntime__ActivityT $(final adwithoutruntime.Activity self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activity_Aspect((adruntime.Activity_Aspect) self);
 		return activity(self);
 	}
 	default Adwithoutruntime__ActivityEdgeT $(final adwithoutruntime.ActivityEdge self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_EDGE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_EDGE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityEdge_Aspect((adruntime.ActivityEdge_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.CONTROL_FLOW
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.CONTROL_FLOW
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return controlFlow((adwithoutruntime.ControlFlow) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityEdge_controlFlow_Aspect((adruntime.ControlFlow_Aspect) self);
 		return null;
 	}
 	default Adruntime__ActivityEdge_AspectT $(final adruntime.ActivityEdge_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityEdge_Aspect_controlFlow_Aspect((adruntime.ControlFlow_Aspect) self);
 		return activityEdge_Aspect(self);
 	}
 	default Adwithoutruntime__ActivityFinalNodeT $(final adwithoutruntime.ActivityFinalNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityFinalNode_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
 		return activityFinalNode(self);
@@ -191,97 +191,97 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return activityFinalNode_Aspect(self);
 	}
 	default Adwithoutruntime__ActivityNodeT $(final adwithoutruntime.ActivityNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_action_Aspect((adruntime.Action_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect((adruntime.ActivityNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_controlNode_Aspect((adruntime.ControlNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return decisionNode((adwithoutruntime.DecisionNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_executableNode_Aspect((adruntime.ExecutableNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return forkNode((adwithoutruntime.ForkNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return initialNode((adwithoutruntime.InitialNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return joinNode((adwithoutruntime.JoinNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return mergeNode((adwithoutruntime.MergeNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return opaqueAction((adwithoutruntime.OpaqueAction) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
 		return null;
 	}
 	default Adruntime__ActivityNode_AspectT $(final adruntime.ActivityNode_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_action_Aspect((adruntime.Action_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_controlNode_Aspect((adruntime.ControlNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_executableNode_Aspect((adruntime.ExecutableNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
 		return activityNode_Aspect(self);
@@ -290,7 +290,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return activity_Aspect(self);
 	}
 	default Adwithoutruntime__BooleanBinaryExpressionT $(final adwithoutruntime.BooleanBinaryExpression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return booleanBinaryExpression_booleanBinaryExpression_Aspect((adruntime.BooleanBinaryExpression_Aspect) self);
 		return booleanBinaryExpression(self);
@@ -299,34 +299,34 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return booleanBinaryExpression_Aspect(self);
 	}
 	default Adwithoutruntime__BooleanExpressionT $(final adwithoutruntime.BooleanExpression self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_BINARY_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_BINARY_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanBinaryExpression((adwithoutruntime.BooleanBinaryExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return booleanExpression_booleanBinaryExpression_Aspect((adruntime.BooleanBinaryExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return booleanExpression_Aspect((adruntime.BooleanExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_UNARY_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_UNARY_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanUnaryExpression((adwithoutruntime.BooleanUnaryExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return booleanExpression_booleanUnaryExpression_Aspect((adruntime.BooleanUnaryExpression_Aspect) self);
 		return null;
 	}
 	default Adruntime__BooleanExpression_AspectT $(final adruntime.BooleanExpression_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return booleanExpression_Aspect_booleanBinaryExpression_Aspect((adruntime.BooleanBinaryExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return booleanExpression_Aspect_booleanUnaryExpression_Aspect((adruntime.BooleanUnaryExpression_Aspect) self);
 		return booleanExpression_Aspect(self);
 	}
 	default Adwithoutruntime__BooleanUnaryExpressionT $(final adwithoutruntime.BooleanUnaryExpression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return booleanUnaryExpression_booleanUnaryExpression_Aspect((adruntime.BooleanUnaryExpression_Aspect) self);
 		return booleanUnaryExpression(self);
@@ -338,7 +338,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return booleanValue(self);
 	}
 	default Adwithoutruntime__BooleanVariableT $(final adwithoutruntime.BooleanVariable self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_VARIABLE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_VARIABLE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return booleanVariable_booleanVariable_Aspect((adruntime.BooleanVariable_Aspect) self);
 		return booleanVariable(self);
@@ -347,7 +347,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return booleanVariable_Aspect(self);
 	}
 	default Adwithoutruntime__ControlFlowT $(final adwithoutruntime.ControlFlow self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlFlow_controlFlow_Aspect((adruntime.ControlFlow_Aspect) self);
 		return controlFlow(self);
@@ -356,70 +356,70 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return controlFlow_Aspect(self);
 	}
 	default Adwithoutruntime__ControlNodeT $(final adwithoutruntime.ControlNode self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_controlNode_Aspect((adruntime.ControlNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return decisionNode((adwithoutruntime.DecisionNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return forkNode((adwithoutruntime.ForkNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return initialNode((adwithoutruntime.InitialNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return joinNode((adwithoutruntime.JoinNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return mergeNode((adwithoutruntime.MergeNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
 		return null;
 	}
 	default Adruntime__ControlNode_AspectT $(final adruntime.ControlNode_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_Aspect_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_Aspect_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_Aspect_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_Aspect_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_Aspect_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_Aspect_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlNode_Aspect_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
 		return controlNode_Aspect(self);
@@ -428,7 +428,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return controlToken(self);
 	}
 	default Adwithoutruntime__DecisionNodeT $(final adwithoutruntime.DecisionNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return decisionNode_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
 		return decisionNode(self);
@@ -437,82 +437,82 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return decisionNode_Aspect(self);
 	}
 	default Adwithoutruntime__ExecutableNodeT $(final adwithoutruntime.ExecutableNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return executableNode_action_Aspect((adruntime.Action_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return executableNode_executableNode_Aspect((adruntime.ExecutableNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return opaqueAction((adwithoutruntime.OpaqueAction) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return executableNode_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
 		return null;
 	}
 	default Adruntime__ExecutableNode_AspectT $(final adruntime.ExecutableNode_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return executableNode_Aspect_action_Aspect((adruntime.Action_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return executableNode_Aspect_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
 		return executableNode_Aspect(self);
 	}
 	default Adwithoutruntime__ExpressionT $(final adwithoutruntime.Expression self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_BINARY_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_BINARY_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanBinaryExpression((adwithoutruntime.BooleanBinaryExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_BINARY_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return expression_booleanBinaryExpression_Aspect((adruntime.BooleanBinaryExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return booleanExpression_Aspect((adruntime.BooleanExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_UNARY_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_UNARY_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanUnaryExpression((adwithoutruntime.BooleanUnaryExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_UNARY_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return expression_booleanUnaryExpression_Aspect((adruntime.BooleanUnaryExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_CALCULATION_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_CALCULATION_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerCalculationExpression((adwithoutruntime.IntegerCalculationExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return expression_integerCalculationExpression_Aspect((adruntime.IntegerCalculationExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_COMPARISON_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_COMPARISON_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerComparisonExpression((adwithoutruntime.IntegerComparisonExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return expression_integerComparisonExpression_Aspect((adruntime.IntegerComparisonExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return integerExpression_Aspect((adruntime.IntegerExpression_Aspect) self);
 		return null;
 	}
 	default Adwithoutruntime__FinalNodeT $(final adwithoutruntime.FinalNode self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return finalNode_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return finalNode_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
 		return null;
 	}
 	default Adruntime__FinalNode_AspectT $(final adruntime.FinalNode_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return finalNode_Aspect_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
 		return finalNode_Aspect(self);
 	}
 	default Adwithoutruntime__ForkNodeT $(final adwithoutruntime.ForkNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return forkNode_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
 		return forkNode(self);
@@ -524,7 +524,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return forkedToken(self);
 	}
 	default Adwithoutruntime__InitialNodeT $(final adwithoutruntime.InitialNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return initialNode_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
 		return initialNode(self);
@@ -539,7 +539,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return inputValue(self);
 	}
 	default Adwithoutruntime__IntegerCalculationExpressionT $(final adwithoutruntime.IntegerCalculationExpression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return integerCalculationExpression_integerCalculationExpression_Aspect((adruntime.IntegerCalculationExpression_Aspect) self);
 		return integerCalculationExpression(self);
@@ -548,7 +548,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return integerCalculationExpression_Aspect(self);
 	}
 	default Adwithoutruntime__IntegerComparisonExpressionT $(final adwithoutruntime.IntegerComparisonExpression self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return integerComparisonExpression_integerComparisonExpression_Aspect((adruntime.IntegerComparisonExpression_Aspect) self);
 		return integerComparisonExpression(self);
@@ -557,28 +557,28 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return integerComparisonExpression_Aspect(self);
 	}
 	default Adwithoutruntime__IntegerExpressionT $(final adwithoutruntime.IntegerExpression self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_CALCULATION_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_CALCULATION_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerCalculationExpression((adwithoutruntime.IntegerCalculationExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return integerExpression_integerCalculationExpression_Aspect((adruntime.IntegerCalculationExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_COMPARISON_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_COMPARISON_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerComparisonExpression((adwithoutruntime.IntegerComparisonExpression) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return integerExpression_integerComparisonExpression_Aspect((adruntime.IntegerComparisonExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return integerExpression_Aspect((adruntime.IntegerExpression_Aspect) self);
 		return null;
 	}
 	default Adruntime__IntegerExpression_AspectT $(final adruntime.IntegerExpression_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_CALCULATION_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return integerExpression_Aspect_integerCalculationExpression_Aspect((adruntime.IntegerCalculationExpression_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_COMPARISON_EXPRESSION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return integerExpression_Aspect_integerComparisonExpression_Aspect((adruntime.IntegerComparisonExpression_Aspect) self);
 		return integerExpression_Aspect(self);
@@ -587,7 +587,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return integerValue(self);
 	}
 	default Adwithoutruntime__IntegerVariableT $(final adwithoutruntime.IntegerVariable self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_VARIABLE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_VARIABLE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return integerVariable_integerVariable_Aspect((adruntime.IntegerVariable_Aspect) self);
 		return integerVariable(self);
@@ -596,7 +596,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return integerVariable_Aspect(self);
 	}
 	default Adwithoutruntime__JoinNodeT $(final adwithoutruntime.JoinNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return joinNode_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
 		return joinNode(self);
@@ -605,7 +605,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return joinNode_Aspect(self);
 	}
 	default Adwithoutruntime__MergeNodeT $(final adwithoutruntime.MergeNode self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return mergeNode_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
 		return mergeNode(self);
@@ -614,76 +614,76 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return mergeNode_Aspect(self);
 	}
 	default Adwithoutruntime__NamedElementT $(final adwithoutruntime.NamedElement self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_action_Aspect((adruntime.Action_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return activity((adwithoutruntime.Activity) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_EDGE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_EDGE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityEdge_Aspect((adruntime.ActivityEdge_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_activityFinalNode_Aspect((adruntime.ActivityFinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activityNode_Aspect((adruntime.ActivityNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.ACTIVITY_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return activity_Aspect((adruntime.Activity_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.CONTROL_FLOW
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.CONTROL_FLOW
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return controlFlow((adwithoutruntime.ControlFlow) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_FLOW_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_controlFlow_Aspect((adruntime.ControlFlow_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_controlNode_Aspect((adruntime.ControlNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return decisionNode((adwithoutruntime.DecisionNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.DECISION_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_decisionNode_Aspect((adruntime.DecisionNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.EXECUTABLE_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_executableNode_Aspect((adruntime.ExecutableNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FINAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_finalNode_Aspect((adruntime.FinalNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return forkNode((adwithoutruntime.ForkNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORK_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_forkNode_Aspect((adruntime.ForkNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return initialNode((adwithoutruntime.InitialNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INITIAL_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_initialNode_Aspect((adruntime.InitialNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return joinNode((adwithoutruntime.JoinNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.JOIN_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_joinNode_Aspect((adruntime.JoinNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return mergeNode((adwithoutruntime.MergeNode) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.MERGE_NODE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_mergeNode_Aspect((adruntime.MergeNode_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return opaqueAction((adwithoutruntime.OpaqueAction) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return namedElement_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
 		return null;
@@ -692,7 +692,7 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return offer(self);
 	}
 	default Adwithoutruntime__OpaqueActionT $(final adwithoutruntime.OpaqueAction self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.OPAQUE_ACTION_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return opaqueAction_opaqueAction_Aspect((adruntime.OpaqueAction_Aspect) self);
 		return opaqueAction(self);
@@ -701,10 +701,10 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return opaqueAction_Aspect(self);
 	}
 	default Adruntime__TokenT $(final adruntime.Token self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_TOKEN
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.CONTROL_TOKEN
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return controlToken((adruntime.ControlToken) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORKED_TOKEN
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.FORKED_TOKEN
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return forkedToken((adruntime.ForkedToken) self);
 		return token(self);
@@ -713,37 +713,37 @@ public interface AdruntimeRevisitor<Adwithoutruntime__ActionT extends Adwithoutr
 		return trace(self);
 	}
 	default Adwithoutruntime__ValueT $(final adwithoutruntime.Value self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_VALUE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_VALUE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanValue((adwithoutruntime.BooleanValue) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_VALUE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_VALUE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerValue((adwithoutruntime.IntegerValue) self);
 		return null;
 	}
 	default Adwithoutruntime__VariableT $(final adwithoutruntime.Variable self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_VARIABLE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_VARIABLE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanVariable((adwithoutruntime.BooleanVariable) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_VARIABLE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_VARIABLE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return variable_booleanVariable_Aspect((adruntime.BooleanVariable_Aspect) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_VARIABLE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_VARIABLE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerVariable((adwithoutruntime.IntegerVariable) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_VARIABLE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_VARIABLE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return variable_integerVariable_Aspect((adruntime.IntegerVariable_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.VARIABLE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.VARIABLE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return variable_Aspect((adruntime.Variable_Aspect) self);
 		return null;
 	}
 	default Adruntime__Variable_AspectT $(final adruntime.Variable_Aspect self) {
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_VARIABLE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.BOOLEAN_VARIABLE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return variable_Aspect_booleanVariable_Aspect((adruntime.BooleanVariable_Aspect) self);
-		if(self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_VARIABLE_ASPECT
+		if (self.eClass().getClassifierID() == adruntime.AdruntimePackage.INTEGER_VARIABLE_ASPECT
 			&& self.eClass().getEPackage() == adruntime.AdruntimePackage.eINSTANCE)
 			return variable_Aspect_integerVariable_Aspect((adruntime.IntegerVariable_Aspect) self);
 		return variable_Aspect(self);

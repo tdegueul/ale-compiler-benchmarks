@@ -66,7 +66,7 @@ public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activ
 	Activitydiagram__TraceT trace(final activitydiagram.Trace t);
 
 	default Activitydiagram__ActionT $(final activitydiagram.Action self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return opaqueAction((activitydiagram.OpaqueAction) self);
 		return null;
@@ -75,7 +75,7 @@ public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activ
 		return activity(self);
 	}
 	default Activitydiagram__ActivityEdgeT $(final activitydiagram.ActivityEdge self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_FLOW
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_FLOW
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return controlFlow((activitydiagram.ControlFlow) self);
 		return null;
@@ -84,25 +84,25 @@ public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activ
 		return activityFinalNode(self);
 	}
 	default Activitydiagram__ActivityNodeT $(final activitydiagram.ActivityNode self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return decisionNode((activitydiagram.DecisionNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return forkNode((activitydiagram.ForkNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return initialNode((activitydiagram.InitialNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return joinNode((activitydiagram.JoinNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return mergeNode((activitydiagram.MergeNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return opaqueAction((activitydiagram.OpaqueAction) self);
 		return null;
@@ -111,10 +111,10 @@ public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activ
 		return booleanBinaryExpression(self);
 	}
 	default Activitydiagram__BooleanExpressionT $(final activitydiagram.BooleanExpression self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return booleanBinaryExpression((activitydiagram.BooleanBinaryExpression) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return booleanUnaryExpression((activitydiagram.BooleanUnaryExpression) self);
 		return null;
@@ -132,22 +132,22 @@ public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activ
 		return controlFlow(self);
 	}
 	default Activitydiagram__ControlNodeT $(final activitydiagram.ControlNode self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return decisionNode((activitydiagram.DecisionNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return forkNode((activitydiagram.ForkNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return initialNode((activitydiagram.InitialNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return joinNode((activitydiagram.JoinNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return mergeNode((activitydiagram.MergeNode) self);
 		return null;
@@ -159,28 +159,28 @@ public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activ
 		return decisionNode(self);
 	}
 	default Activitydiagram__ExecutableNodeT $(final activitydiagram.ExecutableNode self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return opaqueAction((activitydiagram.OpaqueAction) self);
 		return null;
 	}
 	default Activitydiagram__ExpressionT $(final activitydiagram.Expression self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return booleanBinaryExpression((activitydiagram.BooleanBinaryExpression) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return booleanUnaryExpression((activitydiagram.BooleanUnaryExpression) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_CALCULATION_EXPRESSION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_CALCULATION_EXPRESSION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return integerCalculationExpression((activitydiagram.IntegerCalculationExpression) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return integerComparisonExpression((activitydiagram.IntegerComparisonExpression) self);
 		return null;
 	}
 	default Activitydiagram__FinalNodeT $(final activitydiagram.FinalNode self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return activityFinalNode((activitydiagram.ActivityFinalNode) self);
 		return null;
@@ -207,10 +207,10 @@ public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activ
 		return integerComparisonExpression(self);
 	}
 	default Activitydiagram__IntegerExpressionT $(final activitydiagram.IntegerExpression self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_CALCULATION_EXPRESSION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_CALCULATION_EXPRESSION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return integerCalculationExpression((activitydiagram.IntegerCalculationExpression) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return integerComparisonExpression((activitydiagram.IntegerComparisonExpression) self);
 		return null;
@@ -228,31 +228,31 @@ public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activ
 		return mergeNode(self);
 	}
 	default Activitydiagram__NamedElementT $(final activitydiagram.NamedElement self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return activity((activitydiagram.Activity) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return activityFinalNode((activitydiagram.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_FLOW
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_FLOW
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return controlFlow((activitydiagram.ControlFlow) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.DECISION_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return decisionNode((activitydiagram.DecisionNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORK_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return forkNode((activitydiagram.ForkNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INITIAL_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return initialNode((activitydiagram.InitialNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.JOIN_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return joinNode((activitydiagram.JoinNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.MERGE_NODE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return mergeNode((activitydiagram.MergeNode) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return opaqueAction((activitydiagram.OpaqueAction) self);
 		return null;
@@ -264,10 +264,10 @@ public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activ
 		return opaqueAction(self);
 	}
 	default Activitydiagram__TokenT $(final activitydiagram.Token self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_TOKEN
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.CONTROL_TOKEN
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return controlToken((activitydiagram.ControlToken) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORKED_TOKEN
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.FORKED_TOKEN
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return forkedToken((activitydiagram.ForkedToken) self);
 		return null;
@@ -276,19 +276,19 @@ public interface ActivitydiagramRevisitor<Activitydiagram__ActionT extends Activ
 		return trace(self);
 	}
 	default Activitydiagram__ValueT $(final activitydiagram.Value self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_VALUE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_VALUE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return booleanValue((activitydiagram.BooleanValue) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_VALUE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_VALUE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return integerValue((activitydiagram.IntegerValue) self);
 		return null;
 	}
 	default Activitydiagram__VariableT $(final activitydiagram.Variable self) {
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_VARIABLE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.BOOLEAN_VARIABLE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return booleanVariable((activitydiagram.BooleanVariable) self);
-		if(self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_VARIABLE
+		if (self.eClass().getClassifierID() == activitydiagram.ActivitydiagramPackage.INTEGER_VARIABLE
 			&& self.eClass().getEPackage() == activitydiagram.ActivitydiagramPackage.eINSTANCE)
 			return integerVariable((activitydiagram.IntegerVariable) self);
 		return null;

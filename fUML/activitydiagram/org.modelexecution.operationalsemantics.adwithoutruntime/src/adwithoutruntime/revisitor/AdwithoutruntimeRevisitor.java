@@ -58,7 +58,7 @@ public interface AdwithoutruntimeRevisitor<Adwithoutruntime__ActionT extends Adw
 	Adwithoutruntime__ActionT action_opaqueAction(final adwithoutruntime.OpaqueAction o);
 
 	default Adwithoutruntime__ActionT $(final adwithoutruntime.Action self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return opaqueAction((adwithoutruntime.OpaqueAction) self);
 		return null;
@@ -67,7 +67,7 @@ public interface AdwithoutruntimeRevisitor<Adwithoutruntime__ActionT extends Adw
 		return activity(self);
 	}
 	default Adwithoutruntime__ActivityEdgeT $(final adwithoutruntime.ActivityEdge self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.CONTROL_FLOW
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.CONTROL_FLOW
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return controlFlow((adwithoutruntime.ControlFlow) self);
 		return null;
@@ -76,25 +76,25 @@ public interface AdwithoutruntimeRevisitor<Adwithoutruntime__ActionT extends Adw
 		return activityFinalNode(self);
 	}
 	default Adwithoutruntime__ActivityNodeT $(final adwithoutruntime.ActivityNode self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return decisionNode((adwithoutruntime.DecisionNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return forkNode((adwithoutruntime.ForkNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return initialNode((adwithoutruntime.InitialNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return joinNode((adwithoutruntime.JoinNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return mergeNode((adwithoutruntime.MergeNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return opaqueAction((adwithoutruntime.OpaqueAction) self);
 		return null;
@@ -103,10 +103,10 @@ public interface AdwithoutruntimeRevisitor<Adwithoutruntime__ActionT extends Adw
 		return booleanBinaryExpression(self);
 	}
 	default Adwithoutruntime__BooleanExpressionT $(final adwithoutruntime.BooleanExpression self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_BINARY_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_BINARY_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanBinaryExpression((adwithoutruntime.BooleanBinaryExpression) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_UNARY_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_UNARY_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanUnaryExpression((adwithoutruntime.BooleanUnaryExpression) self);
 		return null;
@@ -124,22 +124,22 @@ public interface AdwithoutruntimeRevisitor<Adwithoutruntime__ActionT extends Adw
 		return controlFlow(self);
 	}
 	default Adwithoutruntime__ControlNodeT $(final adwithoutruntime.ControlNode self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return decisionNode((adwithoutruntime.DecisionNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return forkNode((adwithoutruntime.ForkNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return initialNode((adwithoutruntime.InitialNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return joinNode((adwithoutruntime.JoinNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return mergeNode((adwithoutruntime.MergeNode) self);
 		return null;
@@ -148,28 +148,28 @@ public interface AdwithoutruntimeRevisitor<Adwithoutruntime__ActionT extends Adw
 		return decisionNode(self);
 	}
 	default Adwithoutruntime__ExecutableNodeT $(final adwithoutruntime.ExecutableNode self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return opaqueAction((adwithoutruntime.OpaqueAction) self);
 		return null;
 	}
 	default Adwithoutruntime__ExpressionT $(final adwithoutruntime.Expression self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_BINARY_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_BINARY_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanBinaryExpression((adwithoutruntime.BooleanBinaryExpression) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_UNARY_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_UNARY_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanUnaryExpression((adwithoutruntime.BooleanUnaryExpression) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_CALCULATION_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_CALCULATION_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerCalculationExpression((adwithoutruntime.IntegerCalculationExpression) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_COMPARISON_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_COMPARISON_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerComparisonExpression((adwithoutruntime.IntegerComparisonExpression) self);
 		return null;
 	}
 	default Adwithoutruntime__FinalNodeT $(final adwithoutruntime.FinalNode self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
 		return null;
@@ -187,10 +187,10 @@ public interface AdwithoutruntimeRevisitor<Adwithoutruntime__ActionT extends Adw
 		return integerComparisonExpression(self);
 	}
 	default Adwithoutruntime__IntegerExpressionT $(final adwithoutruntime.IntegerExpression self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_CALCULATION_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_CALCULATION_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerCalculationExpression((adwithoutruntime.IntegerCalculationExpression) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_COMPARISON_EXPRESSION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_COMPARISON_EXPRESSION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerComparisonExpression((adwithoutruntime.IntegerComparisonExpression) self);
 		return null;
@@ -208,31 +208,31 @@ public interface AdwithoutruntimeRevisitor<Adwithoutruntime__ActionT extends Adw
 		return mergeNode(self);
 	}
 	default Adwithoutruntime__NamedElementT $(final adwithoutruntime.NamedElement self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return activity((adwithoutruntime.Activity) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.ACTIVITY_FINAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return activityFinalNode((adwithoutruntime.ActivityFinalNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.CONTROL_FLOW
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.CONTROL_FLOW
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return controlFlow((adwithoutruntime.ControlFlow) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.DECISION_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return decisionNode((adwithoutruntime.DecisionNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.FORK_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return forkNode((adwithoutruntime.ForkNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INITIAL_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return initialNode((adwithoutruntime.InitialNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.JOIN_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return joinNode((adwithoutruntime.JoinNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.MERGE_NODE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return mergeNode((adwithoutruntime.MergeNode) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.OPAQUE_ACTION
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return opaqueAction((adwithoutruntime.OpaqueAction) self);
 		return null;
@@ -241,19 +241,19 @@ public interface AdwithoutruntimeRevisitor<Adwithoutruntime__ActionT extends Adw
 		return opaqueAction(self);
 	}
 	default Adwithoutruntime__ValueT $(final adwithoutruntime.Value self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_VALUE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_VALUE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanValue((adwithoutruntime.BooleanValue) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_VALUE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_VALUE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerValue((adwithoutruntime.IntegerValue) self);
 		return null;
 	}
 	default Adwithoutruntime__VariableT $(final adwithoutruntime.Variable self) {
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_VARIABLE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.BOOLEAN_VARIABLE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return booleanVariable((adwithoutruntime.BooleanVariable) self);
-		if(self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_VARIABLE
+		if (self.eClass().getClassifierID() == adwithoutruntime.AdwithoutruntimePackage.INTEGER_VARIABLE
 			&& self.eClass().getEPackage() == adwithoutruntime.AdwithoutruntimePackage.eINSTANCE)
 			return integerVariable((adwithoutruntime.IntegerVariable) self);
 		return null;
