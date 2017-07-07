@@ -1,6 +1,5 @@
 package org.modelexecution.operationalsemantics.monolithicrevisitor.benchmark;
 
-
 import java.io.IOException;
 import java.text.MessageFormat;
 import java.util.Collections;

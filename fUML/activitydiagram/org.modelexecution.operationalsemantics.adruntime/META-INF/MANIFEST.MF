@@ -11,9 +11,7 @@ Export-Package: adruntime,
  adruntime.impl,
  adruntime.revisitor,
  adruntime.util
-Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport,
- org.modelexecution.operationalsemantics.adwithoutruntime;visibility:=reexport,
+Require-Bundle: org.modelexecution.operationalsemantics.adwithoutruntime;visibility:=reexport,
  org.modelexecution.operationalsemantics.ad;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;bundle-version="2.12.0"
 Bundle-ActivationPolicy: lazy
