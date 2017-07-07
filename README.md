@@ -1,30 +1,47 @@
-# Ale compiler benchmarks
+# ALE Examples & Benchmarks
 
-[Examples](./Examples): Small examples of Ale operational semantics.
+This repository is structured as follows:
 
-**Benchmarks:**
+* [examples](./examples): Toy examples demonstrating semantics definition and language modularity in ALE
+* [fUML](./fUML): An implementation of fUML using ALE inspired by [the Model Execution Case](http://www.transformation-tool-contest.eu/2015/cfs.html) of the Transformation Tool Contest 2015 (TTC'15).
 
-All the following projects are implementations of the 8th Transformation Tool Contest - [Model Execution use case](http://www.transformation-tool-contest.eu/2015/solutions_execution.html).
+## Playing with the examples
 
- - [EMF Switch](./EMF%20Switch): EMF Switch based implementation
- - [Interpreter](./Interpreter): The reference implementation, inspired by the Interpreter pattern
- - [Visitor](./Visitor): Visitor pattern based implementation
- - [MonolithicRevisitor](./MonolithicRevisitor): Revisitor based implementation using a monolithic metamodel where the runtime concepts are already merged.
- - [ModularRevisitor](./ModularRevisitor): Revisitor based implementation where the runtime concepts are defined separatly from the activity diagram concepts.
+1. Setup an ALE environment following the [installation instructions](https://github.com/manuelleduc/ale-compiler)
+1. Clone this repository locally, eg. `git clone https://github.com/manuelleduc/ale-compiler-benchmarks`
+1. Import all the projects contained in the `examples` directory in Eclipse
+..* `File -> Import -> Existing Projects into Workspace`
+..* Select the `examples` directory as root directory in the dialog
+..* Check all the projects
+..* Finish
+
+* Each project contains a launch configuration that can be used to run it
+* To re-generate the *Revisitor* interfaces: `Right click -> ALE -> Generate Revisitor interface` on an Ecore file generates the corresponding *Revisitor interface* in the *src* directory of the current project
+* To re-generate the *Revisitor* implementations: `Right click -> ALE -> Generate Revisitor implementation` on an ALE file generates the corresponding *Revisitor* implementation in the *src* directory of the current project
 
 ## Running the benchmarks
 
-1. Follow the Ale installation steps: https://github.com/manuelleduc/ale-compiler#installation
-2. Load the content of the project into the Language workbench workspace
-3. Execute the BenchmarkGeneric class of the benchmark project of your choice (one per implementation folder). BenchmarkGeneric's main function expect 3 parameters:
-  1. The path to a folder with the xmi of the benchmark.
-  2. The name of the test to run (testperformance_variant1, testperformance_variant2, or testperformance_variant3_1)
-  3. A file name prefix (where the execution times are saved)
+This repository contains benchmarks comparing different implementations of the execution semantics of fUML.
+The concrete semantics code is common to all implementations: the only variation is the pattern used to implement it.
 
-Each benchmark's folder has a readme with the detail of the specific configuration for it execution.
-Each benchmark executes the test 500 times with 50 warmups executions.
+* [Interpreter](./fUML/implementations/Interpreter): The reference implementation of TTC'15 following the Interpreter pattern
+* [Visitor](./fUML/implementations/Visitor): An implementation following the classical Visitor pattern
+* [EMF Switch](./fUML/implementations/EMFSwitch): An implementation using the Switch mechanism of EMF
+* [MonolithicRevisitor](./fUML/implementations/MonolithicRevisitor): A first *Revisitor* implementation where the runtime concepts of the activity diagram (Tokens, Offers, etc.) are already merged in a single metamodel
+* [ModularRevisitor](./fUML/implementations/ModularRevisitor): An alternative *Revisitor* implementation based on a static metamodel defining the abstract syntax of activity diagrams and another metamodel defining the runtime concepts
 
-## Running the tests
-1. Follow the Ale installation steps: https://github.com/manuelleduc/ale-compiler#installation
-2. Load the content of the project into the Language workbench workspace
-3. Execute the unit tests provided in the test project of each implementation.
+The [fUML/activitydiagram](./fUML/activitydiagram) contains the reference implementation of activity diagrams from TTC'15, plus a variant where the static concepts and the runtime concepts are split in two different metamodels.
+
+* For convenience, we provide pre-compiled JARs for all the projects and a Bash script that runs all of the benchmarks one after the other:
+  1. Download the [revisitor-benchmarks.zip](https://ncp.cwi.nl/s/vGGvZl8hoGXf0YE) archive (password: `MODELS17!revisitors`, md5sum: `c4f7d9c8077e897555abab9f44334e74`)
+  2. Extract the content of the archive
+  3. Run the benchmarks `./benchmark.sh`
+
+* Otherwise, import all the Eclipse projects contained in the [fUML](./fUML) directory and wait for all of them to compile without error
+* Execute the BenchmarkGeneric class of the benchmark project of your choice (one per implementation folder). BenchmarkGeneric's main function expects 3 parameters:
+  1. The path to a folder with the *.xmi models of the benchmark
+  2. The name of the test to run (testperformance_variant1, testperformance_variant2, or testperformance_variant3)
+  3. A prefix for the *.csv file that will store the results
+
+Each benchmark executes every performance test of the TTC'15 contest 500 times after 50 warmups everytime.
+
