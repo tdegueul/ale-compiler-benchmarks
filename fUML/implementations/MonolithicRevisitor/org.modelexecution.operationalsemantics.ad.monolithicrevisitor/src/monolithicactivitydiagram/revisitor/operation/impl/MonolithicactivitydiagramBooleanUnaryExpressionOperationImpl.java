@@ -1,6 +1,6 @@
 package monolithicactivitydiagram.revisitor.operation.impl;
 
-public class MonolithicactivitydiagramBooleanUnaryExpressionOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanUnaryExpressionOperation
+public  class MonolithicactivitydiagramBooleanUnaryExpressionOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramBooleanUnaryExpressionOperation
 {
 	
 	private final activitydiagram.BooleanUnaryExpression self;

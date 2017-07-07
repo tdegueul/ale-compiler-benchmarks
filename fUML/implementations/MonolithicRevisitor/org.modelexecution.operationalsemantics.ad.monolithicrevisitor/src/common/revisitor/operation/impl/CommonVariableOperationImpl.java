@@ -1,6 +1,6 @@
 package common.revisitor.operation.impl;
 
-public class CommonVariableOperationImpl implements common.revisitor.operation.CommonVariableOperation
+public  class CommonVariableOperationImpl implements common.revisitor.operation.CommonVariableOperation
 {
 	
 	private final activitydiagram.Variable self;
@@ -10,4 +10,5 @@ public class CommonVariableOperationImpl implements common.revisitor.operation.C
 		this.self = self;
 		
 	}
+	
 }

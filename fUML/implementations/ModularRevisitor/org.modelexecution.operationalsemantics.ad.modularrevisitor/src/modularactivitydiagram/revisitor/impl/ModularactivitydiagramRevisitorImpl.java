@@ -7,15 +7,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramAction_AspectOperationImpl(action_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramAction_AspectOperation activityNode_action_Aspect(final adruntime.Action_Aspect action_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramAction_AspectOperationImpl(action_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramAction_AspectOperation action_action_Aspect(final adruntime.Action_Aspect action_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramAction_AspectOperationImpl(action_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramAction_AspectOperation namedElement_action_Aspect(final adruntime.Action_Aspect action_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramAction_AspectOperation executableNode_action_Aspect(final adruntime.Action_Aspect action_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramAction_AspectOperationImpl(action_Aspect, this);
 	} 
 	@Override
@@ -23,11 +15,19 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramAction_AspectOperationImpl(action_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramAction_AspectOperation executableNode_Aspect_action_Aspect(final adruntime.Action_Aspect action_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramAction_AspectOperation action_action_Aspect(final adruntime.Action_Aspect action_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramAction_AspectOperationImpl(action_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramAction_AspectOperation executableNode_action_Aspect(final adruntime.Action_Aspect action_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramAction_AspectOperation activityNode_action_Aspect(final adruntime.Action_Aspect action_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramAction_AspectOperationImpl(action_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramAction_AspectOperation namedElement_action_Aspect(final adruntime.Action_Aspect action_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramAction_AspectOperationImpl(action_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramAction_AspectOperation executableNode_Aspect_action_Aspect(final adruntime.Action_Aspect action_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramAction_AspectOperationImpl(action_Aspect, this);
 	} 
 	@Override
@@ -43,11 +43,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityEdge_AspectOperationImpl(activityEdge_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityEdge_AspectOperation namedElement_activityEdge_Aspect(final adruntime.ActivityEdge_Aspect activityEdge_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityEdge_AspectOperation activityEdge_activityEdge_Aspect(final adruntime.ActivityEdge_Aspect activityEdge_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityEdge_AspectOperationImpl(activityEdge_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityEdge_AspectOperation activityEdge_activityEdge_Aspect(final adruntime.ActivityEdge_Aspect activityEdge_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityEdge_AspectOperation namedElement_activityEdge_Aspect(final adruntime.ActivityEdge_Aspect activityEdge_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityEdge_AspectOperationImpl(activityEdge_Aspect, this);
 	} 
 	@Override
@@ -55,7 +55,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNodeOperation activityNode_activityFinalNode(final adwithoutruntime.ActivityFinalNode activityFinalNode) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNodeOperation controlNode_activityFinalNode(final adwithoutruntime.ActivityFinalNode activityFinalNode) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
 	} 
 	@Override
@@ -63,11 +63,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNodeOperation namedElement_activityFinalNode(final adwithoutruntime.ActivityFinalNode activityFinalNode) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNodeOperation activityNode_activityFinalNode(final adwithoutruntime.ActivityFinalNode activityFinalNode) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNodeOperation controlNode_activityFinalNode(final adwithoutruntime.ActivityFinalNode activityFinalNode) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNodeOperation namedElement_activityFinalNode(final adwithoutruntime.ActivityFinalNode activityFinalNode) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNodeOperationImpl(activityFinalNode, this);
 	} 
 	@Override
@@ -75,7 +75,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNode_AspectOperationImpl(activityFinalNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNode_AspectOperation activityNode_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect activityFinalNode_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNode_AspectOperation activityNode_Aspect_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect activityFinalNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNode_AspectOperationImpl(activityFinalNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNode_AspectOperation finalNode_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect activityFinalNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNode_AspectOperationImpl(activityFinalNode_Aspect, this);
 	} 
 	@Override
@@ -91,7 +95,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNode_AspectOperationImpl(activityFinalNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNode_AspectOperation finalNode_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect activityFinalNode_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNode_AspectOperation finalNode_Aspect_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect activityFinalNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNode_AspectOperationImpl(activityFinalNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNode_AspectOperation activityNode_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect activityFinalNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNode_AspectOperationImpl(activityFinalNode_Aspect, this);
 	} 
 	@Override
@@ -99,19 +107,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNode_AspectOperationImpl(activityFinalNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNode_AspectOperation finalNode_Aspect_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect activityFinalNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNode_AspectOperationImpl(activityFinalNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityFinalNode_AspectOperation activityNode_Aspect_activityFinalNode_Aspect(final adruntime.ActivityFinalNode_Aspect activityFinalNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityFinalNode_AspectOperationImpl(activityFinalNode_Aspect, this);
-	} 
-	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityNode_AspectOperation activityNode_Aspect(final adruntime.ActivityNode_Aspect activityNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityNode_AspectOperationImpl(activityNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityNode_AspectOperation namedElement_activityNode_Aspect(final adruntime.ActivityNode_Aspect activityNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityNode_AspectOperationImpl(activityNode_Aspect, this);
 	} 
 	@Override
@@ -119,11 +115,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityNode_AspectOperationImpl(activityNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivity_AspectOperation activity_Aspect(final adruntime.Activity_Aspect activity_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivity_AspectOperationImpl(activity_Aspect, this);
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivityNode_AspectOperation namedElement_activityNode_Aspect(final adruntime.ActivityNode_Aspect activityNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivityNode_AspectOperationImpl(activityNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivity_AspectOperation namedElement_activity_Aspect(final adruntime.Activity_Aspect activity_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivity_AspectOperation activity_Aspect(final adruntime.Activity_Aspect activity_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivity_AspectOperationImpl(activity_Aspect, this);
 	} 
 	@Override
@@ -131,15 +127,19 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivity_AspectOperationImpl(activity_Aspect, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramActivity_AspectOperation namedElement_activity_Aspect(final adruntime.Activity_Aspect activity_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramActivity_AspectOperationImpl(activity_Aspect, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanBinaryExpressionOperation booleanBinaryExpression(final adwithoutruntime.BooleanBinaryExpression booleanBinaryExpression) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanBinaryExpressionOperationImpl(booleanBinaryExpression, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanBinaryExpressionOperation booleanExpression_booleanBinaryExpression(final adwithoutruntime.BooleanBinaryExpression booleanBinaryExpression) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanBinaryExpressionOperation expression_booleanBinaryExpression(final adwithoutruntime.BooleanBinaryExpression booleanBinaryExpression) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanBinaryExpressionOperationImpl(booleanBinaryExpression, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanBinaryExpressionOperation expression_booleanBinaryExpression(final adwithoutruntime.BooleanBinaryExpression booleanBinaryExpression) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanBinaryExpressionOperation booleanExpression_booleanBinaryExpression(final adwithoutruntime.BooleanBinaryExpression booleanBinaryExpression) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanBinaryExpressionOperationImpl(booleanBinaryExpression, this);
 	} 
 	@Override
@@ -151,6 +151,10 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanBinaryExpression_AspectOperationImpl(booleanBinaryExpression_Aspect, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanBinaryExpression_AspectOperation expression_booleanBinaryExpression_Aspect(final adruntime.BooleanBinaryExpression_Aspect booleanBinaryExpression_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanBinaryExpression_AspectOperationImpl(booleanBinaryExpression_Aspect, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanBinaryExpression_AspectOperation booleanExpression_booleanBinaryExpression_Aspect(final adruntime.BooleanBinaryExpression_Aspect booleanBinaryExpression_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanBinaryExpression_AspectOperationImpl(booleanBinaryExpression_Aspect, this);
 	} 
@@ -159,15 +163,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanBinaryExpression_AspectOperationImpl(booleanBinaryExpression_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanBinaryExpression_AspectOperation expression_booleanBinaryExpression_Aspect(final adruntime.BooleanBinaryExpression_Aspect booleanBinaryExpression_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanBinaryExpression_AspectOperationImpl(booleanBinaryExpression_Aspect, this);
-	} 
-	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanExpression_AspectOperation booleanExpression_Aspect(final adruntime.BooleanExpression_Aspect booleanExpression_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanExpression_AspectOperationImpl(booleanExpression_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanExpression_AspectOperation booleanExpression_booleanExpression_Aspect(final adruntime.BooleanExpression_Aspect booleanExpression_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanExpression_AspectOperationImpl(booleanExpression_Aspect, this);
 	} 
 	@Override
@@ -175,11 +171,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanExpression_AspectOperationImpl(booleanExpression_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanUnaryExpressionOperation booleanUnaryExpression(final adwithoutruntime.BooleanUnaryExpression booleanUnaryExpression) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanUnaryExpressionOperationImpl(booleanUnaryExpression, this);
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanExpression_AspectOperation booleanExpression_booleanExpression_Aspect(final adruntime.BooleanExpression_Aspect booleanExpression_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanExpression_AspectOperationImpl(booleanExpression_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanUnaryExpressionOperation booleanExpression_booleanUnaryExpression(final adwithoutruntime.BooleanUnaryExpression booleanUnaryExpression) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanUnaryExpressionOperation booleanUnaryExpression(final adwithoutruntime.BooleanUnaryExpression booleanUnaryExpression) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanUnaryExpressionOperationImpl(booleanUnaryExpression, this);
 	} 
 	@Override
@@ -187,7 +183,15 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanUnaryExpressionOperationImpl(booleanUnaryExpression, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanUnaryExpressionOperation booleanExpression_booleanUnaryExpression(final adwithoutruntime.BooleanUnaryExpression booleanUnaryExpression) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanUnaryExpressionOperationImpl(booleanUnaryExpression, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanUnaryExpression_AspectOperation booleanUnaryExpression_Aspect(final adruntime.BooleanUnaryExpression_Aspect booleanUnaryExpression_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanUnaryExpression_AspectOperationImpl(booleanUnaryExpression_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanUnaryExpression_AspectOperation expression_booleanUnaryExpression_Aspect(final adruntime.BooleanUnaryExpression_Aspect booleanUnaryExpression_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanUnaryExpression_AspectOperationImpl(booleanUnaryExpression_Aspect, this);
 	} 
 	@Override
@@ -200,10 +204,6 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 	} 
 	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanUnaryExpression_AspectOperation booleanExpression_Aspect_booleanUnaryExpression_Aspect(final adruntime.BooleanUnaryExpression_Aspect booleanUnaryExpression_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanUnaryExpression_AspectOperationImpl(booleanUnaryExpression_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanUnaryExpression_AspectOperation expression_booleanUnaryExpression_Aspect(final adruntime.BooleanUnaryExpression_Aspect booleanUnaryExpression_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanUnaryExpression_AspectOperationImpl(booleanUnaryExpression_Aspect, this);
 	} 
 	@Override
@@ -227,6 +227,10 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanVariable_AspectOperationImpl(booleanVariable_Aspect, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanVariable_AspectOperation booleanVariable_booleanVariable_Aspect(final adruntime.BooleanVariable_Aspect booleanVariable_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanVariable_AspectOperationImpl(booleanVariable_Aspect, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanVariable_AspectOperation variable_booleanVariable_Aspect(final adruntime.BooleanVariable_Aspect booleanVariable_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanVariable_AspectOperationImpl(booleanVariable_Aspect, this);
 	} 
@@ -235,15 +239,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanVariable_AspectOperationImpl(booleanVariable_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramBooleanVariable_AspectOperation booleanVariable_booleanVariable_Aspect(final adruntime.BooleanVariable_Aspect booleanVariable_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramBooleanVariable_AspectOperationImpl(booleanVariable_Aspect, this);
-	} 
-	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlFlowOperation controlFlow(final adwithoutruntime.ControlFlow controlFlow) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlFlowOperationImpl(controlFlow, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlFlowOperation namedElement_controlFlow(final adwithoutruntime.ControlFlow controlFlow) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlFlowOperationImpl(controlFlow, this);
 	} 
 	@Override
@@ -251,11 +247,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlFlowOperationImpl(controlFlow, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlFlow_AspectOperation controlFlow_Aspect(final adruntime.ControlFlow_Aspect controlFlow_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlFlow_AspectOperationImpl(controlFlow_Aspect, this);
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlFlowOperation namedElement_controlFlow(final adwithoutruntime.ControlFlow controlFlow) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlFlowOperationImpl(controlFlow, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlFlow_AspectOperation controlFlow_controlFlow_Aspect(final adruntime.ControlFlow_Aspect controlFlow_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlFlow_AspectOperation controlFlow_Aspect(final adruntime.ControlFlow_Aspect controlFlow_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlFlow_AspectOperationImpl(controlFlow_Aspect, this);
 	} 
 	@Override
@@ -267,6 +263,10 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlFlow_AspectOperationImpl(controlFlow_Aspect, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlFlow_AspectOperation controlFlow_controlFlow_Aspect(final adruntime.ControlFlow_Aspect controlFlow_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlFlow_AspectOperationImpl(controlFlow_Aspect, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlFlow_AspectOperation namedElement_controlFlow_Aspect(final adruntime.ControlFlow_Aspect controlFlow_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlFlow_AspectOperationImpl(controlFlow_Aspect, this);
 	} 
@@ -275,11 +275,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlNode_AspectOperationImpl(controlNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlNode_AspectOperation activityNode_controlNode_Aspect(final adruntime.ControlNode_Aspect controlNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlNode_AspectOperationImpl(controlNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlNode_AspectOperation namedElement_controlNode_Aspect(final adruntime.ControlNode_Aspect controlNode_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlNode_AspectOperation controlNode_controlNode_Aspect(final adruntime.ControlNode_Aspect controlNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlNode_AspectOperationImpl(controlNode_Aspect, this);
 	} 
 	@Override
@@ -287,7 +283,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlNode_AspectOperationImpl(controlNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlNode_AspectOperation controlNode_controlNode_Aspect(final adruntime.ControlNode_Aspect controlNode_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlNode_AspectOperation activityNode_controlNode_Aspect(final adruntime.ControlNode_Aspect controlNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlNode_AspectOperationImpl(controlNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramControlNode_AspectOperation namedElement_controlNode_Aspect(final adruntime.ControlNode_Aspect controlNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramControlNode_AspectOperationImpl(controlNode_Aspect, this);
 	} 
 	@Override
@@ -303,10 +303,6 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNodeOperationImpl(decisionNode, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNodeOperation namedElement_decisionNode(final adwithoutruntime.DecisionNode decisionNode) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNodeOperationImpl(decisionNode, this);
-	} 
-	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNodeOperation controlNode_decisionNode(final adwithoutruntime.DecisionNode decisionNode) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNodeOperationImpl(decisionNode, this);
 	} 
@@ -315,27 +311,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNodeOperationImpl(decisionNode, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNodeOperation namedElement_decisionNode(final adwithoutruntime.DecisionNode decisionNode) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNodeOperationImpl(decisionNode, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation activityNode_decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation decisionNode_decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation namedElement_decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation controlNode_Aspect_decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation activityNode_Aspect_decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
 	} 
 	@Override
@@ -343,7 +323,35 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation activityNode_Aspect_decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation controlNode_Aspect_decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation decisionNode_decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation activityNode_decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramDecisionNode_AspectOperation namedElement_decisionNode_Aspect(final adruntime.DecisionNode_Aspect decisionNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramDecisionNode_AspectOperationImpl(decisionNode_Aspect, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramExecutableNode_AspectOperation executableNode_Aspect(final adruntime.ExecutableNode_Aspect executableNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramExecutableNode_AspectOperationImpl(executableNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramExecutableNode_AspectOperation executableNode_executableNode_Aspect(final adruntime.ExecutableNode_Aspect executableNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramExecutableNode_AspectOperationImpl(executableNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramExecutableNode_AspectOperation activityNode_Aspect_executableNode_Aspect(final adruntime.ExecutableNode_Aspect executableNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramExecutableNode_AspectOperationImpl(executableNode_Aspect, this);
 	} 
 	@Override
@@ -355,35 +363,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramExecutableNode_AspectOperationImpl(executableNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramExecutableNode_AspectOperation activityNode_Aspect_executableNode_Aspect(final adruntime.ExecutableNode_Aspect executableNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramExecutableNode_AspectOperationImpl(executableNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramExecutableNode_AspectOperation executableNode_executableNode_Aspect(final adruntime.ExecutableNode_Aspect executableNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramExecutableNode_AspectOperationImpl(executableNode_Aspect, this);
-	} 
-	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation activityNode_finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation finalNode_finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation namedElement_finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation controlNode_Aspect_finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation activityNode_Aspect_finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
 	} 
 	@Override
@@ -391,11 +371,27 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNodeOperation forkNode(final adwithoutruntime.ForkNode forkNode) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNodeOperationImpl(forkNode, this);
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation activityNode_Aspect_finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNodeOperation namedElement_forkNode(final adwithoutruntime.ForkNode forkNode) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation finalNode_finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation controlNode_Aspect_finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation activityNode_finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramFinalNode_AspectOperation namedElement_finalNode_Aspect(final adruntime.FinalNode_Aspect finalNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramFinalNode_AspectOperationImpl(finalNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNodeOperation forkNode(final adwithoutruntime.ForkNode forkNode) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNodeOperationImpl(forkNode, this);
 	} 
 	@Override
@@ -407,19 +403,15 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNodeOperationImpl(forkNode, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNodeOperation namedElement_forkNode(final adwithoutruntime.ForkNode forkNode) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNodeOperationImpl(forkNode, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNode_AspectOperation forkNode_Aspect(final adruntime.ForkNode_Aspect forkNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNode_AspectOperationImpl(forkNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNode_AspectOperation activityNode_forkNode_Aspect(final adruntime.ForkNode_Aspect forkNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNode_AspectOperationImpl(forkNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNode_AspectOperation namedElement_forkNode_Aspect(final adruntime.ForkNode_Aspect forkNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNode_AspectOperationImpl(forkNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNode_AspectOperation controlNode_Aspect_forkNode_Aspect(final adruntime.ForkNode_Aspect forkNode_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNode_AspectOperation controlNode_forkNode_Aspect(final adruntime.ForkNode_Aspect forkNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNode_AspectOperationImpl(forkNode_Aspect, this);
 	} 
 	@Override
@@ -431,7 +423,15 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNode_AspectOperationImpl(forkNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNode_AspectOperation controlNode_forkNode_Aspect(final adruntime.ForkNode_Aspect forkNode_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNode_AspectOperation controlNode_Aspect_forkNode_Aspect(final adruntime.ForkNode_Aspect forkNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNode_AspectOperationImpl(forkNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNode_AspectOperation activityNode_forkNode_Aspect(final adruntime.ForkNode_Aspect forkNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNode_AspectOperationImpl(forkNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramForkNode_AspectOperation namedElement_forkNode_Aspect(final adruntime.ForkNode_Aspect forkNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramForkNode_AspectOperationImpl(forkNode_Aspect, this);
 	} 
 	@Override
@@ -447,10 +447,6 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNodeOperationImpl(initialNode, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramInitialNodeOperation namedElement_initialNode(final adwithoutruntime.InitialNode initialNode) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNodeOperationImpl(initialNode, this);
-	} 
-	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramInitialNodeOperation controlNode_initialNode(final adwithoutruntime.InitialNode initialNode) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNodeOperationImpl(initialNode, this);
 	} 
@@ -459,7 +455,23 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNodeOperationImpl(initialNode, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramInitialNodeOperation namedElement_initialNode(final adwithoutruntime.InitialNode initialNode) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNodeOperationImpl(initialNode, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramInitialNode_AspectOperation initialNode_Aspect(final adruntime.InitialNode_Aspect initialNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNode_AspectOperationImpl(initialNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramInitialNode_AspectOperation controlNode_initialNode_Aspect(final adruntime.InitialNode_Aspect initialNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNode_AspectOperationImpl(initialNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramInitialNode_AspectOperation activityNode_Aspect_initialNode_Aspect(final adruntime.InitialNode_Aspect initialNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNode_AspectOperationImpl(initialNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramInitialNode_AspectOperation controlNode_Aspect_initialNode_Aspect(final adruntime.InitialNode_Aspect initialNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNode_AspectOperationImpl(initialNode_Aspect, this);
 	} 
 	@Override
@@ -475,18 +487,6 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNode_AspectOperationImpl(initialNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramInitialNode_AspectOperation controlNode_Aspect_initialNode_Aspect(final adruntime.InitialNode_Aspect initialNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNode_AspectOperationImpl(initialNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramInitialNode_AspectOperation activityNode_Aspect_initialNode_Aspect(final adruntime.InitialNode_Aspect initialNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNode_AspectOperationImpl(initialNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramInitialNode_AspectOperation controlNode_initialNode_Aspect(final adruntime.InitialNode_Aspect initialNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramInitialNode_AspectOperationImpl(initialNode_Aspect, this);
-	} 
-	@Override
 	default common.revisitor.operation.CommonInputOperation input(final adruntime.Input input) {
 		return new common.revisitor.operation.impl.CommonInputOperationImpl(input, this);
 	} 
@@ -499,11 +499,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerCalculationExpressionOperationImpl(integerCalculationExpression, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerCalculationExpressionOperation expression_integerCalculationExpression(final adwithoutruntime.IntegerCalculationExpression integerCalculationExpression) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerCalculationExpressionOperation integerExpression_integerCalculationExpression(final adwithoutruntime.IntegerCalculationExpression integerCalculationExpression) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerCalculationExpressionOperationImpl(integerCalculationExpression, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerCalculationExpressionOperation integerExpression_integerCalculationExpression(final adwithoutruntime.IntegerCalculationExpression integerCalculationExpression) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerCalculationExpressionOperation expression_integerCalculationExpression(final adwithoutruntime.IntegerCalculationExpression integerCalculationExpression) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerCalculationExpressionOperationImpl(integerCalculationExpression, this);
 	} 
 	@Override
@@ -511,15 +511,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerCalculationExpression_AspectOperationImpl(integerCalculationExpression_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerCalculationExpression_AspectOperation integerExpression_Aspect_integerCalculationExpression_Aspect(final adruntime.IntegerCalculationExpression_Aspect integerCalculationExpression_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerCalculationExpression_AspectOperationImpl(integerCalculationExpression_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerCalculationExpression_AspectOperation integerExpression_integerCalculationExpression_Aspect(final adruntime.IntegerCalculationExpression_Aspect integerCalculationExpression_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerCalculationExpression_AspectOperationImpl(integerCalculationExpression_Aspect, this);
-	} 
-	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerCalculationExpression_AspectOperation expression_integerCalculationExpression_Aspect(final adruntime.IntegerCalculationExpression_Aspect integerCalculationExpression_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerCalculationExpression_AspectOperationImpl(integerCalculationExpression_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerCalculationExpression_AspectOperation integerExpression_Aspect_integerCalculationExpression_Aspect(final adruntime.IntegerCalculationExpression_Aspect integerCalculationExpression_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerCalculationExpression_AspectOperationImpl(integerCalculationExpression_Aspect, this);
 	} 
 	@Override
@@ -527,11 +523,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerCalculationExpression_AspectOperationImpl(integerCalculationExpression_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerComparisonExpressionOperation integerComparisonExpression(final adwithoutruntime.IntegerComparisonExpression integerComparisonExpression) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerComparisonExpressionOperationImpl(integerComparisonExpression, this);
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerCalculationExpression_AspectOperation integerExpression_integerCalculationExpression_Aspect(final adruntime.IntegerCalculationExpression_Aspect integerCalculationExpression_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerCalculationExpression_AspectOperationImpl(integerCalculationExpression_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerComparisonExpressionOperation expression_integerComparisonExpression(final adwithoutruntime.IntegerComparisonExpression integerComparisonExpression) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerComparisonExpressionOperation integerComparisonExpression(final adwithoutruntime.IntegerComparisonExpression integerComparisonExpression) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerComparisonExpressionOperationImpl(integerComparisonExpression, this);
 	} 
 	@Override
@@ -539,11 +535,15 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerComparisonExpressionOperationImpl(integerComparisonExpression, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerComparisonExpressionOperation expression_integerComparisonExpression(final adwithoutruntime.IntegerComparisonExpression integerComparisonExpression) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerComparisonExpressionOperationImpl(integerComparisonExpression, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerComparisonExpression_AspectOperation integerComparisonExpression_Aspect(final adruntime.IntegerComparisonExpression_Aspect integerComparisonExpression_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerComparisonExpression_AspectOperationImpl(integerComparisonExpression_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerComparisonExpression_AspectOperation integerComparisonExpression_integerComparisonExpression_Aspect(final adruntime.IntegerComparisonExpression_Aspect integerComparisonExpression_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerComparisonExpression_AspectOperation expression_integerComparisonExpression_Aspect(final adruntime.IntegerComparisonExpression_Aspect integerComparisonExpression_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerComparisonExpression_AspectOperationImpl(integerComparisonExpression_Aspect, this);
 	} 
 	@Override
@@ -555,7 +555,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerComparisonExpression_AspectOperationImpl(integerComparisonExpression_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerComparisonExpression_AspectOperation expression_integerComparisonExpression_Aspect(final adruntime.IntegerComparisonExpression_Aspect integerComparisonExpression_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerComparisonExpression_AspectOperation integerComparisonExpression_integerComparisonExpression_Aspect(final adruntime.IntegerComparisonExpression_Aspect integerComparisonExpression_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerComparisonExpression_AspectOperationImpl(integerComparisonExpression_Aspect, this);
 	} 
 	@Override
@@ -563,11 +563,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerExpression_AspectOperationImpl(integerExpression_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerExpression_AspectOperation expression_integerExpression_Aspect(final adruntime.IntegerExpression_Aspect integerExpression_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerExpression_AspectOperation integerExpression_integerExpression_Aspect(final adruntime.IntegerExpression_Aspect integerExpression_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerExpression_AspectOperationImpl(integerExpression_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerExpression_AspectOperation integerExpression_integerExpression_Aspect(final adruntime.IntegerExpression_Aspect integerExpression_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramIntegerExpression_AspectOperation expression_integerExpression_Aspect(final adruntime.IntegerExpression_Aspect integerExpression_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramIntegerExpression_AspectOperationImpl(integerExpression_Aspect, this);
 	} 
 	@Override
@@ -607,10 +607,6 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNodeOperationImpl(joinNode, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNodeOperation namedElement_joinNode(final adwithoutruntime.JoinNode joinNode) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNodeOperationImpl(joinNode, this);
-	} 
-	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNodeOperation controlNode_joinNode(final adwithoutruntime.JoinNode joinNode) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNodeOperationImpl(joinNode, this);
 	} 
@@ -619,7 +615,23 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNodeOperationImpl(joinNode, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNodeOperation namedElement_joinNode(final adwithoutruntime.JoinNode joinNode) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNodeOperationImpl(joinNode, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNode_AspectOperation joinNode_Aspect(final adruntime.JoinNode_Aspect joinNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNode_AspectOperationImpl(joinNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNode_AspectOperation controlNode_joinNode_Aspect(final adruntime.JoinNode_Aspect joinNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNode_AspectOperationImpl(joinNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNode_AspectOperation activityNode_Aspect_joinNode_Aspect(final adruntime.JoinNode_Aspect joinNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNode_AspectOperationImpl(joinNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNode_AspectOperation controlNode_Aspect_joinNode_Aspect(final adruntime.JoinNode_Aspect joinNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNode_AspectOperationImpl(joinNode_Aspect, this);
 	} 
 	@Override
@@ -635,23 +647,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNode_AspectOperationImpl(joinNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNode_AspectOperation controlNode_Aspect_joinNode_Aspect(final adruntime.JoinNode_Aspect joinNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNode_AspectOperationImpl(joinNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNode_AspectOperation activityNode_Aspect_joinNode_Aspect(final adruntime.JoinNode_Aspect joinNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNode_AspectOperationImpl(joinNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramJoinNode_AspectOperation controlNode_joinNode_Aspect(final adruntime.JoinNode_Aspect joinNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramJoinNode_AspectOperationImpl(joinNode_Aspect, this);
-	} 
-	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNodeOperation mergeNode(final adwithoutruntime.MergeNode mergeNode) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNodeOperationImpl(mergeNode, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNodeOperation namedElement_mergeNode(final adwithoutruntime.MergeNode mergeNode) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNodeOperationImpl(mergeNode, this);
 	} 
 	@Override
@@ -663,7 +659,27 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNodeOperationImpl(mergeNode, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNodeOperation namedElement_mergeNode(final adwithoutruntime.MergeNode mergeNode) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNodeOperationImpl(mergeNode, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNode_AspectOperation mergeNode_Aspect(final adruntime.MergeNode_Aspect mergeNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNode_AspectOperationImpl(mergeNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNode_AspectOperation controlNode_mergeNode_Aspect(final adruntime.MergeNode_Aspect mergeNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNode_AspectOperationImpl(mergeNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNode_AspectOperation activityNode_Aspect_mergeNode_Aspect(final adruntime.MergeNode_Aspect mergeNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNode_AspectOperationImpl(mergeNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNode_AspectOperation mergeNode_mergeNode_Aspect(final adruntime.MergeNode_Aspect mergeNode_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNode_AspectOperationImpl(mergeNode_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNode_AspectOperation controlNode_Aspect_mergeNode_Aspect(final adruntime.MergeNode_Aspect mergeNode_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNode_AspectOperationImpl(mergeNode_Aspect, this);
 	} 
 	@Override
@@ -675,22 +691,6 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNode_AspectOperationImpl(mergeNode_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNode_AspectOperation controlNode_Aspect_mergeNode_Aspect(final adruntime.MergeNode_Aspect mergeNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNode_AspectOperationImpl(mergeNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNode_AspectOperation mergeNode_mergeNode_Aspect(final adruntime.MergeNode_Aspect mergeNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNode_AspectOperationImpl(mergeNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNode_AspectOperation activityNode_Aspect_mergeNode_Aspect(final adruntime.MergeNode_Aspect mergeNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNode_AspectOperationImpl(mergeNode_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramMergeNode_AspectOperation controlNode_mergeNode_Aspect(final adruntime.MergeNode_Aspect mergeNode_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramMergeNode_AspectOperationImpl(mergeNode_Aspect, this);
-	} 
-	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOfferOperation offer(final adruntime.Offer offer) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOfferOperationImpl(offer, this);
 	} 
@@ -699,7 +699,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueActionOperationImpl(opaqueAction, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueActionOperation activityNode_opaqueAction(final adwithoutruntime.OpaqueAction opaqueAction) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueActionOperation executableNode_opaqueAction(final adwithoutruntime.OpaqueAction opaqueAction) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueActionOperationImpl(opaqueAction, this);
 	} 
 	@Override
@@ -707,11 +707,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueActionOperationImpl(opaqueAction, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueActionOperation namedElement_opaqueAction(final adwithoutruntime.OpaqueAction opaqueAction) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueActionOperation activityNode_opaqueAction(final adwithoutruntime.OpaqueAction opaqueAction) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueActionOperationImpl(opaqueAction, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueActionOperation executableNode_opaqueAction(final adwithoutruntime.OpaqueAction opaqueAction) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueActionOperation namedElement_opaqueAction(final adwithoutruntime.OpaqueAction opaqueAction) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueActionOperationImpl(opaqueAction, this);
 	} 
 	@Override
@@ -719,15 +719,11 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueAction_AspectOperation activityNode_Aspect_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect opaqueAction_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueAction_AspectOperation opaqueAction_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect opaqueAction_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueAction_AspectOperation activityNode_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect opaqueAction_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueAction_AspectOperation executableNode_Aspect_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect opaqueAction_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
 	} 
 	@Override
@@ -735,7 +731,15 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
 	} 
 	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueAction_AspectOperation executableNode_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect opaqueAction_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
+	} 
+	@Override
 	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueAction_AspectOperation action_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect opaqueAction_Aspect) {
+		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
+	} 
+	@Override
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueAction_AspectOperation activityNode_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect opaqueAction_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
 	} 
 	@Override
@@ -743,11 +747,7 @@ public interface ModularactivitydiagramRevisitorImpl extends modularactivitydiag
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
 	} 
 	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueAction_AspectOperation activityNode_Aspect_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect opaqueAction_Aspect) {
-		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
-	} 
-	@Override
-	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueAction_AspectOperation executableNode_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect opaqueAction_Aspect) {
+	default modularactivitydiagram.revisitor.operation.ModularactivitydiagramOpaqueAction_AspectOperation executableNode_Aspect_opaqueAction_Aspect(final adruntime.OpaqueAction_Aspect opaqueAction_Aspect) {
 		return new modularactivitydiagram.revisitor.operation.impl.ModularactivitydiagramOpaqueAction_AspectOperationImpl(opaqueAction_Aspect, this);
 	} 
 	@Override

@@ -1,6 +1,6 @@
 package monolithicactivitydiagram.revisitor.operation.impl;
 
-public class MonolithicactivitydiagramDecisionNodeOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramDecisionNodeOperation
+public  class MonolithicactivitydiagramDecisionNodeOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramDecisionNodeOperation
 {
 	
 	private final activitydiagram.DecisionNode self;

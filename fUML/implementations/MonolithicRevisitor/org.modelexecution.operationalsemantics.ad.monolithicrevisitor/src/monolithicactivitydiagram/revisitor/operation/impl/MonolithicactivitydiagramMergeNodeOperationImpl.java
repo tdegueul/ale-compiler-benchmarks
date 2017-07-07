@@ -1,6 +1,6 @@
 package monolithicactivitydiagram.revisitor.operation.impl;
 
-public class MonolithicactivitydiagramMergeNodeOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramMergeNodeOperation
+public  class MonolithicactivitydiagramMergeNodeOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramMergeNodeOperation
 {
 	
 	private final activitydiagram.MergeNode self;

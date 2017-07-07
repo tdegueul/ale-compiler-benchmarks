@@ -1,6 +1,6 @@
 package monolithicactivitydiagram.revisitor.operation.impl;
 
-public class MonolithicactivitydiagramIntegerVariableOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramIntegerVariableOperation
+public  class MonolithicactivitydiagramIntegerVariableOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramIntegerVariableOperation
 {
 	
 	private final activitydiagram.IntegerVariable self;

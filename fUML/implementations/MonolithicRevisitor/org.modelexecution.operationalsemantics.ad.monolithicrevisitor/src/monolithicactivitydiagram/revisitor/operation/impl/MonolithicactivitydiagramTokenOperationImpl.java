@@ -1,6 +1,6 @@
 package monolithicactivitydiagram.revisitor.operation.impl;
 
-public class MonolithicactivitydiagramTokenOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramTokenOperation
+public  class MonolithicactivitydiagramTokenOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramTokenOperation
 {
 	
 	private final activitydiagram.Token self;

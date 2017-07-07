@@ -1,6 +1,6 @@
 package monolithicactivitydiagram.revisitor.operation.impl;
 
-public class MonolithicactivitydiagramActivityOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityOperation
+public  class MonolithicactivitydiagramActivityOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramActivityOperation
 {
 	
 	private final activitydiagram.Activity self;

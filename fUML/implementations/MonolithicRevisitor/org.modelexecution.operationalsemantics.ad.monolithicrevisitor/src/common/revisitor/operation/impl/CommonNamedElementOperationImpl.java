@@ -1,6 +1,6 @@
 package common.revisitor.operation.impl;
 
-public class CommonNamedElementOperationImpl implements common.revisitor.operation.CommonNamedElementOperation
+public  class CommonNamedElementOperationImpl implements common.revisitor.operation.CommonNamedElementOperation
 {
 	
 	private final activitydiagram.NamedElement self;
@@ -10,4 +10,5 @@ public class CommonNamedElementOperationImpl implements common.revisitor.operati
 		this.self = self;
 		
 	}
+	
 }

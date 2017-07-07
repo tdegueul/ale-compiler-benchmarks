@@ -1,6 +1,6 @@
 package monolithicactivitydiagram.revisitor.operation.impl;
 
-public class MonolithicactivitydiagramForkNodeOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramForkNodeOperation
+public  class MonolithicactivitydiagramForkNodeOperationImpl implements monolithicactivitydiagram.revisitor.operation.MonolithicactivitydiagramForkNodeOperation
 {
 	
 	private final activitydiagram.ForkNode self;
