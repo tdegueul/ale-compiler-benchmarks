@@ -19,11 +19,11 @@ public interface PrintexpRevisitorImpl extends printexp.revisitor.PrintexpRevisi
 		return new printexp.revisitor.operation.impl.PrintexpFalsOperationImpl(fals, this);
 	} 
 	@Override
-	default printexp.revisitor.operation.PrintexpFalsOperation lit_fals(final boolexp.Fals fals) {
+	default printexp.revisitor.operation.PrintexpFalsOperation exp_fals(final boolexp.Fals fals) {
 		return new printexp.revisitor.operation.impl.PrintexpFalsOperationImpl(fals, this);
 	} 
 	@Override
-	default printexp.revisitor.operation.PrintexpFalsOperation exp_fals(final boolexp.Fals fals) {
+	default printexp.revisitor.operation.PrintexpFalsOperation lit_fals(final boolexp.Fals fals) {
 		return new printexp.revisitor.operation.impl.PrintexpFalsOperationImpl(fals, this);
 	} 
 	@Override
@@ -43,11 +43,11 @@ public interface PrintexpRevisitorImpl extends printexp.revisitor.PrintexpRevisi
 		return new printexp.revisitor.operation.impl.PrintexpTruOperationImpl(tru, this);
 	} 
 	@Override
-	default printexp.revisitor.operation.PrintexpTruOperation lit_tru(final boolexp.Tru tru) {
+	default printexp.revisitor.operation.PrintexpTruOperation exp_tru(final boolexp.Tru tru) {
 		return new printexp.revisitor.operation.impl.PrintexpTruOperationImpl(tru, this);
 	} 
 	@Override
-	default printexp.revisitor.operation.PrintexpTruOperation exp_tru(final boolexp.Tru tru) {
+	default printexp.revisitor.operation.PrintexpTruOperation lit_tru(final boolexp.Tru tru) {
 		return new printexp.revisitor.operation.impl.PrintexpTruOperationImpl(tru, this);
 	} 
 }

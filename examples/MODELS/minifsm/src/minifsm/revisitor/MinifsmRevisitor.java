@@ -13,9 +13,6 @@ Minifsm__StateT state(final minifsm.State state);
 Minifsm__TransitionT transition(final minifsm.Transition transition);
 
 	
-	default Minifsm__TransitionT $(final minifsm.Transition self) {
-		return transition(self);
-	}
 	default Minifsm__StateT $(final minifsm.State self) {
 		if(self.eClass().getClassifierID() == minifsm.MinifsmPackage.FINAL_STATE && self.eClass().getEPackage() == minifsm.MinifsmPackage.eINSTANCE) return finalState((minifsm.FinalState) self);
 		return state(self);
@@ -25,5 +22,8 @@ Minifsm__TransitionT transition(final minifsm.Transition transition);
 	}
 	default Minifsm__MachineT $(final minifsm.Machine self) {
 		return machine(self);
+	}
+	default Minifsm__TransitionT $(final minifsm.Transition self) {
+		return transition(self);
 	}
 }

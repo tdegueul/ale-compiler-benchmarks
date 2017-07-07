@@ -1,6 +1,6 @@
 package fsmprinting.revisitor.operation.impl;
 
-public class FsmprintingTransitionOperationImpl implements fsmprinting.revisitor.operation.FsmprintingTransitionOperation
+public  class FsmprintingTransitionOperationImpl implements fsmprinting.revisitor.operation.FsmprintingTransitionOperation
 {
 	
 	private final minifsm.Transition self;

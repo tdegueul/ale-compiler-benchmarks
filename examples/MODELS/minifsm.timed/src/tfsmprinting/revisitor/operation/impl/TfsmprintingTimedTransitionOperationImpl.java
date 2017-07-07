@@ -1,6 +1,6 @@
 package tfsmprinting.revisitor.operation.impl;
 
-public class TfsmprintingTimedTransitionOperationImpl implements tfsmprinting.revisitor.operation.TfsmprintingTimedTransitionOperation
+public  class TfsmprintingTimedTransitionOperationImpl implements tfsmprinting.revisitor.operation.TfsmprintingTimedTransitionOperation
 {
 	
 	private final timedminifsm.TimedTransition self;

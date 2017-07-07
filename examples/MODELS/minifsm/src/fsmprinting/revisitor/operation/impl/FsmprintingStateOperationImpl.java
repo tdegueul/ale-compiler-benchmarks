@@ -1,6 +1,6 @@
 package fsmprinting.revisitor.operation.impl;
 
-public class FsmprintingStateOperationImpl implements fsmprinting.revisitor.operation.FsmprintingStateOperation
+public  class FsmprintingStateOperationImpl implements fsmprinting.revisitor.operation.FsmprintingStateOperation
 {
 	
 	private final minifsm.State self;

@@ -8,21 +8,21 @@ Timedminifsm__TimedTransitionT timedTransition(final timedminifsm.TimedTransitio
 Minifsm__TransitionT transition_timedTransition(final timedminifsm.TimedTransition timedTransition);
 
 	
-	default Minifsm__TransitionT $(final minifsm.Transition self) {
-		if(self.eClass().getClassifierID() == timedminifsm.TimedminifsmPackage.TIMED_TRANSITION && self.eClass().getEPackage() == timedminifsm.TimedminifsmPackage.eINSTANCE) return timedTransition((timedminifsm.TimedTransition) self);
-		return transition(self);
-	}
-	default Minifsm__MachineT $(final minifsm.Machine self) {
-		return machine(self);
+	default Timedminifsm__TimedTransitionT $(final timedminifsm.TimedTransition self) {
+		return timedTransition(self);
 	}
 	default Minifsm__FinalStateT $(final minifsm.FinalState self) {
 		return finalState(self);
 	}
-	default Timedminifsm__TimedTransitionT $(final timedminifsm.TimedTransition self) {
-		return timedTransition(self);
+	default Minifsm__MachineT $(final minifsm.Machine self) {
+		return machine(self);
 	}
 	default Minifsm__StateT $(final minifsm.State self) {
 		if(self.eClass().getClassifierID() == minifsm.MinifsmPackage.FINAL_STATE && self.eClass().getEPackage() == minifsm.MinifsmPackage.eINSTANCE) return finalState((minifsm.FinalState) self);
 		return state(self);
+	}
+	default Minifsm__TransitionT $(final minifsm.Transition self) {
+		if(self.eClass().getClassifierID() == timedminifsm.TimedminifsmPackage.TIMED_TRANSITION && self.eClass().getEPackage() == timedminifsm.TimedminifsmPackage.eINSTANCE) return timedTransition((timedminifsm.TimedTransition) self);
+		return transition(self);
 	}
 }

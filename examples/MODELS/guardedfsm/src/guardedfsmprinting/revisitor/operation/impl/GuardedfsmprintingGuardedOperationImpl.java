@@ -1,6 +1,6 @@
 package guardedfsmprinting.revisitor.operation.impl;
 
-public class GuardedfsmprintingGuardedOperationImpl implements guardedfsmprinting.revisitor.operation.GuardedfsmprintingGuardedOperation
+public  class GuardedfsmprintingGuardedOperationImpl implements guardedfsmprinting.revisitor.operation.GuardedfsmprintingGuardedOperation
 {
 	
 	private final guardedfsm.Guarded self;

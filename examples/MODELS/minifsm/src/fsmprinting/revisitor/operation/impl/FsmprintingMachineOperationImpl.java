@@ -1,6 +1,6 @@
 package fsmprinting.revisitor.operation.impl;
 
-public class FsmprintingMachineOperationImpl implements fsmprinting.revisitor.operation.FsmprintingMachineOperation
+public  class FsmprintingMachineOperationImpl implements fsmprinting.revisitor.operation.FsmprintingMachineOperation
 {
 	
 	private final minifsm.Machine self;
