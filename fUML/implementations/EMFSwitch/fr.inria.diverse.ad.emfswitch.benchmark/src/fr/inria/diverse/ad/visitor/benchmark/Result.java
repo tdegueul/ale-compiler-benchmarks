@@ -29,5 +29,4 @@ public class Result {
 		com.google.common.io.Files.append(sb, file, Charset.defaultCharset());
 	}
 
-
 }

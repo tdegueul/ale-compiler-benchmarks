@@ -2,6 +2,7 @@ package fr.inria.diverse.ad.visitor2.benchmark;
 
 import java.io.IOException;
 import java.text.MessageFormat;
+import java.util.Collections;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -19,18 +20,22 @@ public class Benchmark {
 	private static final String MODELS_PATH = "{0}/{1}.xmi";
 
 	public void start(final String model, final int warmup, final int iterations, String xmiPath, String prefix) throws IOException {
-
 		final Result res = new Result();
 		for (int i = 0; i < warmup; i++) {
+			System.out.print(MessageFormat.format("Warmup    [{0}/{1}]\r", i + 1, warmup));
 			this.executeBenchmark(model, i, xmiPath);
 		}
-
+		System.out.println();
 		for (int i = 0; i < iterations; i++) {
-
+			System.out.print(MessageFormat.format("Benchmark [{0}/{1}]\r", i + 1, iterations));
 			res.getResults().add(this.executeBenchmark(model, i, xmiPath));
 		}
+		System.out.println();
+		System.out.println(MessageFormat.format("Min: {0} Max: {1} Avg: {2}",
+				Collections.min(res.getResults()),
+				Collections.max(res.getResults()),
+				res.getResults().stream().mapToDouble(i -> i).average().getAsDouble()));
 		res.save(model, prefix);
-
 	}
 
 	private ResourceSetImpl init() {
