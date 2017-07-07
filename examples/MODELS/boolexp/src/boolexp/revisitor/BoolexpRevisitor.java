@@ -18,25 +18,25 @@ public interface BoolexpRevisitor<Boolexp__AndT extends Boolexp__BinaryExpT, Boo
 		return and(self);
 	}
 	default Boolexp__BinaryExpT $(final boolexp.BinaryExp self) {
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.AND
+		if (self.eClass().getClassifierID() == boolexp.BoolexpPackage.AND
 			&& self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE)
 			return and((boolexp.And) self);
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.OR
+		if (self.eClass().getClassifierID() == boolexp.BoolexpPackage.OR
 			&& self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE)
 			return or((boolexp.Or) self);
 		return null;
 	}
 	default Boolexp__ExpT $(final boolexp.Exp self) {
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.AND
+		if (self.eClass().getClassifierID() == boolexp.BoolexpPackage.AND
 			&& self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE)
 			return and((boolexp.And) self);
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.FALS
+		if (self.eClass().getClassifierID() == boolexp.BoolexpPackage.FALS
 			&& self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE)
 			return fals((boolexp.Fals) self);
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.OR
+		if (self.eClass().getClassifierID() == boolexp.BoolexpPackage.OR
 			&& self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE)
 			return or((boolexp.Or) self);
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.TRU
+		if (self.eClass().getClassifierID() == boolexp.BoolexpPackage.TRU
 			&& self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE)
 			return tru((boolexp.Tru) self);
 		return null;
@@ -45,10 +45,10 @@ public interface BoolexpRevisitor<Boolexp__AndT extends Boolexp__BinaryExpT, Boo
 		return fals(self);
 	}
 	default Boolexp__LitT $(final boolexp.Lit self) {
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.FALS
+		if (self.eClass().getClassifierID() == boolexp.BoolexpPackage.FALS
 			&& self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE)
 			return fals((boolexp.Fals) self);
-		if(self.eClass().getClassifierID() == boolexp.BoolexpPackage.TRU
+		if (self.eClass().getClassifierID() == boolexp.BoolexpPackage.TRU
 			&& self.eClass().getEPackage() == boolexp.BoolexpPackage.eINSTANCE)
 			return tru((boolexp.Tru) self);
 		return null;

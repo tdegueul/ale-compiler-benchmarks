@@ -14,7 +14,7 @@ public interface MinifsmRevisitor<Minifsm__FinalStateT extends Minifsm__StateT, 
 		return machine(self);
 	}
 	default Minifsm__StateT $(final minifsm.State self) {
-		if(self.eClass().getClassifierID() == minifsm.MinifsmPackage.FINAL_STATE
+		if (self.eClass().getClassifierID() == minifsm.MinifsmPackage.FINAL_STATE
 			&& self.eClass().getEPackage() == minifsm.MinifsmPackage.eINSTANCE)
 			return finalState((minifsm.FinalState) self);
 		return state(self);
