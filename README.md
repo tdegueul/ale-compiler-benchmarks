@@ -30,12 +30,11 @@ The concrete semantics code is common to all implementations: the only variation
 * [MonolithicRevisitor](./fUML/implementations/MonolithicRevisitor): A first *Revisitor* implementation where the runtime concepts of the activity diagram (Tokens, Offers, etc.) are already merged in a single metamodel
 * [ModularRevisitor](./fUML/implementations/ModularRevisitor): An alternative *Revisitor* implementation based on a static metamodel defining the abstract syntax of activity diagrams and another metamodel defining the runtime concepts
 
-The [fUML/activitydiagram](./fUML/activitydiagram) contains the reference implementation of activity diagrams from TTC'15, plus a variant where the static concepts and the runtime concepts are split in two different metamodels.
+The [fUML/activitydiagram](./fUML/activitydiagram) contains the reference implementation of activity diagrams from TTC'15, plus a variant where the static concepts and the runtime concepts are modularly split in two different metamodels.
 
 * For convenience, we provide pre-compiled JARs for all the projects and a Bash script that runs all of the benchmarks one after the other:
-  1. Download the [revisitor-benchmarks.zip](https://ncp.cwi.nl/s/lsZLo33NvTQyGxO) archive (password: `MODELS17!revisitors`, md5sum: `d54db01389beca83f87da13ef99a034b`)
-  2. Extract the content of the archive
-  3. Run the benchmarks: `./benchmark.sh` or `benchmark.bat`
+  1. Navigate to the [./fUML/benchmarks](./fUML/benchmarks) directory
+  2. Run the benchmarks: `./benchmark.sh` or `benchmark.bat`
 
 * Otherwise, import all the Eclipse projects contained in the [fUML](./fUML) directory and wait for all of them to compile without error
 * Execute the BenchmarkGeneric class of the benchmark project of your choice (one per implementation folder). BenchmarkGeneric's main function expects 3 parameters:
