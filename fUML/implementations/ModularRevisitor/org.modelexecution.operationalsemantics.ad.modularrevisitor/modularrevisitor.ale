@@ -1,6 +1,5 @@
 behavior modularactivitydiagram;
 
-//import ecore "platform:/resource/org.modelexecution.operationalsemantics.adwithoutruntime/ad/adwithoutruntime.ecore";
 import ecore "platform:/resource/org.modelexecution.operationalsemantics.adruntime/model/adruntime.ecore";
 
 open class Expression {
@@ -24,7 +23,7 @@ open class ActivityEdge_Aspect {
 
 		self.getOffers().add(offer);
 	}
-	
+
 	def Sequence(Token) takeOfferedTokens() {
 		Sequence(Token) tokens = newSequence(Token);
 

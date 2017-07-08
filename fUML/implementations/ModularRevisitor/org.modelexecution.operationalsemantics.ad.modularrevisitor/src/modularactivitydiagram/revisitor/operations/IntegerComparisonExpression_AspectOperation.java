@@ -1,5 +1,5 @@
 package modularactivitydiagram.revisitor.operations;
 
-public interface IntegerComparisonExpression_AspectOperation extends modularactivitydiagram.revisitor.operations.IntegerExpression_AspectOperation, modularactivitydiagram.revisitor.operations.IntegerComparisonExpressionOperation {
+public interface IntegerComparisonExpression_AspectOperation extends modularactivitydiagram.revisitor.operations.IntegerComparisonExpressionOperation, modularactivitydiagram.revisitor.operations.IntegerExpression_AspectOperation {
 	void execute();
 }
