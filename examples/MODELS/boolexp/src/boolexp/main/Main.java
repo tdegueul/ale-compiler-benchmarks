@@ -17,7 +17,7 @@ public class Main {
 		Exp e = loadModel();
 		printexp.revisitor.operations.ExpOperation printSem = new PrintexpRevisitor(){}.$(e);
 		evalexp.revisitor.operations.ExpOperation evalSem = new EvalexpRevisitor(){}.$(e);
-		
+
 		System.out.println(printSem.print() + " = " + evalSem.eval());
 	}
 

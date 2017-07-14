@@ -16,8 +16,8 @@ public class DecisionNodeOperationImpl implements monolithicactivitydiagram.revi
 	public void fire(org.eclipse.emf.common.util.EList<activitydiagram.Token> tokens) {
 		activitydiagram.ActivityEdge selectedEdge = null;
 		for (activitydiagram.ActivityEdge edge: self.getOutgoing()) {
-			if (alg.$(edge).isControlFlow()) {
-				activitydiagram.ControlFlow controlFlow = alg.$(edge).asControlFlow();
+			if (edge instanceof activitydiagram.ControlFlow) {
+				activitydiagram.ControlFlow controlFlow = ((activitydiagram) edge).ControlFlow;
 				activitydiagram.Value guardValue = controlFlow.getGuard().getCurrentValue();
 				if (alg.$(guardValue).isBooleanValue()) {
 					activitydiagram.BooleanValue booleanValue = alg.$(guardValue).asBooleanValue();

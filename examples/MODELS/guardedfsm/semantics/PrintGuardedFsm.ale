@@ -4,8 +4,9 @@ import ecore "guardedfsm/model/GuardedFsm.ecore";
 import ale fsmprinting;
 import ale printexp;
 
-open class Guarded extends fsmprinting.Transition {
+open class Guarded {
 	def String print() {
-		return $[super].print() + " [" + $[self.getGuard()].print() + "]";
+		//return $[super].print() + " [" + $[self.getGuard()].print() + "]";
+		return alg.transition(obj).print() + " [" + alg.$(obj.guard).print() + "]";
 	}
 }

@@ -7,19 +7,18 @@ public interface MinifsmRevisitor<Minifsm__FinalStateT extends Minifsm__StateT, 
 	Minifsm__StateT state(final minifsm.State s);
 	Minifsm__TransitionT transition(final minifsm.Transition t);
 
-	default Minifsm__FinalStateT $(final minifsm.FinalState self) {
-		return finalState(self);
+	default Minifsm__FinalStateT $(final minifsm.FinalState it) {
+		return finalState(it);
 	}
-	default Minifsm__MachineT $(final minifsm.Machine self) {
-		return machine(self);
+	default Minifsm__MachineT $(final minifsm.Machine it) {
+		return machine(it);
 	}
-	default Minifsm__StateT $(final minifsm.State self) {
-		if (self.eClass().getClassifierID() == minifsm.MinifsmPackage.FINAL_STATE
-			&& self.eClass().getEPackage() == minifsm.MinifsmPackage.eINSTANCE)
-			return finalState((minifsm.FinalState) self);
-		return state(self);
+	default Minifsm__StateT $(final minifsm.State it) {
+		if (it.getClass() == minifsm.impl.FinalStateImpl.class)
+			return finalState((minifsm.FinalState) it);
+		return state(it);
 	}
-	default Minifsm__TransitionT $(final minifsm.Transition self) {
-		return transition(self);
+	default Minifsm__TransitionT $(final minifsm.Transition it) {
+		return transition(it);
 	}
 }

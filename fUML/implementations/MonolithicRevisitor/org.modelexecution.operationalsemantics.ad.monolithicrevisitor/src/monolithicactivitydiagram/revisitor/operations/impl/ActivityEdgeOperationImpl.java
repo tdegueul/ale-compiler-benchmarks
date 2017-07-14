@@ -11,14 +11,6 @@ public class ActivityEdgeOperationImpl implements monolithicactivitydiagram.revi
 	}
 
 	@Override
-	public Boolean isControlFlow() {
-		return false;
-	}
-	@Override
-	public activitydiagram.ControlFlow asControlFlow() {
-		return null;
-	}
-	@Override
 	public void sendOffer(org.eclipse.emf.common.util.EList<activitydiagram.Token> tokens) {
 		activitydiagram.Offer offer = activitydiagram.ActivitydiagramFactory.eINSTANCE.createOffer();
 		for (activitydiagram.Token token: tokens) {

@@ -6,34 +6,26 @@ open class Exp {
 	abstract def String print();
 }
 
-open class BinaryExp {
-	abstract def String print();
-}
-
-open class Lit {
-	abstract def String print();
-}
-
 open class Tru {
 	def String print() {
-		return "T";
+		return "T"
 	}
 }
 
 open class Fals {
 	def String print() {
-		return "F";
+		return "F"
 	}
 }
 
 open class And {
 	def String print() {
-		return "(" + $[self.getLhs()].print() + " ∧ " + $[self.getRhs()].print() + ")";
+		return alg.$(obj.lhs).print() + " && " + alg.$(obj.rhs).print() 
 	}
 }
 
 open class Or {
 	def String print() {
-		return "(" + $[self.getLhs()].print() + " ∨ " + $[self.getRhs()].print() + ")";
+		return alg.$(obj.lhs).print() + " || " + alg.$(obj.rhs).print()
 	}
 }

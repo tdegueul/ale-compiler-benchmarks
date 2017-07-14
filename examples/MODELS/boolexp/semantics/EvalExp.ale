@@ -3,37 +3,29 @@ behavior evalexp;
 import ecore "boolexp/model/BoolExp.ecore";
 
 open class Exp {
-	abstract def Boolean eval();
-}
-
-open class BinaryExp {
-	abstract def Boolean eval();
-}
-
-open class Lit {
-	abstract def Boolean eval();
+	abstract def boolean eval();
 }
 
 open class Tru {
-	def Boolean eval() {
-		return true;
+	def boolean eval() {
+		return true
 	}
 }
 
 open class Fals {
-	def Boolean eval() {
-		return false;
+	def boolean eval() {
+		return false
 	}
 }
 
 open class And {
-	def Boolean eval() {
-		return $[self.getLhs()].eval() and $[self.getRhs()].eval();
+	def boolean eval() {
+		return alg.$(obj.lhs).eval() && alg.$(obj.rhs).eval()
 	}
 }
 
 open class Or {
-	def Boolean eval() {
-		return $[self.getLhs()].eval() or $[self.getRhs()].eval();
+	def boolean eval() {
+		return alg.$(obj.lhs).eval() || alg.$(obj.rhs).eval()
 	}
 }

@@ -5,25 +5,23 @@ public interface TimedminifsmRevisitor<Minifsm__FinalStateT extends Minifsm__Sta
 	Timedminifsm__TimedTransitionT timedTransition(final timedminifsm.TimedTransition t);
 	Minifsm__TransitionT transition_timedTransition(final timedminifsm.TimedTransition t);
 
-	default Minifsm__FinalStateT $(final minifsm.FinalState self) {
-		return finalState(self);
+	default Minifsm__FinalStateT $(final minifsm.FinalState it) {
+		return finalState(it);
 	}
-	default Minifsm__MachineT $(final minifsm.Machine self) {
-		return machine(self);
+	default Minifsm__MachineT $(final minifsm.Machine it) {
+		return machine(it);
 	}
-	default Minifsm__StateT $(final minifsm.State self) {
-		if (self.eClass().getClassifierID() == minifsm.MinifsmPackage.FINAL_STATE
-			&& self.eClass().getEPackage() == minifsm.MinifsmPackage.eINSTANCE)
-			return finalState((minifsm.FinalState) self);
-		return state(self);
+	default Minifsm__StateT $(final minifsm.State it) {
+		if (it.getClass() == minifsm.impl.FinalStateImpl.class)
+			return finalState((minifsm.FinalState) it);
+		return state(it);
 	}
-	default Timedminifsm__TimedTransitionT $(final timedminifsm.TimedTransition self) {
-		return timedTransition(self);
+	default Timedminifsm__TimedTransitionT $(final timedminifsm.TimedTransition it) {
+		return timedTransition(it);
 	}
-	default Minifsm__TransitionT $(final minifsm.Transition self) {
-		if (self.eClass().getClassifierID() == timedminifsm.TimedminifsmPackage.TIMED_TRANSITION
-			&& self.eClass().getEPackage() == timedminifsm.TimedminifsmPackage.eINSTANCE)
-			return timedTransition((timedminifsm.TimedTransition) self);
-		return transition(self);
+	default Minifsm__TransitionT $(final minifsm.Transition it) {
+		if (it.getClass() == timedminifsm.impl.TimedTransitionImpl.class)
+			return timedTransition((timedminifsm.TimedTransition) it);
+		return transition(it);
 	}
 }

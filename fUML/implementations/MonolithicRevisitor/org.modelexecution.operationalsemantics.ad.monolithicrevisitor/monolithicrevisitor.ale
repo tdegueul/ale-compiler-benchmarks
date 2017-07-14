@@ -3,18 +3,10 @@ behavior monolithicactivitydiagram;
 import ecore "/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore";
  
 open class Expression {
-	def void execute() {}
+	abstract def void execute();
 }
 
 open class ActivityEdge {
-	def Boolean isControlFlow() {
-		return false;
-	}
-	
-	def ControlFlow asControlFlow() {
-		return null;
-	}
-	
 	def void sendOffer(Sequence(Token) tokens) {
 		Offer offer = new Offer();
 		for(Token token in tokens) {
@@ -314,8 +306,8 @@ open class DecisionNode extends ControlNode {
 	def void fire(Sequence(Token) tokens) {
 		ActivityEdge selectedEdge = null;
 		for(ActivityEdge edge in self.getOutgoing()) {
-			if($[edge].isControlFlow()) {
-				ControlFlow controlFlow = $[edge].asControlFlow();
+			if(edge instanceof activitydiagram.ControlFlow) {
+				ControlFlow controlFlow = edge as activitydiagram.ControlFlow;
 				Value guardValue = controlFlow.getGuard().getCurrentValue();
 				if($[guardValue].isBooleanValue()) {
 					BooleanValue booleanValue = $[guardValue].asBooleanValue();
