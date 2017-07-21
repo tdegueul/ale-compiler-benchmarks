@@ -7,14 +7,16 @@ import evalexp.revisitor.operations.ExpOperation;
 import evalexp.revisitor.operations.FalsOperation;
 import evalexp.revisitor.operations.OrOperation;
 import evalexp.revisitor.operations.TruOperation;
+import evalexp.revisitor.operations.impl.ExpOperationImpl;
 
 @SuppressWarnings("all")
-public class AndOperationImpl implements AndOperation {
+public class AndOperationImpl extends ExpOperationImpl implements AndOperation {
   private And obj;
   
   private BoolexpRevisitor<AndOperation, ExpOperation, ExpOperation, FalsOperation, ExpOperation, OrOperation, TruOperation> alg;
   
   public AndOperationImpl(final And obj, final BoolexpRevisitor<AndOperation, ExpOperation, ExpOperation, FalsOperation, ExpOperation, OrOperation, TruOperation> alg) {
+    super(obj, alg);
     this.obj = obj;
     this.alg = alg;
   }

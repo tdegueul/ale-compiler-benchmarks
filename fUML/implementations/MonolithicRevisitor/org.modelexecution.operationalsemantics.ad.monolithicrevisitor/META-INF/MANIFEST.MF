@@ -7,8 +7,8 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: monolithicactivitydiagram.revisitor,
- monolithicactivitydiagram.revisitor.operations,
- monolithicactivitydiagram.revisitor.operations.impl
-Require-Bundle: org.modelexecution.operationalsemantics.ad;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy
+Export-Package: execad.revisitor,
+ execad.revisitor.operations,
+ execad.revisitor.operations.impl
+Require-Bundle: org.modelexecution.operationalsemantics.ad.clean;bundle-version="1.0.0"

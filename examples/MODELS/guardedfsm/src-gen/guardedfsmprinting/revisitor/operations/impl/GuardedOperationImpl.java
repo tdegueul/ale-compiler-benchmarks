@@ -4,6 +4,7 @@ import fsmprinting.revisitor.operations.FinalStateOperation;
 import fsmprinting.revisitor.operations.MachineOperation;
 import fsmprinting.revisitor.operations.StateOperation;
 import fsmprinting.revisitor.operations.TransitionOperation;
+import fsmprinting.revisitor.operations.impl.TransitionOperationImpl;
 import guardedfsm.Guarded;
 import guardedfsm.revisitor.GuardedfsmRevisitor;
 import guardedfsmprinting.revisitor.operations.GuardedOperation;
@@ -14,12 +15,13 @@ import printexp.revisitor.operations.OrOperation;
 import printexp.revisitor.operations.TruOperation;
 
 @SuppressWarnings("all")
-public class GuardedOperationImpl implements GuardedOperation {
+public class GuardedOperationImpl extends TransitionOperationImpl implements GuardedOperation {
   private Guarded obj;
   
   private GuardedfsmRevisitor<AndOperation, ExpOperation, ExpOperation, FalsOperation, FinalStateOperation, GuardedOperation, ExpOperation, MachineOperation, OrOperation, StateOperation, TransitionOperation, TruOperation> alg;
   
   public GuardedOperationImpl(final Guarded obj, final GuardedfsmRevisitor<AndOperation, ExpOperation, ExpOperation, FalsOperation, FinalStateOperation, GuardedOperation, ExpOperation, MachineOperation, OrOperation, StateOperation, TransitionOperation, TruOperation> alg) {
+    super(obj, alg);
     this.obj = obj;
     this.alg = alg;
   }

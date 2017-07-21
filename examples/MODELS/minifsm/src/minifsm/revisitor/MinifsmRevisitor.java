@@ -1,11 +1,10 @@
 package minifsm.revisitor;
 
 public interface MinifsmRevisitor<Minifsm__FinalStateT extends Minifsm__StateT, Minifsm__MachineT, Minifsm__StateT, Minifsm__TransitionT> {
-	Minifsm__FinalStateT finalState(final minifsm.FinalState f);
-	Minifsm__StateT state_finalState(final minifsm.FinalState f);
-	Minifsm__MachineT machine(final minifsm.Machine m);
-	Minifsm__StateT state(final minifsm.State s);
-	Minifsm__TransitionT transition(final minifsm.Transition t);
+	Minifsm__FinalStateT finalState(final minifsm.FinalState it);
+	Minifsm__MachineT machine(final minifsm.Machine it);
+	Minifsm__StateT state(final minifsm.State it);
+	Minifsm__TransitionT transition(final minifsm.Transition it);
 
 	default Minifsm__FinalStateT $(final minifsm.FinalState it) {
 		return finalState(it);

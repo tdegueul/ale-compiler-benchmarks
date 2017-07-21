@@ -3,8 +3,7 @@ package guardedfsm.revisitor;
 public interface GuardedfsmRevisitor<Boolexp__AndT extends Boolexp__BinaryExpT, Boolexp__BinaryExpT extends Boolexp__ExpT, Boolexp__ExpT, Boolexp__FalsT extends Boolexp__LitT, Minifsm__FinalStateT extends Minifsm__StateT, Guardedfsm__GuardedT extends Minifsm__TransitionT, Boolexp__LitT extends Boolexp__ExpT, Minifsm__MachineT, Boolexp__OrT extends Boolexp__BinaryExpT, Minifsm__StateT, Minifsm__TransitionT, Boolexp__TruT extends Boolexp__LitT>
 	extends boolexp.revisitor.BoolexpRevisitor<Boolexp__AndT, Boolexp__BinaryExpT, Boolexp__ExpT, Boolexp__FalsT, Boolexp__LitT, Boolexp__OrT, Boolexp__TruT>,
 		minifsm.revisitor.MinifsmRevisitor<Minifsm__FinalStateT, Minifsm__MachineT, Minifsm__StateT, Minifsm__TransitionT> {
-	Guardedfsm__GuardedT guarded(final guardedfsm.Guarded g);
-	Minifsm__TransitionT transition_guarded(final guardedfsm.Guarded g);
+	Guardedfsm__GuardedT guarded(final guardedfsm.Guarded it);
 
 	default Boolexp__AndT $(final boolexp.And it) {
 		return and(it);

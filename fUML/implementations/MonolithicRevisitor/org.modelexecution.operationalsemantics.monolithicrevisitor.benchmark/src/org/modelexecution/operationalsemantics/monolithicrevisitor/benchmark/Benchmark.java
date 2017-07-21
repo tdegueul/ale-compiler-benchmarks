@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import activitydiagram.Activity;
 import activitydiagram.ActivitydiagramFactory;
 import activitydiagram.ActivitydiagramPackage;
-import monolithicactivitydiagram.revisitor.MonolithicactivitydiagramRevisitor;
-import monolithicactivitydiagram.revisitor.operations.ActivityOperation;
+import execad.revisitor.ExecadRevisitor;
+import execad.revisitor.operations.ActivityOperation;
 
 public class Benchmark {
 
@@ -66,7 +66,7 @@ public class Benchmark {
 	
 	
 	private long doTheJob(final Activity activity) {
-		ActivityOperation $ = new MonolithicactivitydiagramRevisitor() {
+		ActivityOperation $ = new ExecadRevisitor() {
 		}.$(activity);
 		final long start = System.currentTimeMillis();
 		$.main(null);

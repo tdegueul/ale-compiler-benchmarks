@@ -13,27 +13,22 @@ import minifsm.revisitor.MinifsmRevisitor;
 @SuppressWarnings("all")
 public interface FsmprintingRevisitor extends MinifsmRevisitor<FinalStateOperation, MachineOperation, StateOperation, TransitionOperation> {
   @Override
-  public default FinalStateOperation finalState(final FinalState f) {
-    return new fsmprinting.revisitor.operations.impl.FinalStateOperationImpl(f, this);
+  public default FinalStateOperation finalState(final FinalState it) {
+    return new fsmprinting.revisitor.operations.impl.FinalStateOperationImpl(it, this);
   }
   
   @Override
-  public default FinalStateOperation state_finalState(final FinalState f) {
-    return new fsmprinting.revisitor.operations.impl.FinalStateOperationImpl(f, this); 
+  public default MachineOperation machine(final Machine it) {
+    return new fsmprinting.revisitor.operations.impl.MachineOperationImpl(it, this);
   }
   
   @Override
-  public default MachineOperation machine(final Machine m) {
-    return new fsmprinting.revisitor.operations.impl.MachineOperationImpl(m, this);
+  public default StateOperation state(final State it) {
+    return new fsmprinting.revisitor.operations.impl.StateOperationImpl(it, this);
   }
   
   @Override
-  public default StateOperation state(final State s) {
-    return new fsmprinting.revisitor.operations.impl.StateOperationImpl(s, this);
-  }
-  
-  @Override
-  public default TransitionOperation transition(final Transition t) {
-    return new fsmprinting.revisitor.operations.impl.TransitionOperationImpl(t, this);
+  public default TransitionOperation transition(final Transition it) {
+    return new fsmprinting.revisitor.operations.impl.TransitionOperationImpl(it, this);
   }
 }

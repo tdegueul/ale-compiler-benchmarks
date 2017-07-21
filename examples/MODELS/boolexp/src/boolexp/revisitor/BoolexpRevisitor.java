@@ -1,18 +1,10 @@
 package boolexp.revisitor;
 
 public interface BoolexpRevisitor<Boolexp__AndT extends Boolexp__BinaryExpT, Boolexp__BinaryExpT extends Boolexp__ExpT, Boolexp__ExpT, Boolexp__FalsT extends Boolexp__LitT, Boolexp__LitT extends Boolexp__ExpT, Boolexp__OrT extends Boolexp__BinaryExpT, Boolexp__TruT extends Boolexp__LitT> {
-	Boolexp__AndT and(final boolexp.And a);
-	Boolexp__ExpT exp_and(final boolexp.And a);
-	Boolexp__BinaryExpT binaryExp_and(final boolexp.And a);
-	Boolexp__FalsT fals(final boolexp.Fals f);
-	Boolexp__ExpT exp_fals(final boolexp.Fals f);
-	Boolexp__LitT lit_fals(final boolexp.Fals f);
-	Boolexp__OrT or(final boolexp.Or o);
-	Boolexp__ExpT exp_or(final boolexp.Or o);
-	Boolexp__BinaryExpT binaryExp_or(final boolexp.Or o);
-	Boolexp__TruT tru(final boolexp.Tru t);
-	Boolexp__ExpT exp_tru(final boolexp.Tru t);
-	Boolexp__LitT lit_tru(final boolexp.Tru t);
+	Boolexp__AndT and(final boolexp.And it);
+	Boolexp__FalsT fals(final boolexp.Fals it);
+	Boolexp__OrT or(final boolexp.Or it);
+	Boolexp__TruT tru(final boolexp.Tru it);
 
 	default Boolexp__AndT $(final boolexp.And it) {
 		return and(it);

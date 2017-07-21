@@ -14,62 +14,22 @@ import evalexp.revisitor.operations.TruOperation;
 @SuppressWarnings("all")
 public interface EvalexpRevisitor extends BoolexpRevisitor<AndOperation, ExpOperation, ExpOperation, FalsOperation, ExpOperation, OrOperation, TruOperation> {
   @Override
-  public default AndOperation and(final And a) {
-    return new evalexp.revisitor.operations.impl.AndOperationImpl(a, this);
+  public default AndOperation and(final And it) {
+    return new evalexp.revisitor.operations.impl.AndOperationImpl(it, this);
   }
   
   @Override
-  public default AndOperation exp_and(final And a) {
-    return new evalexp.revisitor.operations.impl.AndOperationImpl(a, this); 
+  public default FalsOperation fals(final Fals it) {
+    return new evalexp.revisitor.operations.impl.FalsOperationImpl(it, this);
   }
   
   @Override
-  public default AndOperation binaryExp_and(final And a) {
-    return new evalexp.revisitor.operations.impl.AndOperationImpl(a, this); 
+  public default OrOperation or(final Or it) {
+    return new evalexp.revisitor.operations.impl.OrOperationImpl(it, this);
   }
   
   @Override
-  public default FalsOperation fals(final Fals f) {
-    return new evalexp.revisitor.operations.impl.FalsOperationImpl(f, this);
-  }
-  
-  @Override
-  public default FalsOperation exp_fals(final Fals f) {
-    return new evalexp.revisitor.operations.impl.FalsOperationImpl(f, this); 
-  }
-  
-  @Override
-  public default FalsOperation lit_fals(final Fals f) {
-    return new evalexp.revisitor.operations.impl.FalsOperationImpl(f, this); 
-  }
-  
-  @Override
-  public default OrOperation or(final Or o) {
-    return new evalexp.revisitor.operations.impl.OrOperationImpl(o, this);
-  }
-  
-  @Override
-  public default OrOperation exp_or(final Or o) {
-    return new evalexp.revisitor.operations.impl.OrOperationImpl(o, this); 
-  }
-  
-  @Override
-  public default OrOperation binaryExp_or(final Or o) {
-    return new evalexp.revisitor.operations.impl.OrOperationImpl(o, this); 
-  }
-  
-  @Override
-  public default TruOperation tru(final Tru t) {
-    return new evalexp.revisitor.operations.impl.TruOperationImpl(t, this);
-  }
-  
-  @Override
-  public default TruOperation exp_tru(final Tru t) {
-    return new evalexp.revisitor.operations.impl.TruOperationImpl(t, this); 
-  }
-  
-  @Override
-  public default TruOperation lit_tru(final Tru t) {
-    return new evalexp.revisitor.operations.impl.TruOperationImpl(t, this); 
+  public default TruOperation tru(final Tru it) {
+    return new evalexp.revisitor.operations.impl.TruOperationImpl(it, this);
   }
 }

@@ -4,17 +4,19 @@ import fsmprinting.revisitor.operations.FinalStateOperation;
 import fsmprinting.revisitor.operations.MachineOperation;
 import fsmprinting.revisitor.operations.StateOperation;
 import fsmprinting.revisitor.operations.TransitionOperation;
+import fsmprinting.revisitor.operations.impl.TransitionOperationImpl;
 import tfsmprinting.revisitor.operations.TimedTransitionOperation;
 import timedminifsm.TimedTransition;
 import timedminifsm.revisitor.TimedminifsmRevisitor;
 
 @SuppressWarnings("all")
-public class TimedTransitionOperationImpl implements TimedTransitionOperation {
+public class TimedTransitionOperationImpl extends TransitionOperationImpl implements TimedTransitionOperation {
   private TimedTransition obj;
   
   private TimedminifsmRevisitor<FinalStateOperation, MachineOperation, StateOperation, TimedTransitionOperation, TransitionOperation> alg;
   
   public TimedTransitionOperationImpl(final TimedTransition obj, final TimedminifsmRevisitor<FinalStateOperation, MachineOperation, StateOperation, TimedTransitionOperation, TransitionOperation> alg) {
+    super(obj, alg);
     this.obj = obj;
     this.alg = alg;
   }
