@@ -12,9 +12,11 @@ import execad.revisitor.operations.BooleanBinaryExpressionOperation;
 import execad.revisitor.operations.BooleanExpressionOperation;
 import execad.revisitor.operations.BooleanUnaryExpressionOperation;
 import execad.revisitor.operations.BooleanVariableOperation;
+import execad.revisitor.operations.ControlNodeOperation;
 import execad.revisitor.operations.DecisionNodeOperation;
 import execad.revisitor.operations.ExpressionOperation;
 import execad.revisitor.operations.ForkNodeOperation;
+import execad.revisitor.operations.ForkedTokenOperation;
 import execad.revisitor.operations.InitialNodeOperation;
 import execad.revisitor.operations.IntegerCalculationExpressionOperation;
 import execad.revisitor.operations.IntegerComparisonExpressionOperation;
@@ -32,9 +34,9 @@ import execad.revisitor.operations.impl.BooleanExpressionOperationImpl;
 public class BooleanUnaryExpressionOperationImpl extends BooleanExpressionOperationImpl implements BooleanUnaryExpressionOperation {
   private BooleanUnaryExpression obj;
   
-  private ActivitydiagramRevisitor<ActionOperation, ActivityOperation, ActivityEdgeOperation, ActivityFinalNodeOperation, ActivityNodeOperation, BooleanBinaryExpressionOperation, BooleanExpressionOperation, BooleanUnaryExpressionOperation, Object, BooleanVariableOperation, ActivityEdgeOperation, ActivityNodeOperation, TokenOperation, DecisionNodeOperation, ActivityNodeOperation, ExpressionOperation, ActivityNodeOperation, ForkNodeOperation, TokenOperation, InitialNodeOperation, Object, Object, IntegerCalculationExpressionOperation, IntegerComparisonExpressionOperation, IntegerExpressionOperation, Object, IntegerVariableOperation, JoinNodeOperation, MergeNodeOperation, Object, OfferOperation, OpaqueActionOperation, TokenOperation, Object, Object, VariableOperation> alg;
+  private ActivitydiagramRevisitor<ActionOperation, ActivityOperation, ActivityEdgeOperation, ActivityFinalNodeOperation, ActivityNodeOperation, BooleanBinaryExpressionOperation, BooleanExpressionOperation, BooleanUnaryExpressionOperation, Object, BooleanVariableOperation, ActivityEdgeOperation, ControlNodeOperation, TokenOperation, DecisionNodeOperation, ActivityNodeOperation, ExpressionOperation, ControlNodeOperation, ForkNodeOperation, ForkedTokenOperation, InitialNodeOperation, Object, Object, IntegerCalculationExpressionOperation, IntegerComparisonExpressionOperation, IntegerExpressionOperation, Object, IntegerVariableOperation, JoinNodeOperation, MergeNodeOperation, Object, OfferOperation, OpaqueActionOperation, TokenOperation, Object, Object, VariableOperation> alg;
   
-  public BooleanUnaryExpressionOperationImpl(final BooleanUnaryExpression obj, final ActivitydiagramRevisitor<ActionOperation, ActivityOperation, ActivityEdgeOperation, ActivityFinalNodeOperation, ActivityNodeOperation, BooleanBinaryExpressionOperation, BooleanExpressionOperation, BooleanUnaryExpressionOperation, Object, BooleanVariableOperation, ActivityEdgeOperation, ActivityNodeOperation, TokenOperation, DecisionNodeOperation, ActivityNodeOperation, ExpressionOperation, ActivityNodeOperation, ForkNodeOperation, TokenOperation, InitialNodeOperation, Object, Object, IntegerCalculationExpressionOperation, IntegerComparisonExpressionOperation, IntegerExpressionOperation, Object, IntegerVariableOperation, JoinNodeOperation, MergeNodeOperation, Object, OfferOperation, OpaqueActionOperation, TokenOperation, Object, Object, VariableOperation> alg) {
+  public BooleanUnaryExpressionOperationImpl(final BooleanUnaryExpression obj, final ActivitydiagramRevisitor<ActionOperation, ActivityOperation, ActivityEdgeOperation, ActivityFinalNodeOperation, ActivityNodeOperation, BooleanBinaryExpressionOperation, BooleanExpressionOperation, BooleanUnaryExpressionOperation, Object, BooleanVariableOperation, ActivityEdgeOperation, ControlNodeOperation, TokenOperation, DecisionNodeOperation, ActivityNodeOperation, ExpressionOperation, ControlNodeOperation, ForkNodeOperation, ForkedTokenOperation, InitialNodeOperation, Object, Object, IntegerCalculationExpressionOperation, IntegerComparisonExpressionOperation, IntegerExpressionOperation, Object, IntegerVariableOperation, JoinNodeOperation, MergeNodeOperation, Object, OfferOperation, OpaqueActionOperation, TokenOperation, Object, Object, VariableOperation> alg) {
     super(obj, alg);
     this.obj = obj;
     this.alg = alg;
@@ -42,12 +44,12 @@ public class BooleanUnaryExpressionOperationImpl extends BooleanExpressionOperat
   
   @Override
   public void execute() {
-    final boolean opValue = this.getCurrentValue(this.obj.getOperand());
+    final boolean opValue = this.alg.$(this.obj).getCurrentValue(this.obj.getOperand());
     BooleanUnaryOperator _operator = this.obj.getOperator();
     if (_operator != null) {
       switch (_operator) {
         case NOT:
-          this.assignValue((!opValue));
+          this.alg.$(this.obj).assignValue((!opValue));
           break;
         default:
           break;

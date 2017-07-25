@@ -33,9 +33,11 @@ import execad.revisitor.operations.BooleanBinaryExpressionOperation;
 import execad.revisitor.operations.BooleanExpressionOperation;
 import execad.revisitor.operations.BooleanUnaryExpressionOperation;
 import execad.revisitor.operations.BooleanVariableOperation;
+import execad.revisitor.operations.ControlNodeOperation;
 import execad.revisitor.operations.DecisionNodeOperation;
 import execad.revisitor.operations.ExpressionOperation;
 import execad.revisitor.operations.ForkNodeOperation;
+import execad.revisitor.operations.ForkedTokenOperation;
 import execad.revisitor.operations.InitialNodeOperation;
 import execad.revisitor.operations.IntegerCalculationExpressionOperation;
 import execad.revisitor.operations.IntegerComparisonExpressionOperation;
@@ -49,7 +51,7 @@ import execad.revisitor.operations.TokenOperation;
 import execad.revisitor.operations.VariableOperation;
 
 @SuppressWarnings("all")
-public interface ExecadRevisitor extends ActivitydiagramRevisitor<ActionOperation, ActivityOperation, ActivityEdgeOperation, ActivityFinalNodeOperation, ActivityNodeOperation, BooleanBinaryExpressionOperation, BooleanExpressionOperation, BooleanUnaryExpressionOperation, Object, BooleanVariableOperation, ActivityEdgeOperation, ActivityNodeOperation, TokenOperation, DecisionNodeOperation, ActivityNodeOperation, ExpressionOperation, ActivityNodeOperation, ForkNodeOperation, TokenOperation, InitialNodeOperation, Object, Object, IntegerCalculationExpressionOperation, IntegerComparisonExpressionOperation, IntegerExpressionOperation, Object, IntegerVariableOperation, JoinNodeOperation, MergeNodeOperation, Object, OfferOperation, OpaqueActionOperation, TokenOperation, Object, Object, VariableOperation> {
+public interface ExecadRevisitor extends ActivitydiagramRevisitor<ActionOperation, ActivityOperation, ActivityEdgeOperation, ActivityFinalNodeOperation, ActivityNodeOperation, BooleanBinaryExpressionOperation, BooleanExpressionOperation, BooleanUnaryExpressionOperation, Object, BooleanVariableOperation, ActivityEdgeOperation, ControlNodeOperation, TokenOperation, DecisionNodeOperation, ActivityNodeOperation, ExpressionOperation, ControlNodeOperation, ForkNodeOperation, ForkedTokenOperation, InitialNodeOperation, Object, Object, IntegerCalculationExpressionOperation, IntegerComparisonExpressionOperation, IntegerExpressionOperation, Object, IntegerVariableOperation, JoinNodeOperation, MergeNodeOperation, Object, OfferOperation, OpaqueActionOperation, TokenOperation, Object, Object, VariableOperation> {
   @Override
   public default ActivityOperation activity(final Activity it) {
     return new execad.revisitor.operations.impl.ActivityOperationImpl(it, this);
@@ -101,8 +103,8 @@ public interface ExecadRevisitor extends ActivitydiagramRevisitor<ActionOperatio
   }
   
   @Override
-  public default TokenOperation forkedToken(final ForkedToken it) {
-    return new execad.revisitor.operations.impl.TokenOperationImpl(it, this);
+  public default ForkedTokenOperation forkedToken(final ForkedToken it) {
+    return new execad.revisitor.operations.impl.ForkedTokenOperationImpl(it, this);
   }
   
   @Override

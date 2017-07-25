@@ -2,7 +2,6 @@ behavior execad;
 
 import java.util.List
 import activitydiagram.ActivityNode
-import activitydiagram.ActivityEdge
 import activitydiagram.Token
 import activitydiagram.InputValue
 import activitydiagram.InitialNode
@@ -17,8 +16,8 @@ import ecore "org.modelexecution.operationalsemantics.ad.clean/model/activitydia
 
 open class Activity {
 	def void main(List<InputValue> inputValues) {
-		initialize(inputValues)
-		run()
+		alg.$(obj).initialize(inputValues)
+		alg.$(obj).run()
 	}
 
 	def void initialize(List<InputValue> inputValues) {
@@ -34,12 +33,12 @@ open class Activity {
 		// Run all nodes
 		obj.nodes.forEach[n | alg.$(n).run()]
 
-		fireInitialNode()
+		alg.$(obj).fireInitialNode()
 		
-		var enabled = getEnabledNodes()
+		var enabled = alg.$(obj).getEnabledNodes()
 		while (!enabled.empty) {
-			fireNode(enabled.head)
-			enabled = getEnabledNodes()
+			alg.$(obj).fireNode(enabled.head)
+			enabled = alg.$(obj).getEnabledNodes()
 		}
 	}
 
@@ -53,7 +52,7 @@ open class Activity {
 	}
 
 	def void fireInitialNode() {
-		fireNode(getInitialNode())
+		alg.$(obj).fireNode(alg.$(obj).getInitialNode())
 	}
 
 	def InitialNode getInitialNode() {
@@ -91,7 +90,7 @@ open class ActivityNode {
 	def void addTokens(List<Token> tokens) {
 		tokens.forEach[t |
 			val transferred = alg.$(t).transfer(obj)
-			obj.heldTokens.add(transferred)
+			obj.heldTokens += transferred
 		]
 	}
 
@@ -113,19 +112,23 @@ open class ActivityNode {
 open class Action {
 	abstract def void doAction();
 
+	def boolean isReady() {
+		return super.isReady() && alg.$(obj).hasOffers()
+	}
+
 	def void sendOffers() {
 		if (obj.outgoing.size > 0) {
 			val tokens = <Token>newArrayList(
 				ActivitydiagramFactory::eINSTANCE.createControlToken
 			)
-			addTokens(tokens)
+			alg.$(obj).addTokens(tokens)
 			alg.$(obj.outgoing.head).sendOffer(tokens)
 		}
 	}
 
 	def void fire(List<Token> tokens) {
-		doAction()
-		sendOffers()
+		alg.$(obj).doAction()
+		alg.$(obj).sendOffers()
 	}
 }
 
@@ -169,13 +172,13 @@ open class DecisionNode {
 			.head
 		
 		if (selected !== null) {
-			addTokens(tokens)
+			alg.$(obj).addTokens(tokens)
 			alg.$(selected).sendOffer(tokens)
 		}
 	}
 
 	def boolean isReady() {
-		return obj.incoming.forall[ActivityEdge e | alg.$(e).hasOffer()]
+		return obj.incoming.forall[e | alg.$(e).hasOffer()]
 	}
 }
 
@@ -188,8 +191,19 @@ open class ForkNode {
 				remainingOffersCount = obj.outgoing.size
 			]
 		]
-		addTokens(forkedTokens)
-		sendOffers(forkedTokens)
+		alg.$(obj).addTokens(forkedTokens)
+		alg.$(obj).sendOffers(forkedTokens)
+	}
+}
+
+open class ControlNode {
+	def void fire(List<Token> tokens) {
+		alg.$(obj).addTokens(tokens)
+		alg.$(obj).sendOffers(tokens)
+	}
+
+	def boolean isReady() {
+		return super.isReady() && alg.$(obj).hasOffers()
 	}
 }
 
@@ -198,8 +212,8 @@ open class InitialNode {
 		val producedTokens = <Token>newArrayList(
 			ActivitydiagramFactory::eINSTANCE.createControlToken
 		)
-		addTokens(producedTokens)
-		sendOffers(producedTokens)
+		alg.$(obj).addTokens(producedTokens)
+		alg.$(obj).sendOffers(producedTokens)
 	}
 
 	def boolean isReady() {
@@ -211,27 +225,17 @@ open class JoinNode {
 	def boolean isReady() {
 		return obj.incoming.forall[e | alg.$(e).hasOffer()]
 	}
-	
-	def void fire(List<Token> tokens) {
-		val producedTokens = <Token>newArrayList(
-			ActivitydiagramFactory::eINSTANCE.createControlToken
-		)
-		addTokens(producedTokens)
-		sendOffers(producedTokens)
-	}
 }
 
 open class MergeNode {
-	def void fire(List<Token> tokens) {}
-	
 	def boolean hasOffers() {
-		return obj.incoming.forall[e | alg.$(e).hasOffer()]
+		return obj.incoming.exists[e | alg.$(e).hasOffer()]
 	}
 }
 
 open class Offer {
 	def boolean hasTokens() {
-		removeWithdrawnTokens()
+		alg.$(obj).removeWithdrawnTokens()
 		return !obj.offeredTokens.empty
 	}
 
@@ -254,10 +258,20 @@ open class Token {
 
 	def Token transfer(ActivityNode holder) {
 		if (obj.holder !== null)
-			withdraw()
-		else
-			obj.holder = holder
+			alg.$(obj).withdraw()
+		obj.holder = holder
 		return obj
+	}
+}
+
+open class ForkedToken {
+	def void withdraw() {
+		if (!alg.$(obj.baseToken).isWithdrawn())
+			alg.$(obj.baseToken).withdraw();
+		if (obj.remainingOffersCount > 0)
+			obj.remainingOffersCount = obj.remainingOffersCount - 1
+		if (obj.remainingOffersCount == 0)
+			super.withdraw()
 	}
 }
 
@@ -294,31 +308,31 @@ open class IntegerExpression {
 
 open class BooleanUnaryExpression {
 	def void execute() {
-		val opValue = getCurrentValue(obj.operand)
+		val opValue = alg.$(obj).getCurrentValue(obj.operand)
 
 		switch (obj.operator) {
-			case NOT: assignValue(!opValue)
+			case NOT: alg.$(obj).assignValue(!opValue)
 		}
 	}
 }
 
 open class BooleanBinaryExpression {
 	def void execute() {
-		val opVal1 = getCurrentValue(obj.operand1)
-		val opVal2 = getCurrentValue(obj.operand2)
+		val opVal1 = alg.$(obj).getCurrentValue(obj.operand1)
+		val opVal2 = alg.$(obj).getCurrentValue(obj.operand2)
 		val result =
 			switch (obj.operator) {
 				case AND: opVal1 && opVal2
 				case OR:  opVal1 || opVal2
 			}
-		assignValue(result)
+		alg.$(obj).assignValue(result)
 	}
 }
 
 open class IntegerComparisonExpression {
 	def void execute() {
-		val opVal1 = getCurrentValue(obj.operand1)
-		val opVal2 = getCurrentValue(obj.operand2)
+		val opVal1 = alg.$(obj).getCurrentValue(obj.operand1)
+		val opVal2 = alg.$(obj).getCurrentValue(obj.operand2)
 		val result =
 			switch (obj.operator) {
 				case EQUALS:          opVal1 == opVal2
@@ -337,8 +351,8 @@ open class IntegerComparisonExpression {
 
 open class IntegerCalculationExpression {
 	def void execute() {
-		val opVal1 = getCurrentValue(obj.operand1)
-		val opVal2 = getCurrentValue(obj.operand2)
+		val opVal1 = alg.$(obj).getCurrentValue(obj.operand1)
+		val opVal2 = alg.$(obj).getCurrentValue(obj.operand2)
 		val result =
 			switch (obj.operator) {
 				case ADD:     opVal1 + opVal2

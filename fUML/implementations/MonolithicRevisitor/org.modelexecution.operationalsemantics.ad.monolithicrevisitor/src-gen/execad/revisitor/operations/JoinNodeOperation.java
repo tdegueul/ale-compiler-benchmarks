@@ -1,12 +1,9 @@
 package execad.revisitor.operations;
 
-import activitydiagram.Token;
 import execad.revisitor.operations.ActivityNodeOperation;
-import java.util.List;
+import execad.revisitor.operations.ControlNodeOperation;
 
 @SuppressWarnings("all")
-public interface JoinNodeOperation extends ActivityNodeOperation {
+public interface JoinNodeOperation extends ControlNodeOperation, ActivityNodeOperation {
   public abstract boolean isReady();
-  
-  public abstract void fire(final List<Token> tokens);
 }

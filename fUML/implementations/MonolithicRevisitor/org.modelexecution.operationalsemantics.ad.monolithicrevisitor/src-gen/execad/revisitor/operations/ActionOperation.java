@@ -8,6 +8,8 @@ import java.util.List;
 public interface ActionOperation extends ActivityNodeOperation {
   public abstract void doAction();
   
+  public abstract boolean isReady();
+  
   public abstract void sendOffers();
   
   public abstract void fire(final List<Token> tokens);

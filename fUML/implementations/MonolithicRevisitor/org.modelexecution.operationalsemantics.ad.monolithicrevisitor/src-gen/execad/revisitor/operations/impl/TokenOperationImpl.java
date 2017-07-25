@@ -12,9 +12,11 @@ import execad.revisitor.operations.BooleanBinaryExpressionOperation;
 import execad.revisitor.operations.BooleanExpressionOperation;
 import execad.revisitor.operations.BooleanUnaryExpressionOperation;
 import execad.revisitor.operations.BooleanVariableOperation;
+import execad.revisitor.operations.ControlNodeOperation;
 import execad.revisitor.operations.DecisionNodeOperation;
 import execad.revisitor.operations.ExpressionOperation;
 import execad.revisitor.operations.ForkNodeOperation;
+import execad.revisitor.operations.ForkedTokenOperation;
 import execad.revisitor.operations.InitialNodeOperation;
 import execad.revisitor.operations.IntegerCalculationExpressionOperation;
 import execad.revisitor.operations.IntegerComparisonExpressionOperation;
@@ -31,9 +33,9 @@ import execad.revisitor.operations.VariableOperation;
 public class TokenOperationImpl implements TokenOperation {
   private Token obj;
   
-  private ActivitydiagramRevisitor<ActionOperation, ActivityOperation, ActivityEdgeOperation, ActivityFinalNodeOperation, ActivityNodeOperation, BooleanBinaryExpressionOperation, BooleanExpressionOperation, BooleanUnaryExpressionOperation, Object, BooleanVariableOperation, ActivityEdgeOperation, ActivityNodeOperation, TokenOperation, DecisionNodeOperation, ActivityNodeOperation, ExpressionOperation, ActivityNodeOperation, ForkNodeOperation, TokenOperation, InitialNodeOperation, Object, Object, IntegerCalculationExpressionOperation, IntegerComparisonExpressionOperation, IntegerExpressionOperation, Object, IntegerVariableOperation, JoinNodeOperation, MergeNodeOperation, Object, OfferOperation, OpaqueActionOperation, TokenOperation, Object, Object, VariableOperation> alg;
+  private ActivitydiagramRevisitor<ActionOperation, ActivityOperation, ActivityEdgeOperation, ActivityFinalNodeOperation, ActivityNodeOperation, BooleanBinaryExpressionOperation, BooleanExpressionOperation, BooleanUnaryExpressionOperation, Object, BooleanVariableOperation, ActivityEdgeOperation, ControlNodeOperation, TokenOperation, DecisionNodeOperation, ActivityNodeOperation, ExpressionOperation, ControlNodeOperation, ForkNodeOperation, ForkedTokenOperation, InitialNodeOperation, Object, Object, IntegerCalculationExpressionOperation, IntegerComparisonExpressionOperation, IntegerExpressionOperation, Object, IntegerVariableOperation, JoinNodeOperation, MergeNodeOperation, Object, OfferOperation, OpaqueActionOperation, TokenOperation, Object, Object, VariableOperation> alg;
   
-  public TokenOperationImpl(final Token obj, final ActivitydiagramRevisitor<ActionOperation, ActivityOperation, ActivityEdgeOperation, ActivityFinalNodeOperation, ActivityNodeOperation, BooleanBinaryExpressionOperation, BooleanExpressionOperation, BooleanUnaryExpressionOperation, Object, BooleanVariableOperation, ActivityEdgeOperation, ActivityNodeOperation, TokenOperation, DecisionNodeOperation, ActivityNodeOperation, ExpressionOperation, ActivityNodeOperation, ForkNodeOperation, TokenOperation, InitialNodeOperation, Object, Object, IntegerCalculationExpressionOperation, IntegerComparisonExpressionOperation, IntegerExpressionOperation, Object, IntegerVariableOperation, JoinNodeOperation, MergeNodeOperation, Object, OfferOperation, OpaqueActionOperation, TokenOperation, Object, Object, VariableOperation> alg) {
+  public TokenOperationImpl(final Token obj, final ActivitydiagramRevisitor<ActionOperation, ActivityOperation, ActivityEdgeOperation, ActivityFinalNodeOperation, ActivityNodeOperation, BooleanBinaryExpressionOperation, BooleanExpressionOperation, BooleanUnaryExpressionOperation, Object, BooleanVariableOperation, ActivityEdgeOperation, ControlNodeOperation, TokenOperation, DecisionNodeOperation, ActivityNodeOperation, ExpressionOperation, ControlNodeOperation, ForkNodeOperation, ForkedTokenOperation, InitialNodeOperation, Object, Object, IntegerCalculationExpressionOperation, IntegerComparisonExpressionOperation, IntegerExpressionOperation, Object, IntegerVariableOperation, JoinNodeOperation, MergeNodeOperation, Object, OfferOperation, OpaqueActionOperation, TokenOperation, Object, Object, VariableOperation> alg) {
     this.obj = obj;
     this.alg = alg;
   }
@@ -59,10 +61,9 @@ public class TokenOperationImpl implements TokenOperation {
     ActivityNode _holder = this.obj.getHolder();
     boolean _tripleNotEquals = (_holder != null);
     if (_tripleNotEquals) {
-      this.withdraw();
-    } else {
-      this.obj.setHolder(holder);
+      this.alg.$(this.obj).withdraw();
     }
+    this.obj.setHolder(holder);
     return this.obj;
   }
 }
