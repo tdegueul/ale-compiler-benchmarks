@@ -1,4 +1,4 @@
-behavior execad;
+behavior execad
 
 import java.util.List
 import activitydiagram.ActivityNode
@@ -12,7 +12,7 @@ import activitydiagram.Value
 import activitydiagram.Variable
 import activitydiagram.ActivitydiagramFactory
 
-import ecore "org.modelexecution.operationalsemantics.ad.clean/model/activitydiagram.ecore";
+import ecore "platform:/resource/org.modelexecution.operationalsemantics.ad.clean/model/activitydiagram.ecore"
 
 open class Activity {
 	def void main(List<InputValue> inputValues) {
@@ -106,11 +106,11 @@ open class ActivityNode {
 		obj.running = false
 	}
 
-	abstract def void fire(List<Token> tokens);
+	abstract def void fire(List<Token> tokens)
 }
 
 open class Action {
-	abstract def void doAction();
+	abstract def void doAction()
 
 	def boolean isReady() {
 		return super.isReady() && alg.$(obj).hasOffers()
@@ -276,7 +276,7 @@ open class ForkedToken {
 }
 
 open class Expression {
-	abstract def void execute();
+	abstract def void execute()
 }
 
 open class BooleanExpression {
@@ -367,8 +367,8 @@ open class IntegerCalculationExpression {
 }
 
 open class Variable {
-	abstract def Value getCurrentValue();
-	abstract def void setCurrentValue(Value value);
+	abstract def Value getCurrentValue()
+	abstract def void setCurrentValue(Value value)
 }
 
 open class BooleanVariable {
