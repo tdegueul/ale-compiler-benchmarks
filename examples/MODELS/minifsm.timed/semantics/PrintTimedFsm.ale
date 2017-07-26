@@ -1,15 +1,11 @@
-behavior tfsmprinting;
+behavior tfsmprinting
 
-import ecore "minifsm.timed/model/TimedMiniFsm.ecore";
-import ale fsmprinting;
+import ecore "platform:/resource/minifsm.timed/model/TimedMiniFsm.ecore"
+
+import ale fsmprinting
 
 open class TimedTransition {
 	def String print() {
-		// FIXME: Should be a $[super].print()
 		return alg.transition(obj).print() + " @ " + obj.time
 	}
-}
-
-open class State {
-	
 }
